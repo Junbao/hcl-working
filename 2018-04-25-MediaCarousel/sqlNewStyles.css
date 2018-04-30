@@ -5259,3 +5259,13 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus{
     right: 0px !important;
 }
 /*********Bug 346848 fix***************/
+
+/*********Accessibility fix - page indicators to a list for proper navigation***************/
+#mediaCarouselPageButtons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#mediaCarouselPageButtons li {
+    float: left;
+}
