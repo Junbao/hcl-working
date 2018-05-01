@@ -870,6 +870,7 @@ a.c-call-to-action+a.c-call-to-action{
 
 .cp-media-carousel-with-frames .carousel-navigation {
     position: absolute;
+    top: 0;
     height: 384px;
     width: 100%;
 }
