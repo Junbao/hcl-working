@@ -885,12 +885,10 @@ a.c-call-to-action+a.c-call-to-action{
 
 .cp-media-carousel-with-frames .carousel-navigation .carousel-prev {
     left: 0;
-    content: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REPH04');
 }
 
 .cp-media-carousel-with-frames .carousel-navigation .carousel-next {
     right: 0;
-    content: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REPWBO');
 }
 
 .cp-media-carousel-with-frames .carousel-with-frames {
