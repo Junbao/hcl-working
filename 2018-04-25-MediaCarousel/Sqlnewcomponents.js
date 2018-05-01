@@ -3797,3 +3797,12 @@ function MediaCarouselWithFramesIDRemove() {
     $(".cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position='5'] a").removeAttr('id');
 
 }
+
+// this is a correction for tabindex being forced to -1 for the frames.  Opted not to re-write all the other code  - 05/02/18
+$(document).ready(function() {
+
+    setTimeout(function () {
+        $(".mediaCarNavArrows").attr('tabindex', '0');
+    }, 2000);
+  
+});
