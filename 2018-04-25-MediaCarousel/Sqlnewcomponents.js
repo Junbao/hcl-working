@@ -780,6 +780,7 @@ $(document).ready(function () {
             slick.$slides.eq(slick.currentSlide).siblings().addClass('opacity');
             announcementCarousel.$contentListItems.fadeOut("slow").eq(slick.currentSlide).fadeIn("slow");
             $('#CP_CustomCarousel_1 .carousel .panel-item.slick-active a').attr('tabindex', '-1');
+            resetTabArrowsZero();
         });
 
         //implementing slick to structure
@@ -826,6 +827,7 @@ $(document).ready(function () {
                 slick.$dots.each(function () {
                     $(this).prop('disabled', false);
                 });
+                resetTabArrowsZero();
             }, 100);
         });
 
@@ -924,6 +926,7 @@ $(window).load(function () {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
     } catch (e) { }
+    resetTabArrowsZero();
 });
 
 $(window).resize(function () {
@@ -1285,6 +1288,7 @@ $(document).ready(function () {
                 $(".carousel-frame[data-carousel-position='active']").siblings().find("a.open-popup-video").css("pointerEvents", "none");
                 $(".carousel-frame[data-carousel-position='active']").siblings().find("a.open-popup-video").attr("tabindex", "-1");
                 $(".carousel-frame[data-carousel-position='active']").siblings().find(".carousel-content a").attr("tabindex", "-1");
+                resetTabArrowsZero();
             }
 
             function setPagination(isNext, newActivePage) {
@@ -1626,6 +1630,7 @@ $(document).on('click', '.sql-RightNavTab .sql-accordion-tab-list ul li', functi
     $(this).focus();
     $(this).children().removeAttr('aria-label');
     $(this).siblings().attr('tabindex', '-1');
+    resetTabArrowsZero();
     var selectedindex = $(this).attr("data-index");
     var selectedtext = $(this).text();
     var $data = $(".selectedtab .sql-righttab");
@@ -1666,6 +1671,7 @@ $(document).ready(function () {
             var $data = $(".selectedtab .sql-righttab");
 
             $data.children().eq(selectedindex).addClass("click-active").attr('tabindex', '0').siblings().removeClass("click-active").attr('tabindex', '-1');
+            resetTabArrowsZero();
             $data.children().eq(selectedindex).removeClass("click-active-sibling").siblings().addClass("click-active-sibling");
             SetJcarouselWidth();
             
@@ -1740,7 +1746,7 @@ $(document).ready(function () {
                 $(".sql-RightNavTab .sql-accordion-tab-list ul li[data-index=" + _currentDataIndex + "]").next().focus();
                 //$(".sql-RightNavTab .sql-accordion-tab-list ul li[data-index=" + _currentDataIndex + "]").next().siblings().attr('aria-selected', 'false');
                 $(".sql-RightNavTab .sql-righttab").children().eq(_currentDataIndex).attr('tabindex', '0').siblings().attr('tabindex', '-1');
-
+                resetTabArrowsZero();
                 if (_currentDataIndex == _tablength) {
                     $(".sql-RightNavTab .sql-accordion-tab-list ul li:first").focus();
                 }
@@ -2919,6 +2925,7 @@ function SetJcarouselWidth() {
                         carouselCount = mobileElement;
 
                         carouselElement.eq(activeslide).siblings().attr('aria-hidden', 'true').find('.textcontent a').attr('tabindex', '-1');
+                        resetTabArrowsZero();
 
 
                     } else {
@@ -2951,6 +2958,7 @@ function SetJcarouselWidth() {
                         carouselCount = tabletElement;
 
                         carouselElement.children('li').eq(activeslide).siblings().attr('aria-hidden', 'true').find('.textcontent a').attr('tabindex', '-1');
+                        resetTabArrowsZero();
 
                     } else {
                         maindiv.find(".jcarousel-control-prev").hide();
@@ -2971,6 +2979,7 @@ function SetJcarouselWidth() {
                         carouselCount = desktopElement;
 
                         carouselElement.children('li').eq(activeslide).siblings().attr('aria-hidden', 'true').find('.textcontent a').attr('tabindex', '-1');
+                        resetTabArrowsZero();
 
                         if (activeslide == (carouselElementChildLength - 1)) {
                             activeslide--;
@@ -3034,6 +3043,7 @@ $(document).on("click", ".jcarousel-control-next", function (e) {
 
             carouselEle.children().eq(activelement).addClass("active").attr('aria-hidden', 'false');
             carouselEle.children().eq(activelement).siblings().attr('aria-hidden', 'true').find('.textcontent a').attr('tabindex', '-1');
+            resetTabArrowsZero();
             carouselEle.children().eq(activelement).next().attr('aria-hidden', 'false');
             carouselEle.children().eq(activelement).next().find('.textcontent a').attr('tabindex', '0');
 
@@ -3089,6 +3099,7 @@ $(document).on("click", ".jcarousel-control-prev", function (e) {
             carouselEle.children().removeClass("active");
             carouselEle.children().eq(activelement).addClass("active").attr('aria-hidden', 'false');
             carouselEle.children().eq(activelement).siblings().attr('aria-hidden', 'true').find('.textcontent a').attr('tabindex', '-1');
+            resetTabArrowsZero();
             carouselEle.children().eq(activelement).next().attr('aria-hidden', 'false');
             carouselEle.children().eq(activelement).next().find('.textcontent a').attr('tabindex', '0');
             carouselEle.children().eq(activelement).find('.textcontent a').attr('tabindex', '0');
@@ -3537,6 +3548,7 @@ var sqlintraPageNavBar = function () {
                         tempComponentTarget.attr('tabindex', '-1');
                         tempComponentTarget.focus();  
                         tempComponentTarget.removeAttr('tabindex');
+                        resetTabArrowsZero();
                     }
             }, 1000); 
         }
@@ -3593,7 +3605,8 @@ var sqlintraPageNavBar = function () {
                     else {
                         tempComponentTarget.attr('tabindex', '-1');
                         tempComponentTarget.focus();  
-                        tempComponentTarget.removeAttr('tabindex');                  
+                        tempComponentTarget.removeAttr('tabindex');       
+                        resetTabArrowsZero();           
                     }
             }, 1000);        
         }
@@ -3801,8 +3814,12 @@ function MediaCarouselWithFramesIDRemove() {
 // this is a correction for tabindex being forced to -1 for the frames.  Opted not to re-write all the other code  - 05/02/18
 $(document).ready(function() {
 
-    setTimeout(function () {
-        $(".mediaCarNavArrows").attr('tabindex', '0');
-    }, 2000);
+    setInterval(function () {
+        resetTabArrowsZero();
+    }, 3000);
   
 });
+
+function resetTabArrowsZero() {
+    $(".mediaCarNavArrows").attr("tabindex", "0");
+}

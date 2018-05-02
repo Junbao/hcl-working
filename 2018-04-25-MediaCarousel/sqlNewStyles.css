@@ -871,7 +871,7 @@ a.c-call-to-action+a.c-call-to-action{
 .cp-media-carousel-with-frames .carousel-navigation {
     position: absolute;
     top: 0;
-    height: 384px;
+    /* height: 384px; */
     width: 100%;
 }
 
@@ -880,7 +880,7 @@ a.c-call-to-action+a.c-call-to-action{
     cursor: pointer;
     top: 0;
     bottom: 0;
-    margin: auto;
+    /* margin: auto; */
     z-index: 110;
 }
 
@@ -1139,9 +1139,11 @@ a.c-call-to-action+a.c-call-to-action{
 @media screen and (max-width: 1199px) { /* Viewport 1084 */
 	.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .carousel-image,
 	.cp-media-carousel-with-frames .carousel-navigation {
-		height: 300px;	
+		/* height: 300px;	 */
 	}
-	
+	.mediaCarNavArrows {
+        margin-top: 130px;
+    }
 	.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-headline, 
 	.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-content,
 	.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .carousel-image,
@@ -1241,8 +1243,11 @@ a.c-call-to-action+a.c-call-to-action{
 @media screen and (min-width:540px) and (max-width: 767px) { /* Viewport 540 */
 	.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .carousel-image,
 	.cp-media-carousel-with-frames .carousel-navigation {
-		height: 222px;	
-	}
+		/* height: 222px;	 */
+    }
+    .mediaCarNavArrows {
+        margin-top: 120px;
+    }
 	
 	.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-headline, 
 	.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-content,
@@ -1292,8 +1297,11 @@ a.c-call-to-action+a.c-call-to-action{
 @media screen and (max-width: 539px) { /* Viewport 320 */
 	.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .carousel-image,
 	.cp-media-carousel-with-frames .carousel-navigation {
-		height: 117px;	
-	}
+		/* height: 117px;	 */
+    }
+    .mediaCarNavArrows {
+        margin-top: 90px;
+    }
 	  .cp-media-carousel-with-frames .carousel-with-frames{
           padding-bottom: 0;
       }
@@ -5269,4 +5277,28 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus{
 }
 #mediaCarouselPageButtons li {
     float: left;
+}
+
+.mediaCarNavArrows {
+    background-color: white;
+    width: 40px;
+    height: 80px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    margin: 180px auto ;
+    z-index: 110;
+}
+.mediaCarNavArrows:focus, .mediaCarNavArrows:hover {
+        outline: 1px dashed #000;
+}
+.carousel-previous.mediaCarNavArrows {
+    background-image: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REPH04');
+}
+.carousel-next.mediaCarNavArrows {
+    background-image: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REPWBO');
 }
