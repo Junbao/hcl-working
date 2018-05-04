@@ -279,3 +279,110 @@ $(window).load(function () {
 });
 
 */
+
+$("document").ready(function() {
+  var stillImage = document.getElementById("videoFrameStart");
+  var videoFramer = document.getElementById("videoFrame");
+  var thumbOne = document.getElementById("img1");
+  var thumbTwo = document.getElementById("img2");
+  var thumbThree = document.getElementById("img3");
+  var thumbFour = document.getElementById("img4");
+  var thumbFive = document.getElementById("img5");
+
+  thumbOne.addEventListener("click", function() {
+    stillImage.dataset.frame = "frame1";
+  });
+
+  thumbTwo.addEventListener("click", function() {
+    stillImage.dataset.frame = "frame2";
+  });
+
+  thumbThree.addEventListener("click", function() {
+    stillImage.dataset.frame = "frame3";
+  });
+
+  thumbFour.addEventListener("click", function() {
+    stillImage.dataset.frame = "frame4";
+  });
+
+  thumbFive.addEventListener("click", function() {
+    stillImage.dataset.frame = "frame5";
+  });
+
+  var frameWrapper = document.getElementById("custom_oneplayer_iframe");
+  stillImage.addEventListener("click", function() {
+    var letFrame = stillImage.dataset.frame;
+    if (stillImage.dataset.frame === "frame1") {
+      frameWrapper.setAttribute(
+        "src",
+        "https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dk?autoplay=true"
+      );
+      stillImage.style.display = "none";
+      videoFramer.style.display = "block";
+      console.log("f1 changes");
+    } else if (stillImage.dataset.frame === "frame2") {
+      frameWrapper.setAttribute(
+        "src",
+        "https://www.microsoft.com/en-us/videoplayer/embed/RE1VVbF?autoplay=true"
+      );
+      stillImage.style.display = "none";
+      videoFramer.style.display = "block";
+      console.log("f2 changes");
+    } else if (stillImage.dataset.frame === "frame3") {
+      frameWrapper.setAttribute(
+        "src",
+        "https://www.microsoft.com/en-us/videoplayer/embed/RE1Wds7?autoplay=true"
+      );
+      stillImage.style.display = "none";
+      videoFramer.style.display = "block";
+      console.log("f3 changes");
+    } else if (stillImage.dataset.frame === "frame4") {
+      frameWrapper.setAttribute(
+        "src",
+        "https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dl?autoplay=true"
+      );
+      stillImage.style.display = "none";
+      videoFramer.style.display = "block";
+      console.log("f4 changes");
+    } else if (stillImage.dataset.frame === "frame5") {
+      frameWrapper.setAttribute(
+        "src",
+        "https://www.microsoft.com/en-us/videoplayer/embed/RE1VVbE?autoplay=true"
+      );
+      stillImage.style.display = "none";
+      videoFramer.style.display = "block";
+      console.log("f5 changes");
+    } else {
+      console.log("something is off");
+    }
+  });
+});
+
+// F1 - https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dk?autoplay=false
+// F2 - https://www.microsoft.com/en-us/videoplayer/embed/RE1VVbF?autoplay=false
+// F3 - https://www.microsoft.com/en-us/videoplayer/embed/RE1Wds7?autoplay=false
+// F4 - https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dl?autoplay=false
+// F5 - https://www.microsoft.com/en-us/videoplayer/embed/RE1VVbE?autoplay=false
+
+// <div class="videoplyr c-carousel f-multi-slide" role="region" aria-label="Images">
+//     <div class="videoFrameStart" data-frame="frame1">
+//       <div class="f-video-trigger" aria-hidden="false">
+//         <button class="c-action-trigger-365 c-glyph glyph-play x-hidden-focus" aria-label="Play">
+//           <span class="x-screen-reader">Play</span>
+//         </button>
+//       </div>
+//     </div>
+//     <div class="videocontainer" itemscope="" itemtype="http://schema.org/ItemList">
+//       <div id="newHorizontalItemImage1" data-f-theme="light" class="f-active" role="tabpanel" video-id="RE1W5Dk">
+//         <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dk?autoplay=false" tabindex="0" class="custom-oneplayer-iframe" id="custom_oneplayer_iframe" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;" title="Watch the Grow your business faster with Microsoft Relationship Sales video" />
+//       </div>
+//     </div>
+//   </div>
+
+//   			<div class="thumbnail-ul-holder">
+// 			<h2 class="c-pragraph thumbnail-header">Video Demos</h2>
+// 			<ul role="tablist" class="video-thumbnail-ul">
+// 				<li id="img1" class="c-glyph active-border" role="presentation">
+// 					<a href="#" id="grow-business" role="tab" class="mscom-link c-logo f-active" itemprop="url" aria-label="Watch the Grow your business faster with Microsoft Relationship Sales video"
+// 					 aria-controls="newHorizontalItemContent1 newHorizontalItemImage1" videosrc="https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dk?autoplay=false">
+// 						<div class="arrow-border_on"></div>

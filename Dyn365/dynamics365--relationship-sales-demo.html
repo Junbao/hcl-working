@@ -7,7 +7,8 @@
   
       }
       */
-/* Loader gif ID 4f0e4580-3879-4fe9-88b4-8c24349c1d4a
+
+	/* Loader gif ID 4f0e4580-3879-4fe9-88b4-8c24349c1d4a
 http://via.placeholder.com/350x150
 https://picsum.photos/1050/600?image=200
  */
@@ -61,7 +62,6 @@ https://picsum.photos/1050/600?image=200
 		background: #333 !important;
     } */
 
-
 	.d365-sem-wrapper .m-multi-feature.f-align-left .video-container .thumbnail-ul-holder .video-thumbnail-ul {
 		display: flex;
 		justify-content: center;
@@ -71,19 +71,19 @@ https://picsum.photos/1050/600?image=200
 		border: 1px solid #fff;
     } */
 
-    .f-video-trigger {
-        padding-top: 25%;
-    }
+	.f-video-trigger {
+		padding-top: 25%;
+	}
 
-    .f-video-trigger button.c-action-trigger-365 {
-        background: #333 !important;
-        color: white;
-        border-color: transparent !important;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        font-size: 30px;
-        padding-top: 2px;
+	.f-video-trigger button.c-action-trigger-365 {
+		background: #333 !important;
+		color: white;
+		border-color: transparent !important;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		font-size: 30px;
+		padding-top: 2px;
 	}
 
 	.d365-sem-wrapper .video-thumbnail-ul li span.bold-font {
@@ -155,8 +155,11 @@ https://picsum.photos/1050/600?image=200
 		float: left;
 	}
 
+	#videoFrame {
+		display: none;
+	}
+
 	.videoplyr .videocontainer {
-        display: none;
 		width: 100%;
 		height: auto;
 		border: 20px solid #fff;
@@ -463,38 +466,42 @@ https://picsum.photos/1050/600?image=200
 
 	#newHorizontalItemImage1 {
 		height: 100%;
-    }
-    
-    div[data-frame="frame1"] {
-        background-image: url("https://picsum.photos/1050/600?image=50");
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-    }
-        div[data-frame="frame2"] {
-        background-image: url("https://picsum.photos/1050/600?image=60");
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-    }
-        div[data-frame="frame3"] {
-        background-image: url("https://picsum.photos/1050/600?image=70");
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-    }
-        div[data-frame="frame4"] {
-        background-image: url("https://picsum.photos/1050/600?image=80");
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-    }
-        div[data-frame="frame5"] {
-        background-image: url("https://picsum.photos/1050/600?image=90");
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-    }
+	}
+
+	div[data-frame="frame1"] {
+		background-image: url("https://picsum.photos/1050/600?image=50");
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+	}
+
+	div[data-frame="frame2"] {
+		background-image: url("https://picsum.photos/1050/600?image=60");
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+	}
+
+	div[data-frame="frame3"] {
+		background-image: url("https://picsum.photos/1050/600?image=70");
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+	}
+
+	div[data-frame="frame4"] {
+		background-image: url("https://picsum.photos/1050/600?image=80");
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+	}
+
+	div[data-frame="frame5"] {
+		background-image: url("https://picsum.photos/1050/600?image=90");
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+	}
 
 	.d365-sem-wrapper .m-multi-feature .f-multi-slide div.videocontainer iframe {
 		width: auto;
@@ -1387,6 +1394,13 @@ https://picsum.photos/1050/600?image=200
 	}
 </style>
 
+<script>
+	$(document).ready(function () {
+		console.log("working");
+	});
+</script>
+
+
 <div class="d365-sem-wrapper" data-grid="container">
 	<section class="m-hero-item f-x-center f-y-top context-article theme-light set-bg" itemscope="" itemtype="http://schema.org/Article">
 		<!-- <picture>
@@ -1404,22 +1418,25 @@ https://picsum.photos/1050/600?image=200
 		<div class="herotext-container">
 			<div>
 				<h1 class="c-heading hr-h1">Microsoft Relationship Sales solution demos</h1>
-				<p class="c-paragraph hr-p">Watch how Microsoft Relationship Sales helps you build authentic, personal relationships by bringing together LinkedIn Sales Navigator and Dynamics 365 for Sales.</p>
+				<p class="c-paragraph hr-p">Watch how Microsoft Relationship Sales helps you build authentic, personal relationships by bringing together LinkedIn
+					Sales Navigator and Dynamics 365 for Sales.</p>
 			</div>
 		</div>
 		<section class="video-container">
 			<div class="videoplyr c-carousel f-multi-slide" role="region" aria-label="Images">
-                <div class="videoFrameStart" data-frame="frame1">
-                    <div class="f-video-trigger" aria-hidden="false">
-                        <button class="c-action-trigger-365 c-glyph glyph-play x-hidden-focus" aria-label="Play">
-                            <span class="x-screen-reader">Play</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="videocontainer" itemscope="" itemtype="http://schema.org/ItemList">
-                    <div id="newHorizontalItemImage1" data-f-theme="light" class="f-active" role="tabpanel" video-id="RE1W5Dk">
-                        <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dk?autoplay=false" tabindex="0" class="custom-oneplayer-iframe" id="custom_oneplayer_iframe" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;" title="Watch the Grow your business faster with Microsoft Relationship Sales video"></iframe>
-                    </div>
+				<div id="videoFrameStart" data-frame="frame1">
+					<div class="f-video-trigger" aria-hidden="false">
+						<button class="c-action-trigger-365 c-glyph glyph-play x-hidden-focus" aria-label="Play">
+							<span class="x-screen-reader">Play</span>
+						</button>
+					</div>
+				</div>
+				<div id="videoFrame" class="videocontainer" itemscope="" itemtype="http://schema.org/ItemList">
+					<div id="newHorizontalItemImage1" data-f-theme="light" class="f-active" role="tabpanel" video-id="RE1W5Dk">
+						<iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dk?autoplay=false" tabindex="0" class="custom-oneplayer-iframe"
+						 id="custom_oneplayer_iframe" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
+						 title="Watch the Grow your business faster with Microsoft Relationship Sales video"></iframe>
+					</div>
 				</div>
 			</div>
 			<div class="video-lander-div explore-section">
@@ -1570,16 +1587,17 @@ https://picsum.photos/1050/600?image=200
 							<!--GROW BUSINESS-->GROW YOUR BUSINESS FASTER</span>
 					</li>
 					<li id="img2" class="c-glyph inactive-border" role="presentation">
-						<a href="#" id="stay-focus" role="tab" class="mscom-link c-logo" itemprop="url" aria-label="Watch the Stay Focused with Microsoft Relationship Sales video" aria-controls="newHorizontalItemContent2 newHorizontalItemImage2" videosrc="https://www.microsoft.com/en-us/videoplayer/embed/RE1VVbF?autoplay=false">
+						<a href="#" id="stay-focus" role="tab" class="mscom-link c-logo" itemprop="url" aria-label="Watch the Stay Focused with Microsoft Relationship Sales video"
+						 aria-controls="newHorizontalItemContent2 newHorizontalItemImage2" videosrc="https://www.microsoft.com/en-us/videoplayer/embed/RE1VVbF?autoplay=false">
 							<div class="arrow-border_off"></div>
 							<img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Whuj?ver=dfee" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Whuj?ver=dfee"
 							 alt="Stay Focused"></img>
 
 						</a>
 						<span class="normal-font">STAY FOCUSED</span>
-                    </li>
+					</li>
 
-                    <!-- <li id="img2" class="c-glyph inactive-border" role="presentation">
+					<!-- <li id="img2" class="c-glyph inactive-border" role="presentation">
 						<a href="#" id="stay-focus" role="tab" class="mscom-link c-logo" itemprop="url" aria-label="Watch the Stay Focused with Microsoft Relationship Sales video"
 						 aria-controls="newHorizontalItemContent2 newHorizontalItemImage2" videosrc="https://www.microsoft.com/en-us/videoplayer/embed/RE1VVbF?autoplay=false">
 							<div class="arrow-border_off"></div>
@@ -1589,7 +1607,7 @@ https://picsum.photos/1050/600?image=200
 						</a>
 						<span class="normal-font">STAY FOCUSED</span>
                     </li> -->
-                    
+
 
 					<li id="img3" class="c-glyph inactive-border" role="presentation">
 						<a href="#" id="linkedin" role="tab" class="mscom-link c-logo" itemprop="url" aria-label="Watch the Identify leads using LinkedIn with Microsoft Relationship Sales video"
@@ -1713,5 +1731,3 @@ https://picsum.photos/1050/600?image=200
 </div>
 
 <mscom:contentinclude md:pageid="09aef1c6-f07d-4f29-9de2-ed0788379e6b" ajaxrendered="false"></mscom:contentinclude>
-
-
