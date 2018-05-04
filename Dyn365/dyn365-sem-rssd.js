@@ -281,7 +281,8 @@ $(window).load(function () {
 */
 
 $("document").ready(function() {
-  var stillImage = document.getElementById("videoFrameStart");
+  var mediaWrapper = document.getElementById("videoFrameStart");
+  var stillImage = document.getElementById("frameImagekey");
   var videoFramer = document.getElementById("videoFrame");
   var thumbOne = document.getElementById("img1");
   var thumbTwo = document.getElementById("img2");
@@ -289,69 +290,75 @@ $("document").ready(function() {
   var thumbFour = document.getElementById("img4");
   var thumbFive = document.getElementById("img5");
 
+  // <img src="https://picsum.photos/1050/600?image=50" id="frameImagekey"  > videoFrameStart
   thumbOne.addEventListener("click", function() {
-    stillImage.dataset.frame = "frame1";
+    stillImage.src = "https://picsum.photos/1050/600?image=50";
+    videoFramer.style.zIndex = "-1";
+    frameWrapper.setAttribute("src", "");
+    mediaWrapper.dataset.frame = "frame1";
   });
 
   thumbTwo.addEventListener("click", function() {
-    stillImage.dataset.frame = "frame2";
+    stillImage.src = "https://picsum.photos/1050/600?image=60";
+    videoFramer.style.zIndex = "-1";
+    frameWrapper.setAttribute("src", "");
+    mediaWrapper.dataset.frame = "frame2";
   });
 
   thumbThree.addEventListener("click", function() {
-    stillImage.dataset.frame = "frame3";
+    stillImage.src = "https://picsum.photos/1050/600?image=70";
+    videoFramer.style.zIndex = "-1";
+    frameWrapper.setAttribute("src", "");
+    mediaWrapper.dataset.frame = "frame3";
   });
 
   thumbFour.addEventListener("click", function() {
-    stillImage.dataset.frame = "frame4";
+    stillImage.src = "https://picsum.photos/1050/600?image=80";
+    videoFramer.style.zIndex = "-1";
+    frameWrapper.setAttribute("src", "");
+    mediaWrapper.dataset.frame = "frame4";
   });
 
   thumbFive.addEventListener("click", function() {
-    stillImage.dataset.frame = "frame5";
+    stillImage.src = "https://picsum.photos/1050/600?image=50";
+    videoFramer.style.zIndex = "-1";
+    frameWrapper.setAttribute("src", "");
+    mediaWrapper.dataset.frame = "frame5";
   });
 
   var frameWrapper = document.getElementById("custom_oneplayer_iframe");
   stillImage.addEventListener("click", function() {
     var letFrame = stillImage.dataset.frame;
-    if (stillImage.dataset.frame === "frame1") {
+    if (mediaWrapper.dataset.frame === "frame1") {
       frameWrapper.setAttribute(
         "src",
         "https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dk?autoplay=true"
       );
-      stillImage.style.display = "none";
-      videoFramer.style.display = "block";
-      console.log("f1 changes");
-    } else if (stillImage.dataset.frame === "frame2") {
+      videoFramer.style.zIndex = "0";
+    } else if (mediaWrapper.dataset.frame === "frame2") {
       frameWrapper.setAttribute(
         "src",
         "https://www.microsoft.com/en-us/videoplayer/embed/RE1VVbF?autoplay=true"
       );
-      stillImage.style.display = "none";
-      videoFramer.style.display = "block";
-      console.log("f2 changes");
-    } else if (stillImage.dataset.frame === "frame3") {
+      videoFramer.style.zIndex = "0";
+    } else if (mediaWrapper.dataset.frame === "frame3") {
       frameWrapper.setAttribute(
         "src",
         "https://www.microsoft.com/en-us/videoplayer/embed/RE1Wds7?autoplay=true"
       );
-      stillImage.style.display = "none";
-      videoFramer.style.display = "block";
-      console.log("f3 changes");
-    } else if (stillImage.dataset.frame === "frame4") {
+      videoFramer.style.zIndex = "0";
+    } else if (mediaWrapper.dataset.frame === "frame4") {
       frameWrapper.setAttribute(
         "src",
         "https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dl?autoplay=true"
       );
-      stillImage.style.display = "none";
-      videoFramer.style.display = "block";
-      console.log("f4 changes");
-    } else if (stillImage.dataset.frame === "frame5") {
+      videoFramer.style.zIndex = "0";
+    } else if (mediaWrapper.dataset.frame === "frame5") {
       frameWrapper.setAttribute(
         "src",
         "https://www.microsoft.com/en-us/videoplayer/embed/RE1VVbE?autoplay=true"
       );
-      stillImage.style.display = "none";
-      videoFramer.style.display = "block";
-      console.log("f5 changes");
+      videoFramer.style.zIndex = "0";
     } else {
       console.log("something is off");
     }
