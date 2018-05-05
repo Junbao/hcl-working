@@ -3813,6 +3813,9 @@ function MediaCarouselWithFramesIDRemove() {
 
 // this is a correction for tabindex being forced to -1 for the frames.  Opted not to re-write all the other code  - 05/02/18
 $(document).ready(function() {
+    function resetTabArrowsZero() {
+      $(".mediaCarNavArrows").attr("tabindex", "0");
+    }
 
     setInterval(function () {
         resetTabArrowsZero();
@@ -3820,6 +3823,4 @@ $(document).ready(function() {
   
 });
 
-function resetTabArrowsZero() {
-    $(".mediaCarNavArrows").attr("tabindex", "0");
-}
+

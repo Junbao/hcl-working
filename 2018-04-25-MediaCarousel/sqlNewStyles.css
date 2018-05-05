@@ -5295,8 +5295,9 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus{
 }
 .mediaCarNavArrows:focus, .mediaCarNavArrows:hover {
         outline: 1px dashed #000;
-}
-.carousel-previous.mediaCarNavArrows {
+} 
+
+.carousel-prev.mediaCarNavArrows {
     background-image: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REPH04');
 }
 .carousel-next.mediaCarNavArrows {

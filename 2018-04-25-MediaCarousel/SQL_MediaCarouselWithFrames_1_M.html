@@ -20,7 +20,6 @@
 					<input type="hidden" value="{{play_button_image_alt}}">
 					<input type="hidden" value="{{layover_close_image}}">
 
-
 					<div class="carousel-group">
 						<div class="carousel-frame" data-show="true" data-carousel-position="-2"></div>
 						<div class="carousel-frame" data-show="true" data-carousel-position="-1"></div>
@@ -347,7 +346,10 @@
 					</div>
 
 					<div class="carousel-navigation">
-						<picture>
+						<button class="carousel-button carousel-prev mediaCarNavArrows">&nbsp;</button>
+						<button class="carousel-button carousel-next mediaCarNavArrows">&nbsp;</button>
+
+						<!-- <picture>
 							<source class='hide-by-default show-element' srcset='{{carousel_prev-Min-1779px}}' media='(min-width:1779px)'></source>
 							<source class='hide-by-default show-element' srcset='{{carousel_prev-Min-1400px}}' media='(min-width:1400px)'></source>
 							<source class='hide-by-default show-element' srcset='{{carousel_prev-Min-1084px}}' media='(min-width:1084px)'></source>
@@ -364,10 +366,10 @@
 							<source class='hide-by-default show-element' srcset='{{carousel_next-Min-768px}}' media='(min-width:768px)'></source>
 							<source class='hide-by-default show-element' srcset='{{carousel_next}}' media='(min-width:540px)'></source>
 							<source class='hide-by-default show-element' srcset='{{carousel_next}}' media='(min-width:0)'></source>
-							<img tabindex="0" role="button" srcset='{{carousel_next}}' class="carousel-button carousel-next mediaCarNavArrows" data-desktop-class="carousel-button carousel-next"
+							<img tabindex="0" srcset='{{carousel_next}}' class="carousel-button carousel-next mediaCarNavArrows" data-desktop-class="carousel-button carousel-next"
 							 aria-label="View next slide" md:payloadguid="{{carousel_next}}" alt="{{carousel_next_alt}}" src="{{carousel_next}}"
 							 title="next">
-						</picture>
+						</picture> -->
 					</div>
 
 					<div class="c-sequence-indicator" role="tablist" aria-hidden="false">
@@ -379,19 +381,19 @@
 								<button role="button" aria-label="view slide two - {{2:carousel_headline}}" aria-controls="MediaSlideTwo" data-show="{{2:show}}"></button>
 							</li>
 							<li>
-								<button role="button" aria-label="view slide three" aria-controls="MediaSlideThree" data-show="{{3:show}}"></button>
+								<button role="button" aria-label="view slide three - {{3:carousel_headline}}" aria-controls="MediaSlideThree" data-show="{{3:show}}"></button>
 							</li>
 							<li>
-								<button role="button" aria-label="view slide four" aria-controls="MediaSlideFour" data-show="{{4:show}}"></button>
+								<button role="button" aria-label="view slide four - {{4:carousel_headline}}" aria-controls="MediaSlideFour" data-show="{{4:show}}"></button>
 							</li>
 							<li>
-								<button role="button" aria-label="view slide five" aria-controls="MediaSlideFive" data-show="{{5:show}}"></button>
+								<button role="button" aria-label="view slide five - {{5:carousel_headline}}" aria-controls="MediaSlideFive" data-show="{{5:show}}"></button>
 							</li>
 							<li>
-								<button role="button" aria-label="view slide six" aria-controls="MediaSlideSix" data-show="{{6:show}}"></button>
+								<button role="button" aria-label="view slide six - {{6:carousel_headline}}" aria-controls="MediaSlideSix" data-show="{{6:show}}"></button>
 							</li>
 							<li>
-								<button role="button" aria-label="view slide seven" aria-controls="MediaSlideSeven" data-show="{{7:show}}"></button>
+								<button role="button" aria-label="view slide seven - {{7:carousel_headline}}" aria-controls="MediaSlideSeven" data-show="{{7:show}}"></button>
 							</li>
 						</ul>
 					</div>
