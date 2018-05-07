@@ -4,7 +4,8 @@
  data-disable="true" data-tag="tagging" data-auto-play="{{data-auto-play}}" data-auto-play-speed="{{data-auto-play-speed}}">
 	<div class="ms-grid full">
 		<div class="ms-row no-margin">
-			<div class="livearea">
+			 <!-- xs-col-24-24 s-col-24-24 -->
+			<div class="livearea" aria-live="polite" aria-label="Carousel showing new capabilities of SQL Server 2017">
 				<div class="headline">
 					<mscom:conditional propertyexists="true" property="PageProperties.IsMediaCarouselWithFrames_Hero">
 						<h1 class="c-heading-3">{{headline}}</h1>
@@ -346,33 +347,11 @@
 					</div>
 
 					<div class="carousel-navigation">
-						<button class="carousel-button carousel-prev mediaCarNavArrows" title="previous" aria-label="View previous slide">&nbsp;</button>
-						<button class="carousel-button carousel-next mediaCarNavArrows" title="next" aria-label="View next slide">&nbsp;</button>
-
-						<!-- <picture>
-							<source class='hide-by-default show-element' srcset='{{carousel_prev-Min-1779px}}' media='(min-width:1779px)'></source>
-							<source class='hide-by-default show-element' srcset='{{carousel_prev-Min-1400px}}' media='(min-width:1400px)'></source>
-							<source class='hide-by-default show-element' srcset='{{carousel_prev-Min-1084px}}' media='(min-width:1084px)'></source>
-							<source class='hide-by-default show-element' srcset='{{carousel_prev-Min-768px}}' media='(min-width:768px)'></source>
-							<source class='hide-by-default show-element' srcset='{{carousel_prev}}' media='(min-width:540px)'></source>
-							<source class='hide-by-default show-element' srcset='{{carousel_prev}}' media='(min-width:0)'></source>
-							<img tabindex="0" srcset='{{carousel_prev}}' class="carousel-button carousel-prev mediaCarNavArrows" data-desktop-class="carousel-button carousel-prev"
-							 md:payloadguid="{{carousel_prev}}" alt="{{carousel_prev_alt}}" src="{{carousel_prev}}" title="previous" aria-label="View previous slide">
-						</picture>
-						<picture>
-							<source class='hide-by-default show-element' srcset='{{carousel_next-Min-1779px}}' media='(min-width:1779px)'></source>
-							<source class='hide-by-default show-element' srcset='{{carousel_next-Min-1400px}}' media='(min-width:1400px)'></source>
-							<source class='hide-by-default show-element' srcset='{{carousel_next-Min-1084px}}' media='(min-width:1084px)'></source>
-							<source class='hide-by-default show-element' srcset='{{carousel_next-Min-768px}}' media='(min-width:768px)'></source>
-							<source class='hide-by-default show-element' srcset='{{carousel_next}}' media='(min-width:540px)'></source>
-							<source class='hide-by-default show-element' srcset='{{carousel_next}}' media='(min-width:0)'></source>
-							<img tabindex="0" srcset='{{carousel_next}}' class="carousel-button carousel-next mediaCarNavArrows" data-desktop-class="carousel-button carousel-next"
-							 aria-label="View next slide" md:payloadguid="{{carousel_next}}" alt="{{carousel_next_alt}}" src="{{carousel_next}}"
-							 title="next">
-						</picture> -->
+							<button role="button" class="carousel-button carousel-prev mediaCarNavArrows" title="previous" aria-label="View previous slide">&nbsp;</button>
+							<button role="button" class="carousel-button carousel-next mediaCarNavArrows" title="next" aria-label="View next slide">&nbsp;</button>
 					</div>
 
-					<div class="c-sequence-indicator" role="tablist" aria-hidden="false">
+					<div class="c-sequence-indicator" role="tablist" aria-hidden="false" aria-controls="carousel">
 						<ul id="mediaCarouselPageButtons">
 							<li aria-label="view slide one">
 								<button role="button" aria-label="view slide one - {{1:carousel_headline}}" aria-controls="MediaSlideOne" data-show="{{1:show}}"></button>
