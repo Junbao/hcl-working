@@ -880,7 +880,7 @@ function isScrolledIntoView(elem) {
     return (
         ((elemBottom <= docViewBottom) && (elemBottom >= docViewTop)) ||
         ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
-        );
+    );
 }
 
 $(window).on('load scroll', function () {
@@ -1674,7 +1674,7 @@ $(document).ready(function () {
             resetTabArrowsZero();
             $data.children().eq(selectedindex).removeClass("click-active-sibling").siblings().addClass("click-active-sibling");
             SetJcarouselWidth();
-            
+
             /*Accessibility fix Start*/
 
             //  $data.children().eq(selectedindex).find('a.mscom-link:first').focus();
@@ -2193,16 +2193,16 @@ function stickynavslick() {
                 infinite: false
             }
         },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: true,
-                    infinite: false
-                }
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                infinite: false
             }
+        }
         ]
     });
 
@@ -2666,22 +2666,22 @@ $(document).ready(function () {
                 initialSlide: 0
             }
         },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    initialSlide: 0
-                }
-            },
-            {
-                breakpoint: 539,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    initialSlide: 0
-                }
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                initialSlide: 0
             }
+        },
+        {
+            breakpoint: 539,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 0
+            }
+        }
         ]
     });
 
@@ -2864,7 +2864,7 @@ var objectFitImages = function () {
         h = g.setAttribute,
         y = !1;
     return a.supportsObjectFit = f, a.supportsObjectPosition = d, o(), a
-} ();
+}();
 
 /*Min height calculation for 3Vs4Vs5VsAnalaysis component*/
 function Sql3Vs4Vs5VsAnalysis_thumbnail_minHeight() {
@@ -3178,7 +3178,7 @@ $(document).ready(function () {
     if ($('.CP_AccordionWithTable .terms_and_conditions legend').text() == "") {
         $(this).remove();
     }
-   
+
 
 });
 
@@ -3331,14 +3331,14 @@ var sqlintraPageNavBar = function () {
             $(this).addClass('active');
             var element_id = $(this).attr('href').trim();
             var staticMenuScroll = $('#SQL_StaticMenu').hasClass('scroll');
-            
-            if(staticMenuScroll){
+
+            if (staticMenuScroll) {
                 adjustContainerPositionScroll(e, element_id, sqlintraPageNavHeight);
             }
-            else{
-               addStickyBehaviour();
-               resetContainerPosition();
-               adjustContainerPosition(element_id); 
+            else {
+                addStickyBehaviour();
+                resetContainerPosition();
+                adjustContainerPosition(element_id);
             }
         });
         var lastItem = $sqlintraPageNavListItems.last();
@@ -3465,150 +3465,150 @@ var sqlintraPageNavBar = function () {
         tempElement = element;
         var componentIdFlag = false;
         var staticMenuId = tempElement.split('#');
-        var lastElement = staticMenuId[staticMenuId.length -1];
+        var lastElement = staticMenuId[staticMenuId.length - 1];
         var $componentTarget = "";
         var componentAboveStaticMenu = "";
         var componentBelowStaticMenu = "";
         var staticMenuOriginalPosition = 0;
-        
-        for(var j= 0; j < $componentIDs.length; j++){
-            if($componentIDs[j] == 'SQL_StaticMenu'){
-                componentBelowStaticMenu = $componentIDs[j+1];
-                componentAboveStaticMenu = $componentIDs[j-1];
+
+        for (var j = 0; j < $componentIDs.length; j++) {
+            if ($componentIDs[j] == 'SQL_StaticMenu') {
+                componentBelowStaticMenu = $componentIDs[j + 1];
+                componentAboveStaticMenu = $componentIDs[j - 1];
                 break;
             }
-        }  
-        
-        staticMenuOriginalPosition = $('#'+ componentAboveStaticMenu).offset().top + $('#' + componentAboveStaticMenu).height();
-        
-        for(var j= 0; j < $componentIDs.length; j++){
-            if($componentIDs[j] == lastElement){  
-               componentIdFlag = true;
-               break;
+        }
+
+        staticMenuOriginalPosition = $('#' + componentAboveStaticMenu).offset().top + $('#' + componentAboveStaticMenu).height();
+
+        for (var j = 0; j < $componentIDs.length; j++) {
+            if ($componentIDs[j] == lastElement) {
+                componentIdFlag = true;
+                break;
             }
         }
-        
-        if(!componentIdFlag){
-            $componentTarget = $('a' + element).closest('div').find('[id^=CP_], [id^=SQL_]').attr('id');    
+
+        if (!componentIdFlag) {
+            $componentTarget = $('a' + element).closest('div').find('[id^=CP_], [id^=SQL_]').attr('id');
         }
-        else{
+        else {
             $componentTarget = element;
         }
-        
+
         var staticMenu_height = $('#SQL_StaticMenu').height();
         event.preventDefault();
-        if(componentIdFlag) {   
+        if (componentIdFlag) {
             $(element).children(":first").css("margin-top", "0px");
             $('#SQL_StaticMenu.sticky .nav-grid-container').children("div:first").css("padding-bottom", "1px");
-            if($(window).scrollTop() <= staticMenuOriginalPosition && $componentTarget == ('#' + componentBelowStaticMenu)){
-                if($('#SQL_StaticMenu').hasClass('sticky')){
-                   $('html, body').animate({
-                    scrollTop: $(window).scrollTop()
-                    }, 1000);
-               }
-               else{
+            if ($(window).scrollTop() <= staticMenuOriginalPosition && $componentTarget == ('#' + componentBelowStaticMenu)) {
+                if ($('#SQL_StaticMenu').hasClass('sticky')) {
                     $('html, body').animate({
-                    scrollTop: (staticMenuOriginalPosition)
+                        scrollTop: $(window).scrollTop()
                     }, 1000);
-                }       
-           }
-           else if($(window).scrollTop() == staticMenuOriginalPosition) {
-                   addStickyBehaviour();
-                   $('html, body').scrollTop(staticMenuOriginalPosition - staticMenu_height);  
-                   $('html, body').animate({
-                   scrollTop: (($($componentTarget).offset().top) - (staticMenu_height) + 2)
-                   },1000); 
-           }
-           else if($(window).scrollTop() < staticMenuOriginalPosition) {
-               if($('#SQL_StaticMenu').hasClass('sticky')){
+                }
+                else {
                     $('html, body').animate({
+                        scrollTop: (staticMenuOriginalPosition)
+                    }, 1000);
+                }
+            }
+            else if ($(window).scrollTop() == staticMenuOriginalPosition) {
+                addStickyBehaviour();
+                $('html, body').scrollTop(staticMenuOriginalPosition - staticMenu_height);
+                $('html, body').animate({
                     scrollTop: (($($componentTarget).offset().top) - (staticMenu_height) + 2)
-                    }, 1000); 
-
-               }
-               else{
+                }, 1000);
+            }
+            else if ($(window).scrollTop() < staticMenuOriginalPosition) {
+                if ($('#SQL_StaticMenu').hasClass('sticky')) {
                     $('html, body').animate({
-                    scrollTop: (($($componentTarget).offset().top) - (staticMenu_height * 2))
-                    }, 1000); 
-               }
-           }
-           else{           
+                        scrollTop: (($($componentTarget).offset().top) - (staticMenu_height) + 2)
+                    }, 1000);
+
+                }
+                else {
+                    $('html, body').animate({
+                        scrollTop: (($($componentTarget).offset().top) - (staticMenu_height * 2))
+                    }, 1000);
+                }
+            }
+            else {
                 addStickyBehaviour();
                 $('html, body').animate({
-                scrollTop: (($($componentTarget).offset().top) - staticMenu_height + 2)
-                }, 1000);  
-           }
+                    scrollTop: (($($componentTarget).offset().top) - staticMenu_height + 2)
+                }, 1000);
+            }
             setTimeout(function () {
-                    var tabindexChecker = $($componentTarget).parent('div').find('a:first').attr('tabindex');
-                    var tempComponentTarget = $($componentTarget).parent('div').find('a:first');
-                    if(typeof tabindexChecker !== typeof undefined && tabindexChecker !== false){
-                        tempComponentTarget.focus();
-                    }
-                    else {
-                        tempComponentTarget.attr('tabindex', '-1');
-                        tempComponentTarget.focus();  
-                        tempComponentTarget.removeAttr('tabindex');
-                        resetTabArrowsZero();
-                    }
-            }, 1000); 
+                var tabindexChecker = $($componentTarget).parent('div').find('a:first').attr('tabindex');
+                var tempComponentTarget = $($componentTarget).parent('div').find('a:first');
+                if (typeof tabindexChecker !== typeof undefined && tabindexChecker !== false) {
+                    tempComponentTarget.focus();
+                }
+                else {
+                    tempComponentTarget.attr('tabindex', '-1');
+                    tempComponentTarget.focus();
+                    tempComponentTarget.removeAttr('tabindex');
+                    resetTabArrowsZero();
+                }
+            }, 1000);
         }
-         else {
+        else {
             $(element).next().children(":first").css("margin-top", "0px");
             $('#SQL_StaticMenu.sticky .nav-grid-container').children("div:first").css("padding-bottom", "1px");
-          
-           if($(window).scrollTop() <= staticMenuOriginalPosition && $componentTarget == componentBelowStaticMenu){
-               if($('#SQL_StaticMenu').hasClass('sticky')){
-                   $('html, body').animate({
-                    scrollTop: $(window).scrollTop()
-                    }, 1000);
-               }
-               else{
-                    $('html, body').animate({
-                    scrollTop: (staticMenuOriginalPosition)
-                    }, 1000);
-                }  
-           }
-           else if($(window).scrollTop() == staticMenuOriginalPosition){ 
-                   addStickyBehaviour();
-                   $('html, body').scrollTop(staticMenuOriginalPosition - staticMenu_height);
-                   $('html, body').animate({
-                        scrollTop: (($('#'+ $componentTarget).offset().top) - (staticMenu_height) + 2)
-                    }, 1000);          
-           }
-           else if($(window).scrollTop() < staticMenuOriginalPosition){
-              if($('#SQL_StaticMenu').hasClass('sticky')){
-                    $('html, body').animate({
-                    scrollTop: (($('#'+ $componentTarget).offset().top) - (staticMenu_height) + 2)
-                    }, 1000); 
 
-               }
-               else{
+            if ($(window).scrollTop() <= staticMenuOriginalPosition && $componentTarget == componentBelowStaticMenu) {
+                if ($('#SQL_StaticMenu').hasClass('sticky')) {
                     $('html, body').animate({
-                    scrollTop: (($('#'+ $componentTarget).offset().top) - (staticMenu_height * 2))
-                    }, 1000); 
-               } 
-           }
-           else {
-                   addStickyBehaviour();
-                   $('html, body').animate({
-                    scrollTop: (($('#'+ $componentTarget).offset().top) - staticMenu_height + 2)
-                    }, 1000);  
-           }
-           
-            setTimeout(function () {  
+                        scrollTop: $(window).scrollTop()
+                    }, 1000);
+                }
+                else {
+                    $('html, body').animate({
+                        scrollTop: (staticMenuOriginalPosition)
+                    }, 1000);
+                }
+            }
+            else if ($(window).scrollTop() == staticMenuOriginalPosition) {
+                addStickyBehaviour();
+                $('html, body').scrollTop(staticMenuOriginalPosition - staticMenu_height);
+                $('html, body').animate({
+                    scrollTop: (($('#' + $componentTarget).offset().top) - (staticMenu_height) + 2)
+                }, 1000);
+            }
+            else if ($(window).scrollTop() < staticMenuOriginalPosition) {
+                if ($('#SQL_StaticMenu').hasClass('sticky')) {
+                    $('html, body').animate({
+                        scrollTop: (($('#' + $componentTarget).offset().top) - (staticMenu_height) + 2)
+                    }, 1000);
+
+                }
+                else {
+                    $('html, body').animate({
+                        scrollTop: (($('#' + $componentTarget).offset().top) - (staticMenu_height * 2))
+                    }, 1000);
+                }
+            }
+            else {
+                addStickyBehaviour();
+                $('html, body').animate({
+                    scrollTop: (($('#' + $componentTarget).offset().top) - staticMenu_height + 2)
+                }, 1000);
+            }
+
+            setTimeout(function () {
                 //resetContainer = true;
-                 var tabindexChecker = $("#" + $componentTarget).parent('div').find('a:first').attr('tabindex');
-                 var tempComponentTarget = $("#" + $componentTarget).parent('div').find('a:first');
-                    if(typeof tabindexChecker !== typeof undefined && tabindexChecker !== false){
-                        tempComponentTarget.focus();
-                    }
-                    else {
-                        tempComponentTarget.attr('tabindex', '-1');
-                        tempComponentTarget.focus();  
-                        tempComponentTarget.removeAttr('tabindex');       
-                        resetTabArrowsZero();           
-                    }
-            }, 1000);        
+                var tabindexChecker = $("#" + $componentTarget).parent('div').find('a:first').attr('tabindex');
+                var tempComponentTarget = $("#" + $componentTarget).parent('div').find('a:first');
+                if (typeof tabindexChecker !== typeof undefined && tabindexChecker !== false) {
+                    tempComponentTarget.focus();
+                }
+                else {
+                    tempComponentTarget.attr('tabindex', '-1');
+                    tempComponentTarget.focus();
+                    tempComponentTarget.removeAttr('tabindex');
+                    resetTabArrowsZero();
+                }
+            }, 1000);
         }
     }
     function resetContainerPosition() {
@@ -3626,7 +3626,7 @@ var sqlintraPageNavBar = function () {
     return {
         init: init
     };
-} ();
+}();
 
 $(document).ready(function () {
     setTimeout(function () {
@@ -3790,16 +3790,16 @@ $(window).resize(function () {
     });
 });
 
-$(window).load(function(){
+$(window).load(function () {
     /**Static menu width calculation */
-     var el = $('#sql_static_menu_1');
-     var len = el.children().length;
-     if(len > 0){
-        len = 100/len;
-        el.find('li.dtc').css("width",  len + "%"); 
+    var el = $('#sql_static_menu_1');
+    var len = el.children().length;
+    if (len > 0) {
+        len = 100 / len;
+        el.find('li.dtc').css("width", len + "%");
         // console.log(len);
-     } 
-/**Static menu width calculation */
+    }
+    /**Static menu width calculation */
 });
 
 function MediaCarouselWithFramesIDRemove() {
@@ -3812,15 +3812,16 @@ function MediaCarouselWithFramesIDRemove() {
 }
 
 // this is a correction for tabindex being forced to -1 for the frames.  Opted not to re-write all the other code  - 05/02/18
-$(document).ready(function() {
-    function resetTabArrowsZero() {
-      $(".mediaCarNavArrows").attr("tabindex", "0");
-    }
+$(document).ready(function () {
 
     setInterval(function () {
         resetTabArrowsZero();
     }, 3000);
-  
+
 });
 
+function resetTabArrowsZero() {
+    $(".mediaCarNavArrows").attr("tabindex", "0");
+}
 
+// Problem - in Firefox when tabbing backwards a shift tab acts like a click and sends the active state back to the pagination. Only in Firefox

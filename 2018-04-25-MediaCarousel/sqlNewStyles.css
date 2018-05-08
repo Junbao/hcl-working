@@ -871,6 +871,8 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     bottom: 0;
     margin: auto;
     z-index: 110;
+    padding: 0;
+    background-color: white;
 }
 
 .cp-media-carousel-with-frames .carousel-navigation .carousel-prev {
