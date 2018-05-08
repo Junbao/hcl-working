@@ -12,32 +12,15 @@
 					<mscom:conditional propertyexists="false" property="PageProperties.IsMediaCarouselWithFrames_Hero">
 						<h2 class="c-heading-3">{{headline}}</h2>
 					</mscom:conditional>
-
 				</div>
 
 				<div class="carousel-with-frames">
 					<div class="carousel-navigation">
 						<button tabindex="0" aria-label="view previous slide" class="carousel-button carousel-prev mediaCarNavArrows" data-desktop-class="carousel-button carousel-prev">
-							<picture>
-								<source class='hide-by-default show-element' srcset='{{carousel_prev-Min-1779px}}' media='(min-width:1779px)'></source>
-								<source class='hide-by-default show-element' srcset='{{carousel_prev-Min-1400px}}' media='(min-width:1400px)'></source>
-								<source class='hide-by-default show-element' srcset='{{carousel_prev-Min-1084px}}' media='(min-width:1084px)'></source>
-								<source class='hide-by-default show-element' srcset='{{carousel_prev-Min-768px}}' media='(min-width:768px)'></source>
-								<source class='hide-by-default show-element' srcset='{{carousel_prev}}' media='(min-width:540px)'></source>
-								<source class='hide-by-default show-element' srcset='{{carousel_prev}}' media='(min-width:0)'></source>
-								<img  srcset='{{carousel_prev}}' md:payloadguid="{{carousel_prev}}" alt="{{carousel_prev_alt}}" src="{{carousel_prev}}" title="previous">
-							</picture>
+							<img alt="{{carousel_prev_alt}}" src="{{carousel_prev}}" title="previous" aria-hidden="true" />
 						</button>
-						<button  aria-label="view next slide" class="carousel-button carousel-next mediaCarNavArrows" data-desktop-class="carousel-button carousel-next">
-							<picture role="button">
-								<source class='hide-by-default show-element' srcset='{{carousel_next-Min-1779px}}' media='(min-width:1779px)'></source>
-								<source class='hide-by-default show-element' srcset='{{carousel_next-Min-1400px}}' media='(min-width:1400px)'></source>
-								<source class='hide-by-default show-element' srcset='{{carousel_next-Min-1084px}}' media='(min-width:1084px)'></source>
-								<source class='hide-by-default show-element' srcset='{{carousel_next-Min-768px}}' media='(min-width:768px)'></source>
-								<source class='hide-by-default show-element' srcset='{{carousel_next}}' media='(min-width:540px)'></source>
-								<source class='hide-by-default show-element' srcset='{{carousel_next}}' media='(min-width:0)'></source>
-								<img  srcset='{{carousel_next}}' md:payloadguid="{{carousel_next}}" alt="{{carousel_next_alt}}" src="{{carousel_next}}" title="next">
-							</picture>
+						<button tabindex="0" aria-label="view next slide" class="carousel-button carousel-next mediaCarNavArrows" data-desktop-class="carousel-button carousel-next">
+							<img alt="{{carousel_next_alt}}" src="{{carousel_next}}" title="next" aria-hidden="true" />
 						</button>
 					</div>
 					<input type="hidden" value="{{play_button_image}}">
@@ -51,8 +34,6 @@
 						<button role="tab" aria-label="view slide 5 of 7 - {{5:carousel_headline}}" aria-controls="MediaSlideFive" data-show="{{5:show}}"></button>
 						<button role="tab" aria-label="view slide 6 of 7 - {{6:carousel_headline}}" aria-controls="MediaSlideSix" data-show="{{6:show}}"></button>
 						<button role="tab" aria-label="view slide 7 of 7 - {{7:carousel_headline}}" aria-controls="MediaSlideSeven" data-show="{{7:show}}"></button>
-						<!--<button role="tab"  aria-label="sequence-indicator-label" aria-controls="sequence-indicator-label-eight"
-						data-show="{{8:show}}"></button>-->
 					</div>
 					<div class="carousel-group">
 						<div class="carousel-frame" data-show="true" data-carousel-position="-2"></div>
