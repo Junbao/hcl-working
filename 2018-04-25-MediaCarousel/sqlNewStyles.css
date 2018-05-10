@@ -862,6 +862,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     position: absolute;
     height: 384px;
     width: 100%;
+    top: 0;
 }
 
 .cp-media-carousel-with-frames .carousel-navigation .carousel-button {
@@ -874,6 +875,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     padding: 0;
     background-color: transparent;
 }
+
 .cp-media-carousel-with-frames .carousel-navigation .carousel-button:focus {
     outline: 1px dashed #000;
 }
@@ -995,6 +997,10 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 
 .cp-media-carousel-with-frames.white-bgc .carousel-group .carousel-frame .carousel-frame-shadow {
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.75);
+}
+
+.cp-media-carousel-with-frames .carousel-group *:active {
+    border: 2px solid red;
 }
 
 .cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position="active"] .carousel-frame-shadow {

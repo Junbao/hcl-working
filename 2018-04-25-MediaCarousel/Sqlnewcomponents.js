@@ -862,7 +862,7 @@ $(document).ready(function () {
                 });
             }
         });
-    } catch (e) {}
+    } catch (e) { }
 });
 
 function isScrolledIntoView(elem) {
@@ -925,7 +925,7 @@ $(window).load(function () {
     try {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
-    } catch (e) {}
+    } catch (e) { }
     resetTabArrowsZero();
 });
 
@@ -933,7 +933,7 @@ $(window).resize(function () {
     try {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
-    } catch (e) {}
+    } catch (e) { }
 });
 /**********END OF CP_CustomCarouselSettings.js **********/
 
@@ -1140,7 +1140,7 @@ $(document).ready(function () {
             nextNode.onclick = function (e) {
                 e.preventDefault();
                 slideFrame(false);
-                if (!e.isTrigger  && slickAutoPlay == true) {
+                if (!e.isTrigger && slickAutoPlay == true) {
                     intervalManager(false);
                     intervalManager(true, currentcarousel, slickAutoPlay, slickautoplayspeed);
                 }
@@ -1293,12 +1293,62 @@ $(document).ready(function () {
                 resetTabArrowsZero();
             }
 
+// when aria-controls = data - carousel-position = "active" id = "MediaSlideSeven"
+// var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+
+// var element = document.querySelector('#test');
+// setTimeout(function () {
+//     element.setAttribute('data-text', 'whatever');
+// }, 5000)
+
+// var observer = new MutationObserver(function (mutations) {
+//     mutations.forEach(function (mutation) {
+//         if (mutation.type == "attributes") {
+//             console.log("attributes changed")
+//         }
+//     });
+// });
+
+// observer.observe(element, {
+//     attributes: true //configure it to listen to attribute changes
+// });  
+
+            var findFrameID = document.getElementsByClassName('carousel-frame');
+
+            function changeFocus(btnIcon) {
+                // console.log("well something is working");
+                // var i = 0;
+                // for ( i ; i < findFrameID.length; i++) {
+                //     // console.log(findFrameID[i].getAttribute('id') + " so far");
+                //     if ( findFrameID[i].getAttribute('id') == btnIcon ) {
+                //         console.log("on it now" + btnIcon);
+                //         console.log($(this));
+                //         $(this).find('a').attr('tabindex', '0').focus();
+                //     }
+                // $('button[aria-selected="true"]').attr('tabindex', '-1');
+                // $('.cp-media-carousel-with-frames .carousel-group .carousel-frame').on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
+                //     $('.carousel-frame[data-carousel-position="active"] a').attr('tabindex', '0').focus();
+                // })
+                $('.carousel-frame[data-carousel-position="active"] a').attr('tabindex', '0').focus();
+            };
+
+            $('.c-sequence-indicator button').keypress(function() {
+                if ( event.which == 13 ) changeFocus();
+            });
+            $('.c-sequence-indicator button').on("click", function(){
+                var btnIcon = $(this).attr('aria-controls');
+                
+                // $('.carousel-frame[data-carousel-position="active"] a').attr('tabindex', '0').focus();
+                changeFocus(btnIcon);
+            });
+
+
             function setPagination(isNext, newActivePage) {
                 if (newActivePage !== activePage) {
                     pageNodes[newActivePage].focus();
                     pageNodes[activePage].setAttribute('aria-selected', false);
                     pageNodes[newActivePage].setAttribute('aria-selected', true);
-
+                    
                     activePage = newActivePage;
                 }
             }
@@ -1816,7 +1866,7 @@ $(document).ready(function () {
             // carouselComponentFCT();
             liheightcalc();
         });
-    } catch (e) {}
+    } catch (e) { }
 });
 /** DIV line-height**/
 
@@ -2067,7 +2117,7 @@ $(document).ready(function () {
             }
         }
 
-    } catch (e) {}
+    } catch (e) { }
 });
 
 $(window).on("load", function () {
@@ -2087,7 +2137,7 @@ $(window).on("load", function () {
             }
 
         }, 2000);
-    } catch (e) {}
+    } catch (e) { }
 });
 
 /**********END OF CP_StaticSupportLinks.js **********/
@@ -2130,7 +2180,7 @@ $(document).ready(function () {
                 }
             }
         }
-    } catch (e) {}
+    } catch (e) { }
 });
 
 
@@ -2185,25 +2235,25 @@ function stickynavslick() {
         infinite: false,
 
         responsive: [{
-                breakpoint: 1084,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: true,
-                    infinite: false
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: true,
-                    infinite: false
-                }
+            breakpoint: 1084,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                infinite: false
             }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                infinite: false
+            }
+        }
         ]
     });
 
@@ -2660,29 +2710,29 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [{
-                breakpoint: 1084,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    initialSlide: 0
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    initialSlide: 0
-                }
-            },
-            {
-                breakpoint: 539,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    initialSlide: 0
-                }
+            breakpoint: 1084,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                initialSlide: 0
             }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                initialSlide: 0
+            }
+        },
+        {
+            breakpoint: 539,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 0
+            }
+        }
         ]
     });
 
@@ -2884,7 +2934,7 @@ function Sql3Vs4Vs5VsAnalysis_thumbnail_minHeight() {
             $(".thumbnail-child1").removeClass("thumbnail-child1");
             $(".thumbnail-child2").removeClass("thumbnail-child2");
         });
-    } catch (e) {}
+    } catch (e) { }
 }
 
 $(document).ready(function () {
@@ -3079,7 +3129,7 @@ $(document).on("click", ".jcarousel-control-next", function (e) {
             $(".current-righttab-carousel").find(".jcarousel-control-prev").attr('aria-label', 'view previous slide');
         }
         $(".current-righttab-carousel").removeClass("current-righttab-carousel");
-    } catch (e) {}
+    } catch (e) { }
 });
 $(document).on("click", ".jcarousel-control-prev", function (e) {
     e.stopImmediatePropagation();
@@ -3270,7 +3320,7 @@ $(document).ready(function () {
             $('#SQL_StaticMenu').removeClass('bg-grey-d2');
             $('#SQL_StaticMenu').addClass('bg-grey-50');
         }
-    } catch (e) {}
+    } catch (e) { }
 });
 
 /*SQL-static menu*/
