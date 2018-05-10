@@ -999,9 +999,9 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.75);
 }
 
-.cp-media-carousel-with-frames .carousel-group *:active {
+/* .cp-media-carousel-with-frames .carousel-group *:active {
     border: 2px solid red;
-}
+} */
 
 .cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position="active"] .carousel-frame-shadow {
     width: 90%;
