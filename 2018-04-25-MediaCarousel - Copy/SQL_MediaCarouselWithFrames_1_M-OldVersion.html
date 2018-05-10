@@ -4,7 +4,8 @@
  data-disable="true" data-tag="tagging" data-auto-play="{{data-auto-play}}" data-auto-play-speed="{{data-auto-play-speed}}">
 	<div class="ms-grid full">
 		<div class="ms-row no-margin">
-			<div class="livearea">
+			 <!-- xs-col-24-24 s-col-24-24 -->
+			<div class="livearea" aria-live="polite" aria-label="Carousel showing new capabilities of SQL Server 2017">
 				<div class="headline">
 					<mscom:conditional propertyexists="true" property="PageProperties.IsMediaCarouselWithFrames_Hero">
 						<h1 class="c-heading-3">{{headline}}</h1>
@@ -14,7 +15,8 @@
 					</mscom:conditional>
 				</div>
 
-				<div class="carousel-with-frames" role="region" aria-label="Carousel showing new capabilities of SQL Server 2017">
+				<div class="carousel-with-frames">
+
 					<input type="hidden" value="{{play_button_image}}">
 					<input type="hidden" value="{{play_button_image_alt}}">
 					<input type="hidden" value="{{layover_close_image}}">
@@ -343,24 +345,37 @@
 							</div>-->
 						</div>
 					</div>
+
 					<div class="carousel-navigation">
-						<button tabindex="0" aria-label="view previous slide" class="carousel-button carousel-prev" data-desktop-class="carousel-button carousel-prev">
-							<img alt="{{carousel_prev_alt}}" src="{{carousel_prev}}" title="previous" role="presentation" />
-						</button>
-						<button tabindex="0" aria-label="view next slide" class="carousel-button carousel-next" data-desktop-class="carousel-button carousel-next">
-							<img alt="{{carousel_next_alt}}" src="{{carousel_next}}" title="next" role="presentation" />
-						</button>
-					</div>
-					<div class="c-sequence-indicator" role="tablist" aria-live="assertive" aria-hidden="false">
-						<button role="tab" aria-label="Jump to slide 1 of 7 - {{1:carousel_headline}}" aria-controls="MediaSlideOne" data-show="{{1:show}}"></button>
-						<button role="tab" aria-label="Jump to slide 2 of 7 - {{2:carousel_headline}}" aria-controls="MediaSlideTwo" data-show="{{2:show}}"></button>
-						<button role="tab" aria-label="Jump to slide 3 of 7 - {{3:carousel_headline}}" aria-controls="MediaSlideThree" data-show="{{3:show}}"></button>
-						<button role="tab" aria-label="Jump to slide 4 of 7 - {{4:carousel_headline}}" aria-controls="MediaSlideFour" data-show="{{4:show}}"></button>
-						<button role="tab" aria-label="Jump to slide 5 of 7 - {{5:carousel_headline}}" aria-controls="MediaSlideFive" data-show="{{5:show}}"></button>
-						<button role="tab" aria-label="Jump to slide 6 of 7 - {{6:carousel_headline}}" aria-controls="MediaSlideSix" data-show="{{6:show}}"></button>
-						<button role="tab" aria-label="Jump to slide 7 of 7 - {{7:carousel_headline}}" aria-controls="MediaSlideSeven" data-show="{{7:show}}"></button>
+							<button role="button" class="carousel-button carousel-prev mediaCarNavArrows" title="previous" aria-label="View previous slide">&nbsp;</button>
+							<button role="button" class="carousel-button carousel-next mediaCarNavArrows" title="next" aria-label="View next slide">&nbsp;</button>
 					</div>
 
+					<div class="c-sequence-indicator" role="tablist" aria-hidden="false" aria-controls="carousel">
+						<ul id="mediaCarouselPageButtons">
+							<li aria-label="view slide one">
+								<button role="button" aria-label="view slide one - {{1:carousel_headline}}" aria-controls="MediaSlideOne" data-show="{{1:show}}"></button>
+							</li>
+							<li aria-label="view slide two">
+								<button role="button" aria-label="view slide two - {{2:carousel_headline}}" aria-controls="MediaSlideTwo" data-show="{{2:show}}"></button>
+							</li>
+							<li>
+								<button role="button" aria-label="view slide three - {{3:carousel_headline}}" aria-controls="MediaSlideThree" data-show="{{3:show}}"></button>
+							</li>
+							<li>
+								<button role="button" aria-label="view slide four - {{4:carousel_headline}}" aria-controls="MediaSlideFour" data-show="{{4:show}}"></button>
+							</li>
+							<li>
+								<button role="button" aria-label="view slide five - {{5:carousel_headline}}" aria-controls="MediaSlideFive" data-show="{{5:show}}"></button>
+							</li>
+							<li>
+								<button role="button" aria-label="view slide six - {{6:carousel_headline}}" aria-controls="MediaSlideSix" data-show="{{6:show}}"></button>
+							</li>
+							<li>
+								<button role="button" aria-label="view slide seven - {{7:carousel_headline}}" aria-controls="MediaSlideSeven" data-show="{{7:show}}"></button>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
