@@ -941,6 +941,9 @@ $(window).resize(function () {
 /**********START OF CP_MediaCarouselWithFrames.js **********/
 var mediaAutoCarousel = null;
 var trigerredclick = 0;
+// var mcAnimation = setInterval(function () {
+//     mcAnimationListener()
+// }, 1000);
 
 function intervalManager(flag, currentcarousel, slickAutoPlay, slickautoplayspeed) {
     var ishover = 0;
@@ -1285,8 +1288,8 @@ $(document).ready(function () {
                     frameNode.style.left = ((position === "active") ? initLocation : parseInt(position) * scaledWidth + initScaledLocation) + 'px';
                 });
                 $(".carousel-frame[data-carousel-position='active']").find("a.open-popup-video").css("pointerEvents", "auto");
-                $(".carousel-frame[data-carousel-position='active']").find("a.open-popup-video").attr("tabindex", "0");
-                $(".carousel-frame[data-carousel-position='active']").find(".carousel-content a").attr("tabindex", "0");
+                $(".carousel-frame[data-carousel-position='active']").find(".video-link a.open-popup-video").attr("tabindex", "0");
+                $(".carousel-frame[data-carousel-position='active']").find(".carousel-content a").attr("tabindex", "-1");
                 $(".carousel-frame[data-carousel-position='active']").siblings().find("a.open-popup-video").css("pointerEvents", "none");
                 $(".carousel-frame[data-carousel-position='active']").siblings().find("a.open-popup-video").attr("tabindex", "-1");
                 $(".carousel-frame[data-carousel-position='active']").siblings().find(".carousel-content a").attr("tabindex", "-1");
@@ -1294,15 +1297,33 @@ $(document).ready(function () {
             }
 
 
-            function changeFocus() {
-                $('.carousel-frame[data-carousel-position="active"] a').attr('tabindex', '0').focus();
+            function changeFocus(btnIcon) {
+                $(".carousel-content a").attr("tabindex", "-1");
+                $('.carousel-frame[data-carousel-position="active"] .video-link a').attr('tabindex', '0').focus();
+                // var findFrameID = document.getElementById(btnIcon);
+                // var attribute = findFrameID.getAttribute("data-carousel-position");
+
+                // var timing = setInterval(function () {
+                //     attribute = findFrameID.getAttribute("data-carousel-position");
+                //     if (attribute === "active") {
+                //         console.log("Why yes it is");
+                //         //  $('.carousel-frame[data-carousel-position="active"] a').attr('tabindex', '0').focus();
+                //         clearInterval(timing);
+                //         return;
+                //     };
+                //     console.log("nothing yet");
+                // }, 1000);
+
             };
 
             $('.c-sequence-indicator button').keypress(function () {
                 if (event.which == 13) changeFocus();
             });
             $('.c-sequence-indicator button').on("click", function () {
-                changeFocus();
+                var btnIcon = $(this).attr('aria-controls');
+
+                // $('.carousel-frame[data-carousel-position="active"] a').attr('tabindex', '0').focus();
+                changeFocus(btnIcon);
             });
 
 
