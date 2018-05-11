@@ -1137,6 +1137,8 @@ $(document).ready(function () {
                         $(this).attr('aria-hidden', 'true');
                     }
                 });
+                // changeFocus();
+                $('.carousel-frame .video-link a').css("border", "none");
                 MediaCarouselWithFramesIDRemove();
             }
 
@@ -1154,6 +1156,8 @@ $(document).ready(function () {
                         $(this).attr('aria-hidden', 'true');
                     }
                 });
+                // changeFocus();
+                $('.carousel-frame .video-link a').css("border", "none");
                 MediaCarouselWithFramesIDRemove();
             }
 
@@ -1299,34 +1303,52 @@ $(document).ready(function () {
 
             function changeFocus() {
                 // $(".carousel-content a").attr("tabindex", "-1");
+                console.log("Change Focus was called and running");
                 $('.carousel-frame .video-link a').css("border", "none");
 
                 var findFrame = document.getElementsByClassName('carousel-frame');
                 var attribute = "";
                 var i = 0;
-                setTimeout(function(){
+                setTimeout(function () {
                     $('.carousel-frame .video-link a').css("border", "none");
-                        var timing = setInterval(function () {
-                            for (i; i< findFrame.length; i++) {
-                                attribute = findFrame[i].getAttribute("data-carousel-position");
-                                if (attribute === "active") {
-                                    $('.carousel-frame .video-link a').css("border", "none");
-                                    $('.carousel-frame[data-carousel-position="active"] .video-link a').css("border", "2px dashed red").attr('tabindex', '0').focus();
-                                    clearInterval(timing);
-                                    return;
-                                }
+                    var timing = setInterval(function () {
+                        for (i; i < findFrame.length; i++) {
+                            attribute = findFrame[i].getAttribute("data-carousel-position");
+                            if (attribute === "active") {
+                                $('.carousel-frame .video-link a').css("border", "none");
+                                $('.carousel-frame[data-carousel-position="active"] .video-link a').css("border", "4px solid #1e90ff").attr('tabindex', '0').focus();
+                                clearInterval(timing);
+                                pageIconSet();
+                                return;
                             }
-                        }, 250);
-                }, 250);
+                        }
+                    }, 250);
+                    pageIconSet();
+                }, 1500);
             };
 
             $('.c-sequence-indicator button').keypress(function () {
-                if (event.which == 13) changeFocus();
+                if (event.which == 13) {
+                    changeFocus();
+                }
             });
             $('.c-sequence-indicator button').on("click", function () {
                 changeFocus();
             });
 
+            function pageIconSet() {
+                console.log("Page Icon is called and running");
+                $('.c-sequence-indicator button').each(function () {
+                        if ($(this).attr('aria-selected') != "true") {
+                            $(this).attr('tabindex', '-1');
+                        } else {
+                            $(this).attr('tabindex', '0');
+                        }
+                    }
+
+                );
+
+            };
 
             function setPagination(isNext, newActivePage) {
                 if (newActivePage !== activePage) {
