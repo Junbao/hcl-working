@@ -1297,33 +1297,34 @@ $(document).ready(function () {
             }
 
 
-            function changeFocus(btnIcon) {
-                $(".carousel-content a").attr("tabindex", "-1");
-                $('.carousel-frame[data-carousel-position="active"] .video-link a').attr('tabindex', '0').focus();
-                // var findFrameID = document.getElementById(btnIcon);
-                // var attribute = findFrameID.getAttribute("data-carousel-position");
+            function changeFocus() {
+                // $(".carousel-content a").attr("tabindex", "-1");
+                $('.carousel-frame .video-link a').css("border", "none");
 
-                // var timing = setInterval(function () {
-                //     attribute = findFrameID.getAttribute("data-carousel-position");
-                //     if (attribute === "active") {
-                //         console.log("Why yes it is");
-                //         //  $('.carousel-frame[data-carousel-position="active"] a').attr('tabindex', '0').focus();
-                //         clearInterval(timing);
-                //         return;
-                //     };
-                //     console.log("nothing yet");
-                // }, 1000);
-
+                var findFrame = document.getElementsByClassName('carousel-frame');
+                var attribute = "";
+                var i = 0;
+                setTimeout(function(){
+                    $('.carousel-frame .video-link a').css("border", "none");
+                        var timing = setInterval(function () {
+                            for (i; i< findFrame.length; i++) {
+                                attribute = findFrame[i].getAttribute("data-carousel-position");
+                                if (attribute === "active") {
+                                    $('.carousel-frame .video-link a').css("border", "none");
+                                    $('.carousel-frame[data-carousel-position="active"] .video-link a').css("border", "2px dashed red").attr('tabindex', '0').focus();
+                                    clearInterval(timing);
+                                    return;
+                                }
+                            }
+                        }, 250);
+                }, 250);
             };
 
             $('.c-sequence-indicator button').keypress(function () {
                 if (event.which == 13) changeFocus();
             });
             $('.c-sequence-indicator button').on("click", function () {
-                var btnIcon = $(this).attr('aria-controls');
-
-                // $('.carousel-frame[data-carousel-position="active"] a').attr('tabindex', '0').focus();
-                changeFocus(btnIcon);
+                changeFocus();
             });
 
 
