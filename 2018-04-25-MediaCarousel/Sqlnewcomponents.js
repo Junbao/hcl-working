@@ -862,7 +862,7 @@ $(document).ready(function () {
                 });
             }
         });
-    } catch (e) {}
+    } catch (e) { }
 });
 
 function isScrolledIntoView(elem) {
@@ -925,7 +925,7 @@ $(window).load(function () {
     try {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
-    } catch (e) {}
+    } catch (e) { }
     resetTabArrowsZero();
 });
 
@@ -933,7 +933,7 @@ $(window).resize(function () {
     try {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
-    } catch (e) {}
+    } catch (e) { }
 });
 /**********END OF CP_CustomCarouselSettings.js **********/
 
@@ -941,9 +941,6 @@ $(window).resize(function () {
 /**********START OF CP_MediaCarouselWithFrames.js **********/
 var mediaAutoCarousel = null;
 var trigerredclick = 0;
-// var mcAnimation = setInterval(function () {
-//     mcAnimationListener()
-// }, 1000);
 
 function intervalManager(flag, currentcarousel, slickAutoPlay, slickautoplayspeed) {
     var ishover = 0;
@@ -982,9 +979,8 @@ function intervalManager(flag, currentcarousel, slickAutoPlay, slickautoplayspee
     }
 }
 
-
-
 $(window).load(function () {
+    $(".video-link a").attr("tabindex", "-1");
     try {
         $(".cp-media-carousel-with-frames").each(function () {
             var currentcarousel = $(this);
@@ -1055,6 +1051,8 @@ $(window).scroll(function () {
 
 });
 $(document).ready(function () {
+    var pageIconPlace = 0;
+    var place = 0;
     try {
 
         var forEach = Array.prototype.forEach.call.bind(Array.prototype.forEach);
@@ -1301,22 +1299,51 @@ $(document).ready(function () {
             }
 
 
-            function changeFocus() {
+            function changeFocus(place) {
                 // $(".carousel-content a").attr("tabindex", "-1");
-                console.log("Change Focus was called and running");
                 $('.carousel-frame .video-link a').css("border", "none");
-
+                // $('.c-sequence-indicator buttton').attr('aria-hidden', 'true');
                 var findFrame = document.getElementsByClassName('carousel-frame');
                 var attribute = "";
                 var i = 0;
-                setTimeout(function () {
+                var time;
+                if (pageIconPlace === place) {
+                    time = 250;
+                } else if (pageIconPlace > place) {
+                    pageIconPlace = place - pageIconPlace;
+                } else {
+                    pageIconPlace = pageIconPlace - place;
+                }
+
+                if (pageIconPlace === -7) {
+                    time = 1700;
+                } else if (pageIconPlace === -6) {
+                    time = 1500;
+                } else if (pageIconPlace === -5) {
+                    time = 1250;
+                } else if (pageIconPlace === -4) {
+                    time = 1000;
+                } else if (pageIconPlace === -3) {
+                    time = 750;
+                } else if (pageIconPlace === -2) {
+                    time = 500;
+                } else if (pageIconPlace === -1) {
+                    time = 250;
+                } else {
+                    time = 1750;
+                }
+
+
+                setTimeout(function (time) {
                     $('.carousel-frame .video-link a').css("border", "none");
                     var timing = setInterval(function () {
                         for (i; i < findFrame.length; i++) {
                             attribute = findFrame[i].getAttribute("data-carousel-position");
                             if (attribute === "active") {
-                                $('.carousel-frame .video-link a').css("border", "none");
-                                $('.carousel-frame[data-carousel-position="active"] .video-link a').css("border", "4px solid #1e90ff").attr('tabindex', '0').focus();
+                                $(this).attr('tabindex', '0');
+                                // $('.carousel-frame .video-link a').css("border", "none");
+                                $('.carousel-frame[data-carousel-position="active"] .video-link .open-popup-video').attr('tabindex', '0').focus();
+                                $('.carousel-frame .video-link a').attr('aria-hidden', 'false');
                                 clearInterval(timing);
                                 pageIconSet();
                                 return;
@@ -1324,27 +1351,29 @@ $(document).ready(function () {
                         }
                     }, 250);
                     pageIconSet();
-                }, 1500);
+                    // $('.c-sequence-indicator buttton').delay(1000).attr('aria-hidden', 'false');
+                }, time);
             };
 
             $('.c-sequence-indicator button').keypress(function () {
                 if (event.which == 13) {
-                    changeFocus();
+                    place = $(this).attr('data-place');
+                    changeFocus(place);
                 }
             });
             $('.c-sequence-indicator button').on("click", function () {
-                changeFocus();
+                place = $(this).attr('data-place');
+                changeFocus(place);
             });
 
             function pageIconSet() {
-                console.log("Page Icon is called and running");
                 $('.c-sequence-indicator button').each(function () {
-                        if ($(this).attr('aria-selected') != "true") {
-                            $(this).attr('tabindex', '-1');
-                        } else {
-                            $(this).attr('tabindex', '0');
-                        }
+                    if ($(this).attr('aria-selected') != "true") {
+                        $(this).attr('tabindex', '-1');
+                    } else {
+                        $(this).attr('tabindex', '0');
                     }
+                }
 
                 );
 
@@ -1873,7 +1902,7 @@ $(document).ready(function () {
             // carouselComponentFCT();
             liheightcalc();
         });
-    } catch (e) {}
+    } catch (e) { }
 });
 /** DIV line-height**/
 
@@ -2124,7 +2153,7 @@ $(document).ready(function () {
             }
         }
 
-    } catch (e) {}
+    } catch (e) { }
 });
 
 $(window).on("load", function () {
@@ -2144,7 +2173,7 @@ $(window).on("load", function () {
             }
 
         }, 2000);
-    } catch (e) {}
+    } catch (e) { }
 });
 
 /**********END OF CP_StaticSupportLinks.js **********/
@@ -2187,7 +2216,7 @@ $(document).ready(function () {
                 }
             }
         }
-    } catch (e) {}
+    } catch (e) { }
 });
 
 
@@ -2242,25 +2271,25 @@ function stickynavslick() {
         infinite: false,
 
         responsive: [{
-                breakpoint: 1084,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: true,
-                    infinite: false
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: true,
-                    infinite: false
-                }
+            breakpoint: 1084,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                infinite: false
             }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                infinite: false
+            }
+        }
         ]
     });
 
@@ -2717,29 +2746,29 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [{
-                breakpoint: 1084,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    initialSlide: 0
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    initialSlide: 0
-                }
-            },
-            {
-                breakpoint: 539,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    initialSlide: 0
-                }
+            breakpoint: 1084,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                initialSlide: 0
             }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                initialSlide: 0
+            }
+        },
+        {
+            breakpoint: 539,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 0
+            }
+        }
         ]
     });
 
@@ -2941,7 +2970,7 @@ function Sql3Vs4Vs5VsAnalysis_thumbnail_minHeight() {
             $(".thumbnail-child1").removeClass("thumbnail-child1");
             $(".thumbnail-child2").removeClass("thumbnail-child2");
         });
-    } catch (e) {}
+    } catch (e) { }
 }
 
 $(document).ready(function () {
@@ -3136,7 +3165,7 @@ $(document).on("click", ".jcarousel-control-next", function (e) {
             $(".current-righttab-carousel").find(".jcarousel-control-prev").attr('aria-label', 'view previous slide');
         }
         $(".current-righttab-carousel").removeClass("current-righttab-carousel");
-    } catch (e) {}
+    } catch (e) { }
 });
 $(document).on("click", ".jcarousel-control-prev", function (e) {
     e.stopImmediatePropagation();
@@ -3327,7 +3356,7 @@ $(document).ready(function () {
             $('#SQL_StaticMenu').removeClass('bg-grey-d2');
             $('#SQL_StaticMenu').addClass('bg-grey-50');
         }
-    } catch (e) {}
+    } catch (e) { }
 });
 
 /*SQL-static menu*/
@@ -3867,4 +3896,4 @@ function resetTabArrowsZero() {
     $(".mediaCarNavArrows").attr("tabindex", "0");
 }
 
-// Problem - in Firefox when tabbing backwards a shift tab acts like a click and sends the active state back to the pagination. Only in Firefox
+    // Problem - in Firefox when tabbing backwards a shift tab acts like a click and sends the active state back to the pagination. Only in Firefox

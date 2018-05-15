@@ -1301,8 +1301,9 @@
 
                 function changeFocus(place) {
                     // $(".carousel-content a").attr("tabindex", "-1");
-                    $('.carousel-frame .video-link a').css("border", "none");
+                    // $('.carousel-frame .video-link a').css("border", "none");
                     // $('.c-sequence-indicator buttton').attr('aria-hidden', 'true');
+                    $('.carousel-frame .video-link a').attr('aria-selected', 'false');
                     var findFrame = document.getElementsByClassName('carousel-frame');
                     var attribute = "";
                     var i = 0;
@@ -1335,14 +1336,14 @@
 
                     
                     setTimeout(function (time) {
-                        $('.carousel-frame .video-link a').css("border", "none");
+                        // $('.carousel-frame .video-link a').css("border", "none");
                         var timing = setInterval(function () {
                             for (i; i < findFrame.length; i++) {
                                 attribute = findFrame[i].getAttribute("data-carousel-position");
                                 if (attribute === "active") {
                                     $(this).attr('tabindex', '0');
                                     // $('.carousel-frame .video-link a').css("border", "none");
-                                    $('.carousel-frame[data-carousel-position="active"] .video-link .open-popup-video').attr('tabindex', '0').focus();
+                                    $('.carousel-frame[data-carousel-position="active"] .video-link .open-popup-video').attr('tabindex', '0').attr('aria-selected', 'true').focus();
                                     $('.carousel-frame .video-link a').attr('aria-hidden', 'false');
                                     clearInterval(timing);
                                     pageIconSet();
