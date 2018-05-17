@@ -4569,6 +4569,7 @@ $(window).on('load', function () {
     var w = window.location.href;
     var x = w.split('#');
     var a = $('#' + x[1]).offset().top;
+    var ps= 0;
     console.log("offset value:" + a);
     setTimeout(function () {
         window.scrollTo(0, a);
@@ -4576,25 +4577,42 @@ $(window).on('load', function () {
         $('#' + x[1]).next("section").find('.livearea').addClass('deepstick');
         // $('#' + x[1] +'+'+'div').children().find('.livearea').addClass('deepstick');
         $('#' + x[1]).next("div").find('.livearea').addClass('deepstick');
+        ps = $('#primarySection').offset().top;
+        console.log("initial ps top offset value " + ps);
     }, 1000);
-    var rect = document.getElementById('CP_ThreeColumnsWithCopy_1').getBoundingClientRect();
-    console.log(rect.top, rect.right, rect.bottom, rect.left);
-});
+    // var rect = document.getElementById('CP_ThreeColumnsWithCopy_1').getBoundingClientRect();
+    // console.log(rect.top, rect.right, rect.bottom, rect.left);
 
-
-$(document).ready(function () {
     $('#CP_StickyNav_1 a').click(function () {
-        var w = window.location.href;
-        var x = w.split('#');
-        var a = $('#' + x[1]).offset().top;
-        console.log("offset new value:" + a);
-        var myTarget = $('#' + x[1]);
-        // console.log("Target offset is: " + $('#x').offset().top);
-        window.scrollTo(0, a);
-        // console.log("working?");
+        // console.log("clicked sticky nav");
+        // console.log("new offset value:" + a);
+        // console.log("new offset value:" + a+70);
+        // window.scrollTo(0, a);
+        // $('#primarySection').offset({top: 70,left: 00});
+        var stickyNav = document.getElementById('CP_StickyNav_1');
+        var stickyHeight = stickyNav.scrollHeight;
+        console.log(stickyHeight);
+        setTimeout(function () { 
+            if ($('#CP_StickyNav_1 .cp-sticky-nav-sub').css('position') === 'fixed') {
+                $('#primarySection').css({'position':'relative','top':stickyHeight});
+            } else {
+                console.log("not fixed");
+            }
+            // document.getElementById('primarySection').scrollTop = 70;
+            
+            // ps = $('#primarySection').offset().top;
+            // console.log("on click event ps top offset value " + ps);
+        },1000);
+        
 
-        var rect = document.getElementById('CP_ThreeColumnsWithCopy_1').getBoundingClientRect();
-        console.log(rect.top, rect.right, rect.bottom, rect.left);
+        // setTimeout(function () { 
+        //     console.log("sticky nav click - offset value:" + a);
+        //     ps = $('#primarySection').offset().top
+        //     console.log("PRIMARY - offset value:" + ps);
+        //     var stickyHeight = $('#CP_StickyNav_1').outerHeight(true);
+        //     console.log(stickyHeight);
+        //     window.scrollTo(0, 70);
+        // },1000);
     })
 
 });
