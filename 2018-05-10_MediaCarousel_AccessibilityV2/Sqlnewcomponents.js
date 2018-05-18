@@ -1323,7 +1323,6 @@
                                 attribute = findFrame[i].getAttribute("data-carousel-position");
                                 if (attribute === "active") {
                                     $(this).attr('tabindex', '0');
-                                    // $('.carousel-frame .video-link a').css("border", "none");
                                     $('.carousel-frame[data-carousel-position="active"] .video-link .open-popup-video').attr('tabindex', '0').attr('aria-selected', 'true').focus();
                                     $('.carousel-frame .video-link a').attr('aria-hidden', 'false');
                                     clearInterval(timing);
@@ -1337,12 +1336,10 @@
                 };
 
                 $('.c-sequence-indicator button').on("keydown",function (event) {
-                    console.log("the key = " + event);
                     if (event.which == 13) {
                         place = $(this).attr('data-place');
                         changeFocus(place);
                     } else if (event.which == 38 || event.which == 40) {
-                        console.log("up - down arrows");
                         event.preventDefault();
                     }
                 });
