@@ -1258,20 +1258,7 @@
 
                     setFramesPosition();
                     setPagination(isNext, maintainRange(activePage + (isNext ? -1 : 1), pageNodes.length));
-
-                    //setPlayButtonNode();
                 }
-
-                //function setPlayButtonNode() {
-
-                //var playButtonNode = frameNodes[activeFrame].querySelector('.play-button');
-                //var youtubeID = frameNodes[activeFrame].querySelector('.carousel-youtube-id').value;
-                // playButtonNode.onclick = function () {
-                // 	layoverNode.setAttribute('data-active', true);
-                // 	//layoverIframeNode.setAttribute('src', 'https://www.youtube.com/embed/' + youtubeID + '?autoplay=1');
-                // }                
-
-                //}
 
                 function copyFrame(fromFrameNode, toFrameNode) {
                     $(toFrameNode).empty();
@@ -1298,11 +1285,7 @@
                     resetTabArrowsZero();
                 }
 
-
                 function changeFocus(place) {
-                    // $(".carousel-content a").attr("tabindex", "-1");
-                    // $('.carousel-frame .video-link a').css("border", "none");
-                    // $('.c-sequence-indicator buttton').attr('aria-hidden', 'true');
                     $('.carousel-frame .video-link a').attr('aria-selected', 'false');
                     var findFrame = document.getElementsByClassName('carousel-frame');
                     var attribute = "";
@@ -1333,10 +1316,8 @@
                     } else {
                         time = 1750;
                     }
-
                     
                     setTimeout(function (time) {
-                        // $('.carousel-frame .video-link a').css("border", "none");
                         var timing = setInterval(function () {
                             for (i; i < findFrame.length; i++) {
                                 attribute = findFrame[i].getAttribute("data-carousel-position");
@@ -1352,16 +1333,20 @@
                             }
                         }, 250);
                         pageIconSet();
-                        // $('.c-sequence-indicator buttton').delay(1000).attr('aria-hidden', 'false');
                     }, time);
                 };
 
-                $('.c-sequence-indicator button').keypress(function () {
+                $('.c-sequence-indicator button').on("keydown",function (event) {
+                    console.log("the key = " + event);
                     if (event.which == 13) {
                         place = $(this).attr('data-place');
                         changeFocus(place);
+                    } else if (event.which == 38 || event.which == 40) {
+                        console.log("up - down arrows");
+                        event.preventDefault();
                     }
                 });
+                
                 $('.c-sequence-indicator button').on("click", function () {
                     place = $(this).attr('data-place');
                     changeFocus(place);
