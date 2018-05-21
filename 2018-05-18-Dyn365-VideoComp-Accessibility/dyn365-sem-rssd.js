@@ -133,7 +133,7 @@ $(window).resize(function () {
 $(window).load(function () {
     $(".d365-sem-wrapper .m-multi-feature.f-align-left .video-container .thumbnail-ul-holder .video-thumbnail-ul li").on("keydown", function (e) {
         var currentIndex = $(".thumbnail-ul-holder .video-thumbnail-ul li .f-active").parent("li").index();
-        if (e.which == 39) { //left key
+        if (e.which == 39 || e.which == 38) { //left key
 
             //To make the border active on left key press
             $(".thumbnail-ul-holder .video-thumbnail-ul li").eq(currentIndex).removeClass("inactive-border").addClass("active-border");
@@ -148,7 +148,7 @@ $(window).load(function () {
             $(".thumbnail-ul-holder .video-thumbnail-ul li").eq(currentIndex).siblings().find("span").removeClass("bold-font").addClass("normal-font");
 
         }
-        if (e.which == 37) { //right key
+        if (e.which == 37 || e.which == 40) { //right key
 
             //To make the border active on left key press
             $(".thumbnail-ul-holder .video-thumbnail-ul li").eq(currentIndex).removeClass("inactive-border").addClass("active-border");
@@ -163,48 +163,96 @@ $(window).load(function () {
             $(".thumbnail-ul-holder .video-thumbnail-ul li").eq(currentIndex).siblings().find("span").removeClass("bold-font").addClass("normal-font");
         }
     });
+
+
 });
 
+
+/*Scroll to Top*/
+$(window).scroll(function () {
+    if ($(this).scrollTop() >= 30) {
+        $('#scroll-top-reset').fadeIn(200);
+    } else {
+        $('#scroll-top-reset ').fadeOut(200);
+    }
+});
+$('#scroll-top-reset ').click(function () {
+    $('body,html').animate({
+        scrollTop: 0
+    }, 500);
+    $('#mainContent').focus();
+});
 
 // Accessibility fixes
 
 
-// ThumbNail - video-thumbnail-ul .c-sequence-indicator
-// window.frames['myIFrame'].document.getElementById('myIFrameElemId')
-
-
-$(window).load(function() {
+$(window).load(function () {
+    var showVid;
     // Take video out of initial tab order
     $('.video-dynamic-info a').attr('tabindex', '-1');
 
     // Control tab order from Thumbnail
     $('.video-thumbnail-ul a').on("keydown", function (event) {
         if (event.which == 13) {
-            changeFocus();
+            showVid = $(this);
+            changeFocus(showVid);
         } else if (event.which == 38 || event.which == 40) {
             event.preventDefault();
+            console.log("using up down arrows");
         }
     });
 
     $('.video-thumbnail-ul a').click(function () {
-        changeFocus();
+        showVid = $(this).attr('id');
+        changeFocus(showVid);
     });
-    function sendToIFrame() {
-        // var $iframe = $("#newHorizontalItemImage1 iframe");
-        // $iframe.contentWindow.focus();
-        var findFrame = window.frames['#custom_oneplayer_iframe'].contentDocument.getElementsByClass('c-action-trigger');
-        findFrame.focus();
-    }
 
-    function changeFocus() {
-        // setTimeout(sendToIFrame,100);
+    // Can't get into iframe  - cross domain errors
+
+    function changeFocus(showVid) {
         $('.video-dynamic-info a').attr('tabindex', '0');
-        // Getting Cross domain errors - good step means I am getting where I want but will make it impoosible to test
-        var iframeDocument = document.getElementsByTagName("iframe")[0].contentDocument;
-        iframeDocument.body.style.backgroundColor = "blue";
+        $('.video-thumbnail-ul a').attr('tabindex', '-1');
+        if (showVid === "grow-business") {
+            setTimeout(function () {
+                // $('#newHorizontalItemImage1').attr('tabindex', '0').focus();
+                $('#newHorizontalItemImage1 iframe').attr('tabindex', '0').focus();
+                $('#img1 a').attr('tabindex', '-1');
+                $('#img2 a').attr('tabindex', '0');
+            }, 250);
+        } else if (showVid === "stay-focus") {
+            setTimeout(function () {
+                // $('#newHorizontalItemImage2').attr('tabindex', '0').focus();
+                $('#newHorizontalItemImage2 iframe').attr('tabindex', '0').focus();
+                $('#img2 a').attr('tabindex', '-1');
+                $('#img3 a').attr('tabindex', '0');
+            }, 250);
 
+        } else if (showVid === "linkedin") {
+            setTimeout(function () {
+                // $('#newHorizontalItemImage3').attr('tabindex', '0').focus();
+                $('#newHorizontalItemImage3 iframe').attr('tabindex', '0').focus();
+                $('#img3 a').attr('tabindex', '-1');
+                $('#img4 a').attr('tabindex', '0');
+            }, 250);
 
+        } else if (showVid === "real-time") {
+            setTimeout(function () {
+                // $('#newHorizontalItemImage4').attr('tabindex', '0').focus();
+                $('#newHorizontalItemImage4 iframe').attr('tabindex', '0').focus();
+                $('#img4 a').attr('tabindex', '-1');
+                $('#img5 a').attr('tabindex', '0');
+            }, 250);
+
+        } else if (showVid === "gartner") {
+            setTimeout(function () {
+                // $('#newHorizontalItemImage5').attr('tabindex', '0').focus();
+                $('#newHorizontalItemImage5 iframe').attr('tabindex', '0').focus();
+                $('#img5 a').attr('tabindex', '-1');
+                // $('#img5 a').attr('tabindex', '0');
+            }, 250);
+
+        }
     };
-    
-    
+
+
 });

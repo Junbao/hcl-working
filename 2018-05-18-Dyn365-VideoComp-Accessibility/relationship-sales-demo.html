@@ -8,6 +8,43 @@
       }
       */
 
+    /*accessebility-fixes*/
+
+    .d365-3column-form-h2 {
+        display: none;
+    }
+
+    @media screen and (-ms-high-contrast: white-on-black) {
+        .d365-sem-wrapper .m-multi-feature.f-align-left .video-container .thumbnail-ul-holder .video-thumbnail-ul li.active-border a {
+            border: 8px solid red;
+        }
+        .arrow-border_on {
+            border-bottom: 10px solid red;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+        #scroll-top-reset .scroll-to-top:focus {
+            outline: #fff dashed 2px;
+        }
+        .f-horizontal ul li a:focus {
+            outline: 3px dotted #FFF !important;
+        }
+        .icon-container img {
+            background: #FFF;
+        }
+
+
+    }
+
+    @-moz-document url-prefix() {
+        .icon-container img {
+            background: #FFF;
+        }
+
+    }
+
+    /*accessebility-fixes-ends*/
+
     .d365-sem-wrapper .video-container div.clearfloat {
         display: none;
     }
@@ -98,11 +135,6 @@
     .d365-sem-wrapper .video-thumbnail-ul li span.normal-font {
         font-weight: normal;
     }
-
-    .d365-sem-wrapper .video-thumbnail-ul li:focus { 
-        border:2px dotted black;
-    }
-
 
     .arrow-border_on {
         width: 0;
@@ -495,6 +527,11 @@
         outline: none;
     }
 
+    .d365-sem-wrapper .m-multi-feature.f-align-left .video-container .thumbnail-ul-holder .video-thumbnail-ul li a:active,
+    .d365-sem-wrapper .m-multi-feature.f-align-left .video-container .thumbnail-ul-holder .video-thumbnail-ul li a:focus {
+        outline: 2px dotted black !important;
+    }
+
     .footnote-container {
         padding-left: 1% !important;
         padding-right: 1% !important;
@@ -539,10 +576,8 @@
         .video-dynamic-info .f-active .text-block .text-container .c-paragraph {
             max-height: 77px;
         }
-
         .d365-sem-wrapper .video-container .thumbnail-ul-holder {
             margin-top: 70px;
-
         }
     }
 
@@ -608,7 +643,6 @@
             background-color: #e6e6e6;
             /*covered white-space*/
         }
-
         hr.mob-custom-divider {
             margin-top: 73px !important;
         }
@@ -869,7 +903,6 @@
     @media only screen and (max-width: 539px) {
         .d365-sem-wrapper .video-container div.clearfloat {
             display: block;
-
         }
         .d365-sem-wrapper .video-container .video-lander-div {
             margin-top: 110px;
@@ -1296,7 +1329,6 @@
         .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li ul li {
             margin-top: 15px !important;
         }
-
     }
 
     @media only screen and (max-width: 767px) and (min-width: 540px) {
@@ -1327,7 +1359,6 @@
         .d365-sem-wrapper .video-container .video-lander-div {
             margin-top: 100px;
         }
-
     }
 
     @media only screen and (max-width:539px) {
@@ -1369,7 +1400,6 @@
         }
     }
 
-
     .d365-sem-wrapper .videocontainer-desc {
         background: #ddf8f9;
         padding: 20px;
@@ -1377,7 +1407,7 @@
         text-align: left;
     }
 
-    .videocontainer-desc h3,
+    .videocontainer-desc h2,
     .videocontainer-desc p {
         padding: 0 !important;
         margin: 0 !important;
@@ -1385,7 +1415,14 @@
         color: #000000;
     }
 
-    .videocontainer-desc h3 {
+    .videocontainer-desc h2 {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 85%;
+        color: #000;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
         padding-bottom: 10px !important;
     }
 
@@ -1393,6 +1430,48 @@
         font-size: 15px;
         line-height: 20px;
     }
+
+    /*back-to-top styles*/
+
+    #scroll-top-reset .scroll-to-top {
+        padding-top: 10px;
+        height: 100%;
+        display: block;
+        margin-top: 0;
+    }
+
+    #scroll-top-reset .scroll-to-top:focus {
+        outline: #000 dashed 2px;
+    }
+
+    #scroll-top-reset {
+        position: fixed;
+        bottom: 10px;
+        border-radius: 4px;
+        right: 20px;
+        width: 48px;
+        height: 48px;
+        background: rgba(216, 216, 216, 0.7);
+        color: #000;
+        font-size: 24px;
+        text-align: center;
+        display: none;
+    }
+
+    #scroll-top-reset a {
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    /* Able to see the iframe focus state */
+
+    #newHorizontalItemImage1:focus,
+    #newHorizontalItemImage2:focus,
+    #newHorizontalItemImage3:focus,
+    #newHorizontalItemImage4:focus,
+    #newHorizontalItemImage5:focus,
+        {
+        border: 2px dotted black !important;
 </style>
 
 <div class="d365-sem-wrapper" data-grid="container">
@@ -1410,6 +1489,9 @@
     </section>
     <div data-grid="col-12 stack-2" class="m-multi-feature f-align-left">
         <div class="herotext-container">
+
+
+
             <div>
                 <h1 class="c-heading hr-h1">Microsoft Relationship Sales solution demos</h1>
                 <p class="c-paragraph hr-p">Watch how Microsoft Relationship Sales helps you build authentic, personal relationships by bringing together
@@ -1417,17 +1499,19 @@
                 </p>
             </div>
         </div>
+
         <section class="video-container">
-            <div class="videoplyr c-carousel f-multi-slide" role="region" aria-label="Images">
+
+            <div class="videoplyr c-carousel f-multi-slide" role="region" aria-label="watch Microsoft Relationship Sales solution demos">
                 <div class="videocontainer" itemscope="" itemtype="http://schema.org/ItemList">
                     <ul class="video-ul">
                         <li id="newHorizontalItemImage1" data-f-theme="light" class="f-active" role="tabpanel" video-id="RE1W5Dk">
-                            <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dk?autoplay=false" tabindex="-1" class="custom-oneplayer-iframe"
-                                id="custom_oneplayer_iframe" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
+
+                            <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dk?autoplay=false" tabindex="-1" class="custom-oneplayer-iframe" aria-hidden="true" id="custom_oneplayer_iframe_1" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
                                 title="Watch the Grow your business faster with Microsoft Relationship Sales video"></iframe>
                             <!--<img src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Whud?ver=93df" class="mscom-image dyn-img x-hidden-focus" alt="Build-relationship" width="35" height="34">-->
                             <div class="videocontainer-desc">
-                                <h3 class="c-heading-5 heading-uppercase">Grow Your Business Faster</h3>
+                                <h2 class="c-heading-5 heading-uppercase">Grow Your Business Faster</h2>
                                 <p class="c-paragraph-3">Streamline your business processes and gain insights with embedded intelligence.
                                 </p>
                             </div>
@@ -1435,40 +1519,40 @@
                         </li>
                         <li id="newHorizontalItemImage2" data-f-theme="light" role="tabpanel" video-id="RE1VVbF">
                             <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1VVbF?autoplay=false" tabindex="-1" class="custom-oneplayer-iframe"
-                                id="custom_oneplayer_iframe" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
+                                id="custom_oneplayer_iframe_2" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
                                 title="Watch the Stay Focused with Microsoft Relationship Sales video" shorttitle="" desc=""></iframe>
                             <div class="videocontainer-desc">
-                                <h3 class="c-heading-5 heading-uppercase">Stay Focused</h3>
+                                <h2 class="c-heading-5 heading-uppercase">Stay Focused</h2>
                                 <p class="c-paragraph-3">Predict customer needs and provide the right solution at the right time.
                                 </p>
                             </div>
                         </li>
                         <li id="newHorizontalItemImage3" data-f-theme="dark" role="tabpanel" video-id="RE1Wds7">
                             <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1Wds7?autoplay=false" tabindex="-1" class="custom-oneplayer-iframe"
-                                id="custom_oneplayer_iframe" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
+                                id="custom_oneplayer_iframe_3" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
                                 title="Watch the Identify leads using LinkedIn with Microsoft Relationship Sales video"></iframe>
                             <div class="videocontainer-desc">
-                                <h3 class="c-heading-5 heading-uppercase">Identify Leads Using LinkedIn</h3>
+                                <h2 class="c-heading-5 heading-uppercase">Identify Leads Using LinkedIn</h2>
                                 <p class="c-paragraph-3">Identify and focus on leads who are most likely to turn into a sale.
                                 </p>
                             </div>
                         </li>
                         <li id="newHorizontalItemImage4" data-f-theme="dark" role="tabpanel" video-id="RE1W5Dl">
                             <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dl?autoplay=false" tabindex="-1" class="custom-oneplayer-iframe"
-                                id="custom_oneplayer_iframe" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
+                                id="custom_oneplayer_iframe_4" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
                                 title="Watch the Use real-time data to close deals with Microsoft Relationship Sales video"></iframe>
                             <div class="videocontainer-desc">
-                                <h3 class="c-heading-5 heading-uppercase">Use Real-Time Data to Close Deals</h3>
+                                <h2 class="c-heading-5 heading-uppercase">Use Real-Time Data to Close Deals</h2>
                                 <p class="c-paragraph-3">Gain insights, understand customer needs, and close deals more efficiently.
                                 </p>
                             </div>
                         </li>
                         <li id="newHorizontalItemImage5" data-f-theme="dark" role="tabpanel" video-id="RE1VVbE">
                             <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1VVbE?autoplay=false" tabindex="-1" class="custom-oneplayer-iframe"
-                                id="custom_oneplayer_iframe" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
+                                id="custom_oneplayer_iframe_5" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
                                 title="Watch the Intelligent onboarding with Microsoft Relationship Sales video"></iframe>
                             <div class="videocontainer-desc">
-                                <h3 class="c-heading-5 heading-uppercase">Intelligent Onboarding</h3>
+                                <h2 class="c-heading-5 heading-uppercase">Intelligent Onboarding</h2>
                                 <p class="c-paragraph-3">Streamline seller onboarding with real-time suggestions and contextual help.
                                 </p>
                             </div>
@@ -1491,7 +1575,7 @@
                                 <mscom:image classoverride="dyn-img" payloadguid="02e3a3ff-20b1-41c5-9c51-074d52b792a4" alt="E-Book"></mscom:image>
                                 <p class="c-paragraph">Read the Savvy Sales Leader’s Guide to Building Profitable Relationships.</p>
                                 <a href="http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-ebook-DynSales-Savvy-Sellers-Guide.pdf" target="_blank"
-                                    class="c-call-to-action c-glyph">
+                                    tabindex="-1" class="c-call-to-action c-glyph" aria-label="Read the Savvy Sales Leader’s Guide">
                                     <span>READ THE E-BOOK</span>
                                 </a>
                             </li>
@@ -1501,8 +1585,8 @@
                                 <p class="c-paragraph">
                                     Get a live, one-on-one walk-through of Microsoft Relationship Sales.
                                 </p>
-                                <a href="https://info.microsoft.com/ww.landing-paid-media-relationship-sale-demo.html?lcid=en-us" target="_blank" class="c-call-to-action c-glyph"
-                                    aria-label="Register with Microsoft to request a demo">
+                                <a href="https://info.microsoft.com/ww.landing-paid-media-relationship-sale-demo.html?lcid=en-us" target="_blank" tabindex="-1"
+                                    class="c-call-to-action c-glyph" aria-label="Register with Microsoft to request a demo">
                                     <span>SCHEDULE DEMO</span>
                                 </a>
                             </li>
@@ -1518,7 +1602,8 @@
                                 <mscom:image classoverride="dyn-img" payloadguid="5109f07f-ef34-41b9-9a88-c5672b8de700" alt="Report"></mscom:image>
                                 <p class="c-paragraph">Learn how Microsoft Relationship Sales can help boost productivity.
                                 </p>
-                                <a href="https://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-Whitepaper-NucleusReport.pdf" target="_blank" class="c-call-to-action c-glyph">
+                                <a href="https://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-Whitepaper-NucleusReport.pdf" target="_blank" class="c-call-to-action c-glyph"
+                                    aria-label="Learn how Microsoft Relationship Sales">
                                     <span>READ THE REPORT</span>
                                 </a>
                             </li>
@@ -1544,7 +1629,7 @@
                                 <mscom:image classoverride="dyn-img" payloadguid="02e3a3ff-20b1-41c5-9c51-074d52b792a4" alt="E-Book"></mscom:image>
                                 <p class="c-paragraph">Learn how to win faster by changing how you think about customer engagement.</p>
                                 <a href="https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-eBook-D365SalesOperations-EmpoweringModernSeller.pdf"
-                                    target="_blank" class="c-call-to-action c-glyph">
+                                    target="_blank" class="c-call-to-action c-glyph" aria-label="Learn about customer engagement.">
                                     <span>READ THE E-BOOK</span>
                                 </a>
                             </li>
@@ -1570,7 +1655,7 @@
                                 <mscom:image classoverride="dyn-img" payloadguid="eabd604f-f0b3-45f3-a3a3-e1f863774178" alt="Webinar"></mscom:image>
                                 <p class="c-paragraph">Learn why today’s sales environment should revolve around the customer.</p>
                                 <a href="https://info.microsoft.com/DynSales_ModernSellingRevolvesAroundCustomer_ForresterResearch_OnDemand.html" target="_blank"
-                                    class="c-call-to-action c-glyph">
+                                    class="c-call-to-action c-glyph" aria-label="Learn about today’s sales environment">
                                     <span>WATCH THE WEBINAR</span>
                                 </a>
                             </li>
@@ -1594,8 +1679,13 @@
                             <li class="text-container">
                                 <h3 class="c-heading heading-uppercase">Gartner report</h3>
                                 <mscom:image classoverride="dyn-img" payloadguid="5109f07f-ef34-41b9-9a88-c5672b8de700" alt="Report"></mscom:image>
-                                <p class="c-paragraph">Learn why Gartner positions Microsoft as a leader in sales force automation.*</p>
-                                <a href="https://info.microsoft.com/dynamics365-gartner-magic-quadrant.html?lcid=en-us" target="_blank" class="c-call-to-action c-glyph">
+                                <p class="c-paragraph">Learn why Gartner positions Microsoft as a leader in sales force automation.
+                                    <sup>
+                                        <a href="#footnote" title="Jump to footnote">*</a>
+                                    </sup>
+                                </p>
+                                <a href="https://info.microsoft.com/dynamics365-gartner-magic-quadrant.html?lcid=en-us" target="_blank" class="c-call-to-action c-glyph"
+                                    aria-label="Learn why Gartner positions Microsoft as a leader">
                                     <span>READ THE REPORT</span>
                                 </a>
                             </li>
@@ -1622,7 +1712,7 @@
                             <div class="arrow-border_on"></div>
 
                             <img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Whud?ver=93df" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Whud?ver=93df"
-                                alt="Grow Business"></img>
+                                alt="business processes and gain insights"></img>
                         </a>
                         <span class="bold-font">
                             <!--GROW BUSINESS-->GROW YOUR BUSINESS FASTER</span>
@@ -1632,7 +1722,7 @@
                             aria-controls="newHorizontalItemContent2 newHorizontalItemImage2">
                             <div class="arrow-border_off"></div>
                             <img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Whuj?ver=dfee" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Whuj?ver=dfee"
-                                alt="Stay Focused"></img>
+                                alt="Predict customer needs"></img>
 
                         </a>
                         <span class="normal-font">STAY FOCUSED</span>
@@ -1643,7 +1733,7 @@
                             <div class="arrow-border_off"></div>
 
                             <img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1WyeG?ver=7464" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1WyeG?ver=7464"
-                                alt="Win Faster"></img>
+                                alt="Identify and focus on leads"></img>
                         </a>
                         <span class="normal-font heading-uppercase">
                             <!--WIN FASTER-->IDENTIFY LEADS USING LINKEDIN</span>
@@ -1653,7 +1743,7 @@
                             aria-controls="newHorizontalItemContent4 newHorizontalItemImage4">
                             <div class="arrow-border_off"></div>
                             <img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1XB9G?ver=6de6" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1XB9G?ver=6de6"
-                                alt="Immersive Analytics"></img>
+                                alt="Gain insights, understand customer needs"></img>
                         </a>
                         <span class="normal-font">USE REAL-TIME DATA TO CLOSE DEALS</span>
                     </li>
@@ -1662,7 +1752,7 @@
                             aria-controls="newHorizontalItemContent5 newHorizontalItemImage5">
                             <div class="arrow-border_off"></div>
                             <img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1XArE?ver=3283" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1XArE?ver=3283"
-                                alt="intelligent onboarding"></img>
+                                alt="seller onboarding with real-time suggestions"></img>
                         </a>
                         <span class="normal-font">INTELLIGENT ONBOARDING</span>
                     </li>
@@ -1675,8 +1765,9 @@
         <!--<hr class="c-divider custom-divider">-->
     </div>
 
-    <div data-grid="container" class="d365-3column-form" id="d365_3column_form" style="height:0px;">
-
+    <div data-grid="container" class="d365-3column-form" id="d365_3column_form" style="height:0px;" aria-labelledby="d365-3column-form-h2"
+        aria-label="chat-section" role="region">
+        <h2 class="d365-3column-form-h2"></h2>
         <div class="context-3col-chat m-content-placement d365-c-show custom-d365-c-show" data-grid="col-12">
             <div class="custom-hr-divider"></div>
             <div data-grid="col-12 stack-2" class="flex-banner">
@@ -1749,7 +1840,7 @@
 
 <div class="foot-note-div theme-light">
     <section data-grid="container" class="footnote-container">
-        <p class="c-paragraph-4 italic-foot-note">
+        <p id="footnote" class="c-paragraph-4 italic-foot-note">
             *Gartner does not endorse any vendor, product or service depicted in its research publications, and does not advise technology
             users to select only those vendors with the highest ratings or other designation. Gartner research publications
             consist of the opinions of Gartner's research organization and should not be construed as statements of fact.
@@ -1760,3 +1851,12 @@
 </div>
 
 <mscom:contentinclude md:pageid="09aef1c6-f07d-4f29-9de2-ed0788379e6b" ajaxrendered="false"></mscom:contentinclude>
+
+<!-- back-to-top-->
+
+<div id="scroll-top-reset">
+    <a href="#mainContent" class="scroll-to-top" title="Navigate to the top of the page" aria-label="Navigate to the top of the page"
+        aria-disabled="false">
+        <div class="c-glyph glyph-up"></div>
+    </a>
+</div>
