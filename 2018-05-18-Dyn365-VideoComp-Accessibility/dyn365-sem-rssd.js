@@ -163,7 +163,10 @@ $(window).load(function () {
             $(".thumbnail-ul-holder .video-thumbnail-ul li").eq(currentIndex).siblings().find("span").removeClass("bold-font").addClass("normal-font");
         }
     });
-
+    /*setting focus back to superscript text indicator*/
+    if ($("#footnote").focus()) {
+        $("#footnote").attr("tabindex", "0");
+    }
 
 });
 
