@@ -1,0 +1,1845 @@
+<style>
+    /*accessebility-fixes*/
+
+    #d365-chat-section-h2 {
+        display: none;
+    }
+
+    @media screen and (-ms-high-contrast: white-on-black) {
+        .d365-sem-wrapper .m-multi-feature.f-align-left .video-container .thumbnail-ul-holder .video-thumbnail-ul li.active-border a {
+            border: 8px solid red;
+        }
+        .arrow-border_on {
+            border-bottom: 10px solid red;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+        #scroll-top-reset .scroll-to-top:focus {
+            outline: #fff dashed 2px;
+        }
+        .f-horizontal ul li a:focus {
+            outline: 3px dotted #FFF !important;
+        }
+        .icon-container img {
+            background: #FFF;
+        }
+    }
+
+    /*accessebility-fixes-ends*/
+
+    .d365-sem-wrapper .video-container div.clearfloat {
+        display: none;
+    }
+
+    .d365-sem-wrapper span.chat-cta {
+        margin: 0 !important;
+    }
+
+    .foot-note-div {
+        display: none;
+        padding: 0 5%;
+        margin-top: 1%;
+    }
+
+    .foot-note-div p.italic-foot-note {
+        font-size: 12px;
+        line-height: 18px;
+        font-style: italic;
+        padding-bottom: 10px;
+    }
+
+    .set-bg {
+        background: url('//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2078c') no-repeat;
+        background-size: cover;
+    }
+
+    .heading-uppercase {
+        text-transform: uppercase !important;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header .hr-h1-explore {
+        width: 100%;
+        /*height: 43px;*/
+        font-family: SegoeUI;
+        font-size: 32px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #2b2b2b;
+    }
+
+    .d365-sem-wrapper .thumbnail-ul-holder .thumbnail-header {
+        display: none;
+    }
+
+    .c-video-player .f-video-trigger section div button {
+        border: 2px solid #fff !important;
+        background: #333 !important;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left .video-container .thumbnail-ul-holder .video-thumbnail-ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .c-video-player .f-video-trigger section div button.c-action-trigger.c-glyph[aria-label] {
+        border: 1px solid #fff;
+    }
+
+    .d365-sem-wrapper .video-thumbnail-ul li span.bold-font {
+        font-weight: 700;
+        font-family: initial;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left .video-container .thumbnail-ul-holder .video-thumbnail-ul li a {
+        background: none !important;
+    }
+
+    .d365-sem-wrapper .video-thumbnail-ul li span.normal-font {
+        font-weight: normal;
+        padding-left: 10px;
+        display: block;
+    }
+
+    .d365-sem-wrapper .custom-hr-divider {
+        border-top: 1px solid rgba(0, 0, 0, .2);
+        margin-bottom: 5%;
+    }
+
+    .d365-sem-wrapper .video-thumbnail-ul li span.bold-font {
+        font-weight: bold !important;
+        font-family: sans-serif;
+    }
+
+    .d365-sem-wrapper .video-thumbnail-ul li span.normal-font {
+        font-weight: normal;
+    }
+
+    .arrow-border_on {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #05b5c1;
+        position: absolute;
+        top: -10px;
+        left: 44%;
+        display: inline-block;
+    }
+
+    .arrow-border_off {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid off;
+        position: absolute;
+        top: -10px;
+        left: 44%;
+        display: inline-block;
+    }
+
+    .video-thumbnail-ul li {
+        position: relative;
+    }
+
+    .m-multi-feature .video-container {
+        width: 95% !important;
+        margin: 0 auto;
+        align-items: normal !important;
+        flex-wrap: wrap;
+    }
+
+    .videoplyr {
+        width: 68% !important;
+        float: left;
+    }
+
+    .videoplyr .videocontainer {
+        width: 100%;
+        height: auto;
+        border: 20px solid #fff;
+    }
+
+    .video-lander-div.explore-section {
+        width: 32% !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .m-multi-feature.f-align-left>section,
+    .m-multi-feature.f-align-right>section {
+        align-items: normal !important;
+    }
+
+    .thumbnail-ul-holder .video-thumbnail-ul li a.c-logo {
+        display: inline-block
+    }
+
+    .herotext-container {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 40px;
+        margin-top: -120px;
+    }
+
+    .herotext-container p {
+        width: 944px;
+        display: inline-block;
+        padding: 10px 5px;
+        font-size: 20px;
+    }
+
+    .m-multi-feature [role=tablist] li {
+        margin: 0 0px;
+        float: left;
+        display: block;
+        min-width: 135px;
+        max-width: 147px;
+    }
+
+    .video-container .thumbnail-ul-holder {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        margin-left: 10px;
+        width: 66% !important;
+    }
+
+    /*coding using*/
+
+    .d365-sem-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left>section>div div.thumbnail-ul-holder [role=tablist] li div.arrow-border {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #05b5c1;
+        position: relative;
+        top: -22px;
+        display: inline-block;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left>section>div div.thumbnail-ul-holder [role=tablist] li div.off-arrow-border {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+        position: relative;
+        top: -22px;
+        display: inline-block;
+    }
+
+    .d365-sem-wrapper .m-hero-item.f-x-center>div>div {
+        top: 3%;
+    }
+
+    .d365-sem-wrapper .m-hero-item.context-article h1.c-heading {
+        height: 62px;
+        font-family: SegoeUI;
+        font-size: 46px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000000;
+    }
+
+    .d365-sem-wrapper .c-hero.f-x-center>div>div,
+    .m-hero-item.f-x-center>div>div {
+        min-width: 100%;
+    }
+
+    .d365-sem-wrapper .m-hero-item .c-paragraph {
+        display: inline-block;
+        font-family: SegoeUI;
+        font-size: 20px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000000;
+    }
+
+    .d365-sem-wrapper .icon-container {
+        height: auto;
+        margin-bottom: 11px !important;
+    }
+
+    .d365-sem-wrapper hr.c-divider {
+        margin-top: 55px;
+    }
+
+    .d365-sem-wrapper .m-video-trigger-container {
+        padding-left: 190px;
+        display: inline-block
+    }
+
+    .d365-sem-wrapper .m-video-trigger {
+        top: -260px;
+        width: 70%;
+        height: 400px;
+    }
+
+    .d365-sem-wrapper .m-video-trigger img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .d365-sem-wrapper .m-video-trigger div {
+        display: inline-block;
+        width: auto;
+    }
+
+    .d365-sem-wrapper .m-media-gallery {
+        float: none;
+        width: 70%;
+        padding: 0 !important;
+    }
+
+    .d365-sem-wrapper .c-carousel .f-gallery li {
+        height: 130px;
+        width: 145px;
+    }
+
+    .d365-sem-wrapper .m-media-gallery {
+        position: relative;
+        top: -230px;
+    }
+
+    .d365-sem-wrapper .m-media-gallery .c-carousel .f-gallery {
+        padding-left: 5px;
+    }
+
+    .d365-sem-wrapper .footer-compartment-div {
+        position: relative;
+        top: -229px;
+    }
+
+    .d365-sem-wrapper .m-multi-feature {
+        height: 500px;
+        position: relative;
+        padding-top: 0;
+        top: 20%;
+        /*transform: translateY(-50%);*/
+        transform: translateY(-50%);
+    }
+
+    .d365-sem-wrapper .m-multi-feature ul.video-thumbnail-ul li a img {
+        width: 100%;
+        height: auto;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left>section>div.c-carousel {
+        position: relative;
+        left: 10%;
+        transform: translateY(-27%);
+        border: 20px solid #fff;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left>section>div div.thumbnail-ul-holder {
+        position: relative;
+        top: 417px;
+        /*right: 597px;*/
+        right: 92%;
+        text-align: center;
+        padding-top: 20px;
+        width: 100%;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left>section>div div.thumbnail-ul-holder [role=tablist] {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left>section>div div.thumbnail-ul-holder [role=tablist] li {
+        width: 120px;
+        height: 130px;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left>section>div div.thumbnail-ul-holder [role=tablist] li span {
+        display: block;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left>section>div div.thumbnail-ul-holder [role=tablist] li:last-child {
+        margin-right: 0;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left>section>div div.thumbnail-ul-holder ul.video-thumbnail-ul [role=tablist] li:last-child {
+        margin-right: 0 !important;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info {
+        width: 100%;
+        padding: 0 20px 20px;
+        background-color: #e6e6e6;
+        /*min-height: auto;*/
+        /*min-height: 487px;*/
+        border: 20px solid #fff;
+        border-left: 0 !important;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header {
+        text-align: center;
+        background-color: transparent;
+        margin-top: 0;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header h1 {
+        font-size: 32px;
+        padding: 10px 0 15px;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li h3.c-heading {
+        height: 40px;
+        padding-left: 20px;
+        padding-top: 0;
+        font-family: SegoeUI;
+        font-size: 15px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: 0.5px;
+        text-align: left;
+        color: #fff;
+        background-color: #002150;
+        line-height: 40px;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li {
+        text-align: center;
+        background-color: transparent;
+        margin-top: 15px;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li ul li {
+        background-color: #fff;
+        margin-top: 15px;
+        text-align: left;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header {
+        background-color: transparent;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li p {
+        padding: 10px 20px 0;
+        text-align: left;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li a.c-call-to-action {
+        padding-left: 20px;
+    }
+
+    .d365-sem-wrapper .d365-3column-form {
+        position: relative;
+        top: 25px;
+        margin-bottom: 0 !important;
+    }
+
+    .d365-sem-wrapper hr.custom-divider {
+        margin: 0 5%;
+        position: relative;
+    }
+
+    .d365-sem-wrapper .icon-container img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left>section>div.c-carousel ul.video-ul {
+        height: 376px;
+    }
+
+    .d365-sem-wrapper .m-multi-feature .f-multi-slide ul.video-ul li iframe {
+        width: auto;
+        height: auto;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li .dyn-img {
+        position: relative;
+        right: 10px;
+        top: -36px;
+        width: 30px;
+        float: right;
+        height: 30px;
+    }
+
+    hr.mob-custom-divider {
+        margin-top: 5%;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left>section>div div.thumbnail-ul-holder [role=tablist] li.active-border {
+        border: 8px solid #05b5c1;
+        margin: 0 5px;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left>section>div div.thumbnail-ul-holder [role=tablist] li.inactive-border {
+        border: 8px solid #fff;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left>section>div>ul.video-thumbnail-ul [role=tablist] {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left .video-container .thumbnail-ul-holder .video-thumbnail-ul li.active-border a {
+        border: 8px solid #05b5c1;
+        outline: none;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left .video-container .thumbnail-ul-holder .video-thumbnail-ul li.inactive-border a {
+        border: 8px solid #fff;
+        outline: none;
+    }
+
+    .d365-sem-wrapper .m-multi-feature.f-align-left .video-container .thumbnail-ul-holder .video-thumbnail-ul li a:active,
+    .d365-sem-wrapper .m-multi-feature.f-align-left .video-container .thumbnail-ul-holder .video-thumbnail-ul li a:focus {
+        outline: 2px dotted black !important;
+    }
+
+    .footnote-container {
+        padding-left: 1% !important;
+        padding-right: 1% !important;
+    }
+
+    #ret-footnote,
+    #footnote a {
+        text-decoration: none;
+    }
+
+    .d365-sem-wrapper ul.video-dynamic-info a.c-call-to-action:focus {
+        background-color: #BDBCBD !important;
+        text-decoration: underline !important;
+    }
+
+    .d365-sem-wrapper .context-3col-chat .m-content-placement-item .c-call-to-action {
+        margin-top: 0;
+    }
+
+    /*High resolution*/
+
+    @media only screen and (min-width: 1400px) {
+        .arrow-border_on {
+            left: 45%;
+            top: -9px;
+        }
+        .m-multi-feature .video-container {
+            width: 85% !important;
+        }
+        .videoplyr {
+            width: 74% !important;
+        }
+        .video-lander-div.explore-section {
+            width: 26% !important;
+        }
+        .video-container .thumbnail-ul-holder {
+            width: 73% !important;
+            margin-top: 85px !important;
+        }
+    }
+
+    @media only screen and (min-width: 1083px) and (max-width: 1399px) {
+        .video-dynamic-info .f-active .text-block .text-container .c-paragraph {
+            max-height: 77px;
+        }
+        .d365-sem-wrapper .video-container .thumbnail-ul-holder {
+            margin-top: 70px;
+        }
+    }
+
+    /*Latest code for tablet*/
+
+    @media only screen and (max-width: 767px) {
+        .d365-sem-wrapper .thumbnail-ul-holder .thumbnail-header {
+            display: none;
+        }
+        .d365-sem-wrapper section.video-container {
+            display: block;
+        }
+        .video-container .thumbnail-ul-holder {
+            width: 100%;
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+            border: 20px solid #fff;
+            margin: 0px auto;
+            background-color: #fff;
+            /*covered white-space*/
+            margin-left: 0;
+        }
+        .video-thumbnail-ul {
+            display: inline-block !important;
+        }
+        .video-thumbnail-ul li.c-glyph {
+            min-width: 100px;
+            width: 20%;
+            margin-right: 0px;
+        }
+        .herotext-container p {
+            width: 100%;
+            font-size: 20px;
+            padding: 20px;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li {
+            background-color: transparent;
+            margin-top: 0;
+            text-align: center;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li ul li {
+            background-color: transparent;
+            margin-top: 15px;
+            text-align: center;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.text-container {
+            background-color: #fff;
+            text-align: left;
+            float: none;
+            width: 45% !important;
+            min-width: auto;
+            height: auto;
+            /* max-height: none; */
+            max-width: none;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.f-active .text-block .explore-header {
+            text-align: center;
+            background-color: transparent;
+        }
+        .d365-sem-wrapper .m-multi-feature {
+            top: 0;
+            transform: none;
+            background-color: #e6e6e6;
+            /*covered white-space*/
+        }
+        hr.mob-custom-divider {
+            margin-top: 73px !important;
+        }
+    }
+
+    @media only screen and (max-width: 767px) and (min-width: 540px) {
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header {
+            margin-top: 0 !important;
+        }
+        .d365-sem-wrapper .thumbnail-ul-holder .thumbnail-header {
+            display: none;
+        }
+        .m-multi-feature .video-container {
+            width: 100% !important;
+        }
+        .d365-sem-wrapper .m-multi-feature ul.video-thumbnail-ul li a img {
+            width: 100%;
+            height: auto;
+        }
+        .videoplyr {
+            width: 100% !important;
+        }
+        .videoplyr .videocontainer {
+            height: auto !important;
+        }
+        .d365-sem-wrapper .m-multi-feature {
+            top: 0;
+            transform: none;
+            background-color: #e6e6e6;
+            /*covered white-space*/
+        }
+        .herotext-container {
+            margin-top: -40%;
+            padding-bottom: 0;
+            transform: translateY(-1%);
+        }
+        .video-lander-div.explore-section {
+            width: 100% !important;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info {
+            width: 100%;
+            padding: 20px 20px 40px;
+            height: auto;
+            border: 20px solid #fff !important;
+            background-color: lightgray;
+            min-height: auto;
+            display: inline-block;
+            border-top: 0 !important;
+        }
+        li.text-container {
+            width: 45%;
+            display: inline-block;
+            margin: 0 10px;
+            min-width: 300px;
+        }
+        .d365-sem-wrapper .m-multi-feature {
+            height: auto;
+        }
+        h1.c-heading {
+            font-size: 46px;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+        .video-container .thumbnail-ul-holder {
+            width: 100% !important;
+            border: 20px solid #fff !important;
+            background-color: #fff;
+            /*covered white-space*/
+            margin-left: 0;
+        }
+        .video-thumbnail-ul li.c-glyph {
+            min-width: 85px;
+        }
+        .d365-sem-wrapper hr.custom-divider {
+            display: none;
+        }
+        .d365-sem-wrapper .d365-3column-form {
+            top: 0;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li h3.c-heading {
+            letter-spacing: -0.5px;
+        }
+    }
+
+    /*Because of video aspect ratio issue Bug start*/
+
+    @media only screen and (min-width: 1083px) and (max-width: 1290px) {
+        /*.videoplyr{
+            width: 100% !important;
+            }
+            
+            .video-lander-div.explore-section{
+            width: 100% !important;
+            }
+            
+            .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info{
+            width: 100%;
+            padding: 20px 20px 40px;
+            height: auto;
+            border: 20px solid #fff !important;
+            background-color: #d3d3d3;
+            min-height: auto;
+            display: inline-block;
+            }
+            
+            li.text-container{
+            width: 45%;
+            display: inline-block;
+            margin: 0 10px;
+            min-width: 300px;
+            }            */
+    }
+
+    /*Video bug end*/
+
+    @media only screen and (max-width: 1180px) and (min-width: 768px) {
+        .d365-sem-wrapper .m-multi-feature.f-align-left .video-container .thumbnail-ul-holder .video-thumbnail-ul {
+            display: flex;
+            justify-content: center;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li {
+            margin-top: 0 !important;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li ul li {
+            margin-top: 15px !important;
+        }
+        .herotext-container p {
+            width: 100%;
+            /*padding-bottom: 40px;*/
+            padding-bottom: 6%;
+            font-size: 20px;
+            padding-left: 1%;
+            padding-right: 1%;
+        }
+        .m-multi-feature .video-container {
+            width: 100% !important;
+        }
+        .d365-sem-wrapper .m-multi-feature ul.video-thumbnail-ul li a img {
+            height: 80px;
+        }
+        .videoplyr {
+            width: 100% !important;
+        }
+        .d365-sem-wrapper .m-multi-feature {
+            top: 0;
+            transform: none;
+            background-color: #e6e6e6;
+            /*covered white-space*/
+        }
+        .herotext-container {
+            /*margin-top: -40%;*/
+            margin-top: -14%;
+            padding-bottom: 0;
+        }
+        .video-lander-div.explore-section {
+            width: 100% !important;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info {
+            width: 100%;
+            padding: 20px 20px 40px;
+            height: auto;
+            border: 20px solid #fff !important;
+            background-color: lightgray;
+            min-height: auto;
+            display: inline-block;
+            border-top: 0 !important;
+        }
+        li.text-container {
+            width: 45%;
+            display: inline-block;
+            margin: 0 10px;
+            min-width: 300px;
+        }
+        .d365-sem-wrapper .m-multi-feature {
+            height: auto;
+        }
+        h1.c-heading {
+            font-size: 46px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        .video-container .thumbnail-ul-holder {
+            width: 100% !important;
+            border: none !important;
+            background-color: #fff;
+            /*covered white-space*/
+            margin-left: 0;
+        }
+        .d365-sem-wrapper hr.custom-divider {
+            display: none;
+        }
+        .d365-sem-wrapper .d365-3column-form {
+            top: 0;
+        }
+        .d365-sem-wrapper .m-content-placement .flex-banner {
+            display: flex;
+            display: ms-flex;
+            display: flexbox;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header .hr-h1-explore {
+            padding: 0 !important;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header {
+            margin-top: 0 !important;
+        }
+    }
+
+    @media only screen and (min-width:1083px) and (max-width: 1180px) {
+        .m-hero-item>picture img {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: calc(50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            overflow: hidden;
+        }
+        .d365-sem-wrapper .m-multi-feature {
+            transform: translateY(-13%);
+            background-color: transparent;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info {
+            height: auto !important;
+        }
+        .m-multi-feature.f-align-left>section>div {
+            margin-top: -5px;
+        }
+        .d365-sem-wrapper .d365-3column-form {
+            height: 0;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li {
+            margin-top: 0 !important;
+        }
+        .herotext-container {
+            margin-top: -16%;
+        }
+        .herotext-container p {
+            padding-bottom: 5%;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header .hr-h1-explore {
+            padding: 0 !important;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header {
+            margin-top: 0 !important;
+        }
+    }
+
+    /*Latest code for mobile*/
+
+    @media only screen and (max-width: 539px) {
+        .d365-sem-wrapper .video-container div.clearfloat {
+            display: block;
+        }
+        .d365-sem-wrapper .video-container .video-lander-div {
+            /*margin-top: 136px;*/
+            margin-top: 113px !important;
+        }
+        .videocontainer-desc h2 {
+            font-size: 17px !important;
+        }
+        .d365-sem-wrapper .videocontainer-desc h2,
+        .d365-sem-wrapper .videocontainer-desc p {
+            width: 100%;
+        }
+        .d365-sem-wrapper .thumbnail-ul-holder .thumbnail-header {
+            text-align: center;
+            display: block;
+            font-size: 30px;
+            padding: 10px 0 15px;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left .herotext-container h1.hr-h1 {
+            font-size: 46px;
+        }
+        .d365-sem-wrapper .custom-hr-divider {
+            display: none;
+        }
+        .videoplyr {
+            width: 100% !important;
+        }
+        .m-multi-feature .c-carousel.f-multi-slide {
+            padding: 0;
+        }
+        .videoplyr .videocontainer {
+            height: auto;
+            border: none;
+        }
+        .d365-sem-wrapper .m-multi-feature .video-container {
+            width: 100% !important;
+            /*margin-top: 15px;*/
+        }
+        .d365-sem-wrapper .m-multi-feature {
+            height: auto;
+            position: relative;
+            padding-top: 0;
+            top: 0%;
+            transform: none;
+            background-color: #e6e6e6;
+            transform: translateY(-1%);
+            /*covered white-space*/
+        }
+        .m-multi-feature [role=tablist] {
+            flex-direction: column;
+        }
+        .thumbnail-ul-holder .video-thumbnail-ul li a.c-logo {
+            display: block;
+            float: none;
+        }
+        .video-thumbnail-ul li.c-glyph span {
+            float: none;
+            max-width: none;
+            text-align: left;
+        }
+        .video-lander-div.explore-section {
+            width: 100% !important;
+        }
+        .m-multi-feature [role=tablist] li a {
+            background: none !important;
+            outline: none !important;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info {
+            border: none !important;
+            min-height: auto;
+            padding: 0 17.25% 20px;
+        }
+        .video-container .thumbnail-ul-holder {
+            /*width: 75%;*/
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            margin: 0 auto !important;
+            border: none;
+            width: 100% !important;
+            background-color: #fff;
+            /*covered white-space*/
+            margin-left: 0px !important;
+            text-align: left;
+        }
+        .video-thumbnail-ul li.c-glyph {
+            text-align: left;
+            max-width: 147px;
+            min-width: auto;
+            width: 100%;
+            float: none;
+            margin-bottom: 20px;
+        }
+        .d365-sem-wrapper hr.custom-divider {
+            display: none;
+        }
+        .m-multi-feature [role=tablist] li>a.f-active .c-image {
+            display: inline-block;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li .dyn-img {
+            right: 5px;
+            top: -30px;
+            width: 25px;
+            height: 25px;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li h3.c-heading {
+            height: 35px;
+            /*font-size: 12px;*/
+            padding-left: 15px;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li p {
+            padding: 10px 15px 0;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li a.c-call-to-action {
+            padding-left: 15px;
+        }
+        .herotext-container p {
+            /*padding: 20px 20px 0;*/
+            padding: 20px 20px 2px;
+            font-size: 20px;
+        }
+        .herotext-container {
+            margin-top: -53%;
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
+        .arrow-border_on,
+        .arrow-border_off {
+            display: none;
+        }
+        .d365-sem-wrapper .d365-3column-form {
+            top: -18px;
+        }
+        .d365-sem-wrapper .m-hero-item {
+            margin-top: 50px;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.text-container {
+            width: 100% !important;
+            margin: 25px auto;
+            height: auto;
+        }
+        .d365-sem-wrapper .m-multi-feature ul.video-thumbnail-ul {
+            padding-left: 0;
+        }
+        .d365-sem-wrapper .m-multi-feature ul.video-thumbnail-ul li a img {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 350px) {
+        .videocontainer-desc h2 {
+            font-size: 16px !important;
+        }
+        .d365-sem-wrapper .videocontainer-desc p {
+            font-size: 14px !important;
+        }
+    }
+
+    @media only screen and (max-width: 380px) {
+        .d365-sem-wrapper .video-container .video-lander-div {
+            margin-top: 176px;
+        }
+    }
+
+    @media only screen and (min-width:1400px) {
+        .foot-note-div {
+            padding: 0 7% !important;
+        }
+        .d365-sem-wrapper .thumbnail-ul-holder .thumbnail-header {
+            display: none;
+        }
+        .d365-sem-wrapper {
+            max-width: calc(1920px + 10%);
+        }
+        .d365-sem-wrapper .m-multi-feature {
+            height: 550px;
+            /*transform: translateY(-100%);*/
+            transform: translateY(-72%);
+        }
+        .herotext-container p {
+            width: 944px;
+            height: 46px;
+            font-family: SegoeUI;
+            font-size: 20px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000000;
+            /*font-size: 24px;*/
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left>section>div.c-carousel {
+            margin-left: -4%;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left>section>div {
+            margin-left: 0 !important;
+        }
+        .d365-sem-wrapper .video-thumbnail-ul li {
+            min-width: 18%;
+            /*margin-right: 5px !important; ravinder*/
+            /*margin-right: 11px !important;*/
+        }
+        .d365-sem-wrapper .m-multi-feature ul.video-thumbnail-ul li a img {
+            width: 100%;
+            height: auto;
+        }
+        .d365-sem-wrapper .video-thumbnail-ul li:last-child {
+            margin-right: 0;
+        }
+        .d365-sem-wrapper .video-thumbnail-ul li a span {
+            display: block;
+        }
+        .d365-sem-wrapper .d365-3column-form {
+            top: 0;
+        }
+        .d365-sem-wrapper .custom-hr-divider {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        .d365-sem-wrapper .m-content-placement {
+            /*margin-top: 70px;*/
+            /*transform: translateY(30%);*/
+            transform: translateY(5%)
+        }
+        .d365-sem-wrapper .d365-3column-form {
+            max-width: calc(1800px);
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.text-container {
+            min-height: 200px;
+            min-width: 300px;
+        }
+        .d365-sem-wrapper .video-lander-div ul.video-dynamic-info li ul li:first-child {
+            padding: 0px;
+            height: auto;
+            line-height: 42px;
+            text-align: center;
+        }
+        .d365-sem-wrapper .video-lander-div ul.video-dynamic-info li ul li:first-child h1 {
+            padding: 0px;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li h3.c-heading {
+            font-size: 20px;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li p {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        .d365-sem-wrapper .herotext-container p {
+            padding-top: 30px;
+            font-size: 20px;
+        }
+        .d365-sem-wrapper .herotext-container {
+            margin-bottom: 80px;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li ul li.text-container {
+            margin: 30px auto;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left .herotext-container h1.hr-h1 {
+            width: 100%;
+            height: 62px;
+            font-family: SegoeUI;
+            font-size: 46px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000000;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left .herotext-container p.hr-p {
+            width: 944px;
+            height: 54px;
+            font-family: SegoeUI;
+            font-size: 20px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000000;
+        }
+        .video-dynamic-info .f-active .text-block .text-container .c-paragraph {
+            min-height: 90px;
+            max-height: 100px;
+            padding: 22px 22px 10px;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left .video-container .thumbnail-ul-holder .video-thumbnail-ul {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    /*UHF Overrides*/
+
+    #footerArea {
+        margin-top: 0;
+    }
+
+    @media only screen and (min-width:1100px) and (max-width:1239px) {
+        .d365-sem-wrapper .video-thumbnail-ul li {
+            min-width: 15% !important;
+            /*margin-right: 5px !important; ravinder*/
+            /*margin-right: 11px !important;*/
+        }
+        .d365-sem-wrapper .m-multi-feature ul.video-thumbnail-ul li a img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media only screen and (min-width:1180px) and (max-width:1200px) {
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header {
+            margin-top: 0;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li {
+            margin-top: 0;
+        }
+    }
+
+    @media only screen and (min-width: 1400px) and (max-width:1600px) {
+        .d365-sem-wrapper .m-multi-feature {
+            height: 550px;
+            transform: translateY(-50%);
+        }
+        /*dynamic-content-alignment*/
+        /*first-trail*/
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.text-container {
+            min-width: auto;
+            min-height: auto;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li h3.c-heading {
+            font-size: 15px;
+        }
+        .video-dynamic-info .f-active .text-block .text-container .c-paragraph {
+            min-height: 70px;
+            height: auto;
+            font-size: 15px;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header .hr-h1-explore {
+            /*font-size:20px;*/
+            font-size: 28px;
+            padding-top: 0;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li ul li.text-container {
+            margin: 15px auto 0;
+        }
+    }
+
+    /*second-trail*/
+
+    /*1400-1439*/
+
+    @media only screen and (min-width: 1400px) and (max-width:1439px) {
+        .video-dynamic-info .f-active .text-block .text-container .c-paragraph {
+            padding: 12px 22px 10px;
+        }
+    }
+
+    /*1440-1500*/
+
+    @media only screen and (min-width: 1440px) and (max-width:1500px) {
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li ul li.text-container {
+            margin: 15px auto 0;
+        }
+        .video-dynamic-info .f-active .text-block .text-container .c-paragraph {
+            min-height: 70px;
+            height: auto !important;
+            font-size: 15px;
+            padding: 22px 22px 10px;
+        }
+    }
+
+    /*1501-1600*/
+
+    @media only screen and (min-width: 1501px) and (max-width:1600px) {
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header .hr-h1-explore {
+            font-size: 28px;
+        }
+        .video-dynamic-info .f-active .text-block .text-container .c-paragraph {
+            min-height: 90px;
+            max-height: 100px;
+            padding: 12px 22px 10px;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header .hr-h1-explore {
+            /*font-size: 24px;*/
+            font-size: 28px;
+            padding-top: 0;
+        }
+    }
+
+    /* Spacing in CTA between arrow and text */
+
+    #mainContent .d365-sem-wrapper a.c-call-to-action:after {
+        margin-left: 3px !important;
+    }
+
+    /*@media only screen and (min-width: 2000px) and (max-width:2500px) {
+            .d365-sem-wrapper .m-content-placement {
+                  transform: translateY(40%);
+            }
+      }*/
+
+    /*rework of page*/
+
+    .d365-sem-wrapper .m-multi-feature {
+        height: auto !important;
+        position: relative;
+        padding-top: 0;
+        top: 0% !important;
+        transform: none !important;
+        margin-top: -30% !important;
+    }
+
+    .herotext-container {
+        margin-top: 0px !important;
+    }
+
+    .d365-sem-wrapper .m-multi-feature {
+        background-color: transparent !important;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width:1083px) {
+        .d365-sem-wrapper .m-multi-feature {
+            margin-top: -38% !important;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header .hr-h1-explore {
+            padding: 0 !important;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li ul li.explore-header {
+            margin-top: 0 !important;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li {
+            margin-top: 0 !important;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li ul li {
+            margin-top: 15px !important;
+        }
+    }
+
+    @media only screen and (max-width: 767px) and (min-width: 540px) {
+        .herotext-container {
+            margin-top: 0%;
+            padding-bottom: 0;
+            transform: none;
+        }
+        .d365-sem-wrapper .m-multi-feature {
+            margin-top: -47% !important;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header .hr-h1-explore {
+            padding: 0 !important;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li ul li.explore-header {
+            margin-top: 0 !important;
+        }
+    }
+
+    @media only screen and (max-width: 1180px) and (min-width: 768px) {
+        .herotext-container {
+            margin-top: 0%;
+            padding-bottom: 0;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li {
+            margin-top: 0 !important;
+        }
+        .d365-sem-wrapper .video-container .video-lander-div {
+            margin-top: 100px;
+        }
+    }
+
+    @media only screen and (max-width:539px) {
+        .herotext-container {
+            padding-bottom: 12%;
+        }
+        .c-hero:before,
+        .m-hero-item:before {
+            padding-bottom: 95.25%;
+        }
+        .d365-sem-wrapper .m-multi-feature {
+            margin-top: -95% !important;
+        }
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li.explore-header {
+            margin-top: 0;
+        }
+    }
+
+    @media only screen and (min-width:324px) and (max-width: 445px) {
+        .d365-sem-wrapper .m-multi-feature {
+            /*margin-top: -151%!important;*/
+            margin-top: -170% !important;
+        }
+        .d365-sem-wrapper .m-hero-item {
+            margin-top: 0;
+        }
+        .video-lander-div.explore-section {
+            background-color: none;
+        }
+        .c-hero:before,
+        .m-hero-item:before {
+            padding-bottom: 180.25%;
+        }
+    }
+
+    @media only screen and (min-width:1180px) and (max-width: 1215px) {
+        .d365-sem-wrapper .m-multi-feature.f-align-left section div ul.video-dynamic-info li a.c-call-to-action {
+            margin-top: 0;
+        }
+    }
+
+    .d365-sem-wrapper .videocontainer-desc {
+        background: #ddf8f9;
+        padding: 20px;
+        margin-top: -5px;
+        text-align: left;
+    }
+
+    .videocontainer-desc h2,
+    .videocontainer-desc p {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 85%;
+        color: #000000;
+    }
+
+    .videocontainer-desc h2 {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 85%;
+        color: #000;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        padding-bottom: 10px !important;
+    }
+
+    .videocontainer-desc .c-paragraph-3 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    /*back-to-top styles*/
+
+    #scroll-top-reset .scroll-to-top {
+        padding-top: 10px;
+        height: 100%;
+        display: block;
+        margin-top: 0;
+    }
+
+    #scroll-top-reset .scroll-to-top:focus {
+        outline: #000 dashed 2px;
+    }
+
+    #scroll-top-reset {
+        position: fixed;
+        bottom: 10px;
+        border-radius: 4px;
+        right: 20px;
+        width: 48px;
+        height: 48px;
+        background: rgba(216, 216, 216, 0.7);
+        color: #000;
+        font-size: 24px;
+        text-align: center;
+        display: none;
+    }
+
+    #scroll-top-reset a {
+        margin-top: 10px;
+        display: inline-block;
+    }
+</style>
+
+<div class="d365-sem-wrapper" data-grid="container">
+    <section class="m-hero-item f-x-center f-y-top context-article theme-light set-bg" itemscope="" itemtype="http://schema.org/Article">
+        <!-- <picture>
+                  <source media="(min-width: 1779px)" srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1UCvV">
+                  <source media="(min-width: 1400px)" srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1UCvV">
+                  <source media="(min-width: 1084px)" srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1UCvV">
+                  <source media="(min-width:768px)" srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1UCvV">
+                  <source media="(min-width:540px)" srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1UCvV">
+                  <source media="(min-width:0)" srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1UCvV">
+                  <img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1UCvV" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1UCvV"
+                  alt="Hero background"></img>
+            </picture> -->
+    </section>
+    <div data-grid="col-12 stack-2" class="m-multi-feature f-align-left">
+        <div class="herotext-container">
+
+
+
+            <div>
+                <h1 class="c-heading hr-h1">Microsoft Relationship Sales solution demos</h1>
+                <p class="c-paragraph hr-p">Watch how Microsoft Relationship Sales helps you build authentic, personal relationships by bringing together
+                    LinkedIn Sales Navigator and Dynamics 365 for Sales.
+                </p>
+            </div>
+        </div>
+
+        <section class="video-container">
+
+            <div class="videoplyr c-carousel f-multi-slide" role="region" aria-label="watch Microsoft Relationship Sales solution demos">
+                <div class="videocontainer" itemscope="" itemtype="http://schema.org/ItemList">
+                    <ul class="video-ul">
+                        <li id="newHorizontalItemImage1" data-f-theme="light" class="f-active" role="tabpanel" video-id="RE1W5Dk">
+
+                            <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dk?autoplay=false" tabindex="-1" class="custom-oneplayer-iframe"
+                                id="custom_oneplayer_iframe_1" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
+                                title="Watch the Grow your business faster with Microsoft Relationship Sales video"></iframe>
+                            <!--<img src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Whud?ver=93df" class="mscom-image dyn-img x-hidden-focus" alt="Build-relationship" width="35" height="34">-->
+                            <div class="videocontainer-desc">
+                                <h2 class="c-heading-5 heading-uppercase">Grow Your Business Faster</h2>
+                                <p class="c-paragraph-3">Streamline your business processes and gain insights with embedded intelligence.
+                                </p>
+                            </div>
+
+                        </li>
+                        <li id="newHorizontalItemImage2" data-f-theme="light" role="tabpanel" video-id="RE1VVbF">
+                            <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1VVbF?autoplay=false" tabindex="-1" class="custom-oneplayer-iframe"
+                                id="custom_oneplayer_iframe_2" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
+                                title="Watch the Stay Focused with Microsoft Relationship Sales video" shorttitle="" desc=""></iframe>
+                            <div class="videocontainer-desc">
+                                <h2 class="c-heading-5 heading-uppercase">Stay Focused</h2>
+                                <p class="c-paragraph-3">Predict customer needs and provide the right solution at the right time.
+                                </p>
+                            </div>
+                        </li>
+                        <li id="newHorizontalItemImage3" data-f-theme="dark" role="tabpanel" video-id="RE1Wds7">
+                            <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1Wds7?autoplay=false" tabindex="-1" class="custom-oneplayer-iframe"
+                                id="custom_oneplayer_iframe_3" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
+                                title="Watch the Identify leads using LinkedIn with Microsoft Relationship Sales video"></iframe>
+                            <div class="videocontainer-desc">
+                                <h2 class="c-heading-5 heading-uppercase">Identify Leads Using LinkedIn</h2>
+                                <p class="c-paragraph-3">Identify and focus on leads who are most likely to turn into a sale.
+                                </p>
+                            </div>
+                        </li>
+                        <li id="newHorizontalItemImage4" data-f-theme="dark" role="tabpanel" video-id="RE1W5Dl">
+                            <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1W5Dl?autoplay=false" tabindex="-1" class="custom-oneplayer-iframe"
+                                id="custom_oneplayer_iframe_4" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
+                                title="Watch the Use real-time data to close deals with Microsoft Relationship Sales video"></iframe>
+                            <div class="videocontainer-desc">
+                                <h2 class="c-heading-5 heading-uppercase">Use Real-Time Data to Close Deals</h2>
+                                <p class="c-paragraph-3">Gain insights, understand customer needs, and close deals more efficiently.
+                                </p>
+                            </div>
+                        </li>
+                        <li id="newHorizontalItemImage5" data-f-theme="dark" role="tabpanel" video-id="RE1VVbE">
+                            <iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1VVbE?autoplay=false" tabindex="-1" class="custom-oneplayer-iframe"
+                                id="custom_oneplayer_iframe_5" allowfullscreen="true" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"
+                                title="Watch the Intelligent onboarding with Microsoft Relationship Sales video"></iframe>
+                            <div class="videocontainer-desc">
+                                <h2 class="c-heading-5 heading-uppercase">Intelligent Onboarding</h2>
+                                <p class="c-paragraph-3">Streamline seller onboarding with real-time suggestions and contextual help.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <div class="clearfloat" style="clear:both;"></div>
+            <div class="video-lander-div explore-section">
+                <ul class="video-dynamic-info">
+                    <li role="tabpanel" id="newHorizontalItemContent1" class="f-active">
+                        <ul class="text-block">
+                            <li class="explore-header">
+                                <h2 class="c-paragraph hr-h1-explore">Explore more</h2>
+                            </li>
+                            <li class="text-container">
+                                <h3 class="c-heading heading-uppercase">Sales e-book</h3>
+                                <mscom:image classoverride="dyn-img" payloadguid="02e3a3ff-20b1-41c5-9c51-074d52b792a4" alt="E-Book"></mscom:image>
+                                <p class="c-paragraph">Read the Savvy Sales Leader’s Guide to Building Profitable Relationships.</p>
+                                <a href="http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-ebook-DynSales-Savvy-Sellers-Guide.pdf" target="_blank"
+                                    tabindex="-1" class="c-call-to-action c-glyph" aria-label="Read the Savvy Sales Leader’s Guide">
+                                    <span>READ THE E-BOOK</span>
+                                </a>
+                            </li>
+                            <li class="text-container">
+                                <h3 class="c-heading heading-uppercase">Schedule a demo</h3>
+                                <mscom:image classoverride="dyn-img" payloadguid="fe7a6e0e-43a0-431f-ac5b-e10bc34d0f52" alt="Schedule-demo"></mscom:image>
+                                <p class="c-paragraph">
+                                    Get a live, one-on-one walk-through of Microsoft Relationship Sales.
+                                </p>
+                                <a href="https://info.microsoft.com/ww.landing-paid-media-relationship-sale-demo.html?lcid=en-us" target="_blank" tabindex="-1"
+                                    class="c-call-to-action c-glyph" aria-label="Register with Microsoft to request a demo">
+                                    <span>SCHEDULE DEMO</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="tabpanel" id="newHorizontalItemContent2">
+                        <ul class="text-block">
+                            <li class="explore-header">
+                                <h2 class="c-paragraph hr-h1-explore">Explore more</h2>
+                            </li>
+                            <li class="text-container">
+                                <h3 class="c-heading heading-uppercase">Nucleus report</h3>
+                                <mscom:image classoverride="dyn-img" payloadguid="5109f07f-ef34-41b9-9a88-c5672b8de700" alt="Report"></mscom:image>
+                                <p class="c-paragraph">Learn how Microsoft Relationship Sales can help boost productivity.
+                                </p>
+                                <a href="https://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-Whitepaper-NucleusReport.pdf" target="_blank" class="c-call-to-action c-glyph"
+                                    aria-label="Learn how Microsoft Relationship Sales">
+                                    <span>READ THE REPORT</span>
+                                </a>
+                            </li>
+                            <li class="text-container">
+                                <h3 class="c-heading heading-uppercase">Schedule a demo</h3>
+                                <mscom:image classoverride="dyn-img" payloadguid="fe7a6e0e-43a0-431f-ac5b-e10bc34d0f52" alt="Schedule-demo"></mscom:image>
+                                <p class="c-paragraph">Get a live, one-on-one walk-through of Microsoft Relationship Sales.
+                                </p>
+                                <a href="https://info.microsoft.com/ww.landing-paid-media-relationship-sale-demo.html?lcid=en-us" target="_blank" class="c-call-to-action c-glyph"
+                                    aria-label="Register with Microsoft to request a demo">
+                                    <span>SCHEDULE DEMO</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="tabpanel" id="newHorizontalItemContent3">
+                        <ul class="text-block">
+                            <li class="explore-header">
+                                <h2 class="c-paragraph hr-h1-explore">Explore more</h2>
+                            </li>
+                            <li class="text-container">
+                                <h3 class="c-heading heading-uppercase">Modern selling</h3>
+                                <mscom:image classoverride="dyn-img" payloadguid="02e3a3ff-20b1-41c5-9c51-074d52b792a4" alt="E-Book"></mscom:image>
+                                <p class="c-paragraph">Learn how to win faster by changing how you think about customer engagement.</p>
+                                <a href="https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-eBook-D365SalesOperations-EmpoweringModernSeller.pdf"
+                                    target="_blank" class="c-call-to-action c-glyph" aria-label="Learn about customer engagement.">
+                                    <span>READ THE E-BOOK</span>
+                                </a>
+                            </li>
+                            <li class="text-container hs-text-container">
+                                <h3 class="c-heading heading-uppercase">Schedule a demo</h3>
+                                <mscom:image classoverride="dyn-img" payloadguid="fe7a6e0e-43a0-431f-ac5b-e10bc34d0f52" alt="Schedule-demo"></mscom:image>
+                                <p class="c-paragraph">Get a live, one-on-one walk-through of Microsoft Relationship Sales.
+                                </p>
+                                <a href="https://info.microsoft.com/ww.landing-paid-media-relationship-sale-demo.html?lcid=en-us" target="_blank" class="c-call-to-action c-glyph"
+                                    aria-label="Register with Microsoft to request a demo">
+                                    <span>SCHEDULE DEMO</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="tabpanel" id="newHorizontalItemContent4">
+                        <ul class="text-block">
+                            <li class="explore-header">
+                                <h2 class="c-paragraph hr-h1-explore">Explore more</h2>
+                            </li>
+                            <li class="text-container">
+                                <h3 class="c-heading heading-uppercase">Modern selling</h3>
+                                <mscom:image classoverride="dyn-img" payloadguid="eabd604f-f0b3-45f3-a3a3-e1f863774178" alt="Webinar"></mscom:image>
+                                <p class="c-paragraph">Learn why today’s sales environment should revolve around the customer.</p>
+                                <a href="https://info.microsoft.com/DynSales_ModernSellingRevolvesAroundCustomer_ForresterResearch_OnDemand.html" target="_blank"
+                                    class="c-call-to-action c-glyph" aria-label="Learn about today’s sales environment">
+                                    <span>WATCH THE WEBINAR</span>
+                                </a>
+                            </li>
+                            <li class="text-container">
+                                <h3 class="c-heading heading-uppercase">Schedule a demo</h3>
+                                <mscom:image classoverride="dyn-img" payloadguid="fe7a6e0e-43a0-431f-ac5b-e10bc34d0f52" alt="Schedule-demo"></mscom:image>
+                                <p class="c-paragraph">Get a live, one-on-one walk-through of Microsoft Relationship Sales.
+                                </p>
+                                <a href="https://info.microsoft.com/ww.landing-paid-media-relationship-sale-demo.html?lcid=en-us" target="_blank" class="c-call-to-action c-glyph"
+                                    aria-label="Register with Microsoft to request a demo">
+                                    <span>SCHEDULE DEMO</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="tabpanel" id="newHorizontalItemContent5">
+                        <ul class="text-block">
+                            <li class="explore-header">
+                                <h2 class="c-paragraph hr-h1-explore">Explore more</h2>
+                            </li>
+                            <li class="text-container">
+                                <h3 class="c-heading heading-uppercase">Gartner report</h3>
+                                <mscom:image classoverride="dyn-img" payloadguid="5109f07f-ef34-41b9-9a88-c5672b8de700" alt="Report"></mscom:image>
+                                <p class="c-paragraph">Learn why Gartner positions Microsoft as a leader in sales force automation.
+                                    <a href="#footnote"
+                                        title="Jump to footnote" id="ret-footnote">*</a>
+                                </p>
+                                <a href="https://info.microsoft.com/dynamics365-gartner-magic-quadrant.html?lcid=en-us" target="_blank" class="c-call-to-action c-glyph"
+                                    aria-label="Learn why Gartner positions Microsoft as a leader">
+                                    <span>READ THE REPORT</span>
+                                </a>
+                            </li>
+                            <li class="text-container">
+                                <h3 class="c-heading heading-uppercase">Schedule a demo</h3>
+                                <mscom:image classoverride="dyn-img" payloadguid="fe7a6e0e-43a0-431f-ac5b-e10bc34d0f52" alt="Schedule-demo"></mscom:image>
+                                <p class="c-paragraph">Get a live, one-on-one walk-through of Microsoft Relationship Sales.</p>
+                                <a href="https://info.microsoft.com/ww.landing-paid-media-relationship-sale-demo.html?lcid=en-us" target="_blank" class="c-call-to-action c-glyph"
+                                    aria-label="Register to download the Gartner Magic Quadrant for Sales Force Automation report">
+                                    <span>SCHEDULE DEMO</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="thumbnail-ul-holder">
+                <h2 class="c-pragraph thumbnail-header">Video Demos</h2>
+                <ul role="tablist" class="video-thumbnail-ul">
+                    <li id="img1" class="c-glyph active-border" role="presentation">
+                        <a href="#" id="grow-business" role="tab" class="mscom-link c-logo f-active" itemprop="url" aria-label="Watch the Grow your business faster with Microsoft Relationship Sales video"
+                            aria-controls="newHorizontalItemContent1 newHorizontalItemImage1">
+                            <div class="arrow-border_on"></div>
+
+                            <img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Whud?ver=93df" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Whud?ver=93df"
+                                alt="business processes and gain insights"></img>
+                        </a>
+                        <span class="bold-font">
+                            <!--GROW BUSINESS-->GROW YOUR BUSINESS FASTER</span>
+                    </li>
+                    <li id="img2" class="c-glyph inactive-border" role="presentation">
+                        <a href="#" id="stay-focus" role="tab" class="mscom-link c-logo" itemprop="url" aria-label="Watch the Stay Focused with Microsoft Relationship Sales video"
+                            aria-controls="newHorizontalItemContent2 newHorizontalItemImage2">
+                            <div class="arrow-border_off"></div>
+                            <img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Whuj?ver=dfee" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Whuj?ver=dfee"
+                                alt="Predict customer needs"></img>
+
+                        </a>
+                        <span class="normal-font">STAY FOCUSED</span>
+                    </li>
+                    <li id="img3" class="c-glyph inactive-border" role="presentation">
+                        <a href="#" id="linkedin" role="tab" class="mscom-link c-logo" itemprop="url" aria-label="Watch the Identify leads using LinkedIn with Microsoft Relationship Sales video"
+                            aria-controls="newHorizontalItemContent3 newHorizontalItemImage3">
+                            <div class="arrow-border_off"></div>
+
+                            <img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1WyeG?ver=7464" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1WyeG?ver=7464"
+                                alt="Identify and focus on leads"></img>
+                        </a>
+                        <span class="normal-font heading-uppercase">
+                            <!--WIN FASTER-->IDENTIFY LEADS USING LINKEDIN</span>
+                    </li>
+                    <li id="img4" class="c-glyph inactive-border" role="presentation">
+                        <a href="#" id="real-time" role="tab" class="mscom-link c-logo" itemprop="url" aria-label="Watch the Use real-time data to close deals with Microsoft Relationship Sales video"
+                            aria-controls="newHorizontalItemContent4 newHorizontalItemImage4">
+                            <div class="arrow-border_off"></div>
+                            <img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1XB9G?ver=6de6" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1XB9G?ver=6de6"
+                                alt="Gain insights, understand customer needs"></img>
+                        </a>
+                        <span class="normal-font">USE REAL-TIME DATA TO CLOSE DEALS</span>
+                    </li>
+                    <li id="img5" class="c-glyph inactive-border" role="presentation">
+                        <a href="#" id="gartner" role="tab" class="mscom-link c-logo" itemprop="url" aria-label="Watch the Intelligent onboarding with Microsoft Relationship Sales video"
+                            aria-controls="newHorizontalItemContent5 newHorizontalItemImage5">
+                            <div class="arrow-border_off"></div>
+                            <img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1XArE?ver=3283" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1XArE?ver=3283"
+                                alt="seller onboarding with real-time suggestions"></img>
+                        </a>
+                        <span class="normal-font">INTELLIGENT ONBOARDING</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <div data-grid="container">
+        <!--<hr class="c-divider custom-divider">-->
+    </div>
+
+    <div data-grid="container" class="d365-3column-form" id="d365_3column_form" style="height:0px;" aria-labelledby="d365-chat-section-h2"
+        aria-label="chat-section" role="region">
+        <h2 id="d365-chat-section-h2">chat section hidden header</h2>
+        <div class="context-3col-chat m-content-placement d365-c-show custom-d365-c-show" data-grid="col-12">
+            <div class="custom-hr-divider"></div>
+            <div data-grid="col-12 stack-2" class="flex-banner">
+                <div data-grid="col-4 pad-6x">
+                    <div data-grid="col-12">
+                        <section class="m-content-placement-item f-precise-click f-size-medium x-type-center">
+                            <div class="icon-container">
+                                <mscom:image classoverride="c-image" payloadguid="2dddee7a-7219-424e-9df8-d406ad51afa8" alt="chat-icon"></mscom:image>
+                            </div>
+                            <h2 class="c-heading-4 f-lean" style="height:52px;">Chat with us</h2>
+                            <!--<p class="c-paragraph-4" data-equal-height="3col-chat-p">Available Monday-Friday
+                                                <br>8 AM to 5 PM Central Time.
+                                          </p>-->
+                            <p class="c-paragraph-4" style="height:52px;">Available Monday-Friday
+                                <br>8 AM to 5 PM Central Time.
+                            </p>
+                            <div id="lpChatDynamics" style="padding-left: 20px;"></div>
+                        </section>
+                    </div>
+
+
+                </div>
+                <div data-grid="col-4 pad-6x">
+                    <div data-grid="col-12">
+                        <section class="m-content-placement-item f-precise-click f-size-medium x-type-center">
+                            <div class="icon-container">
+                                <mscom:image classoverride="c-image" payloadguid="2243aa0d-b56b-419a-add0-5c9f4e7c1a62" alt="phone-icon"></mscom:image>
+
+                            </div>
+                            <h2 class="c-heading-4 f-lean" style="height:52px;">Call us</h2>
+                            <!--<p class="c-paragraph-4" data-equal-height="3col-chat-p" x-ms-format-detection="none">Available Monday-Friday
+                                                <br>8 AM to 5 PM Central Time.
+                                          </p>-->
+                            <p class="c-paragraph-4" style="height:52px;" x-ms-format-detection="none">Available Monday-Friday
+                                <br>8 AM to 5 PM Central Time.
+                            </p>
+                            <a class="c-call-to-action c-glyph" id="contact-us-call-cta" aria-label="Call 1-888-477-7989 to speak to a Dynamics 365 specialist"
+                                href="tel:+1-888-477-7989" ms.pgarea="body" ms.cmpnm="call" ms.title="contact us - call" ms.cmpgrp="contact us"
+                                ms.interactiontype="1" x-ms-format-detection="none" ms.index="1" ms.cmptyp="link" ms.ea_action="ask"
+                                ms.ea_offer="sal" ms.ea_name="call">
+                                <span class="baec5a81-e4d6-4674-97f3-e9220f0136c1" style="white-space: nowrap; padding-left: 20px;">CALL 1-888-477-7989</span>
+                            </a>
+
+                        </section>
+                    </div>
+                </div>
+                <div data-grid="col-4 pad-6x">
+                    <div data-grid="col-12">
+                        <section class="m-content-placement-item f-precise-click f-size-medium x-type-center">
+                            <div class="icon-container">
+                                <mscom:image classoverride="c-image" payloadguid="1e83ac24-72fc-4446-9270-a07e50c4e0ca" alt="contact-icon"></mscom:image>
+                            </div>
+                            <h2 class="c-heading-4 f-lean" style="height:52px;">Request we contact you</h2>
+                            <!--<p class="c-paragraph-4" data-equal-height="3col-chat-p">Have a Dynamics 365 expert contact you.</p>-->
+                            <p class="c-paragraph-4" style="height:52px;">Have a Dynamics 365 expert contact you.</p>
+                            <mscom:link id="see_pricing_cta" classoverride="c-call-to-action c-glyph" href="https://dynamics.microsoft.com/en-us/contact-us/"
+                                htmlcustomattributes="{'aria-label':'Send a request to have a Dynamics 365 specialist contact you'}">
+                                <span style="white-space: nowrap; padding-left: 20px;">SEND A REQUEST</span>
+                            </mscom:link>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section data-grid="container">
+    <hr class="c-divider mob-custom-divider">
+</section>
+
+<div class="foot-note-div theme-light">
+    <section data-grid="container" class="footnote-container">
+        <p id="footnote" class="c-paragraph-4 italic-foot-note">
+            <a href="#ret-footnote" class="supLink anchor_underline" aria-label="Return to referrer Footnote">
+                <span class="supFn">*</span>
+            </a>
+
+            Gartner does not endorse any vendor, product or service depicted in its research publications, and does not advise technology
+            users to select only those vendors with the highest ratings or other designation. Gartner research publications
+            consist of the opinions of Gartner's research organization and should not be construed as statements of fact.
+            Gartner disclaims all warranties, expressed or implied, with respect to this research, including any warranties
+            of merchantability or fitness for a particular purpose.
+        </p>
+    </section>
+</div>
+
+<mscom:contentinclude md:pageid="09aef1c6-f07d-4f29-9de2-ed0788379e6b" ajaxrendered="false"></mscom:contentinclude>
+
+<!-- back-to-top-->
+
+<div id="scroll-top-reset">
+    <a href="#mainContent" class="scroll-to-top" title="Navigate to the top of the page" aria-label="Navigate to the top of the page"
+        aria-disabled="false">
+        <div class="c-glyph glyph-up"></div>
+    </a>
+</div>
