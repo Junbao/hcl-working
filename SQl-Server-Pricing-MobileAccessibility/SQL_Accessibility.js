@@ -209,8 +209,10 @@ $(document).ready(function (e) {
 
     $(".accordion-main-panel .accordion-heading").each(function () {
         $(this).attr('role', 'button');
+        tempText = $(this).text();
         if ($(this).hasClass("bg-right-arrow-black")) {
             $(this).attr("aria-expanded", "false");
+            $(this).attr('aria-live')
             tempText = $(this).text();
             if (androidAcc() === 'android') {
                 $(this).attr("aria-label", tempText + " section is collapsed");
@@ -233,7 +235,6 @@ $(document).ready(function (e) {
         if ($(this).hasClass("bg-right-arrow-black")) {
             setTimeout(function () {
                 $($ele).attr("aria-expanded", "false");
-
                 if (androidAcc() === 'android') {
                     $($ele).attr("aria-label", tempText + " section is closing");
                 }
@@ -243,7 +244,6 @@ $(document).ready(function (e) {
                     $($ele).attr("aria-label", tempText + " section is collapsed");
                 }
             },1500);
-
         }
         if ($(this).hasClass("bg-down-arrow-black")) {
             setTimeout(function () {
