@@ -785,17 +785,38 @@
     </div>
 </section>
 
-<!--<script>
-    
-    var signInName = $('.msame_Header_name.msame_TxtTrunc');
-    $(window).on('resize', function(){
-        setTimeout(function(){
-        if (signInName.length > 1){
-            for(var i = 1; i > signInName.length; i++){
-                signInName[i].remove();
-            }
-        }
-        },2)
-    })
+<script>
+    // Fix for layout issue @1024 - Bug 348931
 
-</script>-->
+    $(document).ready(function () {
+        if (window.innerWidth === 1024) {
+            $('#uhf-c-nav').css('display', 'none');
+            $(".js-secondary-paddle").removeClass("glyph-chevron-right");
+            // $("header .js-cat-head").css("display", "none");
+            setTimeout(function () {
+                $(".js-secondary-paddle").css("display", "none");
+                console.log("just added none");
+            }, 5000);
+        } else {
+            $(".js-secondary-paddle").addClass("glyph-chevron-right");
+        }
+    });
+
+
+    // $(window).load(function() { 
+    //     var viewportWidth = $(window).width(); 
+    //     if (viewportWidth < 600) { 
+    //         $( ".view").removeClass("view view-portfolio").addClass( "gallery-mobile"); 
+    //     } 
+    //     $(window).resize(function () { 
+    //         if (viewportWidth < 600) { 
+    //             $( ".view").removeClass("view view-portfolio").addClass( "gallery-mobile");
+    //         } 
+    //     }); 
+    // });
+
+
+
+</script>
+
+
