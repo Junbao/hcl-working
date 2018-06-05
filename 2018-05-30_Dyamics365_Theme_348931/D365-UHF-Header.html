@@ -17,7 +17,6 @@
         outline: 1px dashed currentColor !important;
     }
 
-
     #uhfCatLogo {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     }
@@ -712,14 +711,16 @@
                                         <ul class="" aria-labelledby="shellmenu_813" aria-hidden="true" data-m="{&quot;cN&quot;:&quot;Resources_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c12c5c1m1r1a1&quot;,&quot;sN&quot;:12,&quot;aN&quot;:&quot;c5c1m1r1a1&quot;}"
                                             role="none">
                                             <li data-m="{&quot;cN&quot;:&quot;Academic Alliance_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c1c12c5c1m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c12c5c1m1r1a1&quot;}">
-                                                <a id="shellmenu_82" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/en-us/dynamics365/academic" data-m="{&quot;cN&quot;:&quot;CatNav_Academic Alliance_nav&quot;,&quot;id&quot;:&quot;n1c1c12c5c1m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c1c12c5c1m1r1a1&quot;}">Academic Alliance</a>
+                                                <a id="shellmenu_82" class="js-subm-uhf-nav-link" href="https://dynamics.microsoft.com/en-us/academic/" data-m="{&quot;cN&quot;:&quot;CatNav_Academic Alliance_nav&quot;,&quot;id&quot;:&quot;n1c1c12c5c1m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c1c12c5c1m1r1a1&quot;}">Academic Alliance</a>
                                             </li>
                                             <li data-m="{&quot;cN&quot;:&quot;Awards and Reports_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c2c12c5c1m1r1a1&quot;,&quot;sN&quot;:2,&quot;aN&quot;:&quot;c12c5c1m1r1a1&quot;}">
-                                                <a id="shellmenu_83" class="js-subm-uhf-nav-link x-hidden-focus" href="https://dynamics.microsoft.com/en-us/analyst-awards/"
-                                                    data-m="{&quot;cN&quot;:&quot;CatNav_Awards and Reports_nav&quot;,&quot;id&quot;:&quot;n1c2c12c5c1m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c2c12c5c1m1r1a1&quot;}">Analyst Reports and Awards</a>
+                                                <a id="shellmenu_83" class="js-subm-uhf-nav-link" href="https://dynamics.microsoft.com/en-us/analyst-awards/" data-m="{&quot;cN&quot;:&quot;CatNav_Awards and Reports_nav&quot;,&quot;id&quot;:&quot;n1c2c12c5c1m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c2c12c5c1m1r1a1&quot;}">Analyst Reports and Awards</a>
                                             </li>
                                             <li data-m="{&quot;cN&quot;:&quot;Content Library_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c3c12c5c1m1r1a1&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c12c5c1m1r1a1&quot;}">
                                                 <a id="shellmenu_84" class="js-subm-uhf-nav-link" href="https://explore.dynamics.com/" data-m="{&quot;cN&quot;:&quot;CatNav_Content Library_nav&quot;,&quot;id&quot;:&quot;n1c3c12c5c1m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c3c12c5c1m1r1a1&quot;}">Content Library</a>
+                                            </li>
+                                            <li data-m="{&quot;cN&quot;:&quot;Customer Stories_cont&quot;,&quot;cT&quot;:&quot;Container&quot;,&quot;id&quot;:&quot;c3c12c5c1m1r1a1&quot;,&quot;sN&quot;:3,&quot;aN&quot;:&quot;c12c5c1m1r1a1&quot;}">
+                                                <a id="shellmenu_86" class="js-subm-uhf-nav-link" href="https://dynamics.microsoft.com/en-us/customer-stories/" data-m="{&quot;cN&quot;:&quot;CatNav_Customer Stories_nav&quot;,&quot;id&quot;:&quot;n1c3c12c5c1m1r1a1&quot;,&quot;sN&quot;:1,&quot;aN&quot;:&quot;c3c12c5c1m1r1a1&quot;}">Customer Stories</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -789,7 +790,7 @@
     // Fix for layout issue @1024 - Bug 348931
 
     $(document).ready(function () {
-        if (window.innerWidth === 1024) {
+        function bugFix() {
             $('#uhf-c-nav').css('display', 'none');
             $(".js-secondary-paddle").removeClass("glyph-chevron-right");
             // $("header .js-cat-head").css("display", "none");
@@ -797,26 +798,37 @@
                 $(".js-secondary-paddle").css("display", "none");
                 console.log("just added none");
             }, 5000);
+        }
+        if (window.innerWidth === 1024) {
+            bugFix();
+            $('.glyph-global-nav-button').on('click', function () {
+                if ($('#uhf-c-nav').css('display') === "none") {
+                    $('#uhf-c-nav').css('display', 'block');
+                    $('.glyph-global-nav-button').attr('aria-expanded', 'true');
+                } else {
+                    $('#uhf-c-nav').css('display', 'none');
+                    $('.glyph-global-nav-button').attr('aria-expanded', 'flase');
+                }
+            });
         } else {
             $(".js-secondary-paddle").addClass("glyph-chevron-right");
         }
+        window.addEventListener("resize", function () {
+            console.log("listener is working");
+            if (window.innerWidth == 1024) {
+                $('#uhf-c-nav').css('display', 'none');
+                $('#uhf-g-nav').css('display', 'none');
+                $(".js-secondary-paddle").removeClass("glyph-chevron-right");
+                console.log("just added on resize");
+            } else if (window.innerWidth == 1023) {
+                console.log("screen is 1023");
+            } else if (window.innerWidth == 1025) {
+                console.log("screen getting 1025");
+                $('#uhf-c-nav').css('display', 'block');
+                $(".js-secondary-paddle").addClass("glyph-chevron-right");
+            }
+        });
+
     });
 
-
-    // $(window).load(function() { 
-    //     var viewportWidth = $(window).width(); 
-    //     if (viewportWidth < 600) { 
-    //         $( ".view").removeClass("view view-portfolio").addClass( "gallery-mobile"); 
-    //     } 
-    //     $(window).resize(function () { 
-    //         if (viewportWidth < 600) { 
-    //             $( ".view").removeClass("view view-portfolio").addClass( "gallery-mobile");
-    //         } 
-    //     }); 
-    // });
-
-
-
 </script>
-
-
