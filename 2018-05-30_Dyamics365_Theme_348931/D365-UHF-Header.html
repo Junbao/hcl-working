@@ -792,43 +792,46 @@
     $(document).ready(function () {
         function bugFix() {
             $('#uhf-c-nav').css('display', 'none');
+            $('#uhf-g-nav').css('display', 'none');
             $(".js-secondary-paddle").removeClass("glyph-chevron-right");
-            // $("header .js-cat-head").css("display", "none");
             setTimeout(function () {
+                $('#uhf-c-nav').css('display', 'none');
+                $('#uhf-g-nav').css('display', 'none');
                 $(".js-secondary-paddle").css("display", "none");
-                console.log("just added none");
-            }, 5000);
+            }, 25);
         }
+
         if (window.innerWidth === 1024) {
             bugFix();
-            $('.glyph-global-nav-button').on('click', function () {
-                if ($('#uhf-c-nav').css('display') === "none") {
-                    $('#uhf-c-nav').css('display', 'block');
-                    $('.glyph-global-nav-button').attr('aria-expanded', 'true');
-                } else {
-                    $('#uhf-c-nav').css('display', 'none');
-                    $('.glyph-global-nav-button').attr('aria-expanded', 'flase');
-                }
-            });
         } else {
             $(".js-secondary-paddle").addClass("glyph-chevron-right");
         }
+
         window.addEventListener("resize", function () {
-            console.log("listener is working");
             if (window.innerWidth == 1024) {
-                $('#uhf-c-nav').css('display', 'none');
+                bugFix();
                 $('#uhf-g-nav').css('display', 'none');
-                $(".js-secondary-paddle").removeClass("glyph-chevron-right");
-                console.log("just added on resize");
             } else if (window.innerWidth == 1023) {
-                console.log("screen is 1023");
+                return;
             } else if (window.innerWidth == 1025) {
-                console.log("screen getting 1025");
                 $('#uhf-c-nav').css('display', 'block');
+                $('#uhf-g-nav').css('display', 'block');
                 $(".js-secondary-paddle").addClass("glyph-chevron-right");
             }
         });
 
-    });
+        // If some clicks hamburger at 1024 
+        $('.glyph-global-nav-button').on('click', function() { 
+            if (window.innerWidth === 1024) {
+                if ($('#uhf-c-nav').css('display') === "none") {
+                    $('#uhf-c-nav').css('display', 'block'); 
+                    $('.glyph-global-nav-button').attr('aria-expanded','true');
+                } else {
+                    $('#uhf-c-nav').css('display', 'none');
+                    $('.glyph-global-nav-button').attr('aria-expanded','flase');
+                }
+            }
+        });
 
+    });
 </script>
