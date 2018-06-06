@@ -1,4 +1,4 @@
-/*** Global js for sideheights ***/
+/* ** Global js for sideheights ** */
 var side_elements_height = function ($parent, $child) {
     var maxHeight = 0;
     $parent.each(function () {
@@ -9,8 +9,6 @@ var side_elements_height = function ($parent, $child) {
 
     $parent.each(function () {
         $(this).find($child).css("height", maxHeight);
-
-
     });
 }
 /*** Starts SQL_ImageTabsCarousel ***/
@@ -862,7 +860,7 @@ $(document).ready(function () {
                 });
             }
         });
-    } catch (e) { }
+    } catch (e) {}
 });
 
 function isScrolledIntoView(elem) {
@@ -925,7 +923,7 @@ $(window).load(function () {
     try {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
-    } catch (e) { }
+    } catch (e) {}
     resetTabArrowsZero();
 });
 
@@ -933,7 +931,7 @@ $(window).resize(function () {
     try {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
-    } catch (e) { }
+    } catch (e) {}
 });
 /**********END OF CP_CustomCarouselSettings.js **********/
 
@@ -1143,7 +1141,7 @@ $(document).ready(function () {
             nextNode.onclick = function (e) {
                 e.preventDefault();
                 slideFrame(false);
-                window.moveTo(0,200);
+                window.moveTo(0, 200);
                 if (!e.isTrigger && slickAutoPlay == true) {
                     intervalManager(false);
                     intervalManager(true, currentcarousel, slickAutoPlay, slickautoplayspeed);
@@ -1370,19 +1368,32 @@ $(document).ready(function () {
 
             function pageIconSet() {
                 $('.c-sequence-indicator button').each(function () {
-                    if ($(this).attr('aria-selected') != "true") {
-                        $(this).attr('tabindex', '-1');
-                    } else {
-                        $(this).attr('tabindex', '0');
+                        if ($(this).attr('aria-selected') != "true") {
+                            $(this).attr('tabindex', '-1');
+                        } else {
+                            $(this).attr('tabindex', '0');
+                        }
                     }
-                }
 
                 );
 
             };
 
+            // bug fix 346227 It is a Chrome only bug so isolating only Chrome as Edge doesn't support options to scrollIntoView
+            function chromePageSlide() {
+                var isChrome = window.chrome;
+                if ( isChrome ) {
+                    pageNodes[newActivePage].scrollIntoView({
+                        behavior: "smooth",
+                        block: "bottom"
+                    });
+                }
+            }
+
             function setPagination(isNext, newActivePage) {
                 if (newActivePage !== activePage) {
+                    // bug fix 346227
+                    chromePageSlide();
                     pageNodes[newActivePage].focus();
                     pageNodes[activePage].setAttribute('aria-selected', false);
                     pageNodes[newActivePage].setAttribute('aria-selected', true);
@@ -1904,7 +1915,7 @@ $(document).ready(function () {
             // carouselComponentFCT();
             liheightcalc();
         });
-    } catch (e) { }
+    } catch (e) {}
 });
 /** DIV line-height**/
 
@@ -2155,7 +2166,7 @@ $(document).ready(function () {
             }
         }
 
-    } catch (e) { }
+    } catch (e) {}
 });
 
 $(window).on("load", function () {
@@ -2175,7 +2186,7 @@ $(window).on("load", function () {
             }
 
         }, 2000);
-    } catch (e) { }
+    } catch (e) {}
 });
 
 /**********END OF CP_StaticSupportLinks.js **********/
@@ -2218,7 +2229,7 @@ $(document).ready(function () {
                 }
             }
         }
-    } catch (e) { }
+    } catch (e) {}
 });
 
 
@@ -2273,25 +2284,25 @@ function stickynavslick() {
         infinite: false,
 
         responsive: [{
-            breakpoint: 1084,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                dots: false,
-                arrows: true,
-                infinite: false
+                breakpoint: 1084,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: true,
+                    infinite: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: true,
+                    infinite: false
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                dots: false,
-                arrows: true,
-                infinite: false
-            }
-        }
         ]
     });
 
@@ -2748,29 +2759,29 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [{
-            breakpoint: 1084,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                initialSlide: 0
+                breakpoint: 1084,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    initialSlide: 0
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 0
+                }
+            },
+            {
+                breakpoint: 539,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 0
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                initialSlide: 0
-            }
-        },
-        {
-            breakpoint: 539,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                initialSlide: 0
-            }
-        }
         ]
     });
 
@@ -2972,7 +2983,7 @@ function Sql3Vs4Vs5VsAnalysis_thumbnail_minHeight() {
             $(".thumbnail-child1").removeClass("thumbnail-child1");
             $(".thumbnail-child2").removeClass("thumbnail-child2");
         });
-    } catch (e) { }
+    } catch (e) {}
 }
 
 $(document).ready(function () {
@@ -3167,7 +3178,7 @@ $(document).on("click", ".jcarousel-control-next", function (e) {
             $(".current-righttab-carousel").find(".jcarousel-control-prev").attr('aria-label', 'view previous slide');
         }
         $(".current-righttab-carousel").removeClass("current-righttab-carousel");
-    } catch (e) { }
+    } catch (e) {}
 });
 $(document).on("click", ".jcarousel-control-prev", function (e) {
     e.stopImmediatePropagation();
@@ -3358,7 +3369,7 @@ $(document).ready(function () {
             $('#SQL_StaticMenu').removeClass('bg-grey-d2');
             $('#SQL_StaticMenu').addClass('bg-grey-50');
         }
-    } catch (e) { }
+    } catch (e) {}
 });
 
 /*SQL-static menu*/
@@ -3898,4 +3909,4 @@ function resetTabArrowsZero() {
     $(".mediaCarNavArrows").attr("tabindex", "0");
 }
 
-    // Problem - in Firefox when tabbing backwards a shift tab acts like a click and sends the active state back to the pagination. Only in Firefox
+// Problem - in Firefox when tabbing backwards a shift tab acts like a click and sends the active state back to the pagination. Only in Firefox
