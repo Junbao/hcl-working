@@ -1,0 +1,93 @@
+Hi Team,
+
+As discussed in the call, We have performed one full round of testing on Image tab carousal. Below are the Open/already shared observations which came across.
+
+Tested Preview URL’s: 
+https://cmspreview2.corp.microsoft.com/www.microsoft.com/en-us/cloud-platform/windows-server?CollectionId=d47254f6-060b-46fb-b90f-0983ec11d2f1&debug=true 
+https://cmspreview2.corp.microsoft.com/www.microsoft.com/en-us/cloud-platform/build-your-application-business?CollectionId=d47254f6-060b-46fb-b90f-0983ec11d2f1&debug=true 
+
+IE + JAWS : 
+•	when focus is on non-selected tab  items, JAWS is reading the instruction press SPACEBAR to activate the tab once after pressing SPACEBAR key JAWS is not reading the state as selected. Whereas the state is narrated as selected while using Enter key. This is happening each and every time.
+•	While navigating using UP/DOWN arrow keys between tab items page is also moving UP/DOWN.—IE 
+•	In 200% Zoom mode there is loss of focus (as focus is moving to the 3rd  and 4th tab item but tab item is not visible). Same issue for the 5th tab in Build your application page.--- IE and FF , EDGE
+•	In 200% Zoom mode in tab panel paragraph Text got trimmed.---IE 
+•	In 200% Zoom When focus reaches last tab and if we press enter then “carousel-arrow-slider” is getting disappear from the page. Also when we press left arrow focus reaches to previous tab and if we select    using enter, then “carousel-arrow-slider” pointing to non-selected tab element.---- IE , FF, EDGE—
+•	In HC White mode paragraph in the tab panel is not visible clearly 
+•	As per the Michelle mail related to Tab list We need to access the Tab list with Right & Left arrows. But we are also able to access using Up & Down arrows as well.
+
+FF +NVDA: 
+•	In Reverse Navigation when focus is on tab panel NVDA is not reading the information about tab panel.
+
+EDGE+NARRATOR: 
+•	When narrator is enable After three right arrow keys focus is moving to next tab item.(To change every tab item it is taking three right/left arrow keys.
+•	When narrator is enable On pressing ENTER key on non-selected tab items narrator is not reading as selected.
+•	When Narrator is enable Unable to activate the tab item using Spacebar.
+•	When using UP/DOWN arrow key along with the tab items page is also moving.
+•	In Scan mode for the last 2 tab items reading as empty paragraph but for remaining 3 it is narrating role and name properly.
+•	In Scan mode using spacebar able to select the tab item , but after selecting tab item narrator is not reading the state as selected. Reading fine with ENTER key.
+•	In scan mode when pressing spacebar on 4th and 5th tab item it is not selecting.
+•	In tab mode when focus is on tab item it is reading the heading along with the tab item.
+•	Focus order is not correct in EDGE after pressing SHIFT+TAB from Tab panel focus is not moving to the respective selected tab item.
+
+Also we have attached Video & screenshots for references. PFA and let us know in case of any support required from our side in understanding the bugs.
+
+Regards,
+Surya
+
+
+From: NagarajU Kommisetty (HCL America Inc) 
+Sent: Saturday, April 21, 2018 6:50 PM
+To: Mohammad Amanullah Amanullah (HCL America Inc) <v-moaman@microsoft.com>; Radhika Kundanagurthi (HCL America Inc) <v-rakun@microsoft.com>
+Cc: Suryanarayana Murthy (HCL America Inc) <v-surmur@microsoft.com>; Kavin N (HCL America Inc) <v-kavn@microsoft.com>; Ramakrishna Telkapalli (HCL America Inc) <v-ratelk@microsoft.com>; Rameshbabu Balam (HCL America Inc) <v-rameb@microsoft.com>; Santoshi Kumari Dandi (HCL America Inc) <v-sadand@microsoft.com>; Malla Nanditha (HCL America Inc) <v-malnan@microsoft.com>; Parul Rai (HCL America Inc) <v-parrai@microsoft.com>; Murali Chennoju (HCL America Inc) <v-muchen@microsoft.com>; Harish Pathak (HCL America Inc) <v-hapath@microsoft.com>
+Subject: RE: image tab carousel testing 
+
+HI Aman/Radhika,
+
+Please find my comments inline.
+
+From: Mohammad Amanullah Amanullah (HCL America Inc) 
+Sent: Thursday, April 19, 2018 1:28 AM
+To: Radhika Kundanagurthi (HCL America Inc) <v-rakun@microsoft.com>
+Subject: RE: image tab carousel testing 
+
+Hi Radhika,
+
+I verified image tab carousel on three browser and found following issue:
+
+NVDA/FF:
+•	Space bar is not working to activate tab  Fixed
+•	In Scan mode – Not announcing selected tab on hitting enter  Fixed
+
+Jaws/IE:
+•	Spacebar is not working to activate tab  Fixed
+•	In scan mode – Confuses user by announcing “Press spacebar to activate” when user hit enter to select tab  Working on it
+
+Narrator/Edge:  As discussed , these are open observations.
+•	Does not work with spacebar  Fixed
+•	Does not announce selected And on second down arrow after hitting enter, its read non selected  Open, expected
+•	Announce “Empty paragraph” for 3rd and 4th tab  Open, expected. 
+•	Behave differently with up/down and left/right arrow  Open, expected.
+•	Tabbing order is not correct  Open, expected.
+•	In Scan mode – read as selected even for inactive tabs  Open, expected.
+
+Apart from these, I can still see anchor tag for Prev/Next button which is not available on page now  These are static elements , however we are not getting focus on them while tabbing. With this we would not have any issues with focus order or SR narration.
+
+ 
+
+Thanks,
+Mohammad
+
+From: Radhika Kundanagurthi (HCL America Inc) 
+Sent: Wednesday, April 18, 2018 9:36 AM
+To: Mohammad Amanullah Amanullah (HCL America Inc) <v-moaman@microsoft.com>
+Subject: image tab carousel testing 
+
+Hi Aman,
+
+Can you test below page and let me know open bugs  
+
+https://cmspreview2.corp.microsoft.com/www.microsoft.com/en-us/cloud-platform/build-your-application-business?CollectionId=d47254f6-060b-46fb-b90f-0983ec11d2f1 
+
+
+Thanks,
+Radhika
