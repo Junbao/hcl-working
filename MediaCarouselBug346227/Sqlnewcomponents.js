@@ -28,7 +28,7 @@ function sqlImageTabRTLCarousel() {
 
         var carouselThumbnailNodes = componentNode.querySelectorAll('.carousel-thumbnail-item[data-show="true"]');
         var carouselThumbnailList = componentNode.querySelector('.carousel-thumbnail-list');
-        var carouselNavNodes = componentNode.querySelectorAll('.livearea .carousel-button');
+        var carouselNavNodes = componentNode.querySelectorAll('.livearea .carousel-nav');
         var carouselContentNodes = componentNode.querySelectorAll('.carousel-content-item[data-show="true"]');
         var carouselImageNodes = componentNode.querySelectorAll('.carousel-content-item[data-show="true"] .carousel-content-background');
         var carouselSlider = componentNode.querySelector('.carousel-arrow-slider');
@@ -778,7 +778,6 @@ $(document).ready(function () {
             slick.$slides.eq(slick.currentSlide).siblings().addClass('opacity');
             announcementCarousel.$contentListItems.fadeOut("slow").eq(slick.currentSlide).fadeIn("slow");
             $('#CP_CustomCarousel_1 .carousel .panel-item.slick-active a').attr('tabindex', '-1');
-            resetTabArrowsZero();
         });
 
         //implementing slick to structure
@@ -825,7 +824,6 @@ $(document).ready(function () {
                 slick.$dots.each(function () {
                     $(this).prop('disabled', false);
                 });
-                resetTabArrowsZero();
             }, 100);
         });
 
@@ -860,7 +858,7 @@ $(document).ready(function () {
                 });
             }
         });
-    } catch (e) { }
+    } catch (e) {}
 });
 
 function isScrolledIntoView(elem) {
@@ -923,15 +921,14 @@ $(window).load(function () {
     try {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
-    } catch (e) { }
-    resetTabArrowsZero();
+    } catch (e) {}
 });
 
 $(window).resize(function () {
     try {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
-    } catch (e) { }
+    } catch (e) {}
 });
 /**********END OF CP_CustomCarouselSettings.js **********/
 
@@ -977,8 +974,9 @@ function intervalManager(flag, currentcarousel, slickAutoPlay, slickautoplayspee
     }
 }
 
+
+
 $(window).load(function () {
-    $(".video-link a").attr("tabindex", "-1");
     try {
         $(".cp-media-carousel-with-frames").each(function () {
             var currentcarousel = $(this);
@@ -1118,15 +1116,14 @@ $(document).ready(function () {
             });
 
             // Set event
-
             prevNode.onclick = function (e) {
                 e.preventDefault();
-                chromePageSlide();
                 slideFrame(true);
-                if (!e.isTrigger && slickAutoPlay == true) {
+                if (e.isTrigger == undefined && slickAutoPlay == true) {
                     intervalManager(false);
                     intervalManager(true, currentcarousel, slickAutoPlay, slickautoplayspeed);
                 }
+                chromePageSlide();
                 $('.cp-media-carousel-with-frames .carousel-group .carousel-frame').each(function () {
                     if ($(this).attr('data-carousel-position') == "active") {
                         $(this).attr('aria-hidden', 'false');
@@ -1143,8 +1140,7 @@ $(document).ready(function () {
                 e.preventDefault();
                 chromePageSlide();
                 slideFrame(false);
-                window.moveTo(0, 200);
-                if (!e.isTrigger && slickAutoPlay == true) {
+                if (e.isTrigger == undefined && slickAutoPlay == true) {
                     intervalManager(false);
                     intervalManager(true, currentcarousel, slickAutoPlay, slickautoplayspeed);
                 }
@@ -1192,10 +1188,6 @@ $(document).ready(function () {
                     MediaCarouselWithFramesIDRemove();
                     if ((e.which == 39) || (e.which == 40)) {
                         $(".c-sequence-indicator button.f-active").next().trigger('click');
-                        e.stopImmediatePropagation();
-                    }
-                    if ((e.which == 37) || (e.which == 38)) {
-                        $(".c-sequence-indicator button.f-active").prev().trigger('click');
                         e.stopImmediatePropagation();
                     }
                     if ((e.which == 37) || (e.which == 38)) {
@@ -1291,35 +1283,28 @@ $(document).ready(function () {
                     frameNode.style.left = ((position === "active") ? initLocation : parseInt(position) * scaledWidth + initScaledLocation) + 'px';
                 });
                 $(".carousel-frame[data-carousel-position='active']").find("a.open-popup-video").css("pointerEvents", "auto");
-                $(".carousel-frame[data-carousel-position='active']").find(".video-link a.open-popup-video").attr("tabindex", "0");
-                $(".carousel-frame[data-carousel-position='active']").find(".carousel-content a").attr("tabindex", "-1");
+                $(".carousel-frame[data-carousel-position='active']").find("a.open-popup-video").attr("tabindex", "0");
+                $(".carousel-frame[data-carousel-position='active']").find(".carousel-content a").attr("tabindex", "0");
                 $(".carousel-frame[data-carousel-position='active']").siblings().find("a.open-popup-video").css("pointerEvents", "none");
                 $(".carousel-frame[data-carousel-position='active']").siblings().find("a.open-popup-video").attr("tabindex", "-1");
                 $(".carousel-frame[data-carousel-position='active']").siblings().find(".carousel-content a").attr("tabindex", "-1");
-                resetTabArrowsZero();
             }
 
             // bug fix 346227 It is a Chrome only bug so isolating only Chrome as Edge doesn't support options to scrollIntoView
             function chromePageSlide() {
                 var isChrome = window.chrome;
-                // var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
                 if (navigator.userAgent.indexOf('Edge') >= 0) {
-                    return; 
+                    return;
                 } else if (isChrome) {
                     var carouselWrap = document.getElementById('CP_MediaCarouselWithFrames_1');
-                    
+
                     carouselWrap.scrollIntoViewIfNeeded();
-                    // carouselWrap.scrollIntoView({
-                    //     behavior: "smooth",
-                    //     block: "end",
-                    //     inline: "start"
-                    // });
                 } else {
                     return;
                 }
-                console.log("passing");
             }
 
+            //changing the focus to the frame 
             function changeFocus(place) {
                 chromePageSlide();
                 $('.carousel-frame .video-link a').attr('aria-selected', 'false');
@@ -1352,7 +1337,6 @@ $(document).ready(function () {
                 } else {
                     time = 1750;
                 }
-
 
                 setTimeout(function (time) {
                     // $('.carousel-frame .video-link a').css("border", "none");
@@ -1388,12 +1372,12 @@ $(document).ready(function () {
 
             function pageIconSet() {
                 $('.c-sequence-indicator button').each(function () {
-                    if ($(this).attr('aria-selected') != "true") {
-                        $(this).attr('tabindex', '-1');
-                    } else {
-                        $(this).attr('tabindex', '0');
+                        if ($(this).attr('aria-selected') != "true") {
+                            $(this).attr('tabindex', '-1');
+                        } else {
+                            $(this).attr('tabindex', '0');
+                        }
                     }
-                }
 
                 );
 
@@ -1668,15 +1652,25 @@ $(window).load(function () {
 });
 $(document).ready(function () {
     try {
+
         var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
         var stickyNavNode = document.querySelector('.cp-sticky-nav-sub');
         var stickyNavBGNode = document.querySelector('.cp-sticky-nav-bg');
         var stickyNavInitialPosition = stickyNavBGNode.getBoundingClientRect().top + scrollTop;
+        var stickyNavHeight = $('#CP_StickyNav_1').height();
+
+        // setTimeout(function(){stickyNavInitialPosition = stickyNavBGNode.getBoundingClientRect().top + scrollTop;}, 2000);
 
 
         setStickyNav();
+
+
         stickyNavWidth();
-        window.addEventListener('scroll', setStickyNav);
+        //window.addEventListener('scroll', setStickyNav);
+        window.addEventListener('scroll', function () {
+            stickyNavInitialPosition = stickyNavBGNode.getBoundingClientRect().top + scrollTop;
+            setStickyNav();
+        });
         window.addEventListener('resize', function () {
             stickyNavInitialPosition = stickyNavBGNode.getBoundingClientRect().top + scrollTop;
             setStickyNav();
@@ -1697,16 +1691,18 @@ $(document).ready(function () {
         }
 
         function setStickyNav() {
-            browserZoomLevel = Math.round(window.devicePixelRatio * 100);
-            scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-            stickyNavNode.style.position = (scrollTop >= stickyNavInitialPosition) ? 'fixed' : '';
+            if ($('#CP_StickyNav_1 .cp-sticky-nav-sub').hasClass('sticky')) {
+                browserZoomLevel = Math.round(window.devicePixelRatio * 100);
+                scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+                stickyNavNode.style.position = (scrollTop >= (stickyNavInitialPosition + stickyNavHeight - 1)) ? 'fixed' : '';
 
-            if (browserZoomLevel >= 200 && $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse') == 'true') {
-                stickyNavNode.style.position = (scrollTop >= stickyNavInitialPosition) ? 'fixed' : '';
-                // $('.cp-sticky-nav .cp-sticky-nav-sub').css("position", "fixed");
-            } else if (browserZoomLevel >= 200) {
+                if (browserZoomLevel >= 200 && $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse') == 'true') {
+                    stickyNavNode.style.position = (scrollTop >= (stickyNavInitialPosition + stickyNavHeight - 1)) ? 'fixed' : '';
+                    // $('.cp-sticky-nav .cp-sticky-nav-sub').css("position", "fixed");
+                } else if (browserZoomLevel >= 200) {
 
-                stickyNavNode.style.position = (scrollTop >= stickyNavInitialPosition) ? 'relative' : '';
+                    stickyNavNode.style.position = (scrollTop >= (stickyNavInitialPosition + stickyNavHeight - 1)) ? 'relative' : '';
+                }
             }
         }
 
@@ -1737,7 +1733,6 @@ $(document).on('click', '.sql-RightNavTab .sql-accordion-tab-list ul li', functi
     $(this).focus();
     $(this).children().removeAttr('aria-label');
     $(this).siblings().attr('tabindex', '-1');
-    resetTabArrowsZero();
     var selectedindex = $(this).attr("data-index");
     var selectedtext = $(this).text();
     var $data = $(".selectedtab .sql-righttab");
@@ -1778,7 +1773,6 @@ $(document).ready(function () {
             var $data = $(".selectedtab .sql-righttab");
 
             $data.children().eq(selectedindex).addClass("click-active").attr('tabindex', '0').siblings().removeClass("click-active").attr('tabindex', '-1');
-            resetTabArrowsZero();
             $data.children().eq(selectedindex).removeClass("click-active-sibling").siblings().addClass("click-active-sibling");
             SetJcarouselWidth();
 
@@ -1853,7 +1847,7 @@ $(document).ready(function () {
                 $(".sql-RightNavTab .sql-accordion-tab-list ul li[data-index=" + _currentDataIndex + "]").next().focus();
                 //$(".sql-RightNavTab .sql-accordion-tab-list ul li[data-index=" + _currentDataIndex + "]").next().siblings().attr('aria-selected', 'false');
                 $(".sql-RightNavTab .sql-righttab").children().eq(_currentDataIndex).attr('tabindex', '0').siblings().attr('tabindex', '-1');
-                resetTabArrowsZero();
+
                 if (_currentDataIndex == _tablength) {
                     $(".sql-RightNavTab .sql-accordion-tab-list ul li:first").focus();
                 }
@@ -1922,7 +1916,7 @@ $(document).ready(function () {
             // carouselComponentFCT();
             liheightcalc();
         });
-    } catch (e) { }
+    } catch (e) {}
 });
 /** DIV line-height**/
 
@@ -2173,7 +2167,7 @@ $(document).ready(function () {
             }
         }
 
-    } catch (e) { }
+    } catch (e) {}
 });
 
 $(window).on("load", function () {
@@ -2193,7 +2187,7 @@ $(window).on("load", function () {
             }
 
         }, 2000);
-    } catch (e) { }
+    } catch (e) {}
 });
 
 /**********END OF CP_StaticSupportLinks.js **********/
@@ -2236,7 +2230,7 @@ $(document).ready(function () {
                 }
             }
         }
-    } catch (e) { }
+    } catch (e) {}
 });
 
 
@@ -2291,25 +2285,25 @@ function stickynavslick() {
         infinite: false,
 
         responsive: [{
-            breakpoint: 1084,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                dots: false,
-                arrows: true,
-                infinite: false
+                breakpoint: 1084,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: true,
+                    infinite: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: true,
+                    infinite: false
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                dots: false,
-                arrows: true,
-                infinite: false
-            }
-        }
         ]
     });
 
@@ -2766,29 +2760,29 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [{
-            breakpoint: 1084,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                initialSlide: 0
+                breakpoint: 1084,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    initialSlide: 0
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 0
+                }
+            },
+            {
+                breakpoint: 539,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 0
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                initialSlide: 0
-            }
-        },
-        {
-            breakpoint: 539,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                initialSlide: 0
-            }
-        }
         ]
     });
 
@@ -2990,7 +2984,7 @@ function Sql3Vs4Vs5VsAnalysis_thumbnail_minHeight() {
             $(".thumbnail-child1").removeClass("thumbnail-child1");
             $(".thumbnail-child2").removeClass("thumbnail-child2");
         });
-    } catch (e) { }
+    } catch (e) {}
 }
 
 $(document).ready(function () {
@@ -3032,7 +3026,6 @@ function SetJcarouselWidth() {
                         carouselCount = mobileElement;
 
                         carouselElement.eq(activeslide).siblings().attr('aria-hidden', 'true').find('.textcontent a').attr('tabindex', '-1');
-                        resetTabArrowsZero();
 
 
                     } else {
@@ -3065,7 +3058,6 @@ function SetJcarouselWidth() {
                         carouselCount = tabletElement;
 
                         carouselElement.children('li').eq(activeslide).siblings().attr('aria-hidden', 'true').find('.textcontent a').attr('tabindex', '-1');
-                        resetTabArrowsZero();
 
                     } else {
                         maindiv.find(".jcarousel-control-prev").hide();
@@ -3086,7 +3078,6 @@ function SetJcarouselWidth() {
                         carouselCount = desktopElement;
 
                         carouselElement.children('li').eq(activeslide).siblings().attr('aria-hidden', 'true').find('.textcontent a').attr('tabindex', '-1');
-                        resetTabArrowsZero();
 
                         if (activeslide == (carouselElementChildLength - 1)) {
                             activeslide--;
@@ -3149,7 +3140,6 @@ $(document).on("click", ".jcarousel-control-next", function (e) {
 
             carouselEle.children().eq(activelement).addClass("active").attr('aria-hidden', 'false');
             carouselEle.children().eq(activelement).siblings().attr('aria-hidden', 'true').find('.textcontent a').attr('tabindex', '-1');
-            resetTabArrowsZero();
             carouselEle.children().eq(activelement).next().attr('aria-hidden', 'false');
             carouselEle.children().eq(activelement).next().find('.textcontent a').attr('tabindex', '0');
 
@@ -3185,7 +3175,7 @@ $(document).on("click", ".jcarousel-control-next", function (e) {
             $(".current-righttab-carousel").find(".jcarousel-control-prev").attr('aria-label', 'view previous slide');
         }
         $(".current-righttab-carousel").removeClass("current-righttab-carousel");
-    } catch (e) { }
+    } catch (e) {}
 });
 $(document).on("click", ".jcarousel-control-prev", function (e) {
     e.stopImmediatePropagation();
@@ -3205,7 +3195,6 @@ $(document).on("click", ".jcarousel-control-prev", function (e) {
             carouselEle.children().removeClass("active");
             carouselEle.children().eq(activelement).addClass("active").attr('aria-hidden', 'false');
             carouselEle.children().eq(activelement).siblings().attr('aria-hidden', 'true').find('.textcontent a').attr('tabindex', '-1');
-            resetTabArrowsZero();
             carouselEle.children().eq(activelement).next().attr('aria-hidden', 'false');
             carouselEle.children().eq(activelement).next().find('.textcontent a').attr('tabindex', '0');
             carouselEle.children().eq(activelement).find('.textcontent a').attr('tabindex', '0');
@@ -3376,7 +3365,7 @@ $(document).ready(function () {
             $('#SQL_StaticMenu').removeClass('bg-grey-d2');
             $('#SQL_StaticMenu').addClass('bg-grey-50');
         }
-    } catch (e) { }
+    } catch (e) {}
 });
 
 /*SQL-static menu*/
@@ -3646,7 +3635,6 @@ var sqlintraPageNavBar = function () {
                     tempComponentTarget.attr('tabindex', '-1');
                     tempComponentTarget.focus();
                     tempComponentTarget.removeAttr('tabindex');
-                    resetTabArrowsZero();
                 }
             }, 1000);
         } else {
@@ -3697,7 +3685,6 @@ var sqlintraPageNavBar = function () {
                     tempComponentTarget.attr('tabindex', '-1');
                     tempComponentTarget.focus();
                     tempComponentTarget.removeAttr('tabindex');
-                    resetTabArrowsZero();
                 }
             }, 1000);
         }
@@ -3892,6 +3879,10 @@ $(window).load(function () {
         // console.log(len);
     }
     /**Static menu width calculation */
+    $('.cp-sticky-nav .cp-sticky-nav-sub nav .tab').each(function () {
+        $(this).find('.tab-menu').removeAttr('tabindex', '0');
+    });
+
 });
 
 function MediaCarouselWithFramesIDRemove() {
@@ -3902,18 +3893,3 @@ function MediaCarouselWithFramesIDRemove() {
     $(".cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position='5'] a").removeAttr('id');
 
 }
-
-// this is a correction for tabindex being forced to -1 for the frames.  Opted not to re-write all the other code  - 05/02/18
-$(document).ready(function () {
-
-    setInterval(function () {
-        resetTabArrowsZero();
-    }, 3000);
-
-});
-
-function resetTabArrowsZero() {
-    $(".mediaCarNavArrows").attr("tabindex", "0");
-}
-
-// Problem - in Firefox when tabbing backwards a shift tab acts like a click and sends the active state back to the pagination. Only in Firefox
