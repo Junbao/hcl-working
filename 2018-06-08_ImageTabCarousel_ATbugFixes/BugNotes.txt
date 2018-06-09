@@ -1,3 +1,12 @@
+
+My working release - 
+https://cmspreview2.corp.microsoft.com/www.microsoft.com/en-us/cloud-platform/windows-server?CollectionId=0edb6895-f7a8-4520-946f-c1904d094d82
+
+Content - https://smcms.corp.microsoft.com/#/sites/Main/payloads/ModelView/edit/0edb6895-f7a8-4520-946f-c1904d094d82/en-us/0ee9f041-49bf-4656-b509-17ea1ce550ab?tab=source
+
+Scripts-
+https://smcms.corp.microsoft.com/#/management/Main/payloads/Javascript/edit/78f2cd07-c98d-43d7-9f22-33658d1439d6/en-us/45a15a73-b176-4c94-a314-21a1edec69e5
+
 Hi Team,
 
 As discussed in the call, We have performed one full round of testing on Image tab carousal. Below are the Open/already shared observations which came across.
