@@ -680,7 +680,6 @@ function intertabheight() {
 
 }
 
-
 $(document).ready(function () {
     try {
         $(".image-tabs-with-internal-menu-sub-data-container").children().each(function () {
@@ -986,6 +985,7 @@ $(window).load(function () {
                 if (!($(this).find(".mscom-link").hasClass("open-popup-video")) && !($(this).find(".mscom-link").hasClass("open-inline-video"))) {
                     $(this).find(".mscom-link").removeAttr("href");
                     $(this).find(".mscom-link").removeAttr("tabindex");
+                    $(".false_paragraph a").attr("tabindex", "-1");
                 }
             });
             if (currentcarousel.attr("data-auto-play") == "true" && isScrolledIntoView(currentcarousel)) {
@@ -1187,16 +1187,32 @@ $(document).ready(function () {
                     });
                     MediaCarouselWithFramesIDRemove();
                     if ((e.which == 39) || (e.which == 40)) {
+                        e.preventDefault();
                         $(".c-sequence-indicator button.f-active").next().trigger('click');
-                        e.stopImmediatePropagation();
+                        // e.stopImmediatePropagation();
                     }
                     if ((e.which == 37) || (e.which == 38)) {
+                        e.preventDefault();
                         $(".c-sequence-indicator button.f-active").prev().trigger('click');
-                        e.stopImmediatePropagation();
+                        // e.stopImmediatePropagation();
                     }
                 }
             });
 
+            $("#CP_MediaCarouselWithFrames_1").on('keydown', function (e) {
+
+                if ((e.which == 39) || (e.which == 40)) {
+                    e.preventDefault();
+                    console.log('keydown');
+                    $(".c-sequence-indicator button.f-active").next().trigger('click');
+                } else if ((e.which == 37) || (e.which == 38)) {
+                    e.preventDefault();
+                    $(".c-sequence-indicator button.f-active").prev().trigger('click');
+                    console.log("keydown");
+                } else {
+                    return;
+                }
+            });
 
 
             //setPlayButtonNode();
@@ -1285,6 +1301,7 @@ $(document).ready(function () {
                 $(".carousel-frame[data-carousel-position='active']").find("a.open-popup-video").css("pointerEvents", "auto");
                 $(".carousel-frame[data-carousel-position='active']").find("a.open-popup-video").attr("tabindex", "0");
                 $(".carousel-frame[data-carousel-position='active']").find(".carousel-content a").attr("tabindex", "0");
+                $(".false_paragraph a").attr("tabindex", "-1");
                 $(".carousel-frame[data-carousel-position='active']").siblings().find("a.open-popup-video").css("pointerEvents", "none");
                 $(".carousel-frame[data-carousel-position='active']").siblings().find("a.open-popup-video").attr("tabindex", "-1");
                 $(".carousel-frame[data-carousel-position='active']").siblings().find(".carousel-content a").attr("tabindex", "-1");
@@ -1365,6 +1382,7 @@ $(document).ready(function () {
                     changeFocus(place);
                 }
             });
+
             $('.c-sequence-indicator button').on("click", function () {
                 place = $(this).attr('data-place');
                 changeFocus(place);
@@ -1410,6 +1428,7 @@ $(document).ready(function () {
         console.log(err)
     }
 });
+
 /*Functionality of MediacarouselWithFrames in IOS*/
 $(document).load(function (e) {
     var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
@@ -1650,6 +1669,7 @@ $(document).ready(function () {
 $(window).load(function () {
     $('.cp-sticky-nav .cp-sticky-nav-sub').css("position", "relative");
 });
+
 $(document).ready(function () {
     try {
 
@@ -1746,6 +1766,7 @@ $(document).on('click', '.sql-RightNavTab .sql-accordion-tab-list ul li', functi
         }, 500);
     }
 });
+
 $(document).ready(function () {
     try {
         $(document).on('click', '.sql-RightNavTab .sql-accordion-tab-list ul li', function (e, arg) {
@@ -2340,12 +2361,10 @@ $(document).ready(function () {
             stickynavslick();
             stickynavheight();
         }
-
-    } catch (err) {
-
-    }
+    } catch (err) {}
 
 });
+
 $(window).resize(function () {
     try {
         if ($("#static_menu_1").length > 0) {
@@ -2358,6 +2377,7 @@ $(window).resize(function () {
     }
 
 });
+
 $(document).on("click", ".mobile_table_header", function (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -2380,6 +2400,7 @@ $(document).on("click", ".mobile_table_header", function (e) {
     $(".actb").removeClass("actb");
 
 });
+
 $(document).on("click", ".selectedacctab", function (e) {
     $(this).width()
     $(".subitems").slideToggle(500);
@@ -2404,6 +2425,7 @@ $(document).ready(function () {
 
     }
 });
+
 /*SQL_5PillarsOverlayContent.js*/
 $(document).ready(function () {
     try {
@@ -2541,6 +2563,7 @@ $(document).ready(function () {
     }
 
 });
+
 $(window).resize(function () {
     try {
         if ($(".three-col-slick").length > 0) {
@@ -2597,11 +2620,12 @@ var child_element_height = function ($parent, $child) {
     $parent.find($child).css("height", maxHeight);
 
 }
+
 $(document).ready(function () {
     fiveColCopyChildHeight();
     threeColCopyChildHeight();
-
 });
+
 $(window).resize(function () {
     fiveColCopyChildHeight();
     threeColCopyChildHeight();
@@ -2687,12 +2711,9 @@ $(document).ready(function () {
             function setEventCountdown() {
                 var now = new Date();
                 var timeString = $('.events-hero').find('.countdown-timer').data('event-time') + "  " + $('.events-hero').find('.countdown-timer').data('event-timezone');
-                //console.log("ts"+timeString);
                 timeString = timeString.toString();
                 var countdownDate = new Date(timeString);
-                // console.log(countdownDate);
 
-                //console.log(now);
                 if (now > countdownDate) {
                     $('.events-hero').find('.days-count').find('h3').text('0');
                     $('.events-hero').find('.hours-count').find('h3').text('0');
@@ -2829,6 +2850,7 @@ setInterval(function () {
         prevButtonClick();
     });
 }, 50);
+
 $(window).resize(function () {
     var wwidth = $(window).width();
     if (wwidth >= 540) {
@@ -3125,7 +3147,6 @@ function SetJcarouselWidth() {
 $(document).on("click", ".jcarousel-control-next", function (e) {
     e.stopImmediatePropagation();
     e.preventDefault();
-    e.preventDefault();
     try {
         $(this).parents().closest(".RightNavTab-carousel").addClass("current-righttab-carousel");
         var currentparent = $(".current-righttab-carousel").find(".Tab-carousel");
@@ -3177,6 +3198,7 @@ $(document).on("click", ".jcarousel-control-next", function (e) {
         $(".current-righttab-carousel").removeClass("current-righttab-carousel");
     } catch (e) {}
 });
+
 $(document).on("click", ".jcarousel-control-prev", function (e) {
     e.stopImmediatePropagation();
     e.stopPropagation();
@@ -3234,6 +3256,7 @@ $(document).on("click", ".jcarousel-control-prev", function (e) {
 
     }
 });
+
 $(document).ready(function () {
     if ($(".RightNavTab-carousel:visible").length > 0) {
         $(".Tab-carousel").each(function () {
@@ -3242,6 +3265,7 @@ $(document).ready(function () {
         SetJcarouselWidth();
     }
 });
+
 $(window).resize(function () {
     if ($(".RightNavTab-carousel:visible").length > 0) {
         SetJcarouselWidth();
@@ -3265,16 +3289,12 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-
-
     if ($('.CP_AccordionWithTable .terms_and_conditions fieldset').text() == "") {
         $(this).remove();
     }
     if ($('.CP_AccordionWithTable .terms_and_conditions legend').text() == "") {
         $(this).remove();
     }
-
-
 });
 
 $(window).resize(function () {
@@ -3345,8 +3365,6 @@ function ContentPlacementHeight() {
 }
 
 /* End SQL_MWF_ContentPlacement_1_VG */
-
-
 
 
 $(document).ready(function () {
@@ -3858,6 +3876,7 @@ $(document).ready(function () {
     });
     MediaCarouselWithFramesIDRemove();
 });
+
 $(window).resize(function () {
     browserZoomLevel = Math.round(window.devicePixelRatio * 100);
     $('.cp-sticky-nav .cp-sticky-nav-sub .tabs .tab').on("keypress", function (e) {
@@ -3886,10 +3905,8 @@ $(window).load(function () {
 });
 
 function MediaCarouselWithFramesIDRemove() {
-
     $(".cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position='-2'] a").removeAttr('id');
     $(".cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position='-1'] a").removeAttr('id');
     $(".cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position='4'] a").removeAttr('id');
     $(".cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position='5'] a").removeAttr('id');
-
 }
