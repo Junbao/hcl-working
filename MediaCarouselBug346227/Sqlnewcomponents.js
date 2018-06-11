@@ -936,6 +936,19 @@ $(window).resize(function () {
 var mediaAutoCarousel = null;
 var trigerredclick = 0;
 
+// $(document).on('keydown', function(e) {
+//     console.log(e.key);
+//     if ( !$('.c-sequence-indicator button:active') ) {
+//         if(e.key == 38) {
+//             e.preventDefault();
+//             console.log("working " + e.key);
+//         }
+//     } else {
+//         console.log("working - skipped");
+//     }
+// });
+
+
 function intervalManager(flag, currentcarousel, slickAutoPlay, slickautoplayspeed) {
     var ishover = 0;
 
@@ -985,7 +998,7 @@ $(window).load(function () {
                 if (!($(this).find(".mscom-link").hasClass("open-popup-video")) && !($(this).find(".mscom-link").hasClass("open-inline-video"))) {
                     $(this).find(".mscom-link").removeAttr("href");
                     $(this).find(".mscom-link").removeAttr("tabindex");
-                    $(".false_paragraph a").attr("tabindex", "-1");
+                    skipWatch();
                 }
             });
             if (currentcarousel.attr("data-auto-play") == "true" && isScrolledIntoView(currentcarousel)) {
@@ -1046,9 +1059,18 @@ $(window).scroll(function () {
     }
 
 });
+
 $(document).ready(function () {
     var pageIconPlace = 0;
     var place = 0;
+    function skipWatch() {
+        setTimeout(() => {
+            $('.false_paragraph a').attr('tabindex', '-1');
+            $(".carousel-frame[data-carousel-position='active']").find("a.open-popup-video").attr("tabindex", "-1");
+        }, 1500);
+    };
+
+    skipWatch();
     try {
 
         var forEach = Array.prototype.forEach.call.bind(Array.prototype.forEach);
@@ -1112,18 +1134,19 @@ $(document).ready(function () {
                 initLocation = groupNode.offsetWidth / 2 - WIDTH / 2;
                 initScaledLocation = groupNode.offsetWidth / 2 - (WIDTH - WIDTH * SCALE) / 2;
 
+
                 setFramesPosition();
             });
 
             // Set event
-            prevNode.onclick = function (e) {
+            prevNode.onclick = function(e) {
                 e.preventDefault();
                 slideFrame(true);
                 if (e.isTrigger == undefined && slickAutoPlay == true) {
                     intervalManager(false);
                     intervalManager(true, currentcarousel, slickAutoPlay, slickautoplayspeed);
                 }
-                chromePageSlide();
+                chromePageSlide(e);
                 $('.cp-media-carousel-with-frames .carousel-group .carousel-frame').each(function () {
                     if ($(this).attr('data-carousel-position') == "active") {
                         $(this).attr('aria-hidden', 'false');
@@ -1134,11 +1157,12 @@ $(document).ready(function () {
                 // changeFocus();
                 $('.carousel-frame .video-link a').css("border", "none");
                 MediaCarouselWithFramesIDRemove();
+
             }
 
-            nextNode.onclick = function (e) {
+            nextNode.onclick = function(e) {
                 e.preventDefault();
-                chromePageSlide();
+                chromePageSlide(e);
                 slideFrame(false);
                 if (e.isTrigger == undefined && slickAutoPlay == true) {
                     intervalManager(false);
@@ -1186,31 +1210,17 @@ $(document).ready(function () {
                         }
                     });
                     MediaCarouselWithFramesIDRemove();
-                    if ((e.which == 39) || (e.which == 40)) {
-                        e.preventDefault();
-                        $(".c-sequence-indicator button.f-active").next().trigger('click');
-                        // e.stopImmediatePropagation();
-                    }
-                    if ((e.which == 37) || (e.which == 38)) {
-                        e.preventDefault();
-                        $(".c-sequence-indicator button.f-active").prev().trigger('click');
-                        // e.stopImmediatePropagation();
-                    }
-                }
-            });
+                    // if ((e.which == 38) || (e.which == 39)) {
+                    //     e.preventDefault();
+                    //     $(".c-sequence-indicator button.f-active").next().trigger('click');
+                    //     // e.stopImmediatePropagation();
+                    // }
+                    // if ((e.which == 37) || (e.which == 40)) {
+                    //     e.preventDefault();
+                    //     $(".c-sequence-indicator button.f-active").prev().trigger('click');
+                    //     // e.stopImmediatePropagation();
+                    // }
 
-            $("#CP_MediaCarouselWithFrames_1").on('keydown', function (e) {
-
-                if ((e.which == 39) || (e.which == 40)) {
-                    e.preventDefault();
-                    console.log('keydown');
-                    $(".c-sequence-indicator button.f-active").next().trigger('click');
-                } else if ((e.which == 37) || (e.which == 38)) {
-                    e.preventDefault();
-                    $(".c-sequence-indicator button.f-active").prev().trigger('click');
-                    console.log("keydown");
-                } else {
-                    return;
                 }
             });
 
@@ -1224,7 +1234,6 @@ $(document).ready(function () {
             }
 
             function slideFrame(isNext) {
-
                 forEach(frameNodes, function (frameNode, frameIndex) {
                     var position = frameNode.getAttribute('data-carousel-position');
                     var newPosition = null;
@@ -1301,23 +1310,22 @@ $(document).ready(function () {
                 $(".carousel-frame[data-carousel-position='active']").find("a.open-popup-video").css("pointerEvents", "auto");
                 $(".carousel-frame[data-carousel-position='active']").find("a.open-popup-video").attr("tabindex", "0");
                 $(".carousel-frame[data-carousel-position='active']").find(".carousel-content a").attr("tabindex", "0");
-                $(".false_paragraph a").attr("tabindex", "-1");
+                skipWatch();
                 $(".carousel-frame[data-carousel-position='active']").siblings().find("a.open-popup-video").css("pointerEvents", "none");
                 $(".carousel-frame[data-carousel-position='active']").siblings().find("a.open-popup-video").attr("tabindex", "-1");
                 $(".carousel-frame[data-carousel-position='active']").siblings().find(".carousel-content a").attr("tabindex", "-1");
             }
 
             // bug fix 346227 It is a Chrome only bug so isolating only Chrome as Edge doesn't support options to scrollIntoView
-            function chromePageSlide() {
+            function chromePageSlide(e) {
                 var isChrome = window.chrome;
                 if (navigator.userAgent.indexOf('Edge') >= 0) {
-                    return;
+                    return false;
                 } else if (isChrome) {
                     var carouselWrap = document.getElementById('CP_MediaCarouselWithFrames_1');
-
                     carouselWrap.scrollIntoViewIfNeeded();
                 } else {
-                    return;
+                    return false;
                 }
             }
 
@@ -1376,20 +1384,20 @@ $(document).ready(function () {
                 }, time);
             };
 
-            $('.c-sequence-indicator button').keypress(function () {
-                if (event.which == 13) {
+            $('.c-sequence-indicator button').on('keypress', function(e) {
+                if (e.which == 13) {
                     place = $(this).attr('data-place');
                     changeFocus(place);
                 }
             });
 
-            $('.c-sequence-indicator button').on("click", function () {
+            $('.c-sequence-indicator button').on("click", function() {
                 place = $(this).attr('data-place');
                 changeFocus(place);
             });
 
             function pageIconSet() {
-                $('.c-sequence-indicator button').each(function () {
+                $('.c-sequence-indicator button').each(function() {
                         if ($(this).attr('aria-selected') != "true") {
                             $(this).attr('tabindex', '-1');
                         } else {
@@ -1494,11 +1502,11 @@ $(document).load(function (e) {
                     });
 
                     // Set event
-                    prevNode.onclick = function () {
+                    prevNode.onclick = function (e) {
                         slideFrame(true);
                     }
 
-                    nextNode.onclick = function () {
+                    nextNode.onclick = function (e) {
                         slideFrame(false);
                     }
 
@@ -1847,6 +1855,7 @@ $(document).ready(function () {
             /*Left & up arrows*/
             if (e.keyCode == 37 || e.keyCode == 38) {
                 disableScroll();
+                console.log("running at 1852");
                 _currentEle = e.currentTarget;
                 _tablength = $(".sql-RightNavTab .sql-accordion-tab-list ul li").length;
                 _currentDataIndex = $(_currentEle).attr('data-index');
@@ -1859,6 +1868,7 @@ $(document).ready(function () {
 
             /*Right & down arrows*/
             if (e.keyCode == 39 || e.keyCode == 40) {
+                console.log("running at 1865");
                 disableScroll();
                 _currentEle = e.currentTarget;
                 _tablength = $('.sql-RightNavTab .sql-accordion-tab-list ul li').length - 1;
@@ -1876,6 +1886,7 @@ $(document).ready(function () {
             }
 
             if (e.keyCode == 13 || e.keyCode == 32) {
+                console.log("running at 1882");
                 enableScroll();
                 _currentEle = e.currentTarget;
                 _currentDataIndex = $(_currentEle).attr('data-index');
@@ -3843,7 +3854,8 @@ function preventDefault(e) {
 function preventDefaultForScrollKeys(e) {
     if (keys[e.keyCode]) {
         preventDefault(e);
-        return false;
+        console.log("running at 3850");
+        // return false;
     }
 }
 
