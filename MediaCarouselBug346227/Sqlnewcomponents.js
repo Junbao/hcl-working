@@ -1212,35 +1212,16 @@ $(document).ready(function () {
                     });
 
                     MediaCarouselWithFramesIDRemove();
-                    // if ((e.which == 38) || (e.which == 39)) {
-                    //     console.log("key to left");
-                    //     e.preventDefault();
-                    //     $(".c-sequence-indicator button.f-active").next().trigger('click');
-                    //     // e.stopImmediatePropagation();
-                    // }
-                    // if ((e.which == 37) || (e.which == 40)) {
-                    //     console.log("key to right");
-                    //     e.preventDefault();
-                    //     $(".c-sequence-indicator button.f-active").prev().trigger('click');
-                    //     // e.stopImmediatePropagation();
-                    // }
-
                 }
                 pageNode.onkeydown = function(e) {
-                    jQuery.extend(jQuery.expr[':'], {
-                        focus: "a == document.activeElement"
-                    });
+
                     if ((e.which == 38) || (e.which == 39)) {
                         e.preventDefault();
-                        // if (!$('.c-sequence-indicator button:focus')) {
-                        //     console.log("movie focus");
-                        //     return true;
-                        // }
-                        // e.stopImmediatePropagation();
+                        e.stopImmediatePropagation();
                     }
                     if ((e.which == 37) || (e.which == 40)) {
                         e.preventDefault();
-                        e.stopImmediatePropagation();
+                        // e.stopImmediatePropagation();
                     }
                 }
             });
