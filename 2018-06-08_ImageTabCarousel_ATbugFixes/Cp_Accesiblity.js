@@ -1407,11 +1407,13 @@ $(window).resize(function () {
         $('.cp_media_carousel_with_responsive .carousel-wrapper ul.slick-dots li button').removeAttr('type');
 
     }, 500);
-
+    /* Zoom 200 fix */
+    if (devicePixelRatio > 1.4) {
+        $('.carousel-body').css("max-width", "80%");
+    }
 });
 
 $(window).load(function () {
-
     $(".cp_media_carousel_with_responsive .slick-slider ul.slick-dots li").attr("role", "tab");
     $('.cp_media_carousel_with_responsive').each(function () {
         var $melement = $(this);

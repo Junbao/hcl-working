@@ -1,370 +1,532 @@
-<!-- Begins CP_MediaCarouselWithFrames -->
-<a id="{{deep-link-id}}" data-no-tag="1" tabindex="-1" aria-hidden="true"></a>
-<section id="CP_MediaCarouselWithFrames_1" class="cp-media-carousel-with-frames {{background_color}} {{light-background-OR-dark-background}}"
-    data-disable="true" data-tag="tagging" data-auto-play="{{data-auto-play}}" data-auto-play-speed="{{data-auto-play-speed}}"
-    tab-index="-1">
+<a id="{{deep-link-id}}" class="deeplink-element" aria-hidden="true" data-no-tag="1" tabindex="-1"></a>
+<section class="cp-image-tab-carousel" data-tag="tagging" id="cp-image-tab-carousel" role="region" aria-labelledby="ImageTabCarousel_heading">
     <div class="ms-grid full">
         <div class="ms-row no-margin">
             <div class="livearea">
-                <div class="headline">
-                    <mscom:conditional propertyexists="true" property="PageProperties.IsMediaCarouselWithFrames_Hero">
-                        <h1 class="c-heading-3">{{headline}}</h1>
-                    </mscom:conditional>
-                    <mscom:conditional propertyexists="false" property="PageProperties.IsMediaCarouselWithFrames_Hero">
-                        <h2 class="c-heading-3">{{headline}}</h2>
-                    </mscom:conditional>
+                <mscom:conditional property="PageProperties.IsImageTabsCarousel_Hero" propertyexists="true">
+                    <h1 id="ImageTabCarousel_heading" class="headline c-heading-4">{{headline}}</h1>
+                </mscom:conditional>
+                <mscom:conditional property="PageProperties.IsImageTabsCarousel_Hero" propertyexists="false">
+                    <h2 id="ImageTabCarousel_heading" class="headline c-heading-4">{{headline}}</h2>
+                </mscom:conditional>
+            </div>
+            <!-- Image Tab navigation -->
+            <div class="livearea livearea-thumbnail">
+                <div class="carousel-thumbnails">
+                    <!-- previous arrow - hidden by default -->
+                    <a class="carousel-left carousel-nav">
+                        <picture>
+                            <source class='hide-by-default show-element' srcset='{{left-arrow-image}}' media='(min-width:0)' />
+                            <img srcset='{{left-arrow-image}}' class="" data-desktop-class="" alt="{{left-arrow-image-alt-text}}" src="{{left-arrow-image}}">
+                        </picture>
+                    </a>
+                    <div class="carousel-thumbnail-list" role="tablist">
+                        <a id="tabcarousel1" class="carousel-thumbnail-item" data-index="0" tabindex="0" data-show="{{1:show-element}}" role="tab"
+                            aria-selected="true" aria-controls="carousel-content-item_1">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{1:thumbnail-image-180x60}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{1:thumbnail-image-180x60}}' media='(min-width:0)' />
+                                <img srcset='{{1:thumbnail-image-180x60}}' class="" data-desktop-class="" alt="{{1:thumbnail-alt-text}}" src="{{1:thumbnail-image-180x60}}">
+                            </picture>
+
+                        </a>
+                        <a id="tabcarousel2" class="carousel-thumbnail-item" data-index="1" tabindex="-1" data-show="{{2:show-element}}" role="tab"
+                            aria-selected="false" aria-controls="carousel-content-item_2">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{2:thumbnail-image-180x60}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{2:thumbnail-image-180x60}}' media='(min-width:0)' />
+                                <img srcset='{{2:thumbnail-image-180x60}}' class="" data-desktop-class="" alt="{{2:thumbnail-alt-text}}" src="{{2:thumbnail-image-180x60}}">
+                            </picture>
+
+                        </a>
+                        <a id="tabcarousel3" class="carousel-thumbnail-item" data-index="2" tabindex="-1" data-show="{{3:show-element}}" role="tab"
+                            aria-selected="false" aria-controls="carousel-content-item_3">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{3:thumbnail-image-180x60}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{3:thumbnail-image-180x60}}' media='(min-width:0)' />
+                                <img srcset='{{3:thumbnail-image-180x60}}' class="" data-desktop-class="" alt="{{3:thumbnail-alt-text}}" src="{{3:thumbnail-image-180x60}}">
+                            </picture>
+
+                        </a>
+                        <a id="tabcarousel4" class="carousel-thumbnail-item" data-index="3" tabindex="-1" data-show="{{4:show-element}}" role="tab"
+                            aria-selected="false" aria-controls="carousel-content-item_4">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{4:thumbnail-image-180x60}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{4:thumbnail-image-180x60}}' media='(min-width:0)' />
+                                <img srcset='{{4:thumbnail-image-180x60}}' class="" data-desktop-class="" alt="{{4:thumbnail-alt-text}}" src="{{4:thumbnail-image-180x60}}">
+                            </picture>
+
+                        </a>
+                        <a id="tabcarousel5" class="carousel-thumbnail-item" data-index="4" tabindex="-1" data-show="{{5:show-element}}" role="tab"
+                            aria-selected="false" aria-controls="carousel-content-item_5">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{5:thumbnail-image-180x60}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{5:thumbnail-image-180x60}}' media='(min-width:0)' />
+                                <img srcset='{{5:thumbnail-image-180x60}}' class="" data-desktop-class="" alt="{{5:thumbnail-alt-text}}" src="{{5:thumbnail-image-180x60}}">
+                            </picture>
+
+                        </a>
+                        <a id="tabcarousel6" class="carousel-thumbnail-item" data-index="5" tabindex="-1" data-show="{{6:show-element}}" role="tab"
+                            aria-selected="false" aria-controls="carousel-content-item_6">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{6:thumbnail-image-180x60}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{6:thumbnail-image-180x60}}' media='(min-width:0)' />
+                                <img srcset='{{6:thumbnail-image-180x60}}' class="" data-desktop-class="" alt="{{6:thumbnail-alt-text}}" src="{{6:thumbnail-image-180x60}}">
+                            </picture>
+
+                        </a>
+                    </div>
+                    <!-- next arrow - hidden by default -->
+                    <a class="carousel-right carousel-nav">
+                        <picture>
+                            <source class='hide-by-default show-element' srcset='{{right-arrow-image}}' media='(min-width:0)' />
+                            <img srcset='{{right-arrow-image}}' class="" data-desktop-class="" alt="{{right-arrow-image-alt-text}}" src="{{right-arrow-image}}">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+            <!-- Tab Content -->
+            <div class="livearea livearea-content">
+                <div class="carousel-content-list">
+
+                    <div id="carousel-content-item_1" aria-labelledby="tabcarousel1" role="tabpanel" tabindex="0" class="carousel-content-item  {{1:background-color}} {{1:background-theme}}"
+                        data-active="true" data-show="{{1:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{1:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{1:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{1:background-image-2000x500}}' class="" data-desktop-class="" alt="{{1:background-alt-text}}" src="{{1:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{1:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{1:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{1:logo-image-300x100}}' class="" data-desktop-class="" alt="{{1:logo-image-alt-text}}" src="{{1:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{1:headline}}</h3>
+                            <div class="carousel-body">{{{1:body}}}</div>
+                            <mscom:link href="{{1:link}}" target="{{1:link-target}}" md:payloadguid="{{1:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{1:link-atlas}}','ms.ea_action':'{{1:link-ms.ea_action}}','ms.ea_offer':'{{1:link-ms.ea_offer}}','aria-label':'{{1:aria-label}}'}">
+                                <span>{{1:link-text}}</span>
+                            </mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_2" aria-labelledby="tabcarousel2" role="tabpanel" tabindex="0" class="carousel-content-item  {{2:background-color}} {{2:background-theme}}"
+                        data-show="{{2:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{2:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{2:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{2:background-image-2000x500}}' class="" data-desktop-class="" alt="{{2:background-alt-text}}" src="{{2:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{2:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{2:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{2:logo-image-300x100}}' class="" data-desktop-class="" alt="{{2:logo-image-alt-text}}" src="{{2:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{2:headline}}</h3>
+                            <div class="carousel-body">{{{2:body}}}</div>
+                            <mscom:link href="{{2:link}}" target="{{2:link-target}}" md:payloadguid="{{2:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{2:link-atlas}}','ms.ea_action':'{{2:link-ms.ea_action}}','ms.ea_offer':'{{2:link-ms.ea_offer}}','aria-label':'{{2:aria-label}}'}">{{2:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_3" aria-labelledby="tabcarousel3" role="tabpanel" tabindex="0" class="carousel-content-item  {{3:background-color}} {{3:background-theme}}"
+                        data-show="{{3:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{3:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{3:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{3:background-image-2000x500}}' class="" data-desktop-class="" alt="{{3:background-alt-text}}" src="{{3:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{3:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{3:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{3:logo-image-300x100}}' class="" data-desktop-class="" alt="{{3:logo-image-alt-text}}" src="{{3:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{3:headline}}</h3>
+                            <div class="carousel-body">{{{3:body}}}</div>
+                            <mscom:link href="{{3:link}}" target="{{3:link-target}}" md:payloadguid="{{3:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{3:link-atlas}}','ms.ea_action':'{{3:link-ms.ea_action}}','ms.ea_offer':'{{3:link-ms.ea_offer}}','aria-label':'{{3:aria-label}}'}">{{3:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_4" aria-labelledby="tabcarousel4" role="tabpanel" tabindex="0" class="carousel-content-item {{4:background-color}} {{4:background-theme}}"
+                        data-show="{{4:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{4:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{4:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{4:background-image-2000x500}}' class="" data-desktop-class="" alt="{{4:background-alt-text}}" src="{{4:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{4:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{4:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{4:logo-image-300x100}}' class="" data-desktop-class="" alt="{{4:logo-image-alt-text}}" src="{{4:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{4:headline}}</h3>
+                            <div class="carousel-body">{{{4:body}}}</div>
+                            <mscom:link href="{{4:link}}" target="{{4:link-target}}" md:payloadguid="{{4:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{4:link-atlas}}','ms.ea_action':'{{4:link-ms.ea_action}}','ms.ea_offer':'{{4:link-ms.ea_offer}}','aria-label':'{{4:aria-label}}'}">{{4:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_5" aria-labelledby="tabcarousel5" role="tabpanel" tabindex="0" class="carousel-content-item {{5:background-color}} {{5:background-theme}}"
+                        data-show="{{5:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{5:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{5:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{5:background-image-2000x500}}' class="" data-desktop-class="" alt="{{5:background-alt-text}}" src="{{5:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{5:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{5:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{5:logo-image-300x100}}' class="" data-desktop-class="" alt="{{5:logo-image-alt-text}}" src="{{5:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{5:headline}}</h3>
+                            <div class="carousel-body">{{{5:body}}}</div>
+                            <mscom:link href="{{5:link}}" target="{{5:link-target}}" md:payloadguid="{{5:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{5:link-atlas}}','ms.ea_action':'{{5:link-ms.ea_action}}','ms.ea_offer':'{{5:link-ms.ea_offer}}','aria-label':'{{5:aria-label}}'}">{{5:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_6" aria-labelledby="tabcarousel6" role="tabpanel" tabindex="0" class="carousel-content-item {{6:background-color}} {{6:background-theme}}"
+                        data-show="{{6:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{6:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{6:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{6:background-image-2000x500}}' class="" data-desktop-class="" alt="{{6:background-alt-text}}" src="{{6:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{6:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{6:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{6:logo-image-300x100}}' class="" data-desktop-class="" alt="{{6:logo-image-alt-text}}" src="{{6:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{6:headline}}</h3>
+                            <div class="carousel-body">{{{6:body}}}</div>
+                            <mscom:link href="{{6:link}}" target="{{6:link-target}}" md:payloadguid="{{6:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{6:link-atlas}}','ms.ea_action':'{{6:link-ms.ea_action}}','ms.ea_offer':'{{6:link-ms.ea_offer}}','aria-label':'{{6:aria-label}}'}">{{6:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_7" aria-labelledby="tabcarousel7" role="tabpanel" tabindex="0" class="carousel-content-item {{7:background-color}} {{7:background-theme}}"
+                        data-show="{{7:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{7:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{7:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{7:background-image-2000x500}}' class="" data-desktop-class="" alt="{{7:background-alt-text}}" src="{{7:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{7:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{7:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{7:logo-image-300x100}}' class="" data-desktop-class="" alt="{{7:logo-image-alt-text}}" src="{{7:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{7:headline}}</h3>
+                            <div class="carousel-body">{{{7:body}}}</div>
+                            <mscom:link href="{{7:link}}" target="{{7:link-target}}" md:payloadguid="{{7:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{7:link-atlas}}','ms.ea_action':'{{7:link-ms.ea_action}}','ms.ea_offer':'{{7:link-ms.ea_offer}}','aria-label':'{{7:aria-label}}'}">{{7:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_8" aria-labelledby="tabcarousel8" role="tabpanel" tabindex="0" class="carousel-content-item {{8:background-color}} {{8:background-theme}}"
+                        data-show="{{8:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{8:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{8:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{8:background-image-2000x500}}' class="" data-desktop-class="" alt="{{8:background-alt-text}}" src="{{8:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{8:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{8:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{8:logo-image-300x100}}' class="" data-desktop-class="" alt="{{8:logo-image-alt-text}}" src="{{8:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{8:headline}}</h3>
+                            <div class="carousel-body">{{{8:body}}}</div>
+                            <mscom:link href="{{8:link}}" target="{{8:link-target}}" md:payloadguid="{{8:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{8:link-atlas}}','ms.ea_action':'{{8:link-ms.ea_action}}','ms.ea_offer':'{{8:link-ms.ea_offer}}','aria-label':'{{8:aria-label}}'}">{{8:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_9" aria-labelledby="tabcarousel9" role="tabpanel" tabindex="0" class="carousel-content-item {{9:background-color}} {{9:background-theme}}"
+                        data-show="{{9:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{9:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{9:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{9:background-image-2000x500}}' class="" data-desktop-class="" alt="{{9:background-alt-text}}" src="{{9:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{9:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{9:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{9:logo-image-300x100}}' class="" data-desktop-class="" alt="{{9:logo-image-alt-text}}" src="{{9:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{9:headline}}</h3>
+                            <div class="carousel-body">{{{9:body}}}</div>
+                            <mscom:link href="{{9:link}}" target="{{9:link-target}}" md:payloadguid="{{9:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{9:link-atlas}}','ms.ea_action':'{{9:link-ms.ea_action}}','ms.ea_offer':'{{9:link-ms.ea_offer}}','aria-label':'{{9:aria-label}}'}">{{9:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_10" aria-labelledby="tabcarousel10" role="tabpanel" tabindex="0" class="carousel-content-item {{10:background-color}} {{10:background-theme}}"
+                        data-show="{{10:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{10:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{10:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{10:background-image-2000x500}}' class="" data-desktop-class="" alt="{{10:background-alt-text}}" src="{{10:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{10:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{10:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{10:logo-image-300x100}}' class="" data-desktop-class="" alt="{{10:logo-image-alt-text}}" src="{{10:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{10:headline}}</h3>
+                            <div class="carousel-body">{{{10:body}}}</div>
+                            <mscom:link href="{{10:link}}" target="{{10:link-target}}" md:payloadguid="{{10:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{10:link-atlas}}','ms.ea_action':'{{10:link-ms.ea_action}}','ms.ea_offer':'{{10:link-ms.ea_offer}}','aria-label':'{{10:aria-label}}'}">{{10:link-text}}</mscom:link>
+                        </div>
+                    </div>
+                    <div id="carousel-content-item_11" aria-labelledby="tabcarousel11" role="tabpanel" tabindex="0" class="carousel-content-item {{11:background-color}} {{11:background-theme}}"
+                        data-show="{{11:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{11:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{11:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{11:background-image-2000x500}}' class="" data-desktop-class="" alt="{{11:background-alt-text}}" src="{{11:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{11:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{11:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{11:logo-image-300x100}}' class="" data-desktop-class="" alt="{{11:logo-image-alt-text}}" src="{{11:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{11:headline}}</h3>
+                            <div class="carousel-body">{{{11:body}}}</div>
+                            <mscom:link href="{{11:link}}" target="{{11:link-target}}" md:payloadguid="{{11:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{11:link-atlas}}','ms.ea_action':'{{11:link-ms.ea_action}}','ms.ea_offer':'{{11:link-ms.ea_offer}}','aria-label':'{{11:aria-label}}'}">
+                                <span>{{11:link-text}}</span>
+                            </mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_12" aria-labelledby="tabcarousel12" role="tabpanel" tabindex="0" class="carousel-content-item {{12:background-color}} {{12:background-theme}}"
+                        data-show="{{12:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{12:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{12:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{12:background-image-2000x500}}' class="" data-desktop-class="" alt="{{12:background-alt-text}}" src="{{12:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{12:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{12:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{12:logo-image-300x100}}' class="" data-desktop-class="" alt="{{12:logo-image-alt-text}}" src="{{12:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{12:headline}}</h3>
+                            <div class="carousel-body">{{{12:body}}}</div>
+                            <mscom:link href="{{12:link}}" target="{{12:link-target}}" md:payloadguid="{{12:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{12:link-atlas}}','ms.ea_action':'{{12:link-ms.ea_action}}','ms.ea_offer':'{{12:link-ms.ea_offer}}','aria-label':'{{12:aria-label}}'}">{{12:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_13" aria-labelledby="tabcarousel13" role="tabpanel" tabindex="0" class="carousel-content-item {{13:background-color}} {{13:background-theme}}"
+                        data-show="{{13:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{13:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{13:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{13:background-image-2000x500}}' class="" data-desktop-class="" alt="{{13:background-alt-text}}" src="{{13:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{13:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{13:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{13:logo-image-300x100}}' class="" data-desktop-class="" alt="{{13:logo-image-alt-text}}" src="{{13:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{13:headline}}</h3>
+                            <div class="carousel-body">{{{13:body}}}</div>
+                            <mscom:link href="{{13:link}}" target="{{13:link-target}}" md:payloadguid="{{13:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{13:link-atlas}}','ms.ea_action':'{{13:link-ms.ea_action}}','ms.ea_offer':'{{13:link-ms.ea_offer}}','aria-label':'{{13:aria-label}}'}">{{13:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_14" aria-labelledby="tabcarousel14" role="tabpanel" tabindex="0" class="carousel-content-item {{14:background-color}} {{14:background-theme}}"
+                        data-show="{{14:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{14:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{14:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{14:background-image-2000x500}}' class="" data-desktop-class="" alt="{{14:background-alt-text}}" src="{{14:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{14:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{14:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{14:logo-image-300x100}}' class="" data-desktop-class="" alt="{{14:logo-image-alt-text}}" src="{{14:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{14:headline}}</h3>
+                            <div class="carousel-body">{{{14:body}}}</div>
+                            <mscom:link href="{{14:link}}" target="{{14:link-target}}" md:payloadguid="{{14:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{14:link-atlas}}','ms.ea_action':'{{14:link-ms.ea_action}}','ms.ea_offer':'{{14:link-ms.ea_offer}}','aria-label':'{{14:aria-label}}'}">{{14:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_15" aria-labelledby="tabcarousel15" role="tabpanel" tabindex="0" class="carousel-content-item {{15:background-color}} {{15:background-theme}}"
+                        data-show="{{15:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{15:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{15:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{15:background-image-2000x500}}' class="" data-desktop-class="" alt="{{15:background-alt-text}}" src="{{15:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{15:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{15:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{15:logo-image-300x100}}' class="" data-desktop-class="" alt="{{15:logo-image-alt-text}}" src="{{15:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{15:headline}}</h3>
+                            <div class="carousel-body">{{{15:body}}}</div>
+                            <mscom:link href="{{15:link}}" target="{{15:link-target}}" md:payloadguid="{{15:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{15:link-atlas}}','ms.ea_action':'{{15:link-ms.ea_action}}','ms.ea_offer':'{{15:link-ms.ea_offer}}','aria-label':'{{15:aria-label}}'}">{{15:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_16" aria-labelledby="tabcarousel16" role="tabpanel" tabindex="0" class="carousel-content-item {{16:background-color}} {{16:background-theme}}"
+                        data-show="{{16:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{16:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{16:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{16:background-image-2000x500}}' class="" data-desktop-class="" alt="{{16:background-alt-text}}" src="{{16:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{16:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{16:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{16:logo-image-300x100}}' class="" data-desktop-class="" alt="{{16:logo-image-alt-text}}" src="{{16:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{16:headline}}</h3>
+                            <div class="carousel-body">{{{16:body}}}</div>
+                            <mscom:link href="{{16:link}}" target="{{16:link-target}}" md:payloadguid="{{16:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{16:link-atlas}}','ms.ea_action':'{{16:link-ms.ea_action}}','ms.ea_offer':'{{16:link-ms.ea_offer}}','aria-label':'{{16:aria-label}}'}">{{16:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_17" aria-labelledby="tabcarousel17" role="tabpanel" tabindex="0" class="carousel-content-item {{17:background-color}} {{17:background-theme}}"
+                        data-show="{{17:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{17:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{17:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{17:background-image-2000x500}}' class="" data-desktop-class="" alt="{{17:background-alt-text}}" src="{{17:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{17:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{17:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{17:logo-image-300x100}}' class="" data-desktop-class="" alt="{{17:logo-image-alt-text}}" src="{{17:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{17:headline}}</h3>
+                            <div class="carousel-body">{{{17:body}}}</div>
+                            <mscom:link href="{{17:link}}" target="{{17:link-target}}" md:payloadguid="{{17:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{17:link-atlas}}','ms.ea_action':'{{17:link-ms.ea_action}}','ms.ea_offer':'{{17:link-ms.ea_offer}}','aria-label':'{{17:aria-label}}'}">{{17:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_18" aria-labelledby="tabcarousel18" role="tabpanel" tabindex="0" class="carousel-content-item {{18:background-color}} {{18:background-theme}}"
+                        data-show="{{18:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{18:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{18:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{18:background-image-2000x500}}' class="" data-desktop-class="" alt="{{18:background-alt-text}}" src="{{18:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{18:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{18:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{18:logo-image-300x100}}' class="" data-desktop-class="" alt="{{18:logo-image-alt-text}}" src="{{18:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{18:headline}}</h3>
+                            <div class="carousel-body">{{{18:body}}}</div>
+                            <mscom:link href="{{18:link}}" target="{{18:link-target}}" md:payloadguid="{{18:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{18:link-atlas}}','ms.ea_action':'{{18:link-ms.ea_action}}','ms.ea_offer':'{{18:link-ms.ea_offer}}','aria-label':'{{18:aria-label}}'}">{{18:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_19" aria-labelledby="tabcarousel19" role="tabpanel" tabindex="0" class="carousel-content-item {{19:background-color}} {{19:background-theme}}"
+                        data-show="{{19:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{19:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{19:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{19:background-image-2000x500}}' class="" data-desktop-class="" alt="{{19:background-alt-text}}" src="{{19:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{19:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{19:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{19:logo-image-300x100}}' class="" data-desktop-class="" alt="{{19:logo-image-alt-text}}" src="{{19:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{19:headline}}</h3>
+                            <div class="carousel-body">{{{19:body}}}</div>
+                            <mscom:link href="{{19:link}}" target="{{19:link-target}}" md:payloadguid="{{19:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{19:link-atlas}}','ms.ea_action':'{{19:link-ms.ea_action}}','ms.ea_offer':'{{19:link-ms.ea_offer}}','aria-label':'{{19:aria-label}}'}">{{19:link-text}}</mscom:link>
+                        </div>
+                    </div>
+
+                    <div id="carousel-content-item_20" aria-labelledby="tabcarousel20" role="tabpanel" tabindex="0" class="carousel-content-item {{20:background-color}} {{20:background-theme}}"
+                        data-show="{{20:show-element}}">
+
+                        <picture class="carousel-content-background">
+                            <source class='hide-by-default show-element' srcset='{{20:background-image-2000x500}}' media='(min-width:540px)' />
+                            <source class='hide-by-default show-element' srcset='{{20:background-image-2000x500}}' media='(min-width:0)' />
+                            <img srcset='{{20:background-image-2000x500}}' class="" data-desktop-class="" alt="{{20:background-alt-text}}" src="{{20:background-image-2000x500}}">
+                        </picture>
+                        <div class="carousel-content">
+                            <picture>
+                                <source class='hide-by-default show-element' srcset='{{20:logo-image-300x100}}' media='(min-width:540px)' />
+                                <source class='hide-by-default show-element' srcset='{{20:logo-image-300x100}}' media='(min-width:0)' />
+                                <img srcset='{{20:logo-image-300x100}}' class="" data-desktop-class="" alt="{{20:logo-image-alt-text}}" src="{{20:logo-image-300x100}}">
+                            </picture>
+                            <h3 class="carousel-headline c-heading-4">{{20:headline}}</h3>
+                            <div class="carousel-body">{{{20:body}}}</div>
+                            <mscom:link href="{{20:link}}" target="{{20:link-target}}" md:payloadguid="{{20:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
+                                controltheme="default" htmlcustomattributes="{'atlas':'{{20:link-atlas}}','ms.ea_action':'{{20:link-ms.ea_action}}','ms.ea_offer':'{{20:link-ms.ea_offer}}','aria-label':'{{20:aria-label}}'}">{{20:link-text}}</mscom:link>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="carousel-with-frames" role="region" aria-label="Carousel showing new capabilities of SQL Server 2017">
-                    <input type="hidden" value="{{play_button_image}}">
-                    <input type="hidden" value="{{play_button_image_alt}}">
-                    <input type="hidden" value="{{layover_close_image}}">
-
-
-
-                    <div class="carousel-group">
-                        <div class="carousel-frame" data-show="true" data-carousel-position="-2"></div>
-                        <div class="carousel-frame" data-show="true" data-carousel-position="-1"></div>
-                        <div class="carousel-frame" data-show="{{1:show}}" data-carousel-position="active" id="MediaSlideOne">
-
-                            <div class="carousel-thumbnail">
-                                <div class="carousel-frame-shadow show-by-default {{1:type-hide-element-to-hide-Frame-shadow}}"></div>
-                                <div class="carousel-content">{{{1:carousel_content}}}
-                                    <mscom:link href="{{1:external-link}}" md:payloadguid="{{1:internal-link}}" target="{{1:target-window}}" controltheme="default"
-                                        disablebitracking="false" classoverride="{{1:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph"
-                                        htmlcustomattributes="{'data-player-type':'{{1-data-player-type}}','data-video-url':'{{1-data-video-url}}','ms.ea_action':'{{1-ms.ea-action}}','ms.ea_offer':'{{1-ms.ea-offer}}','atlas':'{{1:atlas}}','aria-hidden':'true', 'role':'presentation'}">{{1-text-forbutton}}</mscom:link>
-                                </div>
-                                <div class="video-link relative {{1-playicon-color}}">
-                                    <mscom:link href="JavaScript:void(0)" id="{{1-video-id}}" classoverride="{{1:open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{1-data-player-type}}', 'data-video-url':'{{1-data-video-url}}','WCS.CN':'{{1-WCS.CN}}','aria-hidden':'false','aria-label':'{{1:aria-tag}}'}"></mscom:link>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{1:carousel_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{1:carousel_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{1:carousel_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{1:carousel_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{1:carousel_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{1:carousel_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{1:carousel_image}}' class="carousel-image" data-desktop-class="carousel-image" md:payloadguid="{{1:carousel_image}}"
-                                            role="presentation" aria-hidden="true" alt="" src="{{1:carousel_image}}">
-                                    </picture>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{play_button_image}}' role="presentation" aria-hidden="true" class="play-button" data-desktop-class="play-button"
-                                            md:payloadguid="{{play_button_image}}" alt="" src="{{play_button_image}}">
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="c-heading-5 carousel-headline semi-bold">{{1:carousel_headline}}</h3>
-                            <!--<div class="carousel-content">{{{1:carousel_content}}}
-								<mscom:link href="{{1:external-link}}" md:payloadguid="{{1:internal-link}}" target="{{1:target-window}}" controltheme="default"
-								disablebitracking="false" classoverride="{{1:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph" htmlcustomattributes="{'data-player-type':'{{1-data-player-type}}','data-video-url':'{{1-data-video-url}}','ms.ea_action':'{{1-ms.ea-action}}','ms.ea_offer':'{{1-ms.ea-offer}}','atlas':'{{1:atlas}}','aria-hidden':'true',
-								'role':'presentation'}">{{1-text-forbutton}}</mscom:link>
-							</div>-->
-                        </div>
-                        <div class="carousel-frame" data-show="{{2:show}}" data-carousel-position="0" id="MediaSlideTwo">
-
-                            <div class="carousel-thumbnail">
-                                <div class="carousel-frame-shadow show-by-default {{2:type-hide-element-to-hide-Frame-shadow}}"></div>
-                                <div class="carousel-content">{{{2:carousel_content}}}
-                                    <mscom:link href="{{2:external-link}}" md:payloadguid="{{2:internal-link}}" target="{{2:target-window}}" controltheme="default"
-                                        disablebitracking="false" classoverride="{{2:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph"
-                                        htmlcustomattributes="{'data-player-type':'{{2-data-player-type}}','data-video-url':'{{2-data-video-url}}','ms.ea_action':'{{2-ms.ea-action}}','ms.ea_offer':'{{2-ms.ea-offer}}','atlas':'{{2:atlas}}','aria-hidden':'true','role':'presentation'}">{{2-text-forbutton}}</mscom:link>
-                                </div>
-                                <div class="video-link relative {{2-playicon-color}}">
-                                    <mscom:link href="JavaScript:void(0)" id="{{2-video-id}}" classoverride="{{2:open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{2-data-player-type}}', 'data-video-url':'{{2-data-video-url}}','WCS.CN':'{{2-WCS.CN}}','aria-hidden':'true','aria-label':'{{2:aria-tag}}'}"></mscom:link>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{2:carousel_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{2:carousel_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{2:carousel_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{2:carousel_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{2:carousel_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{2:carousel_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{2:carousel_image}}' class="carousel-image" data-desktop-class="carousel-image" md:payloadguid="{{2:carousel_image}}"
-                                            role="presentation" aria-hidden="true" alt="" src="{{2:carousel_image}}">
-                                    </picture>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{play_button_image}}' role="presentation" aria-hidden="true" class="play-button" data-desktop-class="play-button"
-                                            md:payloadguid="{{play_button_image}}" alt="" src="{{play_button_image}}">
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="c-heading-5 carousel-headline semi-bold">{{2:carousel_headline}}</h3>
-                            <!--<div class="carousel-content">{{{2:carousel_content}}}
-								<mscom:link href="{{2:external-link}}" md:payloadguid="{{2:internal-link}}" target="{{2:target-window}}" controltheme="default"
-								disablebitracking="false" classoverride="{{2:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph" htmlcustomattributes="{'data-player-type':'{{2-data-player-type}}','data-video-url':'{{2-data-video-url}}','ms.ea_action':'{{2-ms.ea-action}}','ms.ea_offer':'{{2-ms.ea-offer}}','atlas':'{{2:atlas}}','aria-hidden':'true', 'role':'presentation'}">{{2-text-forbutton}}</mscom:link>
-							</div>-->
-                        </div>
-                        <div class="carousel-frame" data-show="{{3:show}}" data-carousel-position="1" id="MediaSlideThree">
-
-                            <div class="carousel-thumbnail">
-                                <div class="carousel-frame-shadow show-by-default {{3:type-hide-element-to-hide-Frame-shadow}}"></div>
-                                <div class="carousel-content">{{{3:carousel_content}}}
-                                    <mscom:link href="{{3:external-link}}" md:payloadguid="{{3:internal-link}}" target="{{3:target-window}}" controltheme="default"
-                                        disablebitracking="false" classoverride="{{3:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph"
-                                        htmlcustomattributes="{'data-player-type':'{{3-data-player-type}}','data-video-url':'{{3-data-video-url}}','ms.ea_action':'{{3-ms.ea-action}}','ms.ea_offer':'{{3-ms.ea-offer}}','atlas':'{{3:atlas}}','aria-hidden':'true', 'role':'presentation'}">{{3-text-forbutton}}</mscom:link>
-                                </div>
-                                <div class="video-link relative {{3-playicon-color}}">
-                                    <mscom:link href="JavaScript:void(0)" id="{{3-video-id}}" classoverride="{{3:open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{3-data-player-type}}', 'data-video-url':'{{3-data-video-url}}','WCS.CN':'{{3-WCS.CN}}','aria-hidden':'true','aria-label':'{{3:aria-tag}}'}"></mscom:link>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{3:carousel_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{3:carousel_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{3:carousel_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{3:carousel_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{3:carousel_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{3:carousel_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{3:carousel_image}}' class="carousel-image" data-desktop-class="carousel-image" md:payloadguid="{{3:carousel_image}}"
-                                            role="presentation" aria-hidden="true" alt="" src="{{3:carousel_image}}">
-                                    </picture>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{play_button_image}}' role="presentation" aria-hidden="true" class="play-button" data-desktop-class="play-button"
-                                            md:payloadguid="{{play_button_image}}" alt="" src="{{play_button_image}}">
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="c-heading-5 carousel-headline semi-bold">{{3:carousel_headline}}</h3>
-                            <!--<div class="carousel-content">{{{3:carousel_content}}}
-								<mscom:link href="{{3:external-link}}" md:payloadguid="{{3:internal-link}}" target="{{3:target-window}}" controltheme="default"
-								disablebitracking="false" classoverride="{{3:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph" htmlcustomattributes="{'data-player-type':'{{3-data-player-type}}','data-video-url':'{{3-data-video-url}}','ms.ea_action':'{{3-ms.ea-action}}','ms.ea_offer':'{{3-ms.ea-offer}}','atlas':'{{3:atlas}}','aria-hidden':'true', 'role':'presentation'}">{{3-text-forbutton}}</mscom:link>
-							</div>-->
-                        </div>
-                        <div class="carousel-frame" data-show="{{4:show}}" data-carousel-position="2" id="MediaSlideFour">
-
-                            <div class="carousel-thumbnail">
-                                <div class="carousel-frame-shadow show-by-default {{4:type-hide-element-to-hide-Frame-shadow}}"></div>
-                                <div class="carousel-content">{{{4:carousel_content}}}
-                                    <mscom:link href="{{4:external-link}}" md:payloadguid="{{4:internal-link}}" target="{{4:target-window}}" controltheme="default"
-                                        disablebitracking="false" classoverride="{{4:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph"
-                                        htmlcustomattributes="{'data-player-type':'{{4-data-player-type}}','data-video-url':'{{4-data-video-url}}','ms.ea_action':'{{4-ms.ea-action}}','ms.ea_offer':'{{4-ms.ea-offer}}','atlas':'{{4:atlas}}','aria-hidden':'true','role':'presentation'}">{{4-text-forbutton}}</mscom:link>
-                                </div>
-                                <div class="video-link relative {{4-playicon-color}}">
-                                    <mscom:link href="JavaScript:void(0)" id="{{4-video-id}}" classoverride="{{4:open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{4-data-player-type}}', 'data-video-url':'{{4-data-video-url}}','WCS.CN':'{{4-WCS.CN}}','aria-hidden':'true','aria-label':'{{4:aria-tag}}'}"></mscom:link>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{4:carousel_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{4:carousel_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{4:carousel_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{4:carousel_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{4:carousel_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{4:carousel_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{4:carousel_image}}' class="carousel-image" data-desktop-class="carousel-image" md:payloadguid="{{4:carousel_image}}"
-                                            role="presentation" aria-hidden="true" alt="" src="{{4:carousel_image}} ">
-                                    </picture>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{play_button_image}}' role="presentation" aria-hidden="true" class="play-button" data-desktop-class="play-button"
-                                            md:payloadguid="{{play_button_image}}" alt="" src="{{play_button_image}}">
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="c-heading-5 carousel-headline semi-bold">{{4:carousel_headline}}</h3>
-                            <!--<div class="carousel-content">{{{4:carousel_content}}}
-								<mscom:link href="{{4:external-link}}" md:payloadguid="{{4:internal-link}}" target="{{4:target-window}}" controltheme="default"
-								disablebitracking="false" classoverride="{{4:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph" htmlcustomattributes="{'data-player-type':'{{4-data-player-type}}','data-video-url':'{{4-data-video-url}}','ms.ea_action':'{{4-ms.ea-action}}','ms.ea_offer':'{{4-ms.ea-offer}}','atlas':'{{4:atlas}}','aria-hidden':'true', 'role':'presentation'}">{{4-text-forbutton}}</mscom:link>
-							</div>-->
-                        </div>
-                        <div class="carousel-frame" data-show="{{5:show}}" data-carousel-position="3" id="MediaSlideFive">
-
-                            <div class="carousel-thumbnail">
-                                <div class="carousel-frame-shadow show-by-default {{5:type-hide-element-to-hide-Frame-shadow}}"></div>
-                                <div class="carousel-content">{{{5:carousel_content}}}
-                                    <mscom:link href="{{5:external-link}}" md:payloadguid="{{5:internal-link}}" target="{{5:target-window}}" controltheme="default"
-                                        disablebitracking="false" classoverride="{{5:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph"
-                                        htmlcustomattributes="{'data-player-type':'{{5-data-player-type}}','data-video-url':'{{5-data-video-url}}','ms.ea_action':'{{5-ms.ea-action}}','ms.ea_offer':'{{5-ms.ea-offer}}','atlas':'{{5:atlas}}','aria-hidden':'true','role':'presentation'}">{{5-text-forbutton}}</mscom:link>
-                                </div>
-                                <div class="video-link relative {{5-playicon-color}}">
-                                    <mscom:link href="JavaScript:void(0)" id="{{5-video-id}}" classoverride="{{5:open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{5-data-player-type}}', 'data-video-url':'{{5-data-video-url}}','WCS.CN':'{{5-WCS.CN}}','aria-hidden':'true','aria-label':'{{5:aria-tag}}'}"></mscom:link>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{5:carousel_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{5:carousel_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{5:carousel_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{5:carousel_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{5:carousel_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{5:carousel_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{5:carousel_image}}' class="carousel-image" data-desktop-class="carousel-image" md:payloadguid="{{5:carousel_image}}"
-                                            role="presentation" aria-hidden="true" alt="" src="{{5:carousel_image}}">
-                                    </picture>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{play_button_image}}' role="presentation" aria-hidden="true" class="play-button" data-desktop-class="play-button"
-                                            md:payloadguid="{{play_button_image}}" alt="" src="{{play_button_image}}">
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="c-heading-5 carousel-headline semi-bold">{{5:carousel_headline}}</h3>
-                            <!--<div class="carousel-content">{{{5:carousel_content}}}
-								<mscom:link href="{{5:external-link}}" md:payloadguid="{{5:internal-link}}" target="{{5:target-window}}" controltheme="default"
-								disablebitracking="false" classoverride="{{5:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph" htmlcustomattributes="{'data-player-type':'{{5-data-player-type}}','data-video-url':'{{5-data-video-url}}','ms.ea_action':'{{5-ms.ea-action}}','ms.ea_offer':'{{5-ms.ea-offer}}','atlas':'{{5:atlas}}','aria-hidden':'true','role':'presentation'}">{{5-text-forbutton}}</mscom:link>
-							</div>-->
-                        </div>
-                        <div class="carousel-frame" data-show="{{6:show}}" data-carousel-position="4" id="MediaSlideSix">
-
-                            <div class="carousel-thumbnail">
-                                <div class="carousel-frame-shadow show-by-default {{6:type-hide-element-to-hide-Frame-shadow}}"></div>
-                                <div class="carousel-content">{{{6:carousel_content}}}
-                                    <mscom:link href="{{6:external-link}}" md:payloadguid="{{6:internal-link}}" target="{{6:target-window}}" controltheme="default"
-                                        disablebitracking="false" classoverride="{{6:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph"
-                                        htmlcustomattributes="{'data-player-type':'{{6-data-player-type}}','data-video-url':'{{6-data-video-url}}','ms.ea_action':'{{6-ms.ea-action}}','ms.ea_offer':'{{6-ms.ea-offer}}','atlas':'{{6:atlas}}','aria-hidden':'true','role':'presentation'}">{{6-text-forbutton}}</mscom:link>
-                                </div>
-                                <div class="video-link relative {{6-playicon-color}}">
-                                    <mscom:link href="JavaScript:void(0)" id="{{6-video-id}}" classoverride="{{6:open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{6-data-player-type}}', 'data-video-url':'{{6-data-video-url}}','WCS.CN':'{{6-WCS.CN}}','aria-label':'{{6:aria-tag}}'}"></mscom:link>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{6:carousel_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{6:carousel_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{6:carousel_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{6:carousel_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{6:carousel_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{6:carousel_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{6:carousel_image}}' class="carousel-image" data-desktop-class="carousel-image" md:payloadguid="{{6:carousel_image}}"
-                                            role="presentation" aria-hidden="true" alt="" src="{{6:carousel_image}}">
-                                    </picture>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{play_button_image}}' role="presentation" aria-hidden="true" class="play-button" data-desktop-class="play-button"
-                                            md:payloadguid="{{play_button_image}}" alt="" src="{{play_button_image}}">
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="c-heading-5 carousel-headline semi-bold">{{6:carousel_headline}}</h3>
-                            <!--<div class="carousel-content">{{{6:carousel_content}}}
-								<mscom:link href="{{6:external-link}}" md:payloadguid="{{6:internal-link}}" target="{{6:target-window}}" controltheme="default"
-								disablebitracking="false" classoverride="{{6:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph" htmlcustomattributes="{'data-player-type':'{{6-data-player-type}}','data-video-url':'{{6-data-video-url}}','ms.ea_action':'{{6-ms.ea-action}}','ms.ea_offer':'{{6-ms.ea-offer}}','atlas':'{{6:atlas}}','aria-hidden':'true','role':'presentation'}">{{6-text-forbutton}}</mscom:link>
-							</div>-->
-                        </div>
-                        <div class="carousel-frame" data-show="{{7:show}}" data-carousel-position="5" id="MediaSlideSeven">
-
-                            <div class="carousel-thumbnail">
-                                <div class="carousel-frame-shadow show-by-default {{7:type-hide-element-to-hide-Frame-shadow}}"></div>
-                                <div class="carousel-content">{{{7:carousel_content}}}
-                                    <mscom:link href="{{7:external-link}}" md:payloadguid="{{7:internal-link}}" target="{{7:target-window}}" controltheme="default"
-                                        disablebitracking="false" classoverride="{{7:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph"
-                                        htmlcustomattributes="{'data-player-type':'{{7-data-player-type}}','data-video-url':'{{7-data-video-url}}','ms.ea_action':'{{7-ms.ea-action}}','ms.ea_offer':'{{7-ms.ea-offer}}','atlas':'{{7:atlas}}','aria-hidden':'true','role':'presentation'}">{{7-text-forbutton}}</mscom:link>
-                                </div>
-                                <div class="video-link relative {{7-playicon-color}}">
-                                    <mscom:link href="JavaScript:void(0)" id="{{7-video-id}}" classoverride="{{7:open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{7-data-player-type}}', 'data-video-url':'{{7-data-video-url}}','WCS.CN':'{{7-WCS.CN}}','aria-label':'{{7:aria-tag}}'}"></mscom:link>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{7:carousel_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{7:carousel_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{7:carousel_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{7:carousel_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{7:carousel_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{7:carousel_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{7:carousel_image}}' class="carousel-image" data-desktop-class="carousel-image" md:payloadguid="{{7:carousel_image}}"
-                                            role="presentation" aria-hidden="true" alt="" src="{{7:carousel_image}}">
-                                    </picture>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{play_button_image}}' role="presentation" aria-hidden="true" class="play-button" data-desktop-class="play-button"
-                                            md:payloadguid="{{play_button_image}}" alt="{{play_button_image_alt}}" src="{{play_button_image}}">
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="c-heading-5 carousel-headline semi-bold">{{7:carousel_headline}}</h3>
-                            <!--<div class="carousel-content">{{{7:carousel_content}}}
-								<mscom:link href="{{7:external-link}}" md:payloadguid="{{7:internal-link}}" target="{{7:target-window}}" controltheme="default"
-								disablebitracking="false" classoverride="{{7:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph" htmlcustomattributes="{'data-player-type':'{{7-data-player-type}}','data-video-url':'{{7-data-video-url}}','ms.ea_action':'{{7-ms.ea-action}}','ms.ea_offer':'{{7-ms.ea-offer}}','atlas':'{{7:atlas}}','aria-hidden':'true','role':'presentation'}">{{7-text-forbutton}}</mscom:link>
-							</div>-->
-                        </div>
-                        <div class="carousel-frame" data-show="{{8:show}}" data-carousel-position="6">
-
-                            <div class="carousel-thumbnail">
-                                <div class="carousel-frame-shadow show-by-default {{8:type-hide-element-to-hide-Frame-shadow}}"></div>
-                                <div class="carousel-content">{{{8:carousel_content}}}
-                                    <mscom:link href="{{8:external-link}}" md:payloadguid="{{8:internal-link}}" target="{{8:target-window}}" controltheme="default"
-                                        disablebitracking="false" classoverride="{{8:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph"
-                                        htmlcustomattributes="{'data-player-type':'{{8-data-player-type}}','data-video-url':'{{8-data-video-url}}','ms.ea_action':'{{8-ms.ea-action}}','ms.ea_offer':'{{8-ms.ea-offer}}','atlas':'{{8:atlas}}','aria-hidden':'true','role':'presentation'}">{{8-text-forbutton}}</mscom:link>
-                                </div>
-                                <div class="video-link relative {{8-playicon-color}}">
-                                    <mscom:link href="JavaScript:void(0)" id="{{8-video-id}}" classoverride="{{8:open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{8-data-player-type}}', 'data-video-url':'{{8-data-video-url}}','WCS.CN':'{{8-WCS.CN}}','aria-hidden':'true','aria-label':'{{8:aria-tag}}'}"></mscom:link>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{8:carousel_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{8:carousel_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{8:carousel_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{8:carousel_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{8:carousel_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{8:carousel_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{8:carousel_image}}' class="carousel-image" data-desktop-class="carousel-image" md:payloadguid="{{8:carousel_image}}"
-                                            role="presentation" aria-hidden="true" alt="" src="{{8:carousel_image}}">
-                                    </picture>
-                                    <picture>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1779px}}' media='(min-width:1779px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1400px}}' media='(min-width:1400px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-1084px}}' media='(min-width:1084px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image-Min-768px}}' media='(min-width:768px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:540px)'></source>
-                                        <source class='hide-by-default show-element' srcset='{{play_button_image}}' media='(min-width:0)'></source>
-                                        <img srcset='{{play_button_image}}' role="presentation" aria-hidden="true" class="play-button" data-desktop-class="play-button"
-                                            md:payloadguid="{{play_button_image}}" alt="" src="{{play_button_image}}">
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="c-heading-5 carousel-headline semi-bold">{{8:carousel_headline}}</h3>
-                            <!--<div class="carousel-content">{{{8:carousel_content}}}
-								<mscom:link href="{{8:external-link}}" md:payloadguid="{{8:internal-link}}" target="{{8:target-window}}" controltheme="default"
-								disablebitracking="false" classoverride="{{8:open-popup-video}} fw-6 c-action-trigger c-call-to-action styles-for-cta c-glyph" htmlcustomattributes="{'data-player-type':'{{8-data-player-type}}','data-video-url':'{{8-data-video-url}}','ms.ea_action':'{{8-ms.ea-action}}','ms.ea_offer':'{{8-ms.ea-offer}}','atlas':'{{8:atlas}}','aria-hidden':'true','role':'presentation'}">{{8-text-forbutton}}</mscom:link>
-							</div>-->
-                        </div>
-                    </div>
-                    <div class="carousel-navigation">
-                        <div tabindex="-1" aria-hidden="true">
-                            <img alt="{{carousel_prev_alt}}" class="carousel-button carousel-prev" data-desktop-class="carousel-button carousel-prev"
-                                src="{{carousel_prev}}" title="previous" role="presentation" />
-                        </div>
-                        <div tabindex="-1" aria-hidden="true">
-                            <img alt="{{carousel_next_alt}}" class="carousel-button carousel-next" data-desktop-class="carousel-button carousel-next"
-                                src="{{carousel_next}}" title="next" role="presentation" />
-                        </div>
-                    </div>
-                    <div class="c-sequence-indicator" role="tablist" aria-live="off">
-                        <button role="tab" aria-label="Jump to slide 1 of 7 - {{1:carousel_headline}}" aria-controls="MediaSlideOne" data-show="{{1:show}}"
-                            data-place="0"></button>
-                        <button role="tab" aria-label="Jump to slide 2 of 7 - {{2:carousel_headline}}" aria-controls="MediaSlideTwo" data-show="{{2:show}}"
-                            data-place="1"></button>
-                        <button role="tab" aria-label="Jump to slide 3 of 7 - {{3:carousel_headline}}" aria-controls="MediaSlideThree" data-show="{{3:show}}"
-                            data-place="2"></button>
-                        <button role="tab" aria-label="Jump to slide 4 of 7 - {{4:carousel_headline}}" aria-controls="MediaSlideFour" data-show="{{4:show}}"
-                            data-place="3"></button>
-                        <button role="tab" aria-label="Jump to slide 5 of 7 - {{5:carousel_headline}}" aria-controls="MediaSlideFive" data-show="{{5:show}}"
-                            data-place="4"></button>
-                        <button role="tab" aria-label="Jump to slide 6 of 7 - {{6:carousel_headline}}" aria-controls="MediaSlideSix" data-show="{{6:show}}"
-                            data-place="5"></button>
-                        <button role="tab" aria-label="Jump to slide 7 of 7 - {{7:carousel_headline}}" aria-controls="MediaSlideSeven" data-show="{{7:show}}"
-                            data-place="6"></button>
-                    </div>
+                <a class="carousel-left carousel-nav">
+                    <picture>
+                        <source class='hide-by-default show-element' srcset='{{left-arrow-image}}' media='(min-width:0)' />
+                        <img srcset='{{left-arrow-image}}' class="" data-desktop-class="" alt="{{left-arrow-image-alt-text}}" src="{{left-arrow-image}}">
+                    </picture>
+                </a>
+                <a class="carousel-right carousel-nav">
+                    <picture>
+                        <source class='hide-by-default show-element' srcset='{{right-arrow-image}}' media='(min-width:0)' />
+                        <img srcset='{{right-arrow-image}}' class="" data-desktop-class="" alt="{{right-arrow-image-alt-text}}" src="{{right-arrow-image}}">
+                    </picture>
+                </a>
+                <div class="carousel-arrow-slider">
+                    <img src="data:image/png;base64,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Z2VSZWFkeXHJZTwAAAMoaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzEzMiA3OS4xNTkyODQsIDIwMTYvMDQvMTktMTM6MTM6NDAgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1LjUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjcwQTREMUFFQTIxMDExRTZCRDQ0Qzc3QTBBOTIxRkJBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjcwQTREMUFGQTIxMDExRTZCRDQ0Qzc3QTBBOTIxRkJBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NzBBNEQxQUNBMjEwMTFFNkJENDRDNzdBMEE5MjFGQkEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NzBBNEQxQURBMjEwMTFFNkJENDRDNzdBMEE5MjFGQkEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7U76CzAAAGnUlEQVR42uzRvW9NYQDH8XuOxGzrYGBhMDGS3C4kGjcxaLAYJNLEYBWrxIC/gAEJQzckkkbTVGKlg6QiMTf1snip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">
                 </div>
             </div>
         </div>

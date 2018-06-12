@@ -17,18 +17,21 @@ https://cmspreview2.corp.microsoft.com/www.microsoft.com/en-us/cloud-platform/bu
 
 IE + JAWS : 
 •	when focus is on non-selected tab  items, JAWS is reading the instruction press SPACEBAR to activate the tab once after pressing SPACEBAR key JAWS is not reading the state as selected. Whereas the state is narrated as selected while using Enter key. This is happening each and every time.
-•	While navigating using UP/DOWN arrow keys between tab items page is also moving UP/DOWN.—IE 
-•	In 200% Zoom mode there is loss of focus (as focus is moving to the 3rd  and 4th tab item but tab item is not visible). Same issue for the 5th tab in Build your application page.--- IE and FF , EDGE
-•	In 200% Zoom mode in tab panel paragraph Text got trimmed.---IE 
+V •	While navigating using UP/DOWN arrow keys between tab items page is also moving UP/DOWN.—IE 
+V •	In 200% Zoom mode there is loss of focus (as focus is moving to the 3rd  and 4th tab item but tab item is not visible). Same issue for the 5th tab in Build your application page.--- IE and FF , EDGE
+JB •	This is fixed - was seeing this in other browsers as well.
 •	In 200% Zoom When focus reaches last tab and if we press enter then “carousel-arrow-slider” is getting disappear from the page. Also when we press left arrow focus reaches to previous tab and if we select    using enter, then “carousel-arrow-slider” pointing to non-selected tab element.---- IE , FF, EDGE—
 •	In HC White mode paragraph in the tab panel is not visible clearly 
+JB • This looks fine for me. IE and Edge - black and white HC screens
 •	As per the Michelle mail related to Tab list We need to access the Tab list with Right & Left arrows. But we are also able to access using Up & Down arrows as well.
 
 FF +NVDA: 
 •	In Reverse Navigation when focus is on tab panel NVDA is not reading the information about tab panel.
+JB • I am navigating through the tabs forward and back then to the slide (and further) then back up. Everything reads as it should be.
 
 EDGE+NARRATOR: 
 •	When narrator is enable After three right arrow keys focus is moving to next tab item.(To change every tab item it is taking three right/left arrow keys.
+JB • Asked Mohammad about this - it is a non issue - working as Navigator is expected
 •	When narrator is enable On pressing ENTER key on non-selected tab items narrator is not reading as selected.
 •	When Narrator is enable Unable to activate the tab item using Spacebar.
 •	When using UP/DOWN arrow key along with the tab items page is also moving.

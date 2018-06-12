@@ -8813,8 +8813,3 @@ outline: 2px dashed #fff !important;
 
 /*Iframe CSS end*/
 
-/* Zoom 200 fix */
-.carousel-body .c-paragraph-3 {
-    max-width: 95%;
-    margin: 0 auto;
-}
