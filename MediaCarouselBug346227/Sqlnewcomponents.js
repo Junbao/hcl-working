@@ -857,7 +857,7 @@ $(document).ready(function () {
                 });
             }
         });
-    } catch (e) { }
+    } catch (e) {}
 });
 
 function isScrolledIntoView(elem) {
@@ -920,14 +920,14 @@ $(window).load(function () {
     try {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
-    } catch (e) { }
+    } catch (e) {}
 });
 
 $(window).resize(function () {
     try {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
-    } catch (e) { }
+    } catch (e) {}
 });
 /**********END OF CP_CustomCarouselSettings.js **********/
 
@@ -1063,6 +1063,7 @@ $(window).scroll(function () {
 $(document).ready(function () {
     var pageIconPlace = 0;
     var place = 0;
+
     function skipWatch() {
         setTimeout(() => {
             $('.false_paragraph a').attr('tabindex', '-1');
@@ -1209,18 +1210,38 @@ $(document).ready(function () {
                             $(this).attr('aria-hidden', 'true');
                         }
                     });
+
                     MediaCarouselWithFramesIDRemove();
                     // if ((e.which == 38) || (e.which == 39)) {
+                    //     console.log("key to left");
                     //     e.preventDefault();
                     //     $(".c-sequence-indicator button.f-active").next().trigger('click');
                     //     // e.stopImmediatePropagation();
                     // }
                     // if ((e.which == 37) || (e.which == 40)) {
+                    //     console.log("key to right");
                     //     e.preventDefault();
                     //     $(".c-sequence-indicator button.f-active").prev().trigger('click');
                     //     // e.stopImmediatePropagation();
                     // }
 
+                }
+                pageNode.onkeydown = function(e) {
+                    jQuery.extend(jQuery.expr[':'], {
+                        focus: "a == document.activeElement"
+                    });
+                    if ((e.which == 38) || (e.which == 39)) {
+                        e.preventDefault();
+                        // if (!$('.c-sequence-indicator button:focus')) {
+                        //     console.log("movie focus");
+                        //     return true;
+                        // }
+                        // e.stopImmediatePropagation();
+                    }
+                    if ((e.which == 37) || (e.which == 40)) {
+                        e.preventDefault();
+                        e.stopImmediatePropagation();
+                    }
                 }
             });
 
@@ -1398,12 +1419,12 @@ $(document).ready(function () {
 
             function pageIconSet() {
                 $('.c-sequence-indicator button').each(function () {
-                    if ($(this).attr('aria-selected') != "true") {
-                        $(this).attr('tabindex', '-1');
-                    } else {
-                        $(this).attr('tabindex', '0');
+                        if ($(this).attr('aria-selected') != "true") {
+                            $(this).attr('tabindex', '-1');
+                        } else {
+                            $(this).attr('tabindex', '0');
+                        }
                     }
-                }
 
                 );
 
@@ -1948,7 +1969,7 @@ $(document).ready(function () {
             // carouselComponentFCT();
             liheightcalc();
         });
-    } catch (e) { }
+    } catch (e) {}
 });
 /** DIV line-height**/
 
@@ -2199,7 +2220,7 @@ $(document).ready(function () {
             }
         }
 
-    } catch (e) { }
+    } catch (e) {}
 });
 
 $(window).on("load", function () {
@@ -2219,7 +2240,7 @@ $(window).on("load", function () {
             }
 
         }, 2000);
-    } catch (e) { }
+    } catch (e) {}
 });
 
 /**********END OF CP_StaticSupportLinks.js **********/
@@ -2262,7 +2283,7 @@ $(document).ready(function () {
                 }
             }
         }
-    } catch (e) { }
+    } catch (e) {}
 });
 
 
@@ -2317,25 +2338,25 @@ function stickynavslick() {
         infinite: false,
 
         responsive: [{
-            breakpoint: 1084,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                dots: false,
-                arrows: true,
-                infinite: false
+                breakpoint: 1084,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: true,
+                    infinite: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: true,
+                    infinite: false
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                dots: false,
-                arrows: true,
-                infinite: false
-            }
-        }
         ]
     });
 
@@ -2372,7 +2393,7 @@ $(document).ready(function () {
             stickynavslick();
             stickynavheight();
         }
-    } catch (err) { }
+    } catch (err) {}
 
 });
 
@@ -2792,29 +2813,29 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [{
-            breakpoint: 1084,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                initialSlide: 0
+                breakpoint: 1084,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    initialSlide: 0
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 0
+                }
+            },
+            {
+                breakpoint: 539,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 0
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                initialSlide: 0
-            }
-        },
-        {
-            breakpoint: 539,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                initialSlide: 0
-            }
-        }
         ]
     });
 
@@ -3017,7 +3038,7 @@ function Sql3Vs4Vs5VsAnalysis_thumbnail_minHeight() {
             $(".thumbnail-child1").removeClass("thumbnail-child1");
             $(".thumbnail-child2").removeClass("thumbnail-child2");
         });
-    } catch (e) { }
+    } catch (e) {}
 }
 
 $(document).ready(function () {
@@ -3207,7 +3228,7 @@ $(document).on("click", ".jcarousel-control-next", function (e) {
             $(".current-righttab-carousel").find(".jcarousel-control-prev").attr('aria-label', 'view previous slide');
         }
         $(".current-righttab-carousel").removeClass("current-righttab-carousel");
-    } catch (e) { }
+    } catch (e) {}
 });
 
 $(document).on("click", ".jcarousel-control-prev", function (e) {
@@ -3394,7 +3415,7 @@ $(document).ready(function () {
             $('#SQL_StaticMenu').removeClass('bg-grey-d2');
             $('#SQL_StaticMenu').addClass('bg-grey-50');
         }
-    } catch (e) { }
+    } catch (e) {}
 });
 
 /*SQL-static menu*/
