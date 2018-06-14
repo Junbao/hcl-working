@@ -1225,10 +1225,12 @@ $(document).ready(function () {
                     if ((e.which == 38) || (e.which == 39)) {
                         e.preventDefault();
                         e.stopImmediatePropagation();
+                        $('.carousel-next').trigger("click");
                     }
                     if ((e.which == 37) || (e.which == 40)) {
                         e.preventDefault();
-                        // e.stopImmediatePropagation();
+                        e.stopImmediatePropagation();
+                        $(".carousel-prev").trigger("click");
                     }
                 }
             });
