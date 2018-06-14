@@ -1879,11 +1879,9 @@ $(document).ready(function () {
 
             /*Right & down arrows*/
             if (e.keyCode == 39 || e.keyCode == 40) {
-                console.log("running at 1865");
                 disableScroll();
                 _currentEle = e.currentTarget;
                 _tablength = $('.sql-RightNavTab .sql-accordion-tab-list ul li').length - 1;
-
                 _currentDataIndex = $(_currentEle).attr('data-index');
 
                 $(".sql-RightNavTab .sql-accordion-tab-list ul li[data-index=" + _currentDataIndex + "]").next().focus();
@@ -1897,15 +1895,12 @@ $(document).ready(function () {
             }
 
             if (e.keyCode == 13 || e.keyCode == 32) {
-                console.log("running at 1882");
                 enableScroll();
                 _currentEle = e.currentTarget;
                 _currentDataIndex = $(_currentEle).attr('data-index');
                 $(".sql-RightNavTab ul li[data-index=" + _currentDataIndex + "]").trigger('mouseenter').attr('aria-selected', 'true');
                 $(".sql-RightNavTab ul li[data-index=" + _currentDataIndex + "]").siblings().attr('aria-selected', 'false');
             }
-
-
         });
 
 
