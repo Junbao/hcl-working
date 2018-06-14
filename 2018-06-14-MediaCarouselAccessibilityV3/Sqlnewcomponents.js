@@ -857,7 +857,7 @@ $(document).ready(function () {
                 });
             }
         });
-    } catch (e) { }
+    } catch (e) {}
 });
 
 function isScrolledIntoView(elem) {
@@ -920,14 +920,14 @@ $(window).load(function () {
     try {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
-    } catch (e) { }
+    } catch (e) {}
 });
 
 $(window).resize(function () {
     try {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
-    } catch (e) { }
+    } catch (e) {}
 });
 /**********END OF CP_CustomCarouselSettings.js **********/
 
@@ -1149,12 +1149,12 @@ $(document).ready(function () {
             // Set event
             prevNode.onclick = function (e) {
                 e.preventDefault();
+                chromePageSlide(e);
                 slideFrame(true);
                 if (e.isTrigger == undefined && slickAutoPlay == true) {
                     intervalManager(false);
                     intervalManager(true, currentcarousel, slickAutoPlay, slickautoplayspeed);
                 }
-                chromePageSlide(e);
                 $('.cp-media-carousel-with-frames .carousel-group .carousel-frame').each(function () {
                     if ($(this).attr('data-carousel-position') == "active") {
                         $(this).attr('aria-hidden', 'false');
@@ -1162,10 +1162,8 @@ $(document).ready(function () {
                         $(this).attr('aria-hidden', 'true');
                     }
                 });
-                // changeFocus();
                 $('.carousel-frame .video-link a').css("border", "none");
                 MediaCarouselWithFramesIDRemove();
-
             }
 
             nextNode.onclick = function (e) {
@@ -1183,7 +1181,6 @@ $(document).ready(function () {
                         $(this).attr('aria-hidden', 'true');
                     }
                 });
-                // changeFocus();
                 $('.carousel-frame .video-link a').css("border", "none");
                 MediaCarouselWithFramesIDRemove();
             }
@@ -1222,12 +1219,12 @@ $(document).ready(function () {
                 }
                 pageNode.onkeydown = function (e) {
 
-                    if ((e.which == 38) || (e.which == 39)) {
+                    if ((e.which == 39) || (e.which == 40)) {
                         e.preventDefault();
                         e.stopImmediatePropagation();
                         $('.carousel-next').trigger("click");
                     }
-                    if ((e.which == 37) || (e.which == 40)) {
+                    if ((e.which == 37) || (e.which == 38)) {
                         e.preventDefault();
                         e.stopImmediatePropagation();
                         $(".carousel-prev").trigger("click");
@@ -1330,14 +1327,12 @@ $(document).ready(function () {
             // bug fix 346227 It is a Chrome only bug so isolating only Chrome as Edge doesn't support options to scrollIntoView
             function chromePageSlide(e) {
                 var isChrome = window.chrome;
+                var carouselWrap = document.getElementById('CP_MediaCarouselWithFrames_1');
                 if (navigator.userAgent.indexOf('Edge') >= 0) {
-                    return false;
+                    carouselWrap.scrollIntoView();
                 } else if (isChrome) {
-                    var carouselWrap = document.getElementById('CP_MediaCarouselWithFrames_1');
                     carouselWrap.scrollIntoViewIfNeeded();
-                } else {
-                    return false;
-                }
+                } 
             }
 
             //changing the focus to the frame 
@@ -1390,7 +1385,7 @@ $(document).ready(function () {
                             }
                         }
                     }, 250);
-                    pageIconSet();
+                    // pageIconSet();
                     // $('.c-sequence-indicator buttton').delay(1000).attr('aria-hidden', 'false');
                 }, time);
             };
@@ -1409,12 +1404,12 @@ $(document).ready(function () {
 
             function pageIconSet() {
                 $('.c-sequence-indicator button').each(function () {
-                    if ($(this).attr('aria-selected') != "true") {
-                        $(this).attr('tabindex', '-1');
-                    } else {
-                        $(this).attr('tabindex', '0');
+                        if ($(this).attr('aria-selected') != "true") {
+                            $(this).attr('tabindex', '-1');
+                        } else {
+                            $(this).attr('tabindex', '0');
+                        }
                     }
-                }
 
                 );
 
@@ -1954,7 +1949,7 @@ $(document).ready(function () {
             // carouselComponentFCT();
             liheightcalc();
         });
-    } catch (e) { }
+    } catch (e) {}
 });
 /** DIV line-height**/
 
@@ -2205,7 +2200,7 @@ $(document).ready(function () {
             }
         }
 
-    } catch (e) { }
+    } catch (e) {}
 });
 
 $(window).on("load", function () {
@@ -2225,7 +2220,7 @@ $(window).on("load", function () {
             }
 
         }, 2000);
-    } catch (e) { }
+    } catch (e) {}
 });
 
 /**********END OF CP_StaticSupportLinks.js **********/
@@ -2268,7 +2263,7 @@ $(document).ready(function () {
                 }
             }
         }
-    } catch (e) { }
+    } catch (e) {}
 });
 
 
@@ -2323,25 +2318,25 @@ function stickynavslick() {
         infinite: false,
 
         responsive: [{
-            breakpoint: 1084,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                dots: false,
-                arrows: true,
-                infinite: false
+                breakpoint: 1084,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: true,
+                    infinite: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: true,
+                    infinite: false
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                dots: false,
-                arrows: true,
-                infinite: false
-            }
-        }
         ]
     });
 
@@ -2378,7 +2373,7 @@ $(document).ready(function () {
             stickynavslick();
             stickynavheight();
         }
-    } catch (err) { }
+    } catch (err) {}
 
 });
 
@@ -2798,29 +2793,29 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [{
-            breakpoint: 1084,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                initialSlide: 0
+                breakpoint: 1084,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    initialSlide: 0
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 0
+                }
+            },
+            {
+                breakpoint: 539,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 0
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                initialSlide: 0
-            }
-        },
-        {
-            breakpoint: 539,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                initialSlide: 0
-            }
-        }
         ]
     });
 
@@ -3023,7 +3018,7 @@ function Sql3Vs4Vs5VsAnalysis_thumbnail_minHeight() {
             $(".thumbnail-child1").removeClass("thumbnail-child1");
             $(".thumbnail-child2").removeClass("thumbnail-child2");
         });
-    } catch (e) { }
+    } catch (e) {}
 }
 
 $(document).ready(function () {
@@ -3213,7 +3208,7 @@ $(document).on("click", ".jcarousel-control-next", function (e) {
             $(".current-righttab-carousel").find(".jcarousel-control-prev").attr('aria-label', 'view previous slide');
         }
         $(".current-righttab-carousel").removeClass("current-righttab-carousel");
-    } catch (e) { }
+    } catch (e) {}
 });
 
 $(document).on("click", ".jcarousel-control-prev", function (e) {
@@ -3400,7 +3395,7 @@ $(document).ready(function () {
             $('#SQL_StaticMenu').removeClass('bg-grey-d2');
             $('#SQL_StaticMenu').addClass('bg-grey-50');
         }
-    } catch (e) { }
+    } catch (e) {}
 });
 
 /*SQL-static menu*/
