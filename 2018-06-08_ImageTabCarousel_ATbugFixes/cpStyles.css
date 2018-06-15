@@ -8175,12 +8175,17 @@ body{-ms-overflow-x: hidden;}
     .cp-image-tab-carousel .carousel-thumbnails {
         padding-bottom: 29px;
     }
+
     .cp-image-tab-carousel .carousel-thumbnails .carousel-thumbnail-item {
         width: calc(100% / 4);
     }
     
     .cp-image-tab-carousel .carousel-content-list {
         height: 431px;
+    }
+    /* removing arrow pointing to image tabs in tablet because matching to image carousel in 3/4 icon width is out of scope */
+    .carousel-arrow-slider {
+        display: none;
     }
 }
 
