@@ -973,8 +973,6 @@ function intervalManager(flag, currentcarousel, slickAutoPlay, slickautoplayspee
     }
 }
 
-
-
 $(window).load(function () {
     try {
         $(".cp-media-carousel-with-frames").each(function () {

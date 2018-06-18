@@ -3946,6 +3946,7 @@ function cpImageTabLTRCarousel() {
             currentthumbEle = e.currentTarget;
             currentEleId = $(currentthumbEle).attr('id');
 
+            //Enter keypress
             if (e.keyCode == 13) {
                 enableScroll();
                 unfreeze();
@@ -3978,7 +3979,8 @@ function cpImageTabLTRCarousel() {
                 contentActiveIndex = thumbnailIndex;
                 setCarouselContent(thumbnailIndex);
             }
-
+            
+            //SPACEBAR keypress
             if (e.keyCode == 32) {
                 enableScroll();
                 unfreeze();
@@ -4009,7 +4011,6 @@ function cpImageTabLTRCarousel() {
                 setCarouselContent(thumbnailIndex1);
             }
 
-
             //Left arrow keypress 
             if (e.keyCode == 37 || e.keyCode == 38) {
                 disableScroll();
@@ -4034,6 +4035,7 @@ function cpImageTabLTRCarousel() {
             }
             //Right arrow keypress
             if (e.keyCode == 39 || e.keyCode == 40) {
+                console.log("key 39-40 activated at line 4037");
                 disableScroll();
                 freeze();
                 currentthumbEle = e.currentTarget;
@@ -4051,7 +4053,6 @@ function cpImageTabLTRCarousel() {
                     setTimeout(function () {
                         enableScroll();
                     }, 200);
-
                 }
                 $(currentthumbEle).siblings().attr('tabindex', '-1');
             }
@@ -4120,8 +4121,8 @@ function cpImageTabLTRCarousel() {
                 currentViewport = DESKTOP;
             } else if (innerWidth >= 768) {
                 currentViewport = TABLET;
-
             }
+
             if (carouselCount > currentViewport) {
                 if (movingThumbnail == STAY) {
                     moveThumbnail(true);
@@ -4135,7 +4136,6 @@ function cpImageTabLTRCarousel() {
                     $(carouselNavNodes[1]).trigger('click')
                     count--;
                 }
-
                 showArrow(true);
             } else {
 
@@ -4145,9 +4145,6 @@ function cpImageTabLTRCarousel() {
                 movingThumbnail == STAY;
                 showArrow(false);
             }
-
-
-
         };
 
         $(carouselContentNodes[0]).show();
@@ -4244,6 +4241,8 @@ function cpImageTabRTLCarousel() {
                 carouselThumbnailNode.style.right = ((thumbnailIndex - thumbnailActiveIndex) * thumbnailWidth) + 'px';
             });
             // console.log(arrowActivePosition, carouselThumbnailList.getBoundingClientRect().left);
+
+            // This will move the carousel arrow (pointing to thumbnails)
             carouselSlider.style.left = -($(carouselSlider).width() / 2 - (carouselThumbnailList.getBoundingClientRect().left + (thumbnailCount - arrowActivePosition - 1) * thumbnailWidth) - thumbnailWidth / 2) + 'px';
         };
 
@@ -4357,6 +4356,7 @@ function cpImageTabRTLCarousel() {
             }
             //Right arrow keypress
             if (e.keyCode == 39 || e.keyCode == 40) {
+                console.log("key 39-40 activated at line 4358");
                 disableScroll();
                 currentthumbEle = e.currentTarget;
                 currentEleClass = $(currentthumbEle).attr('class');
