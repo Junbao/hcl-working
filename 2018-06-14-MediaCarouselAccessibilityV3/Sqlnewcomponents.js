@@ -936,19 +936,6 @@ $(window).resize(function () {
 var mediaAutoCarousel = null;
 var trigerredclick = 0;
 
-// $(document).on('keydown', function(e) {
-//     console.log(e.key);
-//     if ( !$('.c-sequence-indicator button:active') ) {
-//         if(e.key == 38) {
-//             e.preventDefault();
-//             console.log("working " + e.key);
-//         }
-//     } else {
-//         console.log("working - skipped");
-//     }
-// });
-
-
 function intervalManager(flag, currentcarousel, slickAutoPlay, slickautoplayspeed) {
     var ishover = 0;
 
@@ -1071,13 +1058,6 @@ $(document).ready(function () {
     var pageIconPlace = 0;
     var place = 0;
 
-    // function skipWatch() {
-    //     setTimeout(function() {
-    //         $('.false_paragraph a').attr('tabindex', '-1');
-    //         $(".carousel-frame[data-carousel-position='active']").find("a.open-popup-video").attr("tabindex", "-1");
-    //     }, 1500);
-    // };
-
     skipWatch();
     try {
 
@@ -1148,6 +1128,7 @@ $(document).ready(function () {
 
             // Set event
             prevNode.onclick = function (e) {
+                $('.carousel-navigation').attr('tabindex', '-1');
                 e.preventDefault();
                 chromePageSlide(e);
                 slideFrame(true);
@@ -1167,6 +1148,7 @@ $(document).ready(function () {
             }
 
             nextNode.onclick = function (e) {
+                $('.carousel-navigation').attr('tabindex', '-1');
                 e.preventDefault();
                 chromePageSlide(e);
                 slideFrame(false);
@@ -1218,7 +1200,7 @@ $(document).ready(function () {
                     MediaCarouselWithFramesIDRemove();
                 }
                 pageNode.onkeydown = function (e) {
-
+                    console.log("keypress");
                     if ((e.which == 39) || (e.which == 40)) {
                         e.preventDefault();
                         e.stopImmediatePropagation();
@@ -1231,7 +1213,6 @@ $(document).ready(function () {
                     }
                 }
             });
-
 
             //setPlayButtonNode();
 
@@ -1332,11 +1313,12 @@ $(document).ready(function () {
                     carouselWrap.scrollIntoView();
                 } else if (isChrome) {
                     carouselWrap.scrollIntoViewIfNeeded();
-                } 
+                }
             }
 
             //changing the focus to the frame 
             function changeFocus(place) {
+                console.log(place);
                 chromePageSlide();
                 $('.carousel-frame .video-link a').attr('aria-selected', 'false');
                 var findFrame = document.getElementsByClassName('carousel-frame');
@@ -1370,13 +1352,11 @@ $(document).ready(function () {
                 }
 
                 setTimeout(function (time) {
-                    // $('.carousel-frame .video-link a').css("border", "none");
                     var timing = setInterval(function () {
                         for (i; i < findFrame.length; i++) {
                             attribute = findFrame[i].getAttribute("data-carousel-position");
                             if (attribute === "active") {
                                 $(this).attr('tabindex', '0');
-                                // $('.carousel-frame .video-link a').css("border", "none");
                                 $('.carousel-frame[data-carousel-position="active"] .video-link .open-popup-video').attr('tabindex', '0').attr('aria-selected', 'true').focus();
                                 $('.carousel-frame .video-link a').attr('aria-hidden', 'false');
                                 clearInterval(timing);
@@ -1385,8 +1365,6 @@ $(document).ready(function () {
                             }
                         }
                     }, 250);
-                    // pageIconSet();
-                    // $('.c-sequence-indicator buttton').delay(1000).attr('aria-hidden', 'false');
                 }, time);
             };
 
@@ -1419,7 +1397,10 @@ $(document).ready(function () {
                 if (newActivePage !== activePage) {
                     pageNodes[newActivePage].focus();
                     pageNodes[activePage].setAttribute('aria-selected', false);
+                    pageNodes[activePage].setAttribute('tabindex', '-1');
+                    pageNodes[activePage].classList.remove('f-active');
                     pageNodes[newActivePage].setAttribute('aria-selected', true);
+                    pageNodes[newActivePage].setAttribute('tabindex', '0');
 
                     activePage = newActivePage;
                 }
