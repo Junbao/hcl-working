@@ -447,9 +447,9 @@ $(document).ready(function () {
 
 
 // To handle unhandled errors which break the javascript code from executing.
-// window.onerror = function (message, source, lineno, colno, error) {
-//     console.log("Message: " + message + ", Source:" + source + ", lineno:" + lineno);
-// }
+window.onerror = function (message, source, lineno, colno, error) {
+    console.log("Message: " + message + ", Source:" + source + ", lineno:" + lineno);
+}
 
 $(document).ready(function () {
 
@@ -3880,12 +3880,6 @@ function cpImageTabLTRCarousel() {
         });
 
         var thumbnailNavigating = function () {
-            if ($(window).innerWidth() < 768 && $(window).innerWidth() > 539) {
-                thumbnailCount = 3;
-            } else if ($(window).innerWidth() > 768 && $(window).innerWidth() < 1084) {
-                thumbnailCount = 4
-            }
-                    
             thumbnailWidth = thumbnailListWidth / thumbnailCount;
             forEach(carouselThumbnailNodes, function (carouselThumbnailNode, thumbnailIndex) {
 
@@ -4019,43 +4013,41 @@ function cpImageTabLTRCarousel() {
             //Left arrow keypress 
             if (e.keyCode == 37 || e.keyCode == 38) {
                 disableScroll();
-                moveThumbnail();
-                // freeze();
+                freeze();
                 currentthumbEle = e.currentTarget;
                 currentEleClass = $(currentthumbEle).attr('class');
                 currentDataIndex = $(currentthumbEle).attr('data-index');
                 currentthumbnailcount = $("." + currentEleClass + "[data-show=" + true + "]").length - 1;
                 $('.' + currentEleClass + '[data-index=' + currentDataIndex + ']').prev().focus();
-                // unfreeze();
+                unfreeze();
                 setTimeout(function () {
                     enableScroll();
                 }, 200);
                 if (currentDataIndex == "0") {
                     $('.' + currentEleClass + '[data-index=' + currentthumbnailcount + ']').focus();
-                    // unfreeze();
+                    unfreeze();
                     setTimeout(function () {
                         enableScroll();
                     }, 200);
                 }
-                $(currentthumbEle).siblings().attr('tabindex', '-1'); 
+                $(currentthumbEle).siblings().attr('tabindex', '-1');
             }
             //Right arrow keypress
             if (e.keyCode == 39 || e.keyCode == 40) {
                 disableScroll();
-                moveThumbnail();
-                // freeze();
+                freeze();
                 currentthumbEle = e.currentTarget;
                 currentEleClass = $(currentthumbEle).attr('class');
                 currentDataIndex = $(currentthumbEle).attr('data-index');
                 currentthumbnailcount = $("." + currentEleClass + "[data-show=" + true + "]").length - 1;
                 $('.' + currentEleClass + '[data-index=' + currentDataIndex + ']').next().focus();
-                // unfreeze();
+                unfreeze();
                 setTimeout(function () {
                     enableScroll();
                 }, 200);
                 if (currentDataIndex == currentthumbnailcount) {
                     $('.' + currentEleClass + '[data-index=' + 0 + ']').focus();
-                    // unfreeze();
+                    unfreeze();
                     setTimeout(function () {
                         enableScroll();
                     }, 200);
@@ -4194,6 +4186,9 @@ $(document).ready(function () {
 
     }
 });
+
+// Removing for TroubleShooting
+
 // $(window).resize(function () {
 //     $carouselThumbNailItem = $(".carousel-thumbnail-list a.carousel-thumbnail-item[data-show='true']");
 //     if ($(window).innerWidth() < 768 && $(window).innerWidth() > 539)
@@ -4205,7 +4200,6 @@ $(document).ready(function () {
 
 //     thumbnailListWidth = $('.carousel-thumbnail-list').width();
 //     thumbnailWidth = thumbnailListWidth / thumbnailCount;
-
 // })
 
 /*** Ends cp_ImageTabsCarousel ***/
