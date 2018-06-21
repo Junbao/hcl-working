@@ -1,7 +1,8 @@
+
 <div role="tablist" aria-label="Entertainment">
-    <button class="carousel-left carousel-nav">
+    <button class="carousel-left carousel-nav" role="presentation" aria-hidden="true">
         <img alt="{{left-arrow-image-alt-text}}" src="{{left-arrow-image}}">
-    </button>
+    </button> 
 
     <button id="tabcarousel-1" class="carousel-thumbnail-item" tabindex="-1" role="tab" aria-selected="false" aria-controls="carousel-content-item-1" data-index="1" data-show="{{1:show-element}}"
     data-item-class="{{1:background-color}} {{1:background-theme}}"
@@ -27,7 +28,7 @@ contentAriaLabledBy = id="tabcarousel-1"
     </button>
 
 
-    <button class="carousel-right carousel-nav">
+    <button class="carousel-right carousel-nav" role="presentation" aria-hidden="true">
         <img class="" alt="{{right-arrow-image-alt-text}}" src="{{right-arrow-image}}">
     </button>
 </div>
@@ -35,7 +36,7 @@ contentAriaLabledBy = id="tabcarousel-1"
 
 
 <div class="carousel-content-list">
-<div id="contentID" aria-labelledby="contentAriaLabledBy" role="tabpanel" tabindex="0" class="carousel-content-item" data-active="true">
+    <div id="contentID" aria-labelledby="contentAriaLabledBy" role="tabpanel" tabindex="0" class="carousel-content-item" data-active="true">
         <img class="" alt="" src="">
         <div class="carousel-content">
             <img class="" alt="" src="">
@@ -46,9 +47,5 @@ contentAriaLabledBy = id="tabcarousel-1"
             </a>
         </div>
     </div>
-
-
-
-
 </div>
 
