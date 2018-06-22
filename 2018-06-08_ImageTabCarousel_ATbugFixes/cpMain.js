@@ -3846,6 +3846,31 @@ $(document).ready(function () {
     }, 500);
 });
 
+$(document).ready(function () {
+
+    var imageTabCarouselListWidth = $('.carousel-thumbnail-list').width();
+    console.log(imageTabCarouselListWidth);
+
+    var imageTabCarouselCount = 6;
+    var imageTabCarouselItemWidth = imageTabCarouselListWidth / imageTabCarouselCount;
+    console.log(imageTabCarouselItemWidth);
+
+    function setTabItemPosition() {
+        var tabPosition = 0;
+        var tabPositionLeft = 0;
+        $('.carousel-thumbnail-item[data-show="true"]').each(function () {
+            tabPosition = $(this).attr('data-index');
+            console.log(tabPosition);
+            tabPositionLeft = imageTabCarouselItemWidth * tabPosition + 'px';
+            console.log(tabPositionLeft);
+            $(this).css("width", imageTabCarouselItemWidth);
+            $(this).css("left", tabPositionLeft);
+        });
+    }
+    setTabItemPosition();
+});
+
+
 
 // End of the reWrite Image Carousel
 
