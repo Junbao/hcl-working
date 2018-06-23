@@ -3851,23 +3851,75 @@ $(document).ready(function () {
     var imageTabCarouselListWidth = $('.carousel-thumbnail-list').width();
     console.log(imageTabCarouselListWidth);
 
+    var imageTabCarouselCountTotal = $('.carousel-thumbnail-item[data-show="true"]').length;
     var imageTabCarouselCount = 6;
     var imageTabCarouselItemWidth = imageTabCarouselListWidth / imageTabCarouselCount;
     console.log(imageTabCarouselItemWidth);
 
-    function setTabItemPosition() {
+    function carouselResize() {
+        imageTabCarouselListWidth = $('.carousel-thumbnail-list').width();
+        if (imageTabCarouselListWidth > 1250) {
+            if (imageTabCarouselCountTotal > 6 ) {
+                imageTabCarouselCount = 6;
+                tabImageCarouselArrows("show");
+            } else {
+                imageTabCarouselCount = 6;
+                tabImageCarouselArrows("hide");
+            }
+        } else if (imageTabCarouselListWidth > 1083) {
+            imageTabCarouselCount = 6;
+            tabImageCarouselArrows("hide");
+        } else if (imageTabCarouselListWidth > 767) {
+            imageTabCarouselCount = 4;
+            tabImageCarouselArrows("show");
+        } else if (imageTabCarouselListWidth > 539) {
+            imageTabCarouselCount = 3;
+            tabImageCarouselArrows("show");
+        }
+        setTabItemRow(imageTabCarouselCount);
+    }
+    carouselResize();
+
+    function tabImageCarouselArrows(state) {
+        if ( state === "show" ) {
+            $('.carousel-thumbnails .carousel-nav').css('display', 'inline-block');
+            console.log("show arrows");
+        } else if (state === "hide") {
+            $('.carousel-thumbnails .carousel-nav').css('display', 'none');
+            console.log("hide arrows");
+        }
+    }
+
+    function setTabItemRow(tabs) {
         var tabPosition = 0;
         var tabPositionLeft = 0;
+        imageTabCarouselCount = tabs;
+        imageTabCarouselItemWidth = imageTabCarouselListWidth / imageTabCarouselCount;
+
         $('.carousel-thumbnail-item[data-show="true"]').each(function () {
             tabPosition = $(this).attr('data-index');
-            console.log(tabPosition);
             tabPositionLeft = imageTabCarouselItemWidth * tabPosition + 'px';
-            console.log(tabPositionLeft);
             $(this).css("width", imageTabCarouselItemWidth);
             $(this).css("left", tabPositionLeft);
         });
     }
-    setTabItemPosition();
+    setTabItemRow(imageTabCarouselCount);
+
+    $(window).resize(function () {
+        carouselResize();
+    });
+
+    $('.carousel-thumbnail-item').on('click', function(e) {
+        preventDefault();
+        tabSelected(this);
+    });
+
+    function tabSelected(elm) {
+        var read = $(elm).attr('data-body-h3');
+        console.log(read);
+        // Going to populate a content div
+    }
+
 });
 
 
