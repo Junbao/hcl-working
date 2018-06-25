@@ -9336,9 +9336,9 @@ CP_CenterImageWithSideText .Bottom-content {
     .cp-image-tab-carousel .carousel-content-list {
         height: 431px;
     }
-    .carousel-arrow-slider {
+    /* .carousel-arrow-slider {
         display: none;
-    }
+    } */
 }
 
 /* VIEWPORT 768 */

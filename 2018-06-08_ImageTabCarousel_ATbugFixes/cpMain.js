@@ -3880,13 +3880,15 @@ $(document).ready(function () {
     }
     carouselResize();
 
+    // show or hide aleft / right arrows on tab
     function tabImageCarouselArrows(state) {
         if (state === "show") {
             $('.carousel-thumbnails .carousel-nav').css('display', 'inline-block');
-            console.log("show arrows");
+            $('.carousel-thumbnail-list').css('margin-left', 'auto');
+
         } else if (state === "hide") {
             $('.carousel-thumbnails .carousel-nav').css('display', 'none');
-            console.log("hide arrows");
+            $('.carousel-thumbnail-list').css('margin-left', '30px');
         }
     }
 
@@ -3909,6 +3911,13 @@ $(document).ready(function () {
         carouselResize();
     });
 
+    // Clicking on the tabs
+    $('.carousel-thumbnail-item').on('click', function (e) {
+        preventDefault();
+        tabSelected(this);
+    });
+
+    // Clicking on the arrows
     $('.carousel-thumbnail-item').on('click', function (e) {
         preventDefault();
         tabSelected(this);
@@ -3916,14 +3925,16 @@ $(document).ready(function () {
 
 
 
-
+    // Populate the content from tab selection
     function tabSelected(elm) {
-        var read = $(elm).attr('data-body-h3');
+        $('.carousel-thumbnail-item').attr('data-active', 'false');
+        $('.carousel-thumbnail-item').attr('tabindex', '-1');
 
+        $(elm).attr('data-active', 'true');
+        $(elm).attr('tabindex', '0');
 
-        // Going to populate a content div
+        // Pull info from Tabs
         var conAriaLabeledBy = $(elm).attr('id');
-        var conId = $(elm).attr("aria-controls");
         var conClass = $(elm).attr("data-item-class");
         var conShow = $(elm).attr('data-show');
         var conBkgImg = $(elm).attr("data-bkgimg-src");
@@ -3938,31 +3949,31 @@ $(document).ready(function () {
         var conCTAariaLabel = $(elm).attr("data-cta-ariaLabel");
         var conCTAspan = $(elm).attr("data-cta-span");
 
-        console.log(conBkgImg);
-
-
-        // $("#top").attr({
-        //     alt: "This is one,
-        //     title: "and yet another"
-        // });
-
+        // Going to populate a content div
         $('#bottom').attr('aria-labelledby', conAriaLabeledBy);
         $('#bottom').addClass(conClass);
-        $('#bottom').attr('id', conId);
         $('#bottom').attr('data-show', conShow);
-
-        $('#conBkgImage').attr('src', conBkgImg);
-        $('#conBkgImage').attr('alt', conBkgAlt);
-        $('#bottom .carousel-content img').attr('src') = conBodyLogo;
-        $('#bottom .carousel-content img').attr('alt') = conBodyLogoAlt;
+        $('#bottom .carousel-content-background img').attr('src', conBkgImg);
+        $('#bottom .carousel-content-background img').attr('alt', conBkgAlt);
+        $('#bottom .carousel-content img').attr('src', conBodyLogo);
+        $('#bottom .carousel-content img').attr('alt', conBodyLogoAlt);
         $('#bottom h3').html(conBodyH);
         $('#bottom .carousel-body').html(conBodyP);
-        $('#bottom .carousel-content').attr('href') = conCTAhref;
-        $('#bottom .carousel-content a').attr('target') = conCTAtarget;
-        $('#bottom .carousel-content a').attr('atlas') = conCTAatlas;
-        $('#bottom .carousel-content a').attr('aria-label') = conCTAariaLabel;
-        $('#bottom span').text() = conCTAspan;
+        $('#bottom .carousel-content').attr('href', conCTAhref);
+        $('#bottom .carousel-content a').attr('target', conCTAtarget);
+        $('#bottom .carousel-content a').attr('atlas', conCTAatlas);
+        $('#bottom .carousel-content a').attr('aria-label', conCTAariaLabel);
+        $('#bottom span').text(conCTAspan);
+        // $('#bottom').focus();
 
+        // Move Carousel Arrow
+        var elmLeft = parseInt( $(elm).css('left'), 10 );
+        var elmWidth = parseInt( $(elm).css('width'),10);
+        elmWidth = elmWidth / 2;
+        var tabCarWidth = $('.carousel-thumbnails').width();
+        var arrowLeftSpace = tabCarWidth - imageTabCarouselListWidth;
+        var arrowAlign = -Math.abs( 7680 - (elmWidth + elmLeft + arrowLeftSpace) );
+        $('.carousel-arrow-slider').css('left', arrowAlign);
     }
 });
 
