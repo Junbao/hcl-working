@@ -447,9 +447,9 @@ $(document).ready(function () {
 
 
 // To handle unhandled errors which break the javascript code from executing.
-window.onerror = function (message, source, lineno, colno, error) {
-    console.log("Message: " + message + ", Source:" + source + ", lineno:" + lineno);
-}
+// window.onerror = function (message, source, lineno, colno, error) {
+//     console.log("Message: " + message + ", Source:" + source + ", lineno:" + lineno);
+// }
 
 $(document).ready(function () {
 
@@ -820,47 +820,47 @@ function initiateslickafterclick() {
                         pauseOnDotsHover: true,
 
                         responsive: [{
-                                breakpoint: 1084,
-                                settings: {
-                                    slidesToShow: 5,
-                                    slidesToScroll: 5,
+                            breakpoint: 1084,
+                            settings: {
+                                slidesToShow: 5,
+                                slidesToScroll: 5,
 
-                                    dots: true,
+                                dots: true,
 
-                                }
-                            },
-                            {
-                                breakpoint: 768,
-                                settings: {
-                                    slidesToShow: 4,
-                                    slidesToScroll: 4,
-
-                                    autoplay: false,
-
-                                }
-                            },
-                            {
-                                breakpoint: 540,
-                                settings: {
-                                    slidesToShow: 2,
-                                    slidesToScroll: 2,
-
-                                    dots: true
-
-
-                                }
-                            },
-                            {
-                                breakpoint: 320,
-                                settings: {
-                                    slidesToShow: 1,
-                                    slidesToScroll: 1,
-
-                                    dots: false
-
-
-                                }
                             }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 4,
+                                slidesToScroll: 4,
+
+                                autoplay: false,
+
+                            }
+                        },
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 2,
+
+                                dots: true
+
+
+                            }
+                        },
+                        {
+                            breakpoint: 320,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+
+                                dots: false
+
+
+                            }
+                        }
                             // You can unslick at a given breakpoint now by adding:
                             // settings: "unslick"
                             // instead of a settings object
@@ -879,44 +879,44 @@ function initiateslickafterclick() {
                         pauseOnFocus: false,
                         pauseOnDotsHover: true,
                         responsive: [{
-                                breakpoint: 1084,
-                                settings: {
-                                    slidesToShow: 3,
-                                    slidesToScroll: 3,
+                            breakpoint: 1084,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 3,
 
-                                    dots: true,
-                                    autoplay: false,
+                                dots: true,
+                                autoplay: false,
 
-                                }
-                            },
-                            {
-                                breakpoint: 768,
-                                settings: {
-                                    slidesToShow: 2,
-                                    slidesToScroll: 2,
-
-
-                                }
-                            },
-                            {
-                                breakpoint: 540,
-                                settings: {
-                                    slidesToShow: 1,
-                                    slidesToScroll: 1,
-
-
-                                }
-                            },
-                            {
-                                breakpoint: 320,
-                                settings: {
-                                    slidesToShow: 1,
-                                    slidesToScroll: 1,
-
-                                    dots: false,
-
-                                }
                             }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 2,
+
+
+                            }
+                        },
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+
+
+                            }
+                        },
+                        {
+                            breakpoint: 320,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+
+                                dots: false,
+
+                            }
+                        }
                             // You can unslick at a given breakpoint now by adding:
                             // settings: "unslick"
                             // instead of a settings object
@@ -2594,53 +2594,53 @@ $(document).ready(function () {
             pauseOnFocus: false,
             pauseOnDotsHover: true,
             responsive: [{
-                    breakpoint: 1084,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        dots: true,
-                        autoplay: true,
-                        autoplaySpeed: autoplaytime,
-                        pauseOnFocus: false,
-                        pauseOnDotsHover: true,
-                    }
-                }, {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        autoplay: true,
-                        autoplaySpeed: autoplaytime,
-                        pauseOnFocus: false,
-                        pauseOnDotsHover: true,
-                    }
-                }, {
-                    breakpoint: 540,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        dots: true,
-                        autoplay: true,
-                        autoplaySpeed: autoplaytime,
-                        pauseOnFocus: false,
-                        pauseOnDotsHover: true,
-                    }
-                }, {
-                    breakpoint: 320,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: false,
-                        autoplay: true,
-                        autoplaySpeed: autoplaytime,
-                        pauseOnFocus: false,
-                        pauseOnDotsHover: true,
-                    }
+                breakpoint: 1084,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true,
+                    autoplay: true,
+                    autoplaySpeed: autoplaytime,
+                    pauseOnFocus: false,
+                    pauseOnDotsHover: true,
                 }
+            }, {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    autoplay: true,
+                    autoplaySpeed: autoplaytime,
+                    pauseOnFocus: false,
+                    pauseOnDotsHover: true,
+                }
+            }, {
+                breakpoint: 540,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true,
+                    autoplay: true,
+                    autoplaySpeed: autoplaytime,
+                    pauseOnFocus: false,
+                    pauseOnDotsHover: true,
+                }
+            }, {
+                breakpoint: 320,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                    autoplay: true,
+                    autoplaySpeed: autoplaytime,
+                    pauseOnFocus: false,
+                    pauseOnDotsHover: true,
+                }
+            }
                 // You can unslick at a given breakpoint now by adding:
                 // settings: "unslick"
                 // instead of a settings object
@@ -2700,44 +2700,44 @@ $(document).ready(function () {
                     pauseOnFocus: false,
                     pauseOnDotsHover: true,
                     responsive: [{
-                            breakpoint: 1084,
-                            settings: {
-                                slidesToShow: 5,
-                                slidesToScroll: 5,
+                        breakpoint: 1084,
+                        settings: {
+                            slidesToShow: 5,
+                            slidesToScroll: 5,
 
-                                dots: true
+                            dots: true
 
-                            }
-                        }, {
-                            breakpoint: 768,
-                            settings: {
-                                slidesToShow: 4,
-                                slidesToScroll: 4,
-
-                                autoplay: false
-
-                            }
-                        }, {
-                            breakpoint: 540,
-                            settings: {
-                                slidesToShow: 2,
-                                slidesToScroll: 2,
-
-                                dots: true
-
-
-                            }
-                        }, {
-                            breakpoint: 320,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1,
-
-                                dots: false
-
-
-                            }
                         }
+                    }, {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4,
+
+                            autoplay: false
+
+                        }
+                    }, {
+                        breakpoint: 540,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+
+                            dots: true
+
+
+                        }
+                    }, {
+                        breakpoint: 320,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+
+                            dots: false
+
+
+                        }
+                    }
                         // You can unslick at a given breakpoint now by adding:
                         // settings: "unslick"
                         // instead of a settings object
@@ -3684,16 +3684,16 @@ $(document).ready(function () {
             }
             $('#CP_CenterImageWithSideText .slick-carousel-mobile').each(function () {
                 $(this).slick({
-                        dots: true,
-                        rtl: dirrtl,
-                        speed: 300,
-                        infinite: true,
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        autoplay: false,
-                        pauseOnFocus: false,
-                        pauseOnDotsHover: true
-                    }
+                    dots: true,
+                    rtl: dirrtl,
+                    speed: 300,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    pauseOnFocus: false,
+                    pauseOnDotsHover: true
+                }
 
                 );
             })
@@ -3713,7 +3713,7 @@ $(window).load(function () {
 $(window).resize(function () {
     try {
         slickaccessibility();
-    } catch (err) {}
+    } catch (err) { }
 });
 
 //start of zh-cn CP_TryBuyFilter			
@@ -3859,7 +3859,7 @@ $(document).ready(function () {
     function carouselResize() {
         imageTabCarouselListWidth = $('.carousel-thumbnail-list').width();
         if (imageTabCarouselListWidth > 1250) {
-            if (imageTabCarouselCountTotal > 6 ) {
+            if (imageTabCarouselCountTotal > 6) {
                 imageTabCarouselCount = 6;
                 tabImageCarouselArrows("show");
             } else {
@@ -3881,7 +3881,7 @@ $(document).ready(function () {
     carouselResize();
 
     function tabImageCarouselArrows(state) {
-        if ( state === "show" ) {
+        if (state === "show") {
             $('.carousel-thumbnails .carousel-nav').css('display', 'inline-block');
             console.log("show arrows");
         } else if (state === "hide") {
@@ -3909,17 +3909,61 @@ $(document).ready(function () {
         carouselResize();
     });
 
-    $('.carousel-thumbnail-item').on('click', function(e) {
+    $('.carousel-thumbnail-item').on('click', function (e) {
         preventDefault();
         tabSelected(this);
     });
 
+
+
+
     function tabSelected(elm) {
         var read = $(elm).attr('data-body-h3');
-        console.log(read);
-        // Going to populate a content div
-    }
 
+
+        // Going to populate a content div
+        var conAriaLabeledBy = $(elm).attr('id');
+        var conId = $(elm).attr("aria-controls");
+        var conClass = $(elm).attr("data-item-class");
+        var conShow = $(elm).attr('data-show');
+        var conBkgImg = $(elm).attr("data-bkgimg-src");
+        var conBkgAlt = $(elm).attr('data-bkgimg-alt');
+        var conBodyLogo = $(elm).attr('data-body-logo');
+        var conBodyLogoAlt = $(elm).attr("data-body-logo-alt");
+        var conBodyH = $(elm).attr('data-body-h3');
+        var conBodyP = $(elm).attr('data-body');
+        var conCTAhref = $(elm).attr('data-cta-href');
+        var conCTAtarget = $(elm).attr("data-cta-target");
+        var conCTAatlas = $(elm).attr("data-cta-atlas");
+        var conCTAariaLabel = $(elm).attr("data-cta-ariaLabel");
+        var conCTAspan = $(elm).attr("data-cta-span");
+
+        console.log(conBkgImg);
+
+
+        // $("#top").attr({
+        //     alt: "This is one,
+        //     title: "and yet another"
+        // });
+
+        $('#bottom').attr('aria-labelledby', conAriaLabeledBy);
+        $('#bottom').addClass(conClass);
+        $('#bottom').attr('id', conId);
+        $('#bottom').attr('data-show', conShow);
+
+        $('#conBkgImage').attr('src', conBkgImg);
+        $('#conBkgImage').attr('alt', conBkgAlt);
+        $('#bottom .carousel-content img').attr('src') = conBodyLogo;
+        $('#bottom .carousel-content img').attr('alt') = conBodyLogoAlt;
+        $('#bottom h3').html(conBodyH);
+        $('#bottom .carousel-body').html(conBodyP);
+        $('#bottom .carousel-content').attr('href') = conCTAhref;
+        $('#bottom .carousel-content a').attr('target') = conCTAtarget;
+        $('#bottom .carousel-content a').attr('atlas') = conCTAatlas;
+        $('#bottom .carousel-content a').attr('aria-label') = conCTAariaLabel;
+        $('#bottom span').text() = conCTAspan;
+
+    }
 });
 
 
