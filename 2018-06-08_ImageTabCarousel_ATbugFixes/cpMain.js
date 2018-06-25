@@ -820,47 +820,47 @@ function initiateslickafterclick() {
                         pauseOnDotsHover: true,
 
                         responsive: [{
-                            breakpoint: 1084,
-                            settings: {
-                                slidesToShow: 5,
-                                slidesToScroll: 5,
+                                breakpoint: 1084,
+                                settings: {
+                                    slidesToShow: 5,
+                                    slidesToScroll: 5,
 
-                                dots: true,
+                                    dots: true,
 
+                                }
+                            },
+                            {
+                                breakpoint: 768,
+                                settings: {
+                                    slidesToShow: 4,
+                                    slidesToScroll: 4,
+
+                                    autoplay: false,
+
+                                }
+                            },
+                            {
+                                breakpoint: 540,
+                                settings: {
+                                    slidesToShow: 2,
+                                    slidesToScroll: 2,
+
+                                    dots: true
+
+
+                                }
+                            },
+                            {
+                                breakpoint: 320,
+                                settings: {
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1,
+
+                                    dots: false
+
+
+                                }
                             }
-                        },
-                        {
-                            breakpoint: 768,
-                            settings: {
-                                slidesToShow: 4,
-                                slidesToScroll: 4,
-
-                                autoplay: false,
-
-                            }
-                        },
-                        {
-                            breakpoint: 540,
-                            settings: {
-                                slidesToShow: 2,
-                                slidesToScroll: 2,
-
-                                dots: true
-
-
-                            }
-                        },
-                        {
-                            breakpoint: 320,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1,
-
-                                dots: false
-
-
-                            }
-                        }
                             // You can unslick at a given breakpoint now by adding:
                             // settings: "unslick"
                             // instead of a settings object
@@ -879,44 +879,44 @@ function initiateslickafterclick() {
                         pauseOnFocus: false,
                         pauseOnDotsHover: true,
                         responsive: [{
-                            breakpoint: 1084,
-                            settings: {
-                                slidesToShow: 3,
-                                slidesToScroll: 3,
+                                breakpoint: 1084,
+                                settings: {
+                                    slidesToShow: 3,
+                                    slidesToScroll: 3,
 
-                                dots: true,
-                                autoplay: false,
+                                    dots: true,
+                                    autoplay: false,
 
+                                }
+                            },
+                            {
+                                breakpoint: 768,
+                                settings: {
+                                    slidesToShow: 2,
+                                    slidesToScroll: 2,
+
+
+                                }
+                            },
+                            {
+                                breakpoint: 540,
+                                settings: {
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1,
+
+
+                                }
+                            },
+                            {
+                                breakpoint: 320,
+                                settings: {
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1,
+
+                                    dots: false,
+
+                                }
                             }
-                        },
-                        {
-                            breakpoint: 768,
-                            settings: {
-                                slidesToShow: 2,
-                                slidesToScroll: 2,
-
-
-                            }
-                        },
-                        {
-                            breakpoint: 540,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1,
-
-
-                            }
-                        },
-                        {
-                            breakpoint: 320,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1,
-
-                                dots: false,
-
-                            }
-                        }
                             // You can unslick at a given breakpoint now by adding:
                             // settings: "unslick"
                             // instead of a settings object
@@ -2594,53 +2594,53 @@ $(document).ready(function () {
             pauseOnFocus: false,
             pauseOnDotsHover: true,
             responsive: [{
-                breakpoint: 1084,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
-                    dots: true,
-                    autoplay: true,
-                    autoplaySpeed: autoplaytime,
-                    pauseOnFocus: false,
-                    pauseOnDotsHover: true,
+                    breakpoint: 1084,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        dots: true,
+                        autoplay: true,
+                        autoplaySpeed: autoplaytime,
+                        pauseOnFocus: false,
+                        pauseOnDotsHover: true,
+                    }
+                }, {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        autoplay: true,
+                        autoplaySpeed: autoplaytime,
+                        pauseOnFocus: false,
+                        pauseOnDotsHover: true,
+                    }
+                }, {
+                    breakpoint: 540,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        dots: true,
+                        autoplay: true,
+                        autoplaySpeed: autoplaytime,
+                        pauseOnFocus: false,
+                        pauseOnDotsHover: true,
+                    }
+                }, {
+                    breakpoint: 320,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false,
+                        autoplay: true,
+                        autoplaySpeed: autoplaytime,
+                        pauseOnFocus: false,
+                        pauseOnDotsHover: true,
+                    }
                 }
-            }, {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
-                    autoplay: true,
-                    autoplaySpeed: autoplaytime,
-                    pauseOnFocus: false,
-                    pauseOnDotsHover: true,
-                }
-            }, {
-                breakpoint: 540,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
-                    dots: true,
-                    autoplay: true,
-                    autoplaySpeed: autoplaytime,
-                    pauseOnFocus: false,
-                    pauseOnDotsHover: true,
-                }
-            }, {
-                breakpoint: 320,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false,
-                    autoplay: true,
-                    autoplaySpeed: autoplaytime,
-                    pauseOnFocus: false,
-                    pauseOnDotsHover: true,
-                }
-            }
                 // You can unslick at a given breakpoint now by adding:
                 // settings: "unslick"
                 // instead of a settings object
@@ -2700,44 +2700,44 @@ $(document).ready(function () {
                     pauseOnFocus: false,
                     pauseOnDotsHover: true,
                     responsive: [{
-                        breakpoint: 1084,
-                        settings: {
-                            slidesToShow: 5,
-                            slidesToScroll: 5,
+                            breakpoint: 1084,
+                            settings: {
+                                slidesToShow: 5,
+                                slidesToScroll: 5,
 
-                            dots: true
+                                dots: true
 
+                            }
+                        }, {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 4,
+                                slidesToScroll: 4,
+
+                                autoplay: false
+
+                            }
+                        }, {
+                            breakpoint: 540,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 2,
+
+                                dots: true
+
+
+                            }
+                        }, {
+                            breakpoint: 320,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+
+                                dots: false
+
+
+                            }
                         }
-                    }, {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 4,
-                            slidesToScroll: 4,
-
-                            autoplay: false
-
-                        }
-                    }, {
-                        breakpoint: 540,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2,
-
-                            dots: true
-
-
-                        }
-                    }, {
-                        breakpoint: 320,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-
-                            dots: false
-
-
-                        }
-                    }
                         // You can unslick at a given breakpoint now by adding:
                         // settings: "unslick"
                         // instead of a settings object
@@ -3684,16 +3684,16 @@ $(document).ready(function () {
             }
             $('#CP_CenterImageWithSideText .slick-carousel-mobile').each(function () {
                 $(this).slick({
-                    dots: true,
-                    rtl: dirrtl,
-                    speed: 300,
-                    infinite: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    autoplay: false,
-                    pauseOnFocus: false,
-                    pauseOnDotsHover: true
-                }
+                        dots: true,
+                        rtl: dirrtl,
+                        speed: 300,
+                        infinite: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: false,
+                        pauseOnFocus: false,
+                        pauseOnDotsHover: true
+                    }
 
                 );
             })
@@ -3713,7 +3713,7 @@ $(window).load(function () {
 $(window).resize(function () {
     try {
         slickaccessibility();
-    } catch (err) { }
+    } catch (err) {}
 });
 
 //start of zh-cn CP_TryBuyFilter			
@@ -3849,12 +3849,9 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     var imageTabCarouselListWidth = $('.carousel-thumbnail-list').width();
-    console.log(imageTabCarouselListWidth);
-
     var imageTabCarouselCountTotal = $('.carousel-thumbnail-item[data-show="true"]').length;
     var imageTabCarouselCount = 6;
     var imageTabCarouselItemWidth = imageTabCarouselListWidth / imageTabCarouselCount;
-    console.log(imageTabCarouselItemWidth);
 
     function carouselResize() {
         imageTabCarouselListWidth = $('.carousel-thumbnail-list').width();
@@ -3869,16 +3866,49 @@ $(document).ready(function () {
         } else if (imageTabCarouselListWidth > 1083) {
             imageTabCarouselCount = 6;
             tabImageCarouselArrows("hide");
+            // tabSpoting(6);
         } else if (imageTabCarouselListWidth > 767) {
             imageTabCarouselCount = 4;
             tabImageCarouselArrows("show");
+            // tabSpoting(4);
         } else if (imageTabCarouselListWidth > 539) {
             imageTabCarouselCount = 3;
             tabImageCarouselArrows("show");
+            // tabSpoting(3);
         }
         setTabItemRow(imageTabCarouselCount);
+        // adjust the carousel arrow if need be
+        carouselArrowFollow($('.carousel-thumbnail-item[data-active="true"]'));
     }
     carouselResize();
+
+    function tabSpoting(tabs, width) {
+
+// NOTE - look to round the numbers - then add / compare
+
+        console.log("tabs - " + tabs + " tab width - " + width);
+        var i = 0;
+        var count = 0;
+        var arr = document.getElementsByClassName('carousel-thumbnail-item');
+
+        for (i ; i < arr.length; i++) {
+            leftvalue = width * i;
+            console.log("inside - " + leftvalue);
+            if (arr[i].style.left == leftvalue) {
+                arr[i].setAttribute("data-tabspot", i);
+            } else {
+                arr[i].setAttribute("data-tabspot", "false");
+            }
+            console.log("left style val - " + arr[i].style.left);
+
+            if ( i == tabs ){
+                break;
+            }
+
+        }
+
+
+    } 
 
     // show or hide aleft / right arrows on tab
     function tabImageCarouselArrows(state) {
@@ -3895,8 +3925,8 @@ $(document).ready(function () {
     function setTabItemRow(tabs) {
         var tabPosition = 0;
         var tabPositionLeft = 0;
-        imageTabCarouselCount = tabs;
-        imageTabCarouselItemWidth = imageTabCarouselListWidth / imageTabCarouselCount;
+        // imageTabCarouselCount = tabs;
+        imageTabCarouselItemWidth = imageTabCarouselListWidth / tabs;
 
         $('.carousel-thumbnail-item[data-show="true"]').each(function () {
             tabPosition = $(this).attr('data-index');
@@ -3904,8 +3934,10 @@ $(document).ready(function () {
             $(this).css("width", imageTabCarouselItemWidth);
             $(this).css("left", tabPositionLeft);
         });
+
+        tabSpoting(tabs, imageTabCarouselItemWidth)
     }
-    setTabItemRow(imageTabCarouselCount);
+    // setTabItemRow(imageTabCarouselCount);
 
     $(window).resize(function () {
         carouselResize();
@@ -3917,10 +3949,27 @@ $(document).ready(function () {
         tabSelected(this);
     });
 
-    // Clicking on the arrows
-    $('.carousel-thumbnail-item').on('click', function (e) {
+    // Clicking on the arrows  carousel-right carousel-nav
+    $('.carousel-nav').on('click', function (e) {
+        var activeTab = $('.carousel-thumbnail-item[data-active="true"]');
+        var nextTab = "";
+        if ($(this).hasClass("carousel-right")) {
+            if ($(activeTab).attr('data-index') < 5) {
+                nextTab = $(activeTab).next('button');
+            } else {
+                nextTab = $('.carousel-thumbnail-item[data-index="0"]');
+            }
+
+
+        } else if ($(this).hasClass("carousel-left")) {
+            if ($(activeTab).attr('data-index') > 0) {
+                nextTab = $(activeTab).prev('button');
+            } else {
+                nextTab = $('.carousel-thumbnail-item[data-index="5"]');
+            }
+        }
         preventDefault();
-        tabSelected(this);
+        tabSelected(nextTab);
     });
 
 
@@ -3966,13 +4015,18 @@ $(document).ready(function () {
         $('#bottom span').text(conCTAspan);
         // $('#bottom').focus();
 
-        // Move Carousel Arrow
-        var elmLeft = parseInt( $(elm).css('left'), 10 );
-        var elmWidth = parseInt( $(elm).css('width'),10);
+        carouselArrowFollow(elm);
+
+    }
+
+    // Move Carousel Arrow
+    function carouselArrowFollow(elm) {
+        var elmLeft = parseInt($(elm).css('left'), 10);
+        var elmWidth = parseInt($(elm).css('width'), 10);
         elmWidth = elmWidth / 2;
         var tabCarWidth = $('.carousel-thumbnails').width();
         var arrowLeftSpace = tabCarWidth - imageTabCarouselListWidth;
-        var arrowAlign = -Math.abs( 7680 - (elmWidth + elmLeft + arrowLeftSpace) );
+        var arrowAlign = -Math.abs(7680 - (elmWidth + elmLeft + arrowLeftSpace));
         $('.carousel-arrow-slider').css('left', arrowAlign);
     }
 });
