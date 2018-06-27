@@ -3,6 +3,11 @@ From ticket - http://vstfpg15:8080/tfs/PG16/WEBDEV%20-%20Win%20Server%20Cloud%20
 MDY - 6/22/18:  New Issue - While the other accordian states are narrated, the primary (active) page accordian is not.  It is not a true button element.  It is currently using a div tabindex o aria-expanded.  Follow how the other accordion buttons are marked up.
 
 
+I made my changes - but they are not coming through - sent note to Radhika...
+
+
+
+Screen Reader (NVDA) from ---
 
 Menu operation from washington.edu - http://www.washington.edu/
 

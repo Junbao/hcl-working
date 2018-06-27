@@ -7,7 +7,8 @@
             <div class="ms-row no-margin">
                 <div class="livearea tabs" data-tab-number="{{tab-number}}">
                     <div class="tab main-tab">
-                        <div class="tab-menu" tabindex="0" aria-expanded="false" aria-live="assertive">
+                        <!-- in mobile this is one item and looks sort of like an accordian -->
+                        <button class="tab-menu" tabindex="0" aria-expanded="false" aria-haspopup="true" aria-label="Open quick links" aria-controls="quicklinks" aria-owns="quicklinks">
                             <mscom:conditional propertyexists="true" property="PageProperties.ActiveStickyNav1">
                                 {{1:tab-name}}
                             </mscom:conditional>
@@ -29,9 +30,9 @@
                             <mscom:conditional propertyexists="true" property="PageProperties.ActiveStickyNav7">
                                 {{7:tab-name}}
                             </mscom:conditional>
-                        </div>
+                        </button>
                     </div>
-                    <nav role="navigation" aria-label="{{aria-label-info}}">
+                    <nav id="quicklinks" role="navigation" aria-label="{{aria-label-info}}" aria-hidden="false">
                         <ul>
                             <li class="tab">
                                 <mscom:conditional propertyexists="true" property="PageProperties.ActiveStickyNav1">
