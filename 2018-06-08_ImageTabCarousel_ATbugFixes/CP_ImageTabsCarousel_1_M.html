@@ -14,7 +14,7 @@
             <div id="tabImageCarousel" class="livearea livearea-thumbnail" aria-label="Carousel of companies using Windows and Azure to realize their potential">
                 <div class="carousel-thumbnails">
                     <!-- previous arrow - hidden by default -->
-                    <button class="carousel-left carousel-nav" role="presentation" aria-hidden="true">
+                    <button class="carousel-left carousel-nav" role="presentation" aria-hidden="true" tabindex="-1">
                         <img alt="{{left-arrow-image-alt-text}}" src="{{left-arrow-image}}">
                     </button>
                     <div class="carousel-thumbnail-list" role="tablist">
@@ -68,7 +68,7 @@
                         </button>
                     </div>
                     <!-- next arrow - hidden by default -->
-                    <button class="carousel-right carousel-nav" role="presentation" aria-hidden="true">
+                    <button class="carousel-right carousel-nav" role="presentation" aria-hidden="true" tabindex="-1">
                         <img class="" alt="{{right-arrow-image-alt-text}}" src="{{right-arrow-image}}">
                     </button>
                 </div>
@@ -110,13 +110,13 @@
 
                 </div>
 
-                <a class="carousel-left carousel-nav">
+                <a class="carousel-left carousel-nav" role="presentation" aria-hidden="true" tabindex="-1">
                     <picture>
                         <source class='hide-by-default show-element' srcset='{{left-arrow-image}}' media='(min-width:0)' />
                         <img srcset='{{left-arrow-image}}' class="" data-desktop-class="" alt="{{left-arrow-image-alt-text}}" src="{{left-arrow-image}}">
                     </picture>
                 </a>
-                <a class="carousel-right carousel-nav">
+                <a class="carousel-right carousel-nav" role="presentation" aria-hidden="true" tabindex="-1">
                     <picture>
                         <source class='hide-by-default show-element' srcset='{{right-arrow-image}}' media='(min-width:0)' />
                         <img srcset='{{right-arrow-image}}' class="" data-desktop-class="" alt="{{right-arrow-image-alt-text}}" src="{{right-arrow-image}}">

@@ -9172,7 +9172,7 @@ CP_CenterImageWithSideText .Bottom-content {
 }
 
 .cp-image-tab-carousel .carousel-thumbnails .carousel-thumbnail-list {
-    width: calc(100% - 58px);
+    width: calc(100% - 60px);
     height: 65px;
     position: relative;
     overflow: hidden;
