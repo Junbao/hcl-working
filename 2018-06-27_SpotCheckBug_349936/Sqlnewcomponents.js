@@ -1697,6 +1697,7 @@ $(document).ready(function () {
         }
 
         stickyNavNode.querySelector('.main-tab').onkeypress = function (e) {
+            console.log("hitting now");
             if (e.keyCode == 13) {
                 //stickyNavNode.setAttribute('data-collapse', !(stickyNavNode.getAttribute('data-collapse').toLowerCase() === 'true') + '');
             }
@@ -2913,14 +2914,14 @@ function prevButtonClick() {
 }
 
 
-setInterval(function () {
-    $('#SQL_FourColwithImageText .slick-next').on('click', function () {
-        nextButtonClick();
-    });
-    $('#SQL_FourColwithImageText .slick-prev').click(function () {
-        prevButtonClick();
-    });
-}, 50);
+// setInterval(function () {
+//     $('#SQL_FourColwithImageText .slick-next').on('click', function () {
+//         nextButtonClick();
+//     });
+//     $('#SQL_FourColwithImageText .slick-prev').click(function () {
+//         prevButtonClick();
+//     });
+// }, 50);
 
 $(window).resize(function () {
     var wwidth = $(window).width();
