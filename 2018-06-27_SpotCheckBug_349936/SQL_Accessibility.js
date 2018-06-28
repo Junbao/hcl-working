@@ -22,7 +22,7 @@ $(document).ready(function () {
         $("a").removeClass("x-hidden-focus");
     });
 
-    $('#CP_StickyNav_1 a.tab-menu').focus(function () {
+    $('#CP_StickyNav_1 .tab-menu').focus(function () {
         if ($(this).text() == "") {
             $('div.main-tab a.tab-menu').click();
         }
@@ -726,39 +726,65 @@ $(document).ready(function () {
     //         }
     //     }
     // });
-// Rewriting event listener line 712
+    // $('#CP_StickyNav_1 .cp-sticky-nav-sub .main-tab .tab-menu').on('keydown', function (e) {
+    //     if (e.keyCode == 13) {
+    //         if ($(this).closest('.cp-sticky-nav-sub').attr('data-collapse') == "true") {
+    //             $(this).attr('aria-expanded', 'false');
+    //             if (navigator.userAgent.toLowerCase().indexOf('firefox') > 0) {
+    //                 $(this).attr('aria-label', 'collapsed');
+    //                 $(this).focus();
+    //             }
+    //         }
+    //         if ($(this).closest('.cp-sticky-nav-sub').attr('data-collapse') == "false") {
+    //             $(this).attr('aria-expanded', 'true');
+    //             if (navigator.userAgent.toLowerCase().indexOf('firefox') > 0) {
+    //                 $(this).attr('aria-label', 'expanded');
+    //                 $(this).focus()
+    //             }
+    //         }
+    //     }
+    // });
+    /*4016 End*/
+// Rewriting event listener line 712 - bug 349936 - JAB 6/28/18
     $('#stickyMobilePageLink').on('click', function() {
-        // var ariaHolder = $(this).attr('aria-label');
         if ($(this).attr('aria-expanded') == 'false') {
             $(this).attr('aria-expanded', 'true');
-            $(this).attr('aria-label', "Open quick links menu - Open");
+            $(this).find('span').text("navigation - open");
         } else if ($(this).attr('aria-expanded') == 'true') {
             $(this).attr('aria-expanded', 'false');
-            $(this).attr('aria-label', "Open quick links menu - Collapsed");
+            $(this).find('span').text("navigation - collapsed");
         }
-        $(this).focus();
+         $("#quicklinks a").attr('tabindex','0');
+        setTimeout(function() {
+            $("#quicklinks a").filter(":first").focus();
+        }, 500);
+    });
+    $('#stickyMobilePageLink').on('keydown', function(e) {
+        var hiding = $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse');
+        if (e.keyCode == 13 || e.keycode == 32) {
+            $('#stickyMobilePageLink').trigger('click');
+            if (hiding == 'true') {
+                $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse', 'false');
+            } else if (hiding == 'false') {
+                $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse', 'true');
+            }
+            // $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse','false');
+        }
+    });
+
+    $('#quicklinks').on('keydown', function(e) {
+        if ( e.keyCode == 39 || e.keycode == 40 ) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            console.log("working down");
+        } else if (e.keyCode == 37 || e.keycode == 38) {
+            e.preventDefault();
+             e.stopImmediatePropagation();
+            console.log("working up");
+        }
     });
 
 
-    $('#CP_StickyNav_1 .cp-sticky-nav-sub .main-tab .tab-menu').on('keydown', function (e) {
-        if (e.keyCode == 13) {
-            if ($(this).closest('.cp-sticky-nav-sub').attr('data-collapse') == "true") {
-                $(this).attr('aria-expanded', 'false');
-                if (navigator.userAgent.toLowerCase().indexOf('firefox') > 0) {
-                    $(this).attr('aria-label', 'collapsed');
-                    $(this).focus();
-                }
-            }
-            if ($(this).closest('.cp-sticky-nav-sub').attr('data-collapse') == "false") {
-                $(this).attr('aria-expanded', 'true');
-                if (navigator.userAgent.toLowerCase().indexOf('firefox') > 0) {
-                    $(this).attr('aria-label', 'expanded');
-                    $(this).focus()
-                }
-            }
-        }
-    });
-    /*4016 End*/
 
     /*4019 Start*/
     $('a.c-back-to-top').on('focus', function () {
