@@ -755,19 +755,20 @@ $(document).ready(function () {
             $(this).find('span').text("navigation - collapsed");
         }
          $("#quicklinks a").attr('tabindex','0');
-        setTimeout(function() {
-            $("#quicklinks a").filter(":first").focus();
-        }, 500);
+        // setTimeout(function() {
+        //     $("#quicklinks a").filter(":first").focus();
+        // }, 500);
     });
     $('#stickyMobilePageLink').on('keydown', function(e) {
         var hiding = $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse');
         if (e.keyCode == 13 || e.keycode == 32) {
-            $('#stickyMobilePageLink').trigger('click');
+            // $('#stickyMobilePageLink').trigger('click');
             if (hiding == 'true') {
                 $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse', 'false');
             } else if (hiding == 'false') {
                 $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse', 'true');
             }
+            $('#stickyMobilePageLink').trigger('click');
             // $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse','false');
         }
     });
