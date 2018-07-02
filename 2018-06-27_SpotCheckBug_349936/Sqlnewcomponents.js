@@ -1694,16 +1694,32 @@ $(document).ready(function () {
 
         stickyNavNode.querySelector('.main-tab').onmouseup = function () {
             stickyNavNode.setAttribute('data-collapse', !(stickyNavNode.getAttribute('data-collapse').toLowerCase() === 'true') + '');
+            // $(stickyNavNode).attr('data-collapse', $(stickyNavNode).attr('data-collapse') == 'true' ? 'false' : 'true');
+
+            toggleDC();
         }
 
         stickyNavNode.querySelector('.main-tab').onkeypress = function (e) {
-            if (e.keyCode == 13) {
-                //stickyNavNode.setAttribute('data-collapse', !(stickyNavNode.getAttribute('data-collapse').toLowerCase() === 'true') + '');
+            if (e.key == 13) {
+                stickyNavNode.setAttribute('data-collapse', !(stickyNavNode.getAttribute('data-collapse').toLowerCase() === 'true') + '');
+                // $(stickyNavNode).attr('data-collapse', $(stickyNavNode).attr('data-collapse') == 'true' ? 'false' : 'true');
+                toggleDC();
             }
-            if (e.keyCode == 9) {
-                stickyNavNode.setAttribute('data-collapse', !(stickyNavNode.getAttribute('data-collapse').toLowerCase() === 'false') + '');
+            // if (e.keyCode == 9) {
+            //     stickyNavNode.setAttribute('data-collapse', !(stickyNavNode.getAttribute('data-collapse').toLowerCase() === 'false') + '');
+            // }
+        }
+
+        function toggleDC() {
+            if ($(stickyNavNode).attr('data-collapse') == "true") {
+                $('#stickyMobilePageLink').attr('aria-expanded', 'false');
+                $("#stickyNotice").text("collapsed");
+            } else if ($(stickyNavNode).attr('data-collapse') == "false") {
+                $('#stickyMobilePageLink').attr('aria-expanded', 'true');
+                $("#stickyNotice").text("expanded");
             }
         }
+
 
         function setStickyNav() {
             if ($('#CP_StickyNav_1 .cp-sticky-nav-sub').hasClass('sticky')) {

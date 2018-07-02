@@ -745,42 +745,42 @@ $(document).ready(function () {
     //     }
     // });
     /*4016 End*/
-// Rewriting event listener line 712 - bug 349936 - JAB 6/28/18
-    $('#stickyMobilePageLink').on('click', function() {
-        if ($(this).attr('aria-expanded') == 'false') {
-            $(this).attr('aria-expanded', 'true');
-            $(this).find('span').text("navigation - open");
-        } else if ($(this).attr('aria-expanded') == 'true') {
-            $(this).attr('aria-expanded', 'false');
-            $(this).find('span').text("navigation - collapsed");
-        }
-         $("#quicklinks a").attr('tabindex','0');
-        // setTimeout(function() {
-        //     $("#quicklinks a").filter(":first").focus();
-        // }, 500);
-    });
-    $('#stickyMobilePageLink').on('keydown', function(e) {
-        var hiding = $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse');
-        if (e.keyCode == 13 || e.keycode == 32) {
-            // $('#stickyMobilePageLink').trigger('click');
-            if (hiding == 'true') {
-                $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse', 'false');
-            } else if (hiding == 'false') {
-                $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse', 'true');
-            }
-            $('#stickyMobilePageLink').trigger('click');
-            // $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse','false');
-        }
-    });
+    // Rewriting event listener line 712 - bug 349936 - JAB 6/28/18
+    // $('#stickyMobilePageLink').on('click', function () {
+    //     if ($(this).attr('aria-expanded') == 'false') {
+    //         $(this).attr('aria-expanded', 'true');
+    //         $("#stickyNotice").text("expanded");
+    //     } else if ($(this).attr('aria-expanded') == 'true') {
+    //         $(this).attr('aria-expanded', 'false');
+    //         $("#stickyNotice").text("collapsed");
+    //     }
+    //     $("#quicklinks a").attr('tabindex', '0');
+    //     // setTimeout(function() {
+    //     //     $("#quicklinks a").filter(":first").focus();
+    //     // }, 500);
+    // });
+    // $('#stickyMobilePageLink').on('keydown', function (e) {
+    //     var hiding = $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse');
+    //     if (e.keyCode == 13 || e.keycode == 32) {
+    //         // $('#stickyMobilePageLink').trigger('click');
+    //         if (hiding == 'true') {
+    //             $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse', 'false');
+    //         } else if (hiding == 'false') {
+    //             $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse', 'true');
+    //         }
+    //         $('#stickyMobilePageLink').trigger('click');
+    //         // $('.cp-sticky-nav .cp-sticky-nav-sub').attr('data-collapse','false');
+    //     }
+    // });
 
-    $('#quicklinks').on('keydown', function(e) {
-        if ( e.keyCode == 39 || e.keycode == 40 ) {
+    $('#quicklinks').on('keydown', function (e) {
+        if (e.keyCode == 39 || e.keycode == 40) {
             e.preventDefault();
             e.stopImmediatePropagation();
             console.log("working down");
         } else if (e.keyCode == 37 || e.keycode == 38) {
             e.preventDefault();
-             e.stopImmediatePropagation();
+            e.stopImmediatePropagation();
             console.log("working up");
         }
     });
