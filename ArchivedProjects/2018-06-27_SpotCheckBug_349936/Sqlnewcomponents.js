@@ -1681,7 +1681,7 @@ $(document).ready(function () {
 
 
         stickyNavWidth();
-        //window.addEventListener('scroll', setStickyNav);
+
         window.addEventListener('scroll', function () {
             stickyNavInitialPosition = stickyNavBGNode.getBoundingClientRect().top + scrollTop;
             setStickyNav();
@@ -1694,7 +1694,6 @@ $(document).ready(function () {
 
         stickyNavNode.querySelector('.main-tab').onmouseup = function () {
             stickyNavNode.setAttribute('data-collapse', !(stickyNavNode.getAttribute('data-collapse').toLowerCase() === 'true') + '');
-            // $(stickyNavNode).attr('data-collapse', $(stickyNavNode).attr('data-collapse') == 'true' ? 'false' : 'true');
 
             toggleDC();
         }
@@ -1702,12 +1701,9 @@ $(document).ready(function () {
         stickyNavNode.querySelector('.main-tab').onkeypress = function (e) {
             if (e.key == 13) {
                 stickyNavNode.setAttribute('data-collapse', !(stickyNavNode.getAttribute('data-collapse').toLowerCase() === 'true') + '');
-                // $(stickyNavNode).attr('data-collapse', $(stickyNavNode).attr('data-collapse') == 'true' ? 'false' : 'true');
+
                 toggleDC();
             }
-            // if (e.keyCode == 9) {
-            //     stickyNavNode.setAttribute('data-collapse', !(stickyNavNode.getAttribute('data-collapse').toLowerCase() === 'false') + '');
-            // }
         }
 
         function toggleDC() {
