@@ -4760,9 +4760,7 @@ $(window).resize(function () {
 
 // For testing - get rid of contact links
 $(document).ready(function () {
-    setTimeout(() => {
-        $("#CP_StaticSupportLinks_1_VG").css("display", "none");
-    }, 500);
+    $("#CP_StaticSupportLinks_1_VG").css("display", "none");
 });
 
 $(document).ready(function () {
@@ -4772,10 +4770,6 @@ $(document).ready(function () {
     var imageTabCarouselItemWidth = imageTabCarouselListWidth / imageTabCarouselCount;
     var tabCarouselArray = $('.carousel-thumbnail-item[data-show="true"]');
     var count = 0;
-
-    // tabCarouselArray.each(function(e) {
-    //     console.log(e);
-    // })
 
     function reSetTabs() {
         $('.carousel-thumbnail-item[data-show="true"]').attr('data-tabspot', "false");
@@ -4807,8 +4801,6 @@ $(document).ready(function () {
         count = 0;
         for (var i = 0; i < tabCarouselArray.length; i++) {
             tabCarouselArray[i].setAttribute('data-tabspot', 'true');
-            // tabCarouselArray[i].style.display = "block";
-            // console.log("count is - " + count + " tabs - " + imageTabCarouselCount);
             count ++;
             if (count == imageTabCarouselCount) {
                 break;
@@ -4817,7 +4809,7 @@ $(document).ready(function () {
 
         setTabCarousel(imageTabCarouselCount);
 
-        // adjust the carousel arrow if need be
+        // move the carousel arrow if need be
         carouselArrowFollow($('.carousel-thumbnail-item[data-active="true"]'));
     }
 
@@ -4836,7 +4828,7 @@ $(document).ready(function () {
     function setTabCarousel(tabs) {
         var tabPosition = 0;
         var tabPositionLeft = 0;
-
+        // reassigning value for tabs count based on screen width 3 - 4 - 6
         imageTabCarouselItemWidth = imageTabCarouselListWidth / tabs;
 
         $('.carousel-thumbnail-item[data-show="true"]').each(function (k) {
@@ -4847,7 +4839,6 @@ $(document).ready(function () {
             $(this).css("left", tabPositionLeft);
         });
     }
-
 
     $(window).resize(function () {
         carouselResize();
@@ -4897,19 +4888,19 @@ $(document).ready(function () {
         carouselArrowFollow(elm);
     }
 
-    function slideCarouselArrows(direction) {
-        var curWidth = 0;
+    // sliding the tabs in the carousel
+    function slideCarousel(direction) {
+        var curWidth = 0; 
         var curLeft = 0;
         var newLeft = 0;
-        $('.carousel-thumbnail-item[data-tabspot="true"]').each(function () {
+        $('.carousel-thumbnail-item').each(function () {
             curWidth = parseInt($(this).css('width'), 10);
             curLeft = parseInt($(this).css('left'), 10);
 
             if (direction == "right") {
                 newLeft = curLeft - curWidth + "px";
                 this.style.left = newLeft;
-                rotateList("right");
-
+                slideList("right");
 
             } else if (direction == "left") {
                 newLeft = curLeft + curWidth + "px";
@@ -4918,21 +4909,18 @@ $(document).ready(function () {
         });
     }
 
-    function rotateList(dir) {
+
+    function slideList(dir) {
         console.log("direction - " + dir);
         var currentArray = document.getElementsByClassName('carousel-thumbnail-item');
-        if (direction == "right") {
+        if (dir == "right") {
 
-
-
-        } else if (direction == "left") {
+        } else if (dir == "left") {
 
         }
-
     }
 
-
-    // Move Carousel Arrow
+    // Move Carousel Arrow to follow active(elm)
     function carouselArrowFollow(elm) {
         var elmLeft = parseInt($(elm).css("left"), 10);
         var elmWidth = parseInt($(elm).css("width"), 10);
@@ -4956,22 +4944,14 @@ $(document).ready(function () {
         var activeTab = $('.carousel-thumbnail-item[data-active="true"]');
         var nextTab = "";
         if ($(this).hasClass("carousel-right")) {
-            if ($(activeTab).attr("data-index") < 5) {
-                nextTab = $(activeTab).next("button");
-                slideCarouselArrows("right");
-            } else {
-                nextTab = $('.carousel-thumbnail-item[data-index="0"]');
-            }
+            nextTab = $(activeTab).next("button");
+            slideCarousel("right");
         } else if ($(this).hasClass("carousel-left")) {
-            if ($(activeTab).attr("data-index") > 0) {
-                nextTab = $(activeTab).prev("button");
-                slideCarouselArrows("left");
-            } else {
-                nextTab = $('.carousel-thumbnail-item[data-index="5"]');
-            }
+            nextTab = $(activeTab).prev("button");
+            slideCarousel("left");
         }
         e.preventDefault();
-        carouselArrowFollow(elm)
+        carouselArrowFollow(nextTab);
         // tabSelected(nextTab);
     });
 
@@ -4983,14 +4963,14 @@ $(document).ready(function () {
         var activeTab = $('.carousel-thumbnail-item[data-active="true"]');
         var nextTab = "";
 
-        if (e.keyCode == 37 || e.keyCode == 38) { //Left arrow keypress 
+        if (e.keyCode == 37 || e.keyCode == 38) { //Left and up arrow keypress 
             console.log("key 37-38 activated at line 4953");
             if ($(activeTab).attr("data-index") > 0) {
                 nextTab = $(activeTab).prev("button");
             } else {
                 nextTab = $('.carousel-thumbnail-item[data-index="5"]');
             }
-        } else if (e.keyCode == 39 || e.keyCode == 40) {  //Right arrow keypress
+        } else if (e.keyCode == 39 || e.keyCode == 40) {  //Right and down arrow keypress
             console.log("key 39-40 activated at line 4975");
             if ($(activeTab).attr("data-index") < 5) {
                 nextTab = $(activeTab).next("button");
