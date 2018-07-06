@@ -14,6 +14,7 @@ jQuery.fn.replacepadding = function () {
         }
     });
 };
+
 jQuery.fn.replacemargin = function () {
     var current = $(this);
     current.each(function () {
@@ -4801,7 +4802,7 @@ $(document).ready(function () {
         count = 0;
         for (var i = 0; i < tabCarouselArray.length; i++) {
             tabCarouselArray[i].setAttribute('data-tabspot', 'true');
-            count ++;
+            count++;
             if (count == imageTabCarouselCount) {
                 break;
             }
@@ -4890,32 +4891,58 @@ $(document).ready(function () {
 
     // sliding the tabs in the carousel
     function slideCarousel(direction) {
-        var curWidth = 0; 
+        var curWidth = 0;
         var curLeft = 0;
         var newLeft = 0;
+        var dir = "";
         $('.carousel-thumbnail-item').each(function () {
             curWidth = parseInt($(this).css('width'), 10);
             curLeft = parseInt($(this).css('left'), 10);
 
             if (direction == "right") {
+                dir = "right";
                 newLeft = curLeft - curWidth + "px";
                 this.style.left = newLeft;
-                slideList("right");
-
             } else if (direction == "left") {
+                dir = "left";
                 newLeft = curLeft + curWidth + "px";
                 this.style.left = newLeft;
             }
         });
+        slideList(dir, curWidth);
     }
 
 
-    function slideList(dir) {
-        console.log("direction - " + dir);
+    function slideList(dir, width) {
+        var lastSpot = imageTabCarouselCountTotal - 1;
         var currentArray = document.getElementsByClassName('carousel-thumbnail-item');
-        if (dir == "right") {
+        var dIndex = 0;
+        var nLeft = 0;
+
+        $('.carousel-thumbnail-item').each( function(k) {
+            dIndex = $(this).attr('data-index');
+            nIndex = dIndex - 1;
+            $(this).attr('data-index', dIndex - 1);
+        })
+
+        if (dir == "right") { // move -1 to 5
+            $('.carousel-thumbnail-item').each(function(k) {
+                if ($(this).attr('data-index') == '-1' ) {
+                    $(this).css({ 'left': '-500px', 'display': 'none' });
+                    $(this).attr('data-index', lastSpot);
+                }
+            });
+
+            setTimeout(() => {
+                $('.carousel-thumbnail-item[data-index="' + lastSpot + '"]').css({'left': width * lastSpot, 'display': 'block'});
+            }, 250);
 
         } else if (dir == "left") {
+            $('.carousel-thumbnail-item').each( function() {
+                if (this.attr('data-index') === lastSpot) {
+                    this.attr('data-index', '0' ).css('left') = width * -1;
+                }
+            });
 
         }
     }
