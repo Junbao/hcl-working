@@ -9,3 +9,6 @@ function chromePageSlide () {
   }
 };
 chromePageSlide()
+
+// jQuery find item with a data Attribute val
+$('.carousel-thumbnail-item[data-index="' + lastSpot + '"]')

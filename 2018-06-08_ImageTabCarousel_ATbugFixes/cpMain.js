@@ -4811,7 +4811,7 @@ $(document).ready(function () {
         setTabCarousel(imageTabCarouselCount);
 
         // move the carousel arrow if need be
-        carouselArrowFollow($('.carousel-thumbnail-item[data-active="true"]'));
+        carouselArrowFollow();
     }
 
     // show or hide aleft / right arrows on tab
@@ -4886,75 +4886,71 @@ $(document).ready(function () {
         $("#bottom .carousel-content a").attr("aria-label", conCTAariaLabel);
         $("#bottom span").text(conCTAspan);
 
-        carouselArrowFollow(elm);
+        carouselArrowFollow();
     }
 
     // sliding the tabs in the carousel
     function slideCarousel(direction) {
-        var curWidth = 0;
-        var curLeft = 0;
+        var curWidth = (curWidth = parseInt($('.carousel-thumbnail-item').css("width"), 10));
         var newLeft = 0;
-        var dir = "";
+        var dIndex = 0;
+        var lastSpot = imageTabCarouselCountTotal - 1;
+
+        if (direction == "right") {
+            $('.carousel-thumbnail-item[data-index="0"]')
+                .attr("data-index", imageTabCarouselCountTotal)
+                .stop()
+                .css({ "display": "none", "left": imageTabCarouselCountTotal * curWidth });
+        } else if (direction == "left") {
+            $('.carousel-thumbnail-item[data-index="' + lastSpot + '"]').attr("data-index", "-1").css({ display: "none", left: -Math.abs(curWidth) });
+            setTimeout(function() {
+                $('.carousel-thumbnail-item[data-index="-1"]').css('display', 'block');
+            }, 50);
+        }
+
         $('.carousel-thumbnail-item').each(function () {
             curWidth = parseInt($(this).css('width'), 10);
             curLeft = parseInt($(this).css('left'), 10);
+            dIndex = parseInt($(this).attr("data-index"), 10);
+            nIndex = dIndex;
 
             if (direction == "right") {
-                dir = "right";
-                newLeft = curLeft - curWidth + "px";
+                $(this).css("display", "block");
+                $(this).attr("data-index", dIndex - 1);
+                nIndex = $(this).attr("data-index");
+                newLeft = curWidth * nIndex + "px";
                 this.style.left = newLeft;
+
             } else if (direction == "left") {
-                dir = "left";
-                newLeft = curLeft + curWidth + "px";
+                $(this).css("display", "block");
+                $(this).attr("data-index", dIndex + 1);
+
+                nIndex = $(this).attr("data-index");
+                newLeft = curWidth * nIndex + "px";
+                $(this).css("display", "block");
                 this.style.left = newLeft;
             }
+            carouselArrowFollow();
         });
-        slideList(dir, curWidth);
-    }
-
-
-    function slideList(dir, width) {
-        var lastSpot = imageTabCarouselCountTotal - 1;
-        var currentArray = document.getElementsByClassName('carousel-thumbnail-item');
-        var dIndex = 0;
-        var nLeft = 0;
-
-        $('.carousel-thumbnail-item').each( function(k) {
-            dIndex = $(this).attr('data-index');
-            nIndex = dIndex - 1;
-            $(this).attr('data-index', dIndex - 1);
-        })
-
-        if (dir == "right") { // move -1 to 5
-            $('.carousel-thumbnail-item').each(function(k) {
-                if ($(this).attr('data-index') == '-1' ) {
-                    $(this).css({ 'left': '-500px', 'display': 'none' });
-                    $(this).attr('data-index', lastSpot);
-                }
-            });
-
-            setTimeout(() => {
-                $('.carousel-thumbnail-item[data-index="' + lastSpot + '"]').css({'left': width * lastSpot, 'display': 'block'});
-            }, 250);
-
-        } else if (dir == "left") {
-            $('.carousel-thumbnail-item').each( function() {
-                if (this.attr('data-index') === lastSpot) {
-                    this.attr('data-index', '0' ).css('left') = width * -1;
-                }
-            });
-
-        }
     }
 
     // Move Carousel Arrow to follow active(elm)
-    function carouselArrowFollow(elm) {
+    function carouselArrowFollow() {
+        $(".carousel-arrow-slider").css("display", "block");
+        var elm = $('.carousel-thumbnail-item[data-active="true"]');
+        var elmIndex = parseInt($(elm).attr('data-index'), 10);
         var elmLeft = parseInt($(elm).css("left"), 10);
         var elmWidth = parseInt($(elm).css("width"), 10);
+
+console.log("elmIndex = " + elmIndex + " elmLeft = " + elmLeft + " elmWidth = " + elmWidth);
+
         elmWidth = elmWidth / 2;
         var tabCarWidth = $(".carousel-thumbnails").width();
         var arrowLeftSpace = tabCarWidth - imageTabCarouselListWidth;
         var arrowAlign = -Math.abs(7680 - (elmWidth + elmLeft + arrowLeftSpace));
+        if (elmIndex > imageTabCarouselCount) {
+            $(".carousel-arrow-slider").css("display", "none");
+        }
         $(".carousel-arrow-slider").css("left", arrowAlign);
     }
 
@@ -4972,13 +4968,18 @@ $(document).ready(function () {
         var nextTab = "";
         if ($(this).hasClass("carousel-right")) {
             nextTab = $(activeTab).next("button");
+            $(activeTab).next("button").attr("data-active", "true");
+            $(activeTab).attr("data-active", "false");
             slideCarousel("right");
+            // tabSelected(this);
         } else if ($(this).hasClass("carousel-left")) {
             nextTab = $(activeTab).prev("button");
+
             slideCarousel("left");
+            // tabSelected(this);
         }
         e.preventDefault();
-        carouselArrowFollow(nextTab);
+        // carouselArrowFollow(nextTab);
         // tabSelected(nextTab);
     });
 
@@ -5006,7 +5007,7 @@ $(document).ready(function () {
             }
         }
         if (e.keyCode == 13) {  //Enter keypress
-            tabSelected($('.carousel-thumbnail-item[data-active="true"]'));
+            tabSelected($(this));
         }
         $(activeTab).attr('data-active', 'false');
 
