@@ -4886,7 +4886,7 @@ $(document).ready(function () {
         $("#bottom .carousel-content a").attr("aria-label", conCTAariaLabel);
         $("#bottom span").text(conCTAspan);
 
-        carouselArrowFollow();
+        // carouselArrowFollow();
     }
 
     // sliding the tabs in the carousel
@@ -4930,28 +4930,31 @@ $(document).ready(function () {
                 $(this).css("display", "block");
                 this.style.left = newLeft;
             }
-            carouselArrowFollow();
         });
+        carouselArrowFollow();
     }
 
     // Move Carousel Arrow to follow active(elm)
     function carouselArrowFollow() {
-        $(".carousel-arrow-slider").css("display", "block");
-        var elm = $('.carousel-thumbnail-item[data-active="true"]');
-        var elmIndex = parseInt($(elm).attr('data-index'), 10);
-        var elmLeft = parseInt($(elm).css("left"), 10);
-        var elmWidth = parseInt($(elm).css("width"), 10);
+        setTimeout(() => {
+            $(".carousel-arrow-slider").css("display", "block");
+            var elm = $('.carousel-thumbnail-item[data-active="true"]');
+            var elmIndex = parseInt($(elm).attr('data-index'), 10);
+            var elmLeft = parseInt($(elm).css("left"), 10);
+            var elmWidth = parseInt($(elm).css("width"), 10);
 
-console.log("elmIndex = " + elmIndex + " elmLeft = " + elmLeft + " elmWidth = " + elmWidth);
+            console.log("elmIndex = " + elmIndex + " elmLeft = " + elmLeft + " elmWidth = " + elmWidth);
 
-        elmWidth = elmWidth / 2;
-        var tabCarWidth = $(".carousel-thumbnails").width();
-        var arrowLeftSpace = tabCarWidth - imageTabCarouselListWidth;
-        var arrowAlign = -Math.abs(7680 - (elmWidth + elmLeft + arrowLeftSpace));
-        if (elmIndex > imageTabCarouselCount) {
-            $(".carousel-arrow-slider").css("display", "none");
-        }
-        $(".carousel-arrow-slider").css("left", arrowAlign);
+            elmWidth = elmWidth / 2;
+            var sectionWidth = $("#cp-image-tab-carousel").width();
+            var tabCarWidth = $(".carousel-thumbnails").width();
+            var arrowLeftSpace = sectionWidth - tabCarWidth;
+            var arrowAlign = -Math.abs(7680 - (elmWidth + elmLeft + arrowLeftSpace));
+            if (elmIndex > imageTabCarouselCount) {
+                $(".carousel-arrow-slider").css("display", "none");
+            }
+            $(".carousel-arrow-slider").css("left", arrowAlign);
+        }, 200);
     }
 
     // Navigation
