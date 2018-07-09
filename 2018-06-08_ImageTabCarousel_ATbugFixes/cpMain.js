@@ -4769,16 +4769,12 @@ $(document).ready(function () {
     var imageTabCarouselCountTotal = $('.carousel-thumbnail-item[data-show="true"]').length;
     var imageTabCarouselCount = 6;
     var imageTabCarouselItemWidth = imageTabCarouselListWidth / imageTabCarouselCount;
-    var tabCarouselArray = $('.carousel-thumbnail-item[data-show="true"]');
-    var count = 0;
+    // var tabCarouselArray = $('.carousel-thumbnail-item[data-show="true"]');
+    // var count = 0;
 
-    function reSetTabs() {
-        $('.carousel-thumbnail-item[data-show="true"]').attr('data-tabspot', "false");
-    };
 
     function carouselResize() {
         imageTabCarouselListWidth = $(".carousel-thumbnail-list").width();
-        reSetTabs();
 
         if (imageTabCarouselListWidth > 1250) {
             if (imageTabCarouselCountTotal > 6) {
@@ -4794,18 +4790,9 @@ $(document).ready(function () {
         } else if (imageTabCarouselListWidth > 767) {
             imageTabCarouselCount = 4;
             tabImageCarouselArrows("show");
-        } else if (imageTabCarouselListWidth > 539) {
+        } else if (imageTabCarouselListWidth > 437) {
             imageTabCarouselCount = 3;
             tabImageCarouselArrows("show");
-        }
-
-        count = 0;
-        for (var i = 0; i < tabCarouselArray.length; i++) {
-            tabCarouselArray[i].setAttribute('data-tabspot', 'true');
-            count++;
-            if (count == imageTabCarouselCount) {
-                break;
-            }
         }
 
         setTabCarousel(imageTabCarouselCount);
@@ -4851,8 +4838,12 @@ $(document).ready(function () {
         $(".carousel-thumbnail-item").attr("data-active", "false");
         $(".carousel-thumbnail-item").attr("tabindex", "-1");
 
-        $(elm).attr("data-active", "true");
-        $(elm).attr("tabindex", "0");
+        $(elm).attr({
+            "data-active": "true",
+            "tabindex": "0",
+            "data-tabspot": "true"
+        });
+
 
         carouselArrowFollow();
 
@@ -4937,25 +4928,26 @@ $(document).ready(function () {
 
     // Move Carousel Arrow to follow active(elm)
     function carouselArrowFollow() {
-        setTimeout(() => {
-            $(".carousel-arrow-slider").css("display", "block");
-            var elm = $('.carousel-thumbnail-item[data-active="true"]');
-            var elmIndex = parseInt($(elm).attr('data-index'), 10);
-            var elmLeft = parseInt($(elm).css("left"), 10);
-            var elmWidth = parseInt($(elm).css("width"), 10);
+        var sectionWidth = $("#cp-image-tab-carousel").width();
+        if (sectionWidth < 540) {
+            $(".carousel-arrow-slider").css("display", "none");
+        } else {
+            setTimeout(() => {
+                $(".carousel-arrow-slider").css("display", "block");
+                var elm = $('.carousel-thumbnail-item[data-active="true"]');
+                // var elmIndex = parseInt($(elm).attr('data-index'), 10);
+                var elmLeft = parseInt($(elm).css("left"), 10);
+                var elmWidth = parseInt($(elm).css("width"), 10);
 
-            console.log("elmIndex = " + elmIndex + " elmLeft = " + elmLeft + " elmWidth = " + elmWidth);
+                elmWidth = elmWidth / 2;
+                var sectionWidth = $("#cp-image-tab-carousel").width();
+                var tabCarWidth = $(".carousel-thumbnails").width();
+                var arrowLeftSpace = sectionWidth - tabCarWidth;
+                var arrowAlign = -Math.abs(7680 - (elmWidth + elmLeft + arrowLeftSpace));
 
-            elmWidth = elmWidth / 2;
-            var sectionWidth = $("#cp-image-tab-carousel").width();
-            var tabCarWidth = $(".carousel-thumbnails").width();
-            var arrowLeftSpace = sectionWidth - tabCarWidth;
-            var arrowAlign = -Math.abs(7680 - (elmWidth + elmLeft + arrowLeftSpace));
-            if (elmIndex > imageTabCarouselCount) {
-                $(".carousel-arrow-slider").css("display", "none");
-            }
-            $(".carousel-arrow-slider").css("left", arrowAlign);
-        }, 500);
+                $(".carousel-arrow-slider").css("left", arrowAlign);
+            }, 500);
+        }
 
     }
 
@@ -4968,11 +4960,11 @@ $(document).ready(function () {
     });
 
     // Clicking on the arrows -- carousel-right carousel-nav
-    $(".carousel-nav").on("click", function (e) {
+    $(".carousel-nav").on("click", function (dir,e) {
         var activeTab = $('.carousel-thumbnail-item[data-active="true"]');
         var nextIndex = 0;
 
-        if ($(this).hasClass("carousel-right")) {
+        if ($(this).hasClass("carousel-right") || dir == "left") {
             nextIndex = parseInt($(activeTab).attr('data-index'), 10) + 1;
             if (nextIndex > imageTabCarouselCountTotal) {
                 nextIndex = imageTabCarouselCountTotal;
@@ -4981,7 +4973,7 @@ $(document).ready(function () {
 
             slideCarousel("right");
             tabSelected(nextTab);
-        } else if ($(this).hasClass("carousel-left")) {
+        } else if ($(this).hasClass("carousel-left") || dir == "right") {
             nextIndex = parseInt($(activeTab).attr('data-index'), 10) - 1;
             if (nextIndex < 0) {
                 nextIndex = 0;
@@ -4992,7 +4984,6 @@ $(document).ready(function () {
             slideCarousel("left");
         }
         e.preventDefault();
-
     });
 
 
@@ -5000,31 +4991,97 @@ $(document).ready(function () {
     $('.carousel-thumbnails').on('keydown', function (e) {
         e.preventDefault();
         e.stopPropagation();
-        var activeTab = $('.carousel-thumbnail-item[data-active="true"]');
-        var nextTab = "";
+        var activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
+        var nextIndex = parseInt($(activeTab).attr('data-index'), 10);
 
         if (e.keyCode == 37 || e.keyCode == 38) { //Left and up arrow keypress 
-            console.log("key 37-38 activated at line 4953");
-            if ($(activeTab).attr("data-index") > 0) {
-                nextTab = $(activeTab).prev("button");
-            } else {
-                nextTab = $('.carousel-thumbnail-item[data-index="5"]');
-            }
-        } else if (e.keyCode == 39 || e.keyCode == 40) {  //Right and down arrow keypress
-            console.log("key 39-40 activated at line 4975");
-            if ($(activeTab).attr("data-index") < imageTabCarouselCount) {
-              nextTab = $(activeTab).next("button");
-            } else {
-              nextTab = $('.carousel-thumbnail-item[data-index="0"]');
-            }
-        }
-        if (e.keyCode == 13) {  //Enter keypress
-            tabSelected($(this));
-        }
-        $(activeTab).attr('data-active', 'false');
+            nextIndex = nextIndex - 1;
 
-        $(nextTab).focus();
-        $(nextTab).attr("data-active", "true");
+            if (imageTabCarouselCount < imageTabCarouselCountTotal) { // seeing if we need carousel scrolling
+                if (nextIndex < 0) {
+                    nextIndex = imageTabCarouselCountTotal;
+                } else if ( nextIndex > imageTabCarouselCountTotal ) {
+                    nextIndex = 0;
+                }
+                nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
+                $(activeTab).attr({
+                    'tabindex': "-1",
+                    'data-tabspot': 'false',
+                    'aria-selected': 'false'
+                });
+                $(nextTab).attr({
+                    'tabindex': "0",
+                    'aria-selected': 'true',
+                    'data-tabspot': 'true'
+                }).focus();
+            
+                // tabSelected(nextTab);
+                slideCarousel("left");
+            } else {
+                if (nextIndex < 0) {
+                    nextIndex = imageTabCarouselCountTotal - 1;
+                } 
+                nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
+                $(activeTab).attr({
+                    'tabindex': "-1",
+                    'data-tabspot': 'false',
+                    'aria-selected': 'false'
+                });
+                $(nextTab).attr({
+                    'tabindex': "0",
+                    'aria-selected': 'true',
+                    'data-tabspot': 'true'
+                }).focus();
+            }
+            carouselArrowFollow();
+        } else if (e.keyCode == 39 || e.keyCode == 40) {  //Right and down arrow keypress
+            nextIndex = nextIndex + 1;
+
+            if (imageTabCarouselCount < imageTabCarouselCountTotal) { // seeing if we need carousel scrolling
+                if (nextIndex === imageTabCarouselCountTotal) {
+                    nextIndex = 0;
+                } 
+                nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
+                $(activeTab).attr({
+                    'tabindex': "-1",
+                    'data-tabspot': 'false',
+                    'aria-selected': 'false'
+                });
+                $(nextTab).attr({
+                    'tabindex': "0",
+                    'aria-selected': 'true',
+                    'data-tabspot': 'true'
+                }).focus();
+
+                // tabSelected(nextTab);
+                slideCarousel("right");
+            } else {
+
+                if (nextIndex === imageTabCarouselCountTotal) {
+                    nextIndex = 0;
+                }
+
+                nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
+                // console.log(nextTab);
+                $(activeTab).attr({
+                    'tabindex': "-1",
+                    'data-tabspot': 'false',
+                    'aria-selected': 'false'
+                });
+                $(nextTab).attr({
+                    'tabindex': "0",
+                    'aria-selected': 'true',
+                    'data-tabspot': 'true'
+                }).focus();
+            }
+            carouselArrowFollow();
+        } else if (e.keyCode == 13) {  //Enter keypress
+            tabSelected(activeTab);
+        }
+        // $(activeTab).attr('data-active', 'false');
+
+        // $(nextTab).focus();
+        // $(nextTab).attr("data-active", "true");
 
         // carouselArrowFollow(elm);
     });

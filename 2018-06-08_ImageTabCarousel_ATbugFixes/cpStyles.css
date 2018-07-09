@@ -9336,9 +9336,7 @@ CP_CenterImageWithSideText .Bottom-content {
     .cp-image-tab-carousel .carousel-content-list {
         height: 431px;
     }
-    /* .carousel-arrow-slider {
-        display: none;
-    } */
+
 }
 
 /* VIEWPORT 768 */
@@ -9426,6 +9424,9 @@ CP_CenterImageWithSideText .Bottom-content {
     }
     .cp-image-tab-carousel .livearea-content .carousel-right {
         right: 0;
+    }
+    .carousel-arrow-slider {
+        display: none;
     }
 }
 
