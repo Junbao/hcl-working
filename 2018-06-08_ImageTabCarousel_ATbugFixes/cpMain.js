@@ -4854,6 +4854,8 @@ $(document).ready(function () {
         $(elm).attr("data-active", "true");
         $(elm).attr("tabindex", "0");
 
+        carouselArrowFollow();
+
         // Pull info from Tabs
         var conAriaLabeledBy = $(elm).attr("id");
         var conClass = $(elm).attr("data-item-class");
@@ -4886,7 +4888,6 @@ $(document).ready(function () {
         $("#bottom .carousel-content a").attr("aria-label", conCTAariaLabel);
         $("#bottom span").text(conCTAspan);
 
-        // carouselArrowFollow();
     }
 
     // sliding the tabs in the carousel
@@ -4903,7 +4904,7 @@ $(document).ready(function () {
                 .css({ "display": "none", "left": imageTabCarouselCountTotal * curWidth });
         } else if (direction == "left") {
             $('.carousel-thumbnail-item[data-index="' + lastSpot + '"]').attr("data-index", "-1").css({ display: "none", left: -Math.abs(curWidth) });
-            setTimeout(function() {
+            setTimeout(function () {
                 $('.carousel-thumbnail-item[data-index="-1"]').css('display', 'block');
             }, 50);
         }
@@ -4954,7 +4955,8 @@ $(document).ready(function () {
                 $(".carousel-arrow-slider").css("display", "none");
             }
             $(".carousel-arrow-slider").css("left", arrowAlign);
-        }, 200);
+        }, 500);
+
     }
 
     // Navigation
@@ -4968,22 +4970,29 @@ $(document).ready(function () {
     // Clicking on the arrows -- carousel-right carousel-nav
     $(".carousel-nav").on("click", function (e) {
         var activeTab = $('.carousel-thumbnail-item[data-active="true"]');
-        var nextTab = "";
-        if ($(this).hasClass("carousel-right")) {
-            nextTab = $(activeTab).next("button");
-            $(activeTab).next("button").attr("data-active", "true");
-            $(activeTab).attr("data-active", "false");
-            slideCarousel("right");
-            // tabSelected(this);
-        } else if ($(this).hasClass("carousel-left")) {
-            nextTab = $(activeTab).prev("button");
+        var nextIndex = 0;
 
+        if ($(this).hasClass("carousel-right")) {
+            nextIndex = parseInt($(activeTab).attr('data-index'), 10) + 1;
+            if (nextIndex > imageTabCarouselCountTotal) {
+                nextIndex = imageTabCarouselCountTotal;
+            }
+            nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
+
+            slideCarousel("right");
+            tabSelected(nextTab);
+        } else if ($(this).hasClass("carousel-left")) {
+            nextIndex = parseInt($(activeTab).attr('data-index'), 10) - 1;
+            if (nextIndex < 0) {
+                nextIndex = 0;
+            }
+            nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
+
+            tabSelected(nextTab);
             slideCarousel("left");
-            // tabSelected(this);
         }
         e.preventDefault();
-        // carouselArrowFollow(nextTab);
-        // tabSelected(nextTab);
+
     });
 
 
@@ -5003,10 +5012,10 @@ $(document).ready(function () {
             }
         } else if (e.keyCode == 39 || e.keyCode == 40) {  //Right and down arrow keypress
             console.log("key 39-40 activated at line 4975");
-            if ($(activeTab).attr("data-index") < 5) {
-                nextTab = $(activeTab).next("button");
+            if ($(activeTab).attr("data-index") < imageTabCarouselCount) {
+              nextTab = $(activeTab).next("button");
             } else {
-                nextTab = $('.carousel-thumbnail-item[data-index="0"]');
+              nextTab = $('.carousel-thumbnail-item[data-index="0"]');
             }
         }
         if (e.keyCode == 13) {  //Enter keypress
@@ -5019,7 +5028,6 @@ $(document).ready(function () {
 
         // carouselArrowFollow(elm);
     });
-
 
 });
 
