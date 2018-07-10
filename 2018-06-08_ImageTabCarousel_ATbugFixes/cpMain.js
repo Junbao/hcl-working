@@ -64,14 +64,14 @@ $(document).ready(function () {
     $("picture").each(function () {
         if (
             $(this)
-                .find("img")
-                .attr("src") == null ||
+            .find("img")
+            .attr("src") == null ||
             $(this)
-                .find("img")
-                .attr("src") == undefined ||
+            .find("img")
+            .attr("src") == undefined ||
             $(this)
-                .find("img")
-                .attr("src") == ""
+            .find("img")
+            .attr("src") == ""
         ) {
             $(this)
                 .find("img")
@@ -295,8 +295,8 @@ $(document).ready(function () {
             });
         if (
             $(this)
-                .find(".slickcarousel")
-                .children().length > 1
+            .find(".slickcarousel")
+            .children().length > 1
         ) {
             $(this)
                 .find(".slickcarousel")
@@ -385,8 +385,7 @@ $(document).ready(function () {
         autoplay: false,
         pauseOnFocus: false,
         pauseOnDotsHover: false,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 1084,
                 settings: {
                     slidesToShow: 3,
@@ -432,24 +431,23 @@ function settingsideemediaminwidth() {
 
     $(".cp-side-media-with-copy").each(function () {
         if (windowWidth > 539) {
-            if (
-                !$(this)
-                    .find(".ms-row")
-                    .hasClass("no-image")
+            if (!$(this)
+                .find(".ms-row")
+                .hasClass("no-image")
             ) {
                 $(this)
                     .find(".cp-col2-right")
                     .css("width", "50%");
                 var liveareawidth = Math.floor(
                     $(this)
-                        .find(".ms-row .livearea")
-                        .width() / 2
+                    .find(".ms-row .livearea")
+                    .width() / 2
                 );
                 if (
                     liveareawidth >
                     $(this)
-                        .find(".cp-col2-right")
-                        .outerWidth()
+                    .find(".cp-col2-right")
+                    .outerWidth()
                 ) {
                     $(this)
                         .find(".cp-col2-right")
@@ -469,15 +467,14 @@ $(window).resize(function () {
 $(document).ready(function () {
     $(document).HighContrastDetection();
     $(".cp-side-media-with-copy").each(function () {
-        if (
-            !$(this)
-                .find(".video-poster-link")
-                .hasClass("open-popup-video")
+        if (!$(this)
+            .find(".video-poster-link")
+            .hasClass("open-popup-video")
         ) {
             if (
                 $(this)
-                    .find(".video-poster-link")
-                    .attr("href") == "#"
+                .find(".video-poster-link")
+                .attr("href") == "#"
             ) {
                 $(this)
                     .find(".video-poster-link")
@@ -515,47 +512,47 @@ $(document).ready(function () {
         }
         if (
             $(this)
-                .find(".video-poster-link")
-                .parent()
-                .find("img")
-                .attr("src") == "" ||
+            .find(".video-poster-link")
+            .parent()
+            .find("img")
+            .attr("src") == "" ||
             $(this)
-                .find(".video-poster-link")
-                .parent()
-                .find("img")
-                .attr("src") == null ||
+            .find(".video-poster-link")
+            .parent()
+            .find("img")
+            .attr("src") == null ||
             $(this)
-                .find(".video-poster-link")
-                .parent()
-                .find("img")
-                .attr("src") == undefined ||
+            .find(".video-poster-link")
+            .parent()
+            .find("img")
+            .attr("src") == undefined ||
             $(this)
-                .find(".video-poster-link")
-                .parent()
-                .find("picture")
-                .html() == "" ||
+            .find(".video-poster-link")
+            .parent()
+            .find("picture")
+            .html() == "" ||
             $(this)
-                .find(".video-poster-link")
-                .parent()
-                .find("picture")
-                .html() == undefined ||
+            .find(".video-poster-link")
+            .parent()
+            .find("picture")
+            .html() == undefined ||
             $(this)
-                .find(".video-poster-link")
-                .parent()
-                .find("picture")
-                .html() == null ||
+            .find(".video-poster-link")
+            .parent()
+            .find("picture")
+            .html() == null ||
             $(this)
-                .find(".video-poster-link")
-                .parent()
-                .html() == "" ||
+            .find(".video-poster-link")
+            .parent()
+            .html() == "" ||
             $(this)
-                .find(".video-poster-link")
-                .parent()
-                .html() == undefined ||
+            .find(".video-poster-link")
+            .parent()
+            .html() == undefined ||
             $(this)
-                .find(".video-poster-link")
-                .parent()
-                .html() == null
+            .find(".video-poster-link")
+            .parent()
+            .html() == null
         ) {
             $(this)
                 .find(".ms-row")
@@ -655,10 +652,9 @@ function fourReasonSlick() {
     }
     $(".cp-four-reasons-1").each(function () {
         if (wwidth <= 539) {
-            if (
-                !$(this)
-                    .find(".mobcarousel")
-                    .hasClass("slick-slider")
+            if (!$(this)
+                .find(".mobcarousel")
+                .hasClass("slick-slider")
             ) {
                 $(this)
                     .find(".mobcarousel")
@@ -687,8 +683,8 @@ function fourReasonSlick() {
         } else {
             if (
                 $(this)
-                    .find(".mobcarousel")
-                    .hasClass("slick-slider")
+                .find(".mobcarousel")
+                .hasClass("slick-slider")
             ) {
                 $(this)
                     .find(".mobcarousel")
@@ -801,7 +797,7 @@ $(document).ready(function () {
                 updateSubNavTab();
             }
         }
-    } catch (err) { }
+    } catch (err) {}
 });
 /*mediacarouselcentral align*/
 function fixcontentHeights() {
@@ -837,7 +833,7 @@ function fixcontentHeights() {
                         .css("height", maxanchorheight);
                 });
         });
-    } catch (err) { }
+    } catch (err) {}
 }
 
 function bodyheight() {
@@ -864,7 +860,7 @@ function bodyheight() {
                         .css("height", maxtabheight);
                 });
         });
-    } catch (err) { }
+    } catch (err) {}
 }
 
 function mediacarouselcenteralign() {
@@ -879,7 +875,7 @@ function mediacarouselcenteralign() {
                     .css("margin", "0 auto");
             }
         });
-    } catch (err) { }
+    } catch (err) {}
 }
 
 function subtabmenuheight() {
@@ -957,8 +953,8 @@ $(window).resize(function () {
                         .find(".presenttab span")
                         .text(
                             $(this)
-                                .children()
-                                .text()
+                            .children()
+                            .text()
                         );
                     $(this)
                         .parent()
@@ -972,10 +968,9 @@ $(window).resize(function () {
 });
 $(document).on("click", ".cp_subtab .presenttab", function (e) {
     e.preventDefault();
-    if (
-        !$(this)
-            .children()
-            .hasClass("active")
+    if (!$(this)
+        .children()
+        .hasClass("active")
     ) {
         $(this)
             .children()
@@ -1018,15 +1013,14 @@ function initiateslickafterclick() {
     if (
         $(".currentsubtabs .tabdata.active").find(".carousel-wrapper").length > 0
     ) {
-        if (
-            !$(".currentsubtabs .tabdata.active")
-                .find(".carousel-wrapper")
-                .hasClass("slickCalled")
+        if (!$(".currentsubtabs .tabdata.active")
+            .find(".carousel-wrapper")
+            .hasClass("slickCalled")
         ) {
             if (
                 $(".currentsubtabs .tabdata.active")
-                    .find(".carousel-wrapper")
-                    .hasClass("slick-slider")
+                .find(".carousel-wrapper")
+                .hasClass("slick-slider")
             ) {
                 $(".currentsubtabs .tabdata.active")
                     .find(".carousel-wrapper")
@@ -1054,8 +1048,7 @@ function initiateslickafterclick() {
                             pauseOnFocus: false,
                             pauseOnDotsHover: true,
 
-                            responsive: [
-                                {
+                            responsive: [{
                                     breakpoint: 1084,
                                     settings: {
                                         slidesToShow: 5,
@@ -1109,8 +1102,7 @@ function initiateslickafterclick() {
 
                             pauseOnFocus: false,
                             pauseOnDotsHover: true,
-                            responsive: [
-                                {
+                            responsive: [{
                                     breakpoint: 1084,
                                     settings: {
                                         slidesToShow: 3,
@@ -1293,7 +1285,7 @@ $(document).on("click", ".cp_subtab .tabs", function (e) {
                         .find(element)
                         .height(tallestHeight);
                 });
-            } catch (e) { }
+            } catch (e) {}
         }
     }
 });
@@ -1374,8 +1366,7 @@ $(window).resize(function () {
     } else {
         wwidth = $(window).width() + 17;
     }
-    if (wwidth <= 539) {
-    } else {
+    if (wwidth <= 539) {} else {
         tabheight();
     }
     imageslick();
@@ -1393,10 +1384,9 @@ function imageslick() {
     }
     $(".image-tabs").each(function () {
         if (wwidth <= 539) {
-            if (
-                !$(this)
-                    .find(".icon-tab-details")
-                    .hasClass("slick-slider")
+            if (!$(this)
+                .find(".icon-tab-details")
+                .hasClass("slick-slider")
             ) {
                 $(this)
                     .find(".icon-tab-details")
@@ -1414,8 +1404,8 @@ function imageslick() {
         } else {
             if (
                 $(this)
-                    .find(".icon-tab-details")
-                    .hasClass("slick-slider")
+                .find(".icon-tab-details")
+                .hasClass("slick-slider")
             ) {
                 $(this)
                     .find(".icon-tab-details")
@@ -1472,8 +1462,8 @@ $(document).ready(function () {
     $(".image-gallery-overlay .partner-icons .partner-info").each(function () {
         if (
             $(this)
-                .find("a")
-                .attr("href") === undefined
+            .find("a")
+            .attr("href") === undefined
         ) {
             $(this)
                 .find("a")
@@ -1814,14 +1804,14 @@ $(document).ready(function () {
             $(".accordionpanel").each(function () {
                 if (
                     $(this)
-                        .find(".right-content")
-                        .find(".image-holder")
-                        .find("picture")
-                        .html() != "" &&
+                    .find(".right-content")
+                    .find(".image-holder")
+                    .find("picture")
+                    .html() != "" &&
                     typeof $(this)
-                        .find(".right-content")
-                        .find(".button-holder a")
-                        .prop("href") != "undefined"
+                    .find(".right-content")
+                    .find(".button-holder a")
+                    .prop("href") != "undefined"
                 ) {
                     //Three Column//
 
@@ -1841,10 +1831,10 @@ $(document).ready(function () {
                         .addClass("set-right-column");
                 } else if (
                     $(this)
-                        .find(".right-content")
-                        .find(".image-holder")
-                        .find("picture")
-                        .html() != ""
+                    .find(".right-content")
+                    .find(".image-holder")
+                    .find("picture")
+                    .html() != ""
                 ) {
                     //Two Column with image container only//
                     $(this)
@@ -1855,9 +1845,9 @@ $(document).ready(function () {
                         .addClass("set-right-column");
                 } else if (
                     typeof $(this)
-                        .find(".right-content")
-                        .find(".button-holder a")
-                        .prop("href") != "undefined"
+                    .find(".right-content")
+                    .find(".button-holder a")
+                    .prop("href") != "undefined"
                 ) {
                     //Two Column with button container only//
                     $(this)
@@ -1884,8 +1874,8 @@ $(document).ready(function () {
 
                 if (
                     $(this)
-                        .find(".left-content .cta-learn-more")
-                        .text() == ""
+                    .find(".left-content .cta-learn-more")
+                    .text() == ""
                 ) {
                     $(this)
                         .find(".left-content .cta-learn-more")
@@ -1893,9 +1883,9 @@ $(document).ready(function () {
                 }
                 if (
                     $(this)
-                        .find(".right-content")
-                        .find(".button-holder a")
-                        .text() == ""
+                    .find(".right-content")
+                    .find(".button-holder a")
+                    .text() == ""
                 ) {
                     $(this)
                         .find(".right-content")
@@ -1947,8 +1937,8 @@ $(document).ready(function () {
         $(".media-carousel").each(function () {
             if (
                 $(this)
-                    .find("ul.slides")
-                    .children().length <= 1
+                .find("ul.slides")
+                .children().length <= 1
             ) {
                 $(this)
                     .find(".c-flipper")
@@ -1997,7 +1987,7 @@ function updatePadding(container, element) {
                 .find(element)
                 .height(tallestHeight);
         });
-    } catch (e) { }
+    } catch (e) {}
 }
 
 /*cpHerocarousel*/
@@ -2006,15 +1996,15 @@ $(document).ready(function () {
         $(".hero-carousel").each(function () {
             if (
                 $(this)
-                    .find(".subheadline")
-                    .find("h6")
-                    .html() != null
+                .find(".subheadline")
+                .find("h6")
+                .html() != null
             ) {
                 if (
                     $(this)
-                        .find(".subheadline")
-                        .find("h6")
-                        .html().length == 0
+                    .find(".subheadline")
+                    .find("h6")
+                    .html().length == 0
                 ) {
                     $(this)
                         .find(".subheadline")
@@ -2025,8 +2015,7 @@ $(document).ready(function () {
             $(this)
                 .find(".video-poster-link")
                 .each(function () {
-                    if (
-                        !$(this).hasClass("open-popup-video") &&
+                    if (!$(this).hasClass("open-popup-video") &&
                         !$(this).hasClass("open-inline-video")
                     ) {
                         $(this).removeAttr("href");
@@ -2185,8 +2174,8 @@ var intraPageNavBar = (function () {
                 tempElement = element_id;
                 if (
                     $(tempElement)
-                        .children()
-                        .has("a")
+                    .children()
+                    .has("a")
                 ) {
                     $(tempElement)
                         .find("div a:first")
@@ -2260,8 +2249,7 @@ var intraPageNavBar = (function () {
 
                         $bookmarks.push($bookmark);
                         $validIntraPageNavLinks.push(element);
-                        if (
-                            !addStickyOnPageLoad &&
+                        if (!addStickyOnPageLoad &&
                             window.location.hash.toLowerCase() == $bookmark.id.toLowerCase()
                         ) {
                             addStickyOnPageLoad = true;
@@ -2443,15 +2431,13 @@ var intraPageNavBar = (function () {
                 $componentTarget == "#" + componentBelowStaticMenu
             ) {
                 if ($("#CP_StaticMenu").hasClass("sticky")) {
-                    $("html, body").animate(
-                        {
+                    $("html, body").animate({
                             scrollTop: $(window).scrollTop()
                         },
                         1000
                     );
                 } else {
-                    $("html, body").animate(
-                        {
+                    $("html, body").animate({
                             scrollTop: staticMenuOriginalPosition
                         },
                         1000
@@ -2462,33 +2448,28 @@ var intraPageNavBar = (function () {
                 $("html, body").scrollTop(
                     staticMenuOriginalPosition - staticMenu_height
                 );
-                $("html, body").animate(
-                    {
+                $("html, body").animate({
                         scrollTop: $($componentTarget).offset().top - staticMenu_height
                     },
                     1000
                 );
             } else if ($(window).scrollTop() < staticMenuOriginalPosition) {
                 if ($("#CP_StaticMenu").hasClass("sticky")) {
-                    $("html, body").animate(
-                        {
+                    $("html, body").animate({
                             scrollTop: $($componentTarget).offset().top - staticMenu_height
                         },
                         1000
                     );
                 } else {
-                    $("html, body").animate(
-                        {
-                            scrollTop:
-                                $($componentTarget).offset().top - staticMenu_height * 2
+                    $("html, body").animate({
+                            scrollTop: $($componentTarget).offset().top - staticMenu_height * 2
                         },
                         1000
                     );
                 }
             } else {
                 addStickyBehaviour();
-                $("html, body").animate(
-                    {
+                $("html, body").animate({
                         scrollTop: $($componentTarget).offset().top - staticMenu_height
                     },
                     1000
@@ -2527,15 +2508,13 @@ var intraPageNavBar = (function () {
                 $componentTarget == componentBelowStaticMenu
             ) {
                 if ($("#CP_StaticMenu").hasClass("sticky")) {
-                    $("html, body").animate(
-                        {
+                    $("html, body").animate({
                             scrollTop: $(window).scrollTop()
                         },
                         1000
                     );
                 } else {
-                    $("html, body").animate(
-                        {
+                    $("html, body").animate({
                             scrollTop: staticMenuOriginalPosition
                         },
                         1000
@@ -2546,37 +2525,29 @@ var intraPageNavBar = (function () {
                 $("html, body").scrollTop(
                     staticMenuOriginalPosition - staticMenu_height
                 );
-                $("html, body").animate(
-                    {
-                        scrollTop:
-                            $("#" + $componentTarget).offset().top - staticMenu_height
+                $("html, body").animate({
+                        scrollTop: $("#" + $componentTarget).offset().top - staticMenu_height
                     },
                     1000
                 );
             } else if ($(window).scrollTop() < staticMenuOriginalPosition) {
                 if ($("#CP_StaticMenu").hasClass("sticky")) {
-                    $("html, body").animate(
-                        {
-                            scrollTop:
-                                $("#" + $componentTarget).offset().top - staticMenu_height
+                    $("html, body").animate({
+                            scrollTop: $("#" + $componentTarget).offset().top - staticMenu_height
                         },
                         1000
                     );
                 } else {
-                    $("html, body").animate(
-                        {
-                            scrollTop:
-                                $("#" + $componentTarget).offset().top - staticMenu_height * 2
+                    $("html, body").animate({
+                            scrollTop: $("#" + $componentTarget).offset().top - staticMenu_height * 2
                         },
                         1000
                     );
                 }
             } else {
                 addStickyBehaviour();
-                $("html, body").animate(
-                    {
-                        scrollTop:
-                            $("#" + $componentTarget).offset().top - staticMenu_height
+                $("html, body").animate({
+                        scrollTop: $("#" + $componentTarget).offset().top - staticMenu_height
                     },
                     1000
                 );
@@ -2648,7 +2619,7 @@ function stickynavheight() {
                 });
             $(".dtc a").css("height", max_height);
         }, 100);
-    } catch (err) { }
+    } catch (err) {}
 }
 
 $(document).ready(function () {
@@ -2657,14 +2628,14 @@ $(document).ready(function () {
             stickynavslick();
             stickynavheight();
         }
-    } catch (err) { }
+    } catch (err) {}
 });
 $(window).resize(function () {
     try {
         if ($("#static_menu_1").length > 0) {
             stickynavheight();
         }
-    } catch (err) { }
+    } catch (err) {}
 });
 
 /********************Static-Menu*******************/
@@ -2755,8 +2726,7 @@ $(document).on("click", ".explore", function (e) {
     $(this)
         .parent()
         .find(".expandtable")
-        .animate(
-            {
+        .animate({
                 height: "toggle"
             },
             1000,
@@ -2792,8 +2762,8 @@ function UHFResourcesMenuHighlighter() {
                     var thisHref = href.pop();
                     if (thisHref.indexOf("resources") > -1)
                         $(this)
-                            .find("a")
-                            .addClass("current");
+                        .find("a")
+                        .addClass("current");
                 });
                 return false;
             }
@@ -2818,9 +2788,9 @@ function UHFResourcesMenuHighlighter() {
 $(document).ready(function () {
     try {
         var relativeUrl =
-            window.location.search != ""
-                ? window.location.pathname + window.location.search
-                : window.location.pathname;
+            window.location.search != "" ?
+            window.location.pathname + window.location.search :
+            window.location.pathname;
         var pageNameStartIndex = relativeUrl.lastIndexOf("/");
         var pageFromUrl = relativeUrl
             .substring(pageNameStartIndex + 1)
@@ -2873,9 +2843,9 @@ $(document).ready(function () {
                     var scPageName = replacedVal.substring(n + 1).split(".")[0];
                     if (
                         pageFromUrl
-                            .toString()
-                            .toLowerCase()
-                            .indexOf(scPageName.toString().toLowerCase()) >= 0
+                        .toString()
+                        .toLowerCase()
+                        .indexOf(scPageName.toString().toLowerCase()) >= 0
                     ) {
                         activeLinkObjId = $(value).attr("id");
                     }
@@ -2980,10 +2950,9 @@ function fiveReasonSlick() {
     }
     $(".five-reasons-container").each(function () {
         if (wwidth < 540) {
-            if (
-                !$(this)
-                    .find("div.slides")
-                    .hasClass("slick-slider")
+            if (!$(this)
+                .find("div.slides")
+                .hasClass("slick-slider")
             ) {
                 $(this)
                     .find("div.slides")
@@ -3010,8 +2979,8 @@ function fiveReasonSlick() {
         } else {
             if (
                 $(this)
-                    .find("div.slides")
-                    .hasClass("slick-slider")
+                .find("div.slides")
+                .hasClass("slick-slider")
             ) {
                 $(this)
                     .find("div.slides")
@@ -3074,7 +3043,7 @@ $(document).ready(function () {
                             .css("height", paraHeight);
                     });
                 });
-            } catch (e) { }
+            } catch (e) {}
         }
 
         $(window).resize(function () {
@@ -3104,8 +3073,7 @@ function threeReasonSlick() {
                 slidesToScroll: 1,
                 pauseOnFocus: false,
                 pauseOnDotsHover: false,
-                responsive: [
-                    {
+                responsive: [{
                         breakpoint: 768,
                         settings: {
                             slidesToShow: 2,
@@ -3127,14 +3095,14 @@ function threeReasonSlick() {
             });
         if (
             $(this)
-                .find(".links")
-                .html() == "" ||
+            .find(".links")
+            .html() == "" ||
             $(this)
-                .find(".links")
-                .html() == null ||
+            .find(".links")
+            .html() == null ||
             $(this)
-                .find(".links")
-                .html() == undefined
+            .find(".links")
+            .html() == undefined
         ) {
             $(this)
                 .find(".links")
@@ -3228,8 +3196,7 @@ $(document).ready(function () {
             autoplaySpeed: autoplaytime,
             pauseOnFocus: false,
             pauseOnDotsHover: true,
-            responsive: [
-                {
+            responsive: [{
                     breakpoint: 1084,
                     settings: {
                         slidesToShow: 2,
@@ -3285,7 +3252,7 @@ $(document).ready(function () {
                 // instead of a settings object
             ]
         });
-    } catch (err) { }
+    } catch (err) {}
 });
 /*End--CP_TwoColVideoCarousel*/
 
@@ -3339,8 +3306,7 @@ $(document).ready(function () {
                         //autoplaySpeed: autoplaytime,
                         pauseOnFocus: false,
                         pauseOnDotsHover: true,
-                        responsive: [
-                            {
+                        responsive: [{
                                 breakpoint: 1084,
                                 settings: {
                                     slidesToShow: 5,
@@ -3394,8 +3360,7 @@ $(document).ready(function () {
 
                         pauseOnFocus: false,
                         pauseOnDotsHover: true,
-                        responsive: [
-                            {
+                        responsive: [{
                                 breakpoint: 1084,
                                 settings: {
                                     slidesToShow: 3,
@@ -3432,7 +3397,7 @@ $(document).ready(function () {
                     });
             }
         });
-    } catch (e) { }
+    } catch (e) {}
 });
 
 /*END of MediaCarouselWithCopy*/
@@ -3442,14 +3407,14 @@ $(document).ready(function () {
     $(".case-study .case-details .image-div").each(function () {
         if (
             $(this)
-                .find("img")
-                .attr("src") == undefined ||
+            .find("img")
+            .attr("src") == undefined ||
             $(this)
-                .find("img")
-                .attr("src") == "" ||
+            .find("img")
+            .attr("src") == "" ||
             $(this)
-                .find("img")
-                .attr("src") == null
+            .find("img")
+            .attr("src") == null
         ) {
             $(this)
                 .closest(".image-div")
@@ -3567,8 +3532,7 @@ function loadCortanaTab() {
                                 $(".currentslicktab").slick("slickGoTo", selectedindex);
                             }
 
-                            $("html, body").animate(
-                                {
+                            $("html, body").animate({
                                     scrollTop: topvalue
                                 },
                                 500
@@ -3615,8 +3579,7 @@ function updateCortanaUrl() {
         if (tab_value == undefined || tab_value == "" || tab_value == null) {
             if (history.pushState) {
                 var newurl = window.location.href + "#" + tab;
-                window.history.pushState(
-                    {
+                window.history.pushState({
                         path: newurl
                     },
                     "",
@@ -3632,8 +3595,7 @@ function updateCortanaUrl() {
                 if (history.pushState) {
                     var updatedurl = window.location.href;
                     updatedurl = updatedurl.replace(tab_value, tab);
-                    window.history.pushState(
-                        {
+                    window.history.pushState({
                             path: updatedurl
                         },
                         "",
@@ -3645,8 +3607,7 @@ function updateCortanaUrl() {
                     var subupdatedurl = window.location.href;
                     subupdatedurl = subupdatedurl.replace(maintabvalue, mainTab);
                     subupdatedurl = subupdatedurl.replace(subtabvalue, subTab);
-                    window.history.pushState(
-                        {
+                    window.history.pushState({
                             path: subupdatedurl
                         },
                         "",
@@ -3701,7 +3662,7 @@ $(document).ready(function () {
                 }
             }
         }
-    } catch (err) { }
+    } catch (err) {}
 });
 
 function slickInitializer() {
@@ -3711,8 +3672,7 @@ function slickInitializer() {
     }
     $(".cortana-6tabs .main-menu-ul").slick({
         rtl: dirrtl,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 99999,
                 settings: "unslick"
             },
@@ -3740,8 +3700,7 @@ function slickInitializer() {
     });
     $(".cortana-6tabs .inner-menu-ul").slick({
         rtl: dirrtl,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 99999,
                 settings: "unslick"
             },
@@ -3788,8 +3747,7 @@ function slicksubInitializer() {
     }
     $(".cortana-6tabs .inner-menu-ul").slick({
         rtl: dirrtl,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 99999,
                 settings: "unslick"
             },
@@ -3820,8 +3778,8 @@ function slicksubInitializer() {
     ).text("");
     if (
         $(".cortana-6tabs .inner-menu-ul li")
-            .not(".inner-menu-ul li:first-child")
-            .hasClass("current")
+        .not(".inner-menu-ul li:first-child")
+        .hasClass("current")
     ) {
         $(".cortana-6tabs .inner-menu-ul li:first-child")
             .addClass("current")
@@ -3862,8 +3820,8 @@ $(document).ready(function () {
         $(".cortana-6tabs .main-menu-ul li").each(function () {
             if (
                 $(this)
-                    .find("p")
-                    .html().length == 0
+                .find("p")
+                .html().length == 0
             ) {
                 // $(this).remove();
             } else {
@@ -3882,8 +3840,8 @@ $(document).ready(function () {
                 .each(function () {
                     if (
                         $(this)
-                            .find("p")
-                            .html().length == 0
+                        .find("p")
+                        .html().length == 0
                     ) {
                         // $(this).remove();
                     } else {
@@ -3905,14 +3863,14 @@ $(document).ready(function () {
             function () {
                 if (
                     $(this)
-                        .find("img")
-                        .attr("src") == undefined ||
+                    .find("img")
+                    .attr("src") == undefined ||
                     $(this)
-                        .find("img")
-                        .attr("src") == "" ||
+                    .find("img")
+                    .attr("src") == "" ||
                     $(this)
-                        .find("img")
-                        .attr("src") == null
+                    .find("img")
+                    .attr("src") == null
                 ) {
                     $(this)
                         .closest(".m-col-12-24")
@@ -4087,7 +4045,7 @@ $(document).ready(function () {
                     }
                 });
         });
-    } catch (err) { }
+    } catch (err) {}
 });
 
 $(function () {
@@ -4131,12 +4089,12 @@ $(document).ready(function () {
                 var now = new Date();
                 var timeString =
                     $(".events-hero")
-                        .find(".countdown-timer")
-                        .data("event-time") +
+                    .find(".countdown-timer")
+                    .data("event-time") +
                     "  " +
                     $(".events-hero")
-                        .find(".countdown-timer")
-                        .data("event-timezone");
+                    .find(".countdown-timer")
+                    .data("event-timezone");
                 timeString = timeString.toString();
                 var countdownDate = new Date(timeString);
                 //console.log(countdownDate);
@@ -4181,7 +4139,7 @@ $(document).ready(function () {
 
             setInterval(setEventCountdown, 1000);
         }
-    } catch (err) { }
+    } catch (err) {}
 });
 /***Eventsbgimagetimer js end*/
 
@@ -4194,9 +4152,9 @@ function loadaccordiondata() {
         $(".cp-accordion-with-control .accordionpanel").each(function () {
             $(this).html(
                 $(".accordiondatatabs")
-                    .children()
-                    .eq(i)
-                    .html()
+                .children()
+                .eq(i)
+                .html()
             );
 
             i++;
@@ -4244,31 +4202,30 @@ function CircleGraphicsWithSideTextCall() {
             var slideNodes = slideListNode.querySelectorAll(".slide-text");
             var windowWidth = $(window).width();
             var componentWidth =
-                innerWidth > 1084
-                    ? 1084
-                    : windowWidth *
-                    (innerWidth > 768
-                        ? 0.95
-                        : innerWidth >= 540
-                            ? 0.87
-                            : 0.91); /*As per Cloud-platform viewports*/
+                innerWidth > 1084 ?
+                1084 :
+                windowWidth *
+                (innerWidth > 768 ?
+                    0.95 :
+                    innerWidth >= 540 ?
+                    0.87 :
+                    0.91); /*As per Cloud-platform viewports*/
             var slideWidth = componentWidth * 0.3;
             var currentBarCircleIndex = 0;
             positioning();
             window.addEventListener("resize", function () {
                 windowWidth = $(window).width();
                 componentWidth =
-                    innerWidth > 1084
-                        ? 1084
-                        : windowWidth *
-                        (innerWidth > 768
-                            ? 0.95
-                            : innerWidth >= 540
-                                ? 0.87
-                                : 0.91); /*As per Cloud-platform viewports*/
+                    innerWidth > 1084 ?
+                    1084 :
+                    windowWidth *
+                    (innerWidth > 768 ?
+                        0.95 :
+                        innerWidth >= 540 ?
+                        0.87 :
+                        0.91); /*As per Cloud-platform viewports*/
                 positioning();
-                slideListNode.style.marginLeft =
-                    -slideWidth * currentBarCircleIndex * 2 + "px";
+                slideListNode.style.marginLeft = -slideWidth * currentBarCircleIndex * 2 + "px";
             });
             forEach(barCircleNodes, function (barCircleNode, barCircleIndex) {
                 barCircleNode.onclick = function () {
@@ -4276,8 +4233,7 @@ function CircleGraphicsWithSideTextCall() {
                         node.setAttribute("data-bar-circle-active", "False");
                     });
                     this.setAttribute("data-bar-circle-active", "True");
-                    slideListNode.style.marginLeft =
-                        -slideWidth * barCircleIndex * 2 + "px";
+                    slideListNode.style.marginLeft = -slideWidth * barCircleIndex * 2 + "px";
                     circling(barCircleIndex);
                     baring(barCircleIndex);
                     currentBarCircleIndex = barCircleIndex;
@@ -4490,13 +4446,13 @@ function CircleLayersWithSideTextCall() {
                 var length = circleLayerNodes.length;
                 for (var i = 0; i < length; i++) {
                     var color =
-                        i < changeIndex
-                            ? circleLayerNodes[i].getAttribute("data-color")
-                            : circleLayerNodes[changeIndex].getAttribute("data-color");
+                        i < changeIndex ?
+                        circleLayerNodes[i].getAttribute("data-color") :
+                        circleLayerNodes[changeIndex].getAttribute("data-color");
                     var subColor =
-                        i < changeIndex
-                            ? circleLayerSubNodes[i].getAttribute("data-color")
-                            : circleLayerNodes[changeIndex].getAttribute("data-color");
+                        i < changeIndex ?
+                        circleLayerSubNodes[i].getAttribute("data-color") :
+                        circleLayerNodes[changeIndex].getAttribute("data-color");
 
                     circleLayerNodes[i].setAttribute("fill", color);
                     circleLayerSubNodes[i].setAttribute("fill", subColor);
@@ -4505,10 +4461,10 @@ function CircleLayersWithSideTextCall() {
 
             function setPositions() {
                 var containerWidth =
-                    innerWidth > 1180
-                        ? 1180
-                        : $(window).width() *
-                        (innerWidth > 768 ? 0.95 : innerWidth >= 540 ? 0.87 : 0.91);
+                    innerWidth > 1180 ?
+                    1180 :
+                    $(window).width() *
+                    (innerWidth > 768 ? 0.95 : innerWidth >= 540 ? 0.87 : 0.91);
                 var slideWidth = containerWidth * (innerWidth >= 768 ? 0.33 : 1);
                 var graphicWidth = containerWidth * (innerWidth >= 768 ? 0.67 : 1);
                 if (innerWidth < 768) {
@@ -4521,8 +4477,7 @@ function CircleLayersWithSideTextCall() {
                     (graphicWidth * 400) / (innerWidth < 540 ? 450 : 800);
                 slideListNode.style.width =
                     slideWidth * slideTextNodes.length * 2 * 1.1 + "px";
-                slideListNode.style.marginLeft =
-                    -slideWidth * 2 * (slideTextNodes.length - 1 - changeIndex) + "px";
+                slideListNode.style.marginLeft = -slideWidth * 2 * (slideTextNodes.length - 1 - changeIndex) + "px";
 
                 forEach(slideTextNodes, function (slideNode, i) {
                     var k = slideTextNodes.length - i - 1;
@@ -4570,7 +4525,7 @@ $(document).ready(function () {
                 });
             });
         }
-    } catch (err) { }
+    } catch (err) {}
 });
 /*End--Carousel for trusted cloud pages ---*/
 
@@ -4597,7 +4552,7 @@ $(document).ready(function () {
                 });
             });
         }
-    } catch (err) { }
+    } catch (err) {}
 });
 
 /*END-Trusted-Cloud-JS*/
@@ -4608,7 +4563,7 @@ $(window).load(function () {
 $(window).resize(function () {
     try {
         slickaccessibility();
-    } catch (err) { }
+    } catch (err) {}
 });
 
 //start of zh-cn CP_TryBuyFilter
@@ -4844,7 +4799,6 @@ $(document).ready(function () {
             "data-tabspot": "true"
         });
 
-
         carouselArrowFollow();
 
         // Pull info from Tabs
@@ -4878,7 +4832,6 @@ $(document).ready(function () {
         $("#bottom .carousel-content a").attr("atlas", conCTAatlas);
         $("#bottom .carousel-content a").attr("aria-label", conCTAariaLabel);
         $("#bottom span").text(conCTAspan);
-
     }
 
     // sliding the tabs in the carousel
@@ -4892,9 +4845,15 @@ $(document).ready(function () {
             $('.carousel-thumbnail-item[data-index="0"]')
                 .attr("data-index", imageTabCarouselCountTotal)
                 .stop()
-                .css({ "display": "none", "left": imageTabCarouselCountTotal * curWidth });
+                .css({
+                    "display": "none",
+                    "left": imageTabCarouselCountTotal * curWidth
+                });
         } else if (direction == "left") {
-            $('.carousel-thumbnail-item[data-index="' + lastSpot + '"]').attr("data-index", "-1").css({ display: "none", left: -Math.abs(curWidth) });
+            $('.carousel-thumbnail-item[data-index="' + lastSpot + '"]').attr("data-index", "-1").css({
+                display: "none",
+                left: -Math.abs(curWidth)
+            });
             setTimeout(function () {
                 $('.carousel-thumbnail-item[data-index="-1"]').css('display', 'block');
             }, 50);
@@ -4948,43 +4907,53 @@ $(document).ready(function () {
                 $(".carousel-arrow-slider").css("left", arrowAlign);
             }, 500);
         }
-
     }
 
     // Navigation
 
     // Clicking on the tabs
     $(".carousel-thumbnail-item").on("click", function (e) {
-        preventDefault();
+        e.preventDefault();
         tabSelected(this);
     });
 
     // Clicking on the arrows -- carousel-right carousel-nav
-    $(".carousel-nav").on("click", function (dir,e) {
+    $(".carousel-nav").on("click", function (e) {
+        e.preventDefault();
         var activeTab = $('.carousel-thumbnail-item[data-active="true"]');
         var nextIndex = 0;
 
-        if ($(this).hasClass("carousel-right") || dir == "left") {
-            nextIndex = parseInt($(activeTab).attr('data-index'), 10) + 1;
-            if (nextIndex > imageTabCarouselCountTotal) {
-                nextIndex = imageTabCarouselCountTotal;
-            }
-            nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
-
-            slideCarousel("right");
-            tabSelected(nextTab);
-        } else if ($(this).hasClass("carousel-left") || dir == "right") {
-            nextIndex = parseInt($(activeTab).attr('data-index'), 10) - 1;
-            if (nextIndex < 0) {
-                nextIndex = 0;
-            }
-            nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
-
-            tabSelected(nextTab);
-            slideCarousel("left");
+        if ($(this).hasClass("carousel-right")) {
+            carouselRight()
+        } else if ($(this).hasClass("carousel-left")) {
+            carouselLeft()
         }
         e.preventDefault();
     });
+
+    function carouselLeft() {
+        activeTab = $('.carousel-thumbnail-item[data-active="true"]');
+        nextIndex = 0;
+
+        nextIndex = parseInt($(activeTab).attr('data-index'), 10) - 1;
+        if (nextIndex < 0) {
+            nextIndex = 0;
+        }
+        nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
+        slideCarousel("left");
+    }
+
+    function carouselRight() {
+        activeTab = $('.carousel-thumbnail-item[data-active="true"]');
+        nextIndex = 0;
+        
+        nextIndex = parseInt($(activeTab).attr('data-index'), 10) + 1;
+        if (nextIndex > imageTabCarouselCountTotal) {
+            nextIndex = imageTabCarouselCountTotal;
+        }
+        nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
+        slideCarousel("right");
+    }
 
 
     // Key navigation
@@ -5000,7 +4969,7 @@ $(document).ready(function () {
             if (imageTabCarouselCount < imageTabCarouselCountTotal) { // seeing if we need carousel scrolling
                 if (nextIndex < 0) {
                     nextIndex = imageTabCarouselCountTotal;
-                } else if ( nextIndex > imageTabCarouselCountTotal ) {
+                } else if (nextIndex > imageTabCarouselCountTotal) {
                     nextIndex = 0;
                 }
                 nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
@@ -5014,13 +4983,13 @@ $(document).ready(function () {
                     'aria-selected': 'true',
                     'data-tabspot': 'true'
                 }).focus();
-            
+
                 // tabSelected(nextTab);
                 slideCarousel("left");
             } else {
                 if (nextIndex < 0) {
                     nextIndex = imageTabCarouselCountTotal - 1;
-                } 
+                }
                 nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
                 $(activeTab).attr({
                     'tabindex': "-1",
@@ -5034,13 +5003,13 @@ $(document).ready(function () {
                 }).focus();
             }
             carouselArrowFollow();
-        } else if (e.keyCode == 39 || e.keyCode == 40) {  //Right and down arrow keypress
+        } else if (e.keyCode == 39 || e.keyCode == 40) { //Right and down arrow keypress
             nextIndex = nextIndex + 1;
 
             if (imageTabCarouselCount < imageTabCarouselCountTotal) { // seeing if we need carousel scrolling
                 if (nextIndex === imageTabCarouselCountTotal) {
                     nextIndex = 0;
-                } 
+                }
                 nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
                 $(activeTab).attr({
                     'tabindex': "-1",
@@ -5075,7 +5044,7 @@ $(document).ready(function () {
                 }).focus();
             }
             carouselArrowFollow();
-        } else if (e.keyCode == 13) {  //Enter keypress
+        } else if (e.keyCode == 13) { //Enter keypress
             tabSelected(activeTab);
         }
         // $(activeTab).attr('data-active', 'false');
@@ -5170,10 +5139,10 @@ $(document).ready(function () {
                         //On popu open set default Focus on close button
                         $(itemNodes[activeIndex].querySelector(".pillar-popup")).focusout();
                         $(
-                            itemNodes[activeIndex]
+                                itemNodes[activeIndex]
                                 .querySelector(".pillar-popup")
                                 .querySelector(".pillar-close-button")
-                        )
+                            )
                             .attr("tabindex", "0")
                             .focus();
                     }
@@ -5247,7 +5216,7 @@ $(document).ready(function () {
                 resize();
             }
         );
-    } catch (err) { }
+    } catch (err) {}
 });
 
 function setHero1ColHeight() {
@@ -5255,8 +5224,8 @@ function setHero1ColHeight() {
         $(".hero-height").each(function () {
             if (
                 $(this)
-                    .find("picture")
-                    .children().length == 0
+                .find("picture")
+                .children().length == 0
             ) {
                 $(this).css("height", "auto");
                 $(this)
@@ -5274,7 +5243,7 @@ function setHero1ColHeight() {
                 }
             }
         });
-    } catch (e) { }
+    } catch (e) {}
 }
 $(document).ready(function () {
     setHero1ColHeight();
@@ -5414,8 +5383,8 @@ $(document).ready(function () {
         if ($(this).text() == "") {
             if (
                 $(this)
-                    .siblings()
-                    .find("a") != ""
+                .siblings()
+                .find("a") != ""
             ) {
                 $("#CP_Footer_1 p").css("margin-top", "20px");
             }
@@ -5452,15 +5421,15 @@ $(window).load(function () {
     $(".cp-mwf-hero-carousel .m-hero div.c-carousel-p ul li").each(function () {
         if (
             $(this)
-                .find("section")
-                .hasClass("theme-dark")
+            .find("section")
+            .hasClass("theme-dark")
         ) {
             $(this).attr("data-f-theme", "dark");
         }
         if (
             $(this)
-                .find("section")
-                .hasClass("theme-light")
+            .find("section")
+            .hasClass("theme-light")
         ) {
             $(this).attr("data-f-theme", "light");
         }
@@ -5513,10 +5482,9 @@ function mwfCarouselSR() {
         $(this)
             .find(".m-hero-item .hero-c-bg ul li")
             .each(function () {
-                if (
-                    !$(this)
-                        .find("a")
-                        .hasClass("theme-transparent") &&
+                if (!$(this)
+                    .find("a")
+                    .hasClass("theme-transparent") &&
                     window.matchMedia("(min-width: 540px)").matches
                 ) {
                     $(this)
@@ -5547,9 +5515,9 @@ $("body").on("load", function () {
 /*******************Bug #346839 Fix ***************/
 function freeze() {
     if ($("html").css("position") != "fixed") {
-        var top = $("html").scrollTop()
-            ? $("html").scrollTop()
-            : $("body").scrollTop();
+        var top = $("html").scrollTop() ?
+            $("html").scrollTop() :
+            $("body").scrollTop();
         if (window.innerWidth > $("html").width()) {
             $("html").css("overflow-y", "scroll");
         }
@@ -5581,8 +5549,8 @@ $(document).ready(function () {
     $(".hero-1-col .hero-content ul li").each(function () {
         if (
             $(this)
-                .find("a")
-                .hasClass("theme-transparent")
+            .find("a")
+            .hasClass("theme-transparent")
         ) {
             $(this).addClass("fn");
         }
@@ -5593,9 +5561,9 @@ $(document).ready(function () {
 $(document).ready(function () {
     try {
         var relativeUrl =
-            window.location.search != ""
-                ? window.location.pathname + window.location.search
-                : window.location.pathname;
+            window.location.search != "" ?
+            window.location.pathname + window.location.search :
+            window.location.pathname;
         var pageNameStartIndex = relativeUrl.lastIndexOf("/");
         var pageFromUrl = relativeUrl
             .substring(pageNameStartIndex + 1)
