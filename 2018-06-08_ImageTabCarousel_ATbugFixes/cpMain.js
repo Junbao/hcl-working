@@ -4724,9 +4724,6 @@ $(document).ready(function () {
     var imageTabCarouselCountTotal = $('.carousel-thumbnail-item[data-show="true"]').length;
     var imageTabCarouselCount = 6;
     var imageTabCarouselItemWidth = imageTabCarouselListWidth / imageTabCarouselCount;
-    // var tabCarouselArray = $('.carousel-thumbnail-item[data-show="true"]');
-    // var count = 0;
-
 
     function carouselResize() {
         imageTabCarouselListWidth = $(".carousel-thumbnail-list").width();
@@ -4787,7 +4784,6 @@ $(document).ready(function () {
         carouselResize();
     });
 
-
     // Populate the content from tab selection
     function tabSelected(elm) {
         $(".carousel-thumbnail-item").attr("data-active", "false");
@@ -4832,6 +4828,7 @@ $(document).ready(function () {
         $("#bottom .carousel-content a").attr("atlas", conCTAatlas);
         $("#bottom .carousel-content a").attr("aria-label", conCTAariaLabel);
         $("#bottom span").text(conCTAspan);
+        $('#bottom').focus();
     }
 
     // sliding the tabs in the carousel
@@ -4920,15 +4917,11 @@ $(document).ready(function () {
     // Clicking on the arrows -- carousel-right carousel-nav
     $(".carousel-nav").on("click", function (e) {
         e.preventDefault();
-        var activeTab = $('.carousel-thumbnail-item[data-active="true"]');
-        var nextIndex = 0;
-
         if ($(this).hasClass("carousel-right")) {
             carouselRight()
         } else if ($(this).hasClass("carousel-left")) {
             carouselLeft()
         }
-        e.preventDefault();
     });
 
     function carouselLeft() {
@@ -4959,7 +4952,7 @@ $(document).ready(function () {
     // Key navigation
     $('.carousel-thumbnails').on('keydown', function (e) {
         e.preventDefault();
-        e.stopPropagation();
+        // e.stopPropagation();
         var activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
         var nextIndex = parseInt($(activeTab).attr('data-index'), 10);
 
@@ -4984,7 +4977,6 @@ $(document).ready(function () {
                     'data-tabspot': 'true'
                 }).focus();
 
-                // tabSelected(nextTab);
                 slideCarousel("left");
             } else {
                 if (nextIndex < 0) {
@@ -5003,6 +4995,7 @@ $(document).ready(function () {
                 }).focus();
             }
             carouselArrowFollow();
+
         } else if (e.keyCode == 39 || e.keyCode == 40) { //Right and down arrow keypress
             nextIndex = nextIndex + 1;
 
@@ -5025,13 +5018,11 @@ $(document).ready(function () {
                 // tabSelected(nextTab);
                 slideCarousel("right");
             } else {
-
                 if (nextIndex === imageTabCarouselCountTotal) {
                     nextIndex = 0;
                 }
-
                 nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
-                // console.log(nextTab);
+
                 $(activeTab).attr({
                     'tabindex': "-1",
                     'data-tabspot': 'false',
@@ -5046,15 +5037,13 @@ $(document).ready(function () {
             carouselArrowFollow();
         } else if (e.keyCode == 13) { //Enter keypress
             tabSelected(activeTab);
+        } else if (e.shiftKey && e.keyCode == 9) {
+            console.log("Shift Tab - only happening in carousel");
+            // $(this).focusout();
+        } else if (e.keyCode == 9) {
+            console.log("Tab - only happening in carousel");
         }
-        // $(activeTab).attr('data-active', 'false');
-
-        // $(nextTab).focus();
-        // $(nextTab).attr("data-active", "true");
-
-        // carouselArrowFollow(elm);
     });
-
 });
 
 // End of the reWrite Image Carousel
