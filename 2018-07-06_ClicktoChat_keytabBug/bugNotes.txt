@@ -1,0 +1,39 @@
+
+Narrator:
+
+Chat box popup: Reading as expected but two times.
+
+Chat now button: 
+With Tab:
+•	Focus not clear -- Fixed
+•	Not reading Aria label
+•	On hitting enter, its taking user to new tab “https://www.microsoft.com/en-us/solution-providers/search?cacheId=61a0e90f-a100-4486-b9fc-c7b84739b3ba “ instead of opening chat dialog box
+With scan mode:
+•	User unable to reach chat button. After second item it goes to hero CTA
+
+
+NVDA / Chrome - 
+Need help? Chat now with Microsoft
+button
+alert
+Loading  alert
+complementary landmark 
+navigation landmark clickable
+Minimize
+button
+Welcome! To chat with a Microsoft sales agent, provide your information below and click <strong>Submit</strong>.</br><font size="1.5"> <a href=" http://go.microsoft.com/fwlink/?LinkID=267510&clcid=0x409"target="_blank" style="text-decoration:underline !important;">Privacy Statement</a></br></font> Complete the survey. First Name*  edit  required
+Enter text here
+blank
+
+
+NVDA / Firefox
+Statement
+
+tabbing into issue - 
+document.getElementsByClassName('LPMcontainer')[0].removeAttribute('tabindex');
+From - lp_ada_enhancements-hf07012018.js
+
+Think the problem is in the JS file and how Edge deals with issues.  Chrome and Firefox - even in Narrator works.
+The HTML that is being read - think that is because they are adding html in text() type of issue.
+
+Also 2 console.logs still live in their script.
