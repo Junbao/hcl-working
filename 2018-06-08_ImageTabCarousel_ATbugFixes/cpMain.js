@@ -4774,6 +4774,15 @@ $(document).ready(function () {
         // reassigning value for tabs count based on screen width 3 - 4 - 6
         imageTabCarouselItemWidth = imageTabCarouselListWidth / tabs;
 
+        $(".carousel-thumbnail-item").each(function(j) {
+            if (j < tabs) {
+                $(this).addClass('tabCarouselShow');
+            } else {
+                $(this).removeClass('tabCarouselShow');
+            }
+            j++
+        });
+
         $('.carousel-thumbnail-item[data-show="true"]').each(function (k) {
             tabPosition = $(this).attr("data-index");
             tabPositionLeft = imageTabCarouselItemWidth * tabPosition + "px";
@@ -4781,6 +4790,8 @@ $(document).ready(function () {
             $(this).css("width", imageTabCarouselItemWidth);
             $(this).css("left", tabPositionLeft);
         });
+
+        carouselArrowFollow();
     }
 
     $(window).resize(function () {
@@ -4840,7 +4851,7 @@ $(document).ready(function () {
     }
 
     // sliding the tabs in the carousel
-    function slideCarousel(direction) {
+    function slideCarouselWorking(direction) {
         var curWidth = parseInt($('.carousel-thumbnail-item[data-index="1"]').css("width"), 10);
         var newLeft = 0;
         var dIndex = 0;
@@ -4891,16 +4902,15 @@ $(document).ready(function () {
 
 
     // sliding keyboard control carousel
-    function slideKeyCarousel(direction) {
-        var curWidth = (curWidth = parseInt($('.carousel-thumbnail-item').css("width"), 10));
-        var newLeft = 0;
+    function slideCarousel(direction) {
+        var curWidth = parseInt($('.carousel-thumbnail-item[data-index="1"]').css("width"), 10);
+        // var newLeft = 0;
         var dIndex = 0;
         var lastSpot = imageTabCarouselCountTotal - 1;
-        // console.log(imageTabCarouselCount); // how many tabs available
+
         if (direction == "right") {
             $('.carousel-thumbnail-item[data-index="0"]')
                 .attr("data-index", imageTabCarouselCountTotal)
-                .stop()
                 .css({
                     "display": "none",
                     "left": imageTabCarouselCountTotal * curWidth
@@ -4924,22 +4934,25 @@ $(document).ready(function () {
             if (direction == "right") {
                 $(this).css("display", "block");
                 $(this).attr("data-index", dIndex - 1);
-                nIndex = $(this).attr("data-index");
-                newLeft = curWidth * nIndex + "px";
-                this.style.left = newLeft;
+                // nIndex = $(this).attr("data-index");
+                // newLeft = curWidth * nIndex + "px";
+                // this.style.left = newLeft;
+                setTabCarousel(imageTabCarouselCount);
 
             } else if (direction == "left") {
                 $(this).css("display", "block");
                 $(this).attr("data-index", dIndex + 1);
 
-                nIndex = $(this).attr("data-index");
-                newLeft = curWidth * nIndex + "px";
-                $(this).css("display", "block");
-                this.style.left = newLeft;
+                // nIndex = $(this).attr("data-index");
+                // newLeft = curWidth * nIndex + "px";
+                // $(this).css("display", "block");
+                // this.style.left = newLeft;
+                setTabCarousel(imageTabCarouselCount);
             }
         });
-        carouselArrowFollow();
+        // carouselArrowFollow();
     }
+
 
     // Move Carousel Arrow to follow active(elm)
     function carouselArrowFollow() {
@@ -4963,7 +4976,7 @@ $(document).ready(function () {
             $(".carousel-arrow-slider").css("left", arrowAlign);
         }, 350);
 
-        console.log($('.carousel-thumbnail-item[data-active="true"]').attr("id") + " left position - " + $('.carousel-thumbnail-item[data-active="true"]').css("left"));
+        // console.log($('.carousel-thumbnail-item[data-active="true"]').attr("id") + " left position - " + $('.carousel-thumbnail-item[data-active="true"]').css("left"));
     }
 
     // Navigation
@@ -5019,6 +5032,7 @@ $(document).ready(function () {
             activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
             activeIndex = parseInt($(activeTab).attr('data-index'), 10);
             nextIndex = activeIndex - 1;
+            // $('.carousel-arrow-slider').css("display", 'none');
 
             if (imageTabCarouselCount < imageTabCarouselCountTotal) { // seeing if we need carousel scrolling
                 nextIndex = imageTabCarouselCount - 2;
@@ -5059,6 +5073,8 @@ $(document).ready(function () {
             activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
             activeIndex = parseInt($(activeTab).attr('data-index'), 10);
             nextIndex = activeIndex + 1;
+            $('.carousel-thumbnail-item').css("transition", '0s');
+            // $('.carousel-arrow-slider').css("display", 'none');
 
             if (imageTabCarouselCount < imageTabCarouselCountTotal) { // seeing if we need carousel scrolling
                 if (nextIndex === imageTabCarouselCountTotal) {
