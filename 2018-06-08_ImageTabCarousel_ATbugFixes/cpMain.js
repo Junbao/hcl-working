@@ -4774,15 +4774,6 @@ $(document).ready(function () {
         // reassigning value for tabs count based on screen width 3 - 4 - 6
         imageTabCarouselItemWidth = imageTabCarouselListWidth / tabs;
 
-        $(".carousel-thumbnail-item").each(function(j) {
-            if (j < tabs) {
-                $(this).addClass('tabCarouselShow');
-            } else {
-                $(this).removeClass('tabCarouselShow');
-            }
-            j++
-        });
-
         $('.carousel-thumbnail-item[data-show="true"]').each(function (k) {
             tabPosition = $(this).attr("data-index");
             tabPositionLeft = imageTabCarouselItemWidth * tabPosition + "px";
@@ -4790,8 +4781,6 @@ $(document).ready(function () {
             $(this).css("width", imageTabCarouselItemWidth);
             $(this).css("left", tabPositionLeft);
         });
-
-        carouselArrowFollow();
     }
 
     $(window).resize(function () {
@@ -4800,11 +4789,13 @@ $(document).ready(function () {
 
     // Populate the content from tab selection
     function tabSelected(elm) {
-        $(".carousel-thumbnail-item").attr({ 
-            "data-active": "false", 
-            "tabindex": "-1", 
-            "aria-selected" : "false", 
-            "data-tabspot": "false" 
+        // console.log(elm);
+        
+        $(".carousel-thumbnail-item").attr({
+            "data-active": "false",
+            "tabindex": "-1",
+            "aria-selected": "false",
+            "data-tabspot": "false"
         });
 
         $(elm).attr({
@@ -4851,7 +4842,7 @@ $(document).ready(function () {
     }
 
     // sliding the tabs in the carousel
-    function slideCarouselWorking(direction) {
+    function slideCarousel(direction) {
         var curWidth = parseInt($('.carousel-thumbnail-item[data-index="1"]').css("width"), 10);
         var newLeft = 0;
         var dIndex = 0;
@@ -4901,67 +4892,14 @@ $(document).ready(function () {
     }
 
 
-    // sliding keyboard control carousel
-    function slideCarousel(direction) {
-        var curWidth = parseInt($('.carousel-thumbnail-item[data-index="1"]').css("width"), 10);
-        // var newLeft = 0;
-        var dIndex = 0;
-        var lastSpot = imageTabCarouselCountTotal - 1;
-
-        if (direction == "right") {
-            $('.carousel-thumbnail-item[data-index="0"]')
-                .attr("data-index", imageTabCarouselCountTotal)
-                .css({
-                    "display": "none",
-                    "left": imageTabCarouselCountTotal * curWidth
-                });
-        } else if (direction == "left") {
-            $('.carousel-thumbnail-item[data-index="' + lastSpot + '"]').attr("data-index", "-1").css({
-                display: "none",
-                left: -Math.abs(curWidth)
-            });
-            setTimeout(function () {
-                $('.carousel-thumbnail-item[data-index="-1"]').css('display', 'block');
-            }, 50);
-        }
-
-        $('.carousel-thumbnail-item').each(function () {
-            curWidth = parseInt($(this).css('width'), 10);
-            curLeft = parseInt($(this).css('left'), 10);
-            dIndex = parseInt($(this).attr("data-index"), 10);
-            nIndex = dIndex;
-
-            if (direction == "right") {
-                $(this).css("display", "block");
-                $(this).attr("data-index", dIndex - 1);
-                // nIndex = $(this).attr("data-index");
-                // newLeft = curWidth * nIndex + "px";
-                // this.style.left = newLeft;
-                setTabCarousel(imageTabCarouselCount);
-
-            } else if (direction == "left") {
-                $(this).css("display", "block");
-                $(this).attr("data-index", dIndex + 1);
-
-                // nIndex = $(this).attr("data-index");
-                // newLeft = curWidth * nIndex + "px";
-                // $(this).css("display", "block");
-                // this.style.left = newLeft;
-                setTabCarousel(imageTabCarouselCount);
-            }
-        });
-        // carouselArrowFollow();
-    }
-
-
     // Move Carousel Arrow to follow active(elm)
     function carouselArrowFollow() {
         var sectionWidth = $("#cp-image-tab-carousel").width();
-        if (sectionWidth < 540) {
-            $(".carousel-arrow-slider").css("display", "none");
-        } 
-        setTimeout(function() {
-            $(".carousel-arrow-slider").css("display", "block");
+        if (sectionWidth < 767) {
+          $(".carousel-arrow-slider").css("display", "none");
+        }
+        setTimeout(function () {
+            // $(".carousel-arrow-slider").css("display", "block");
             var elm = $('.carousel-thumbnail-item[data-active="true"]');
             // var elmIndex = parseInt($(elm).attr('data-index'), 10);
             var elmLeft = parseInt(elm.css("left"), 10);
@@ -5029,100 +4967,53 @@ $(document).ready(function () {
 
         if (e.keyCode == 37 || e.keyCode == 38) { //Left and up arrow keypress 
             e.preventDefault();
-            activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
-            activeIndex = parseInt($(activeTab).attr('data-index'), 10);
-            nextIndex = activeIndex - 1;
-            // $('.carousel-arrow-slider').css("display", 'none');
+            carouselLeft();
 
-            if (imageTabCarouselCount < imageTabCarouselCountTotal) { // seeing if we need carousel scrolling
-                nextIndex = imageTabCarouselCount - 2;
-
-                $('.carousel-thumbnail-item[data-tabspot="true"]').attr({
-                "tabindex": "-1",
-                "data-tabspot": "false",
-                "aria-selected": "false"
+            setTimeout(() => {
+                activeIndex = $('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index");
+                nextIndex = activeIndex - 1;
+                $('.carousel-thumbnail-item').attr({
+                    "tabindex": "-1",
+                    "data-tabspot": "false",
+                    "aria-selected": "false"
                 });
-                // console.log("Next tab - " + nextTab);
+
                 $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]').attr({
                     "tabindex": "0",
                     "aria-selected": "true",
                     "data-tabspot": "true"
-                })
-                .focus();
-                slideCarousel("left");
-            } else {
-                if (nextIndex < 0) {
-                    nextIndex = imageTabCarouselCountTotal - 1;
-                }
-                nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
-                $(activeTab).attr({
-                    'tabindex': "-1",
-                    'data-tabspot': 'false',
-                    'aria-selected': 'false'
-                });
-                $(nextTab).attr({
-                    'tabindex': "0",
-                    'aria-selected': 'true',
-                    'data-tabspot': 'true'
                 }).focus();
-                carouselArrowFollow();
-            }
+            }, 250);
+
 
         } else if (e.keyCode == 39 || e.keyCode == 40) { //Right and down arrow keypress
             e.preventDefault();
-            activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
-            activeIndex = parseInt($(activeTab).attr('data-index'), 10);
-            nextIndex = activeIndex + 1;
-            $('.carousel-thumbnail-item').css("transition", '0s');
-            // $('.carousel-arrow-slider').css("display", 'none');
+            activeIndex = $('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index");
+            carouselRight();
 
-            if (imageTabCarouselCount < imageTabCarouselCountTotal) { // seeing if we need carousel scrolling
-                if (nextIndex === imageTabCarouselCountTotal) {
-                    nextIndex = 0;
-                }
-                nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
-                $(activeTab).attr({
-                    'tabindex': "-1",
-                    'data-tabspot': 'false',
-                    'aria-selected': 'false'
-                });
-                $(nextTab).attr({
-                    'tabindex': "0",
-                    'aria-selected': 'true',
-                    'data-tabspot': 'true'
-                }).focus();
+            setTimeout(() => {
+            //   activeIndex = $('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index");
+              nextIndex = activeIndex + 1;
+              $(".carousel-thumbnail-item").attr({
+                tabindex: "-1",
+                "data-tabspot": "false",
+                "aria-selected": "false"
+              });
 
-                // tabSelected(nextTab);
-                slideCarousel("right");
-            } else {
-                if (nextIndex === imageTabCarouselCountTotal) {
-                    nextIndex = 0;
-                }
-                nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
+              $('.carousel-thumbnail-item[data-index="' + activeIndex + '"]')
+                .attr({
+                  tabindex: "0",
+                  "aria-selected": "true",
+                  "data-tabspot": "true"
+                })
+                .focus();
+            }, 250);
 
-                $(activeTab).attr({
-                    'tabindex': "-1",
-                    'data-tabspot': 'false',
-                    'aria-selected': 'false'
-                });
-                $(nextTab).attr({
-                    'tabindex': "0",
-                    'aria-selected': 'true',
-                    'data-tabspot': 'true'
-                }).focus();
-                carouselArrowFollow();
-            }
-
+ 
         } else if (e.keyCode == 13) { //Enter keypress
+            activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
             tabSelected(activeTab);
-        } 
-        // else if (e.shiftKey && e.keyCode == 9) {
-        //     console.log("Shift Tab - only happening in carousel");
-        //     $(this).focusout();
-        // } else if (e.keyCode == 9) {
-        //     console.log("Tab - only happening in carousel");
-        // }
-        // e.preventDefault();
+        }
     });
 });
 
