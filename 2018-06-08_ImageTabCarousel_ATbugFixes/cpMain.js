@@ -4969,7 +4969,7 @@ $(document).ready(function () {
             e.preventDefault();
             carouselLeft();
 
-            setTimeout(() => {
+            setTimeout(function(){
                 activeIndex = $('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index");
                 nextIndex = activeIndex - 1;
                 $('.carousel-thumbnail-item').attr({
@@ -4991,7 +4991,7 @@ $(document).ready(function () {
             activeIndex = $('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index");
             carouselRight();
 
-            setTimeout(() => {
+            setTimeout(function() {
             //   activeIndex = $('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index");
               nextIndex = activeIndex + 1;
               $(".carousel-thumbnail-item").attr({
