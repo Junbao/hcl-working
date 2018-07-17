@@ -4720,7 +4720,8 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    var imageTabCarouselListWidth = $(".carousel-thumbnail-list").width();
+    var imageTabCarouselList = $(".carousel-thumbnail-list");
+    var imageTabCarouselListWidth = $(imageTabCarouselList).width();
     var imageTabCarouselCountTotal = $('.carousel-thumbnail-item[data-show="true"]').length;
     var imageTabCarouselCount = 6;
     var imageTabCarouselItemWidth = imageTabCarouselListWidth / imageTabCarouselCount;
@@ -4787,7 +4788,7 @@ $(document).ready(function () {
         carouselResize();
     });
 
-    $('.carousel-thumbnails').focusin(function() {
+    $('.carousel-thumbnails').focusin(function () {
         $(".carousel-thumbnail-item").attr('tabindex', '0');
     })
 
@@ -4899,26 +4900,20 @@ $(document).ready(function () {
     // Move Carousel Arrow to follow active(elm)
     function carouselArrowFollow() {
         var sectionWidth = $("#cp-image-tab-carousel").width();
+        var carouselThumbnailList = $('.carousel-thumbnail-list').position().left;
+
         if (sectionWidth < 767) {
             $(".carousel-arrow-slider").css("display", "none");
         }
+        
         setTimeout(function () {
-            // $(".carousel-arrow-slider").css("display", "block");
             var elm = $('.carousel-thumbnail-item[data-active="true"]');
-            // var elmIndex = parseInt($(elm).attr('data-index'), 10);
-            var elmLeft = parseInt(elm.css("left"), 10);
+            var elmIndex = parseInt(elm.attr('data-index'), 10);
             var elmWidth = parseInt(elm.css("width"), 10);
-
-            elmWidth = elmWidth / 2;
-            var sectionWidth = $("#cp-image-tab-carousel").width();
-            var tabCarWidth = $(".carousel-thumbnails").width();
-            var arrowLeftSpace = sectionWidth - tabCarWidth;
-            var arrowAlign = -Math.abs(7680 - (elmWidth + elmLeft + arrowLeftSpace));
+            var arrowAlign = -($('.carousel-arrow-slider').width() / 2 - (carouselThumbnailList + elmIndex * elmWidth) - elmWidth / 2) + "px";
 
             $(".carousel-arrow-slider").css("left", arrowAlign);
         }, 350);
-
-        // console.log($('.carousel-thumbnail-item[data-active="true"]').attr("id") + " left position - " + $('.carousel-thumbnail-item[data-active="true"]').css("left"));
     }
 
     // Navigation
@@ -4940,26 +4935,24 @@ $(document).ready(function () {
     });
 
     function carouselLeft() {
-        activeTab = $('.carousel-thumbnail-item[data-active="true"]');
-        nextIndex = 0;
+        // activeTab = $('.carousel-thumbnail-item[data-active="true"]');
+        // nextIndex = 0;
 
-        nextIndex = parseInt($(activeTab).attr('data-index'), 10) - 1;
-        if (nextIndex < 0) {
-            nextIndex = 0;
-        }
-        nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
+        // nextIndex = parseInt($(activeTab).attr('data-index'), 10) - 1;
+        // if (nextIndex < 0) {
+        //     nextIndex = 0;
+        // }
+        // nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
         slideCarousel("left");
     }
 
     function carouselRight() {
-        activeTab = $('.carousel-thumbnail-item[data-active="true"]');
-        nextIndex = 0;
-
-        nextIndex = parseInt($(activeTab).attr('data-index'), 10) + 1;
-        if (nextIndex > imageTabCarouselCountTotal) {
-            nextIndex = imageTabCarouselCountTotal;
-        }
-        nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
+        // var = activeTabCR = $('.carousel-thumbnail-item[data-active="true"]');
+        // var = nextIndexCR = parseInt($(activeTabCR).attr('data-index'), 10) + 1;
+        // if (nextIndexCR > imageTabCarouselCountTotal) {
+        //     nextIndexCR = imageTabCarouselCountTotal;
+        // }
+        // nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndexCR + '"]');
         slideCarousel("right");
     }
 
@@ -4971,11 +4964,15 @@ $(document).ready(function () {
 
         if (e.keyCode == 37 || e.keyCode == 38) { //Left and up arrow keypress 
             e.preventDefault();
-            carouselLeft();
+            activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
 
-            setTimeout(function () {
-                activeIndex = $('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index");
-                nextIndex = activeIndex - 1;
+            if (imageTabCarouselCount === 6) {
+                if ( activeIndex === 0 ) {
+                    nextIndex = imageTabCarouselCount - 1 ;
+                } else {
+                    nextIndex = activeIndex - 1;
+                }
+                
                 $('.carousel-thumbnail-item').attr({
                     "tabindex": "0",
                     "data-tabspot": "false",
@@ -4987,33 +4984,73 @@ $(document).ready(function () {
                     "aria-selected": "true",
                     "data-tabspot": "true"
                 }).focus();
-            }, 250);
 
+            } else {
+                carouselLeft();
+
+                setTimeout(function () {
+                    activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
+                    nextIndex = activeIndex - 1;
+                    $('.carousel-thumbnail-item').attr({
+                        "tabindex": "0",
+                        "data-tabspot": "false",
+                        "aria-selected": "false"
+                    });
+
+                    $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]').attr({
+                        "tabindex": "0",
+                        "aria-selected": "true",
+                        "data-tabspot": "true"
+                    }).focus();
+                }, 350);
+
+            }
 
         } else if (e.keyCode == 39 || e.keyCode == 40) { //Right and down arrow keypress
             e.preventDefault();
-            activeIndex = $('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index");
-            carouselRight();
 
-            setTimeout(function () {
-                //   activeIndex = $('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index");
-                nextIndex = activeIndex + 1;
+            if (imageTabCarouselCount === 6) {
+                activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
+                if (activeIndex === imageTabCarouselCount - 1) {
+                    nextIndex = 0;
+                } else {
+                    nextIndex = activeIndex + 1;
+                }
+
                 $(".carousel-thumbnail-item").attr({
-                    tabindex: "-1",
+                    "tabindex": "0",
                     "data-tabspot": "false",
                     "aria-selected": "false"
                 });
-
-                $('.carousel-thumbnail-item[data-index="' + activeIndex + '"]')
+                console.log("Adjusted Active");
+                $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
                     .attr({
-                        tabindex: "0",
+                        "tabindex": "0",
                         "aria-selected": "true",
                         "data-tabspot": "true"
                     })
                     .focus();
-            }, 250);
+            } else {
+                carouselRight();
 
+                setTimeout(function () {
+                    activeIndex = $('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index");
+                    nextIndex = activeIndex + 1;
+                    $(".carousel-thumbnail-item").attr({
+                        tabindex: "0",
+                        "data-tabspot": "false",
+                        "aria-selected": "false"
+                    });
 
+                    $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
+                        .attr({
+                            tabindex: "0",
+                            "aria-selected": "true",
+                            "data-tabspot": "true"
+                        })
+                        .focus();
+                }, 350);
+            }
         } else if (e.keyCode == 13) { //Enter keypress
             activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
             tabSelected(activeTab);
