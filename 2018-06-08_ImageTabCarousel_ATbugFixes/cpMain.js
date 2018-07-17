@@ -64,14 +64,14 @@ $(document).ready(function () {
     $("picture").each(function () {
         if (
             $(this)
-            .find("img")
-            .attr("src") == null ||
+                .find("img")
+                .attr("src") == null ||
             $(this)
-            .find("img")
-            .attr("src") == undefined ||
+                .find("img")
+                .attr("src") == undefined ||
             $(this)
-            .find("img")
-            .attr("src") == ""
+                .find("img")
+                .attr("src") == ""
         ) {
             $(this)
                 .find("img")
@@ -295,8 +295,8 @@ $(document).ready(function () {
             });
         if (
             $(this)
-            .find(".slickcarousel")
-            .children().length > 1
+                .find(".slickcarousel")
+                .children().length > 1
         ) {
             $(this)
                 .find(".slickcarousel")
@@ -386,33 +386,33 @@ $(document).ready(function () {
         pauseOnFocus: false,
         pauseOnDotsHover: false,
         responsive: [{
-                breakpoint: 1084,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 540,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 320,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+            breakpoint: 1084,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
             }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 540,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 320,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
         ]
     });
 });
@@ -440,14 +440,14 @@ function settingsideemediaminwidth() {
                     .css("width", "50%");
                 var liveareawidth = Math.floor(
                     $(this)
-                    .find(".ms-row .livearea")
-                    .width() / 2
+                        .find(".ms-row .livearea")
+                        .width() / 2
                 );
                 if (
                     liveareawidth >
                     $(this)
-                    .find(".cp-col2-right")
-                    .outerWidth()
+                        .find(".cp-col2-right")
+                        .outerWidth()
                 ) {
                     $(this)
                         .find(".cp-col2-right")
@@ -473,8 +473,8 @@ $(document).ready(function () {
         ) {
             if (
                 $(this)
-                .find(".video-poster-link")
-                .attr("href") == "#"
+                    .find(".video-poster-link")
+                    .attr("href") == "#"
             ) {
                 $(this)
                     .find(".video-poster-link")
@@ -512,47 +512,47 @@ $(document).ready(function () {
         }
         if (
             $(this)
-            .find(".video-poster-link")
-            .parent()
-            .find("img")
-            .attr("src") == "" ||
+                .find(".video-poster-link")
+                .parent()
+                .find("img")
+                .attr("src") == "" ||
             $(this)
-            .find(".video-poster-link")
-            .parent()
-            .find("img")
-            .attr("src") == null ||
+                .find(".video-poster-link")
+                .parent()
+                .find("img")
+                .attr("src") == null ||
             $(this)
-            .find(".video-poster-link")
-            .parent()
-            .find("img")
-            .attr("src") == undefined ||
+                .find(".video-poster-link")
+                .parent()
+                .find("img")
+                .attr("src") == undefined ||
             $(this)
-            .find(".video-poster-link")
-            .parent()
-            .find("picture")
-            .html() == "" ||
+                .find(".video-poster-link")
+                .parent()
+                .find("picture")
+                .html() == "" ||
             $(this)
-            .find(".video-poster-link")
-            .parent()
-            .find("picture")
-            .html() == undefined ||
+                .find(".video-poster-link")
+                .parent()
+                .find("picture")
+                .html() == undefined ||
             $(this)
-            .find(".video-poster-link")
-            .parent()
-            .find("picture")
-            .html() == null ||
+                .find(".video-poster-link")
+                .parent()
+                .find("picture")
+                .html() == null ||
             $(this)
-            .find(".video-poster-link")
-            .parent()
-            .html() == "" ||
+                .find(".video-poster-link")
+                .parent()
+                .html() == "" ||
             $(this)
-            .find(".video-poster-link")
-            .parent()
-            .html() == undefined ||
+                .find(".video-poster-link")
+                .parent()
+                .html() == undefined ||
             $(this)
-            .find(".video-poster-link")
-            .parent()
-            .html() == null
+                .find(".video-poster-link")
+                .parent()
+                .html() == null
         ) {
             $(this)
                 .find(".ms-row")
@@ -683,8 +683,8 @@ function fourReasonSlick() {
         } else {
             if (
                 $(this)
-                .find(".mobcarousel")
-                .hasClass("slick-slider")
+                    .find(".mobcarousel")
+                    .hasClass("slick-slider")
             ) {
                 $(this)
                     .find(".mobcarousel")
@@ -797,7 +797,7 @@ $(document).ready(function () {
                 updateSubNavTab();
             }
         }
-    } catch (err) {}
+    } catch (err) { }
 });
 /*mediacarouselcentral align*/
 function fixcontentHeights() {
@@ -833,7 +833,7 @@ function fixcontentHeights() {
                         .css("height", maxanchorheight);
                 });
         });
-    } catch (err) {}
+    } catch (err) { }
 }
 
 function bodyheight() {
@@ -860,7 +860,7 @@ function bodyheight() {
                         .css("height", maxtabheight);
                 });
         });
-    } catch (err) {}
+    } catch (err) { }
 }
 
 function mediacarouselcenteralign() {
@@ -875,7 +875,7 @@ function mediacarouselcenteralign() {
                     .css("margin", "0 auto");
             }
         });
-    } catch (err) {}
+    } catch (err) { }
 }
 
 function subtabmenuheight() {
@@ -953,8 +953,8 @@ $(window).resize(function () {
                         .find(".presenttab span")
                         .text(
                             $(this)
-                            .children()
-                            .text()
+                                .children()
+                                .text()
                         );
                     $(this)
                         .parent()
@@ -1019,8 +1019,8 @@ function initiateslickafterclick() {
         ) {
             if (
                 $(".currentsubtabs .tabdata.active")
-                .find(".carousel-wrapper")
-                .hasClass("slick-slider")
+                    .find(".carousel-wrapper")
+                    .hasClass("slick-slider")
             ) {
                 $(".currentsubtabs .tabdata.active")
                     .find(".carousel-wrapper")
@@ -1049,41 +1049,41 @@ function initiateslickafterclick() {
                             pauseOnDotsHover: true,
 
                             responsive: [{
-                                    breakpoint: 1084,
-                                    settings: {
-                                        slidesToShow: 5,
-                                        slidesToScroll: 5,
+                                breakpoint: 1084,
+                                settings: {
+                                    slidesToShow: 5,
+                                    slidesToScroll: 5,
 
-                                        dots: true
-                                    }
-                                },
-                                {
-                                    breakpoint: 768,
-                                    settings: {
-                                        slidesToShow: 4,
-                                        slidesToScroll: 4,
-
-                                        autoplay: false
-                                    }
-                                },
-                                {
-                                    breakpoint: 540,
-                                    settings: {
-                                        slidesToShow: 2,
-                                        slidesToScroll: 2,
-
-                                        dots: true
-                                    }
-                                },
-                                {
-                                    breakpoint: 320,
-                                    settings: {
-                                        slidesToShow: 1,
-                                        slidesToScroll: 1,
-
-                                        dots: false
-                                    }
+                                    dots: true
                                 }
+                            },
+                            {
+                                breakpoint: 768,
+                                settings: {
+                                    slidesToShow: 4,
+                                    slidesToScroll: 4,
+
+                                    autoplay: false
+                                }
+                            },
+                            {
+                                breakpoint: 540,
+                                settings: {
+                                    slidesToShow: 2,
+                                    slidesToScroll: 2,
+
+                                    dots: true
+                                }
+                            },
+                            {
+                                breakpoint: 320,
+                                settings: {
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1,
+
+                                    dots: false
+                                }
+                            }
                                 // You can unslick at a given breakpoint now by adding:
                                 // settings: "unslick"
                                 // instead of a settings object
@@ -1103,38 +1103,38 @@ function initiateslickafterclick() {
                             pauseOnFocus: false,
                             pauseOnDotsHover: true,
                             responsive: [{
-                                    breakpoint: 1084,
-                                    settings: {
-                                        slidesToShow: 3,
-                                        slidesToScroll: 3,
+                                breakpoint: 1084,
+                                settings: {
+                                    slidesToShow: 3,
+                                    slidesToScroll: 3,
 
-                                        dots: true,
-                                        autoplay: false
-                                    }
-                                },
-                                {
-                                    breakpoint: 768,
-                                    settings: {
-                                        slidesToShow: 2,
-                                        slidesToScroll: 2
-                                    }
-                                },
-                                {
-                                    breakpoint: 540,
-                                    settings: {
-                                        slidesToShow: 1,
-                                        slidesToScroll: 1
-                                    }
-                                },
-                                {
-                                    breakpoint: 320,
-                                    settings: {
-                                        slidesToShow: 1,
-                                        slidesToScroll: 1,
-
-                                        dots: false
-                                    }
+                                    dots: true,
+                                    autoplay: false
                                 }
+                            },
+                            {
+                                breakpoint: 768,
+                                settings: {
+                                    slidesToShow: 2,
+                                    slidesToScroll: 2
+                                }
+                            },
+                            {
+                                breakpoint: 540,
+                                settings: {
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1
+                                }
+                            },
+                            {
+                                breakpoint: 320,
+                                settings: {
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1,
+
+                                    dots: false
+                                }
+                            }
                                 // You can unslick at a given breakpoint now by adding:
                                 // settings: "unslick"
                                 // instead of a settings object
@@ -1285,7 +1285,7 @@ $(document).on("click", ".cp_subtab .tabs", function (e) {
                         .find(element)
                         .height(tallestHeight);
                 });
-            } catch (e) {}
+            } catch (e) { }
         }
     }
 });
@@ -1366,7 +1366,7 @@ $(window).resize(function () {
     } else {
         wwidth = $(window).width() + 17;
     }
-    if (wwidth <= 539) {} else {
+    if (wwidth <= 539) { } else {
         tabheight();
     }
     imageslick();
@@ -1404,8 +1404,8 @@ function imageslick() {
         } else {
             if (
                 $(this)
-                .find(".icon-tab-details")
-                .hasClass("slick-slider")
+                    .find(".icon-tab-details")
+                    .hasClass("slick-slider")
             ) {
                 $(this)
                     .find(".icon-tab-details")
@@ -1462,8 +1462,8 @@ $(document).ready(function () {
     $(".image-gallery-overlay .partner-icons .partner-info").each(function () {
         if (
             $(this)
-            .find("a")
-            .attr("href") === undefined
+                .find("a")
+                .attr("href") === undefined
         ) {
             $(this)
                 .find("a")
@@ -1804,14 +1804,14 @@ $(document).ready(function () {
             $(".accordionpanel").each(function () {
                 if (
                     $(this)
-                    .find(".right-content")
-                    .find(".image-holder")
-                    .find("picture")
-                    .html() != "" &&
+                        .find(".right-content")
+                        .find(".image-holder")
+                        .find("picture")
+                        .html() != "" &&
                     typeof $(this)
-                    .find(".right-content")
-                    .find(".button-holder a")
-                    .prop("href") != "undefined"
+                        .find(".right-content")
+                        .find(".button-holder a")
+                        .prop("href") != "undefined"
                 ) {
                     //Three Column//
 
@@ -1831,10 +1831,10 @@ $(document).ready(function () {
                         .addClass("set-right-column");
                 } else if (
                     $(this)
-                    .find(".right-content")
-                    .find(".image-holder")
-                    .find("picture")
-                    .html() != ""
+                        .find(".right-content")
+                        .find(".image-holder")
+                        .find("picture")
+                        .html() != ""
                 ) {
                     //Two Column with image container only//
                     $(this)
@@ -1845,9 +1845,9 @@ $(document).ready(function () {
                         .addClass("set-right-column");
                 } else if (
                     typeof $(this)
-                    .find(".right-content")
-                    .find(".button-holder a")
-                    .prop("href") != "undefined"
+                        .find(".right-content")
+                        .find(".button-holder a")
+                        .prop("href") != "undefined"
                 ) {
                     //Two Column with button container only//
                     $(this)
@@ -1874,8 +1874,8 @@ $(document).ready(function () {
 
                 if (
                     $(this)
-                    .find(".left-content .cta-learn-more")
-                    .text() == ""
+                        .find(".left-content .cta-learn-more")
+                        .text() == ""
                 ) {
                     $(this)
                         .find(".left-content .cta-learn-more")
@@ -1883,9 +1883,9 @@ $(document).ready(function () {
                 }
                 if (
                     $(this)
-                    .find(".right-content")
-                    .find(".button-holder a")
-                    .text() == ""
+                        .find(".right-content")
+                        .find(".button-holder a")
+                        .text() == ""
                 ) {
                     $(this)
                         .find(".right-content")
@@ -1937,8 +1937,8 @@ $(document).ready(function () {
         $(".media-carousel").each(function () {
             if (
                 $(this)
-                .find("ul.slides")
-                .children().length <= 1
+                    .find("ul.slides")
+                    .children().length <= 1
             ) {
                 $(this)
                     .find(".c-flipper")
@@ -1987,7 +1987,7 @@ function updatePadding(container, element) {
                 .find(element)
                 .height(tallestHeight);
         });
-    } catch (e) {}
+    } catch (e) { }
 }
 
 /*cpHerocarousel*/
@@ -1996,15 +1996,15 @@ $(document).ready(function () {
         $(".hero-carousel").each(function () {
             if (
                 $(this)
-                .find(".subheadline")
-                .find("h6")
-                .html() != null
+                    .find(".subheadline")
+                    .find("h6")
+                    .html() != null
             ) {
                 if (
                     $(this)
-                    .find(".subheadline")
-                    .find("h6")
-                    .html().length == 0
+                        .find(".subheadline")
+                        .find("h6")
+                        .html().length == 0
                 ) {
                     $(this)
                         .find(".subheadline")
@@ -2174,8 +2174,8 @@ var intraPageNavBar = (function () {
                 tempElement = element_id;
                 if (
                     $(tempElement)
-                    .children()
-                    .has("a")
+                        .children()
+                        .has("a")
                 ) {
                     $(tempElement)
                         .find("div a:first")
@@ -2432,14 +2432,14 @@ var intraPageNavBar = (function () {
             ) {
                 if ($("#CP_StaticMenu").hasClass("sticky")) {
                     $("html, body").animate({
-                            scrollTop: $(window).scrollTop()
-                        },
+                        scrollTop: $(window).scrollTop()
+                    },
                         1000
                     );
                 } else {
                     $("html, body").animate({
-                            scrollTop: staticMenuOriginalPosition
-                        },
+                        scrollTop: staticMenuOriginalPosition
+                    },
                         1000
                     );
                 }
@@ -2449,29 +2449,29 @@ var intraPageNavBar = (function () {
                     staticMenuOriginalPosition - staticMenu_height
                 );
                 $("html, body").animate({
-                        scrollTop: $($componentTarget).offset().top - staticMenu_height
-                    },
+                    scrollTop: $($componentTarget).offset().top - staticMenu_height
+                },
                     1000
                 );
             } else if ($(window).scrollTop() < staticMenuOriginalPosition) {
                 if ($("#CP_StaticMenu").hasClass("sticky")) {
                     $("html, body").animate({
-                            scrollTop: $($componentTarget).offset().top - staticMenu_height
-                        },
+                        scrollTop: $($componentTarget).offset().top - staticMenu_height
+                    },
                         1000
                     );
                 } else {
                     $("html, body").animate({
-                            scrollTop: $($componentTarget).offset().top - staticMenu_height * 2
-                        },
+                        scrollTop: $($componentTarget).offset().top - staticMenu_height * 2
+                    },
                         1000
                     );
                 }
             } else {
                 addStickyBehaviour();
                 $("html, body").animate({
-                        scrollTop: $($componentTarget).offset().top - staticMenu_height
-                    },
+                    scrollTop: $($componentTarget).offset().top - staticMenu_height
+                },
                     1000
                 );
             }
@@ -2509,14 +2509,14 @@ var intraPageNavBar = (function () {
             ) {
                 if ($("#CP_StaticMenu").hasClass("sticky")) {
                     $("html, body").animate({
-                            scrollTop: $(window).scrollTop()
-                        },
+                        scrollTop: $(window).scrollTop()
+                    },
                         1000
                     );
                 } else {
                     $("html, body").animate({
-                            scrollTop: staticMenuOriginalPosition
-                        },
+                        scrollTop: staticMenuOriginalPosition
+                    },
                         1000
                     );
                 }
@@ -2526,29 +2526,29 @@ var intraPageNavBar = (function () {
                     staticMenuOriginalPosition - staticMenu_height
                 );
                 $("html, body").animate({
-                        scrollTop: $("#" + $componentTarget).offset().top - staticMenu_height
-                    },
+                    scrollTop: $("#" + $componentTarget).offset().top - staticMenu_height
+                },
                     1000
                 );
             } else if ($(window).scrollTop() < staticMenuOriginalPosition) {
                 if ($("#CP_StaticMenu").hasClass("sticky")) {
                     $("html, body").animate({
-                            scrollTop: $("#" + $componentTarget).offset().top - staticMenu_height
-                        },
+                        scrollTop: $("#" + $componentTarget).offset().top - staticMenu_height
+                    },
                         1000
                     );
                 } else {
                     $("html, body").animate({
-                            scrollTop: $("#" + $componentTarget).offset().top - staticMenu_height * 2
-                        },
+                        scrollTop: $("#" + $componentTarget).offset().top - staticMenu_height * 2
+                    },
                         1000
                     );
                 }
             } else {
                 addStickyBehaviour();
                 $("html, body").animate({
-                        scrollTop: $("#" + $componentTarget).offset().top - staticMenu_height
-                    },
+                    scrollTop: $("#" + $componentTarget).offset().top - staticMenu_height
+                },
                     1000
                 );
             }
@@ -2619,7 +2619,7 @@ function stickynavheight() {
                 });
             $(".dtc a").css("height", max_height);
         }, 100);
-    } catch (err) {}
+    } catch (err) { }
 }
 
 $(document).ready(function () {
@@ -2628,14 +2628,14 @@ $(document).ready(function () {
             stickynavslick();
             stickynavheight();
         }
-    } catch (err) {}
+    } catch (err) { }
 });
 $(window).resize(function () {
     try {
         if ($("#static_menu_1").length > 0) {
             stickynavheight();
         }
-    } catch (err) {}
+    } catch (err) { }
 });
 
 /********************Static-Menu*******************/
@@ -2727,8 +2727,8 @@ $(document).on("click", ".explore", function (e) {
         .parent()
         .find(".expandtable")
         .animate({
-                height: "toggle"
-            },
+            height: "toggle"
+        },
             1000,
             function () {
                 $(this).toggleClass("active");
@@ -2762,8 +2762,8 @@ function UHFResourcesMenuHighlighter() {
                     var thisHref = href.pop();
                     if (thisHref.indexOf("resources") > -1)
                         $(this)
-                        .find("a")
-                        .addClass("current");
+                            .find("a")
+                            .addClass("current");
                 });
                 return false;
             }
@@ -2789,8 +2789,8 @@ $(document).ready(function () {
     try {
         var relativeUrl =
             window.location.search != "" ?
-            window.location.pathname + window.location.search :
-            window.location.pathname;
+                window.location.pathname + window.location.search :
+                window.location.pathname;
         var pageNameStartIndex = relativeUrl.lastIndexOf("/");
         var pageFromUrl = relativeUrl
             .substring(pageNameStartIndex + 1)
@@ -2843,9 +2843,9 @@ $(document).ready(function () {
                     var scPageName = replacedVal.substring(n + 1).split(".")[0];
                     if (
                         pageFromUrl
-                        .toString()
-                        .toLowerCase()
-                        .indexOf(scPageName.toString().toLowerCase()) >= 0
+                            .toString()
+                            .toLowerCase()
+                            .indexOf(scPageName.toString().toLowerCase()) >= 0
                     ) {
                         activeLinkObjId = $(value).attr("id");
                     }
@@ -2979,8 +2979,8 @@ function fiveReasonSlick() {
         } else {
             if (
                 $(this)
-                .find("div.slides")
-                .hasClass("slick-slider")
+                    .find("div.slides")
+                    .hasClass("slick-slider")
             ) {
                 $(this)
                     .find("div.slides")
@@ -3043,7 +3043,7 @@ $(document).ready(function () {
                             .css("height", paraHeight);
                     });
                 });
-            } catch (e) {}
+            } catch (e) { }
         }
 
         $(window).resize(function () {
@@ -3074,35 +3074,35 @@ function threeReasonSlick() {
                 pauseOnFocus: false,
                 pauseOnDotsHover: false,
                 responsive: [{
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1,
-                            infinite: true,
-                            dots: true
-                        }
-                    },
-                    {
-                        breakpoint: 540,
-                        settings: {
-                            dots: true,
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            infinite: true
-                        }
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
                     }
+                },
+                {
+                    breakpoint: 540,
+                    settings: {
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true
+                    }
+                }
                 ]
             });
         if (
             $(this)
-            .find(".links")
-            .html() == "" ||
+                .find(".links")
+                .html() == "" ||
             $(this)
-            .find(".links")
-            .html() == null ||
+                .find(".links")
+                .html() == null ||
             $(this)
-            .find(".links")
-            .html() == undefined
+                .find(".links")
+                .html() == undefined
         ) {
             $(this)
                 .find(".links")
@@ -3197,62 +3197,62 @@ $(document).ready(function () {
             pauseOnFocus: false,
             pauseOnDotsHover: true,
             responsive: [{
-                    breakpoint: 1084,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        dots: true,
-                        autoplay: true,
-                        autoplaySpeed: autoplaytime,
-                        pauseOnFocus: false,
-                        pauseOnDotsHover: true
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        autoplay: true,
-                        autoplaySpeed: autoplaytime,
-                        pauseOnFocus: false,
-                        pauseOnDotsHover: true
-                    }
-                },
-                {
-                    breakpoint: 540,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        dots: true,
-                        autoplay: true,
-                        autoplaySpeed: autoplaytime,
-                        pauseOnFocus: false,
-                        pauseOnDotsHover: true
-                    }
-                },
-                {
-                    breakpoint: 320,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: false,
-                        autoplay: true,
-                        autoplaySpeed: autoplaytime,
-                        pauseOnFocus: false,
-                        pauseOnDotsHover: true
-                    }
+                breakpoint: 1084,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true,
+                    autoplay: true,
+                    autoplaySpeed: autoplaytime,
+                    pauseOnFocus: false,
+                    pauseOnDotsHover: true
                 }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    autoplay: true,
+                    autoplaySpeed: autoplaytime,
+                    pauseOnFocus: false,
+                    pauseOnDotsHover: true
+                }
+            },
+            {
+                breakpoint: 540,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true,
+                    autoplay: true,
+                    autoplaySpeed: autoplaytime,
+                    pauseOnFocus: false,
+                    pauseOnDotsHover: true
+                }
+            },
+            {
+                breakpoint: 320,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                    autoplay: true,
+                    autoplaySpeed: autoplaytime,
+                    pauseOnFocus: false,
+                    pauseOnDotsHover: true
+                }
+            }
                 // You can unslick at a given breakpoint now by adding:
                 // settings: "unslick"
                 // instead of a settings object
             ]
         });
-    } catch (err) {}
+    } catch (err) { }
 });
 /*End--CP_TwoColVideoCarousel*/
 
@@ -3307,41 +3307,41 @@ $(document).ready(function () {
                         pauseOnFocus: false,
                         pauseOnDotsHover: true,
                         responsive: [{
-                                breakpoint: 1084,
-                                settings: {
-                                    slidesToShow: 5,
-                                    slidesToScroll: 5,
+                            breakpoint: 1084,
+                            settings: {
+                                slidesToShow: 5,
+                                slidesToScroll: 5,
 
-                                    dots: true
-                                }
-                            },
-                            {
-                                breakpoint: 768,
-                                settings: {
-                                    slidesToShow: 4,
-                                    slidesToScroll: 4,
-
-                                    autoplay: false
-                                }
-                            },
-                            {
-                                breakpoint: 540,
-                                settings: {
-                                    slidesToShow: 2,
-                                    slidesToScroll: 2,
-
-                                    dots: true
-                                }
-                            },
-                            {
-                                breakpoint: 320,
-                                settings: {
-                                    slidesToShow: 1,
-                                    slidesToScroll: 1,
-
-                                    dots: false
-                                }
+                                dots: true
                             }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 4,
+                                slidesToScroll: 4,
+
+                                autoplay: false
+                            }
+                        },
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 2,
+
+                                dots: true
+                            }
+                        },
+                        {
+                            breakpoint: 320,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+
+                                dots: false
+                            }
+                        }
                             // You can unslick at a given breakpoint now by adding:
                             // settings: "unslick"
                             // instead of a settings object
@@ -3361,43 +3361,43 @@ $(document).ready(function () {
                         pauseOnFocus: false,
                         pauseOnDotsHover: true,
                         responsive: [{
-                                breakpoint: 1084,
-                                settings: {
-                                    slidesToShow: 3,
-                                    slidesToScroll: 3,
+                            breakpoint: 1084,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 3,
 
-                                    dots: true,
-                                    autoplay: false
-                                }
-                            },
-                            {
-                                breakpoint: 768,
-                                settings: {
-                                    slidesToShow: 2,
-                                    slidesToScroll: 2
-                                }
-                            },
-                            {
-                                breakpoint: 540,
-                                settings: {
-                                    slidesToShow: 1,
-                                    slidesToScroll: 1
-                                }
-                            },
-                            {
-                                breakpoint: 320,
-                                settings: {
-                                    slidesToShow: 1,
-                                    slidesToScroll: 1,
-
-                                    dots: false
-                                }
+                                dots: true,
+                                autoplay: false
                             }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 2
+                            }
+                        },
+                        {
+                            breakpoint: 540,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 320,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+
+                                dots: false
+                            }
+                        }
                         ]
                     });
             }
         });
-    } catch (e) {}
+    } catch (e) { }
 });
 
 /*END of MediaCarouselWithCopy*/
@@ -3407,14 +3407,14 @@ $(document).ready(function () {
     $(".case-study .case-details .image-div").each(function () {
         if (
             $(this)
-            .find("img")
-            .attr("src") == undefined ||
+                .find("img")
+                .attr("src") == undefined ||
             $(this)
-            .find("img")
-            .attr("src") == "" ||
+                .find("img")
+                .attr("src") == "" ||
             $(this)
-            .find("img")
-            .attr("src") == null
+                .find("img")
+                .attr("src") == null
         ) {
             $(this)
                 .closest(".image-div")
@@ -3533,8 +3533,8 @@ function loadCortanaTab() {
                             }
 
                             $("html, body").animate({
-                                    scrollTop: topvalue
-                                },
+                                scrollTop: topvalue
+                            },
                                 500
                             );
                             $(".currentslicktab").removeClass("currentslicktab");
@@ -3580,8 +3580,8 @@ function updateCortanaUrl() {
             if (history.pushState) {
                 var newurl = window.location.href + "#" + tab;
                 window.history.pushState({
-                        path: newurl
-                    },
+                    path: newurl
+                },
                     "",
                     newurl
                 );
@@ -3596,8 +3596,8 @@ function updateCortanaUrl() {
                     var updatedurl = window.location.href;
                     updatedurl = updatedurl.replace(tab_value, tab);
                     window.history.pushState({
-                            path: updatedurl
-                        },
+                        path: updatedurl
+                    },
                         "",
                         updatedurl
                     );
@@ -3608,8 +3608,8 @@ function updateCortanaUrl() {
                     subupdatedurl = subupdatedurl.replace(maintabvalue, mainTab);
                     subupdatedurl = subupdatedurl.replace(subtabvalue, subTab);
                     window.history.pushState({
-                            path: subupdatedurl
-                        },
+                        path: subupdatedurl
+                    },
                         "",
                         subupdatedurl
                     );
@@ -3662,7 +3662,7 @@ $(document).ready(function () {
                 }
             }
         }
-    } catch (err) {}
+    } catch (err) { }
 });
 
 function slickInitializer() {
@@ -3673,57 +3673,57 @@ function slickInitializer() {
     $(".cortana-6tabs .main-menu-ul").slick({
         rtl: dirrtl,
         responsive: [{
-                breakpoint: 99999,
-                settings: "unslick"
-            },
-            {
-                breakpoint: 540,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: true,
-                    infinite: false
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: true,
-                    infinite: false
-                }
+            breakpoint: 99999,
+            settings: "unslick"
+        },
+        {
+            breakpoint: 540,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                infinite: false
             }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                infinite: false
+            }
+        }
         ]
     });
     $(".cortana-6tabs .inner-menu-ul").slick({
         rtl: dirrtl,
         responsive: [{
-                breakpoint: 99999,
-                settings: "unslick"
-            },
-            {
-                breakpoint: 540,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: true,
-                    infinite: false
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: true,
-                    infinite: false
-                }
+            breakpoint: 99999,
+            settings: "unslick"
+        },
+        {
+            breakpoint: 540,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                infinite: false
             }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                infinite: false
+            }
+        }
         ]
     });
     $(
@@ -3748,29 +3748,29 @@ function slicksubInitializer() {
     $(".cortana-6tabs .inner-menu-ul").slick({
         rtl: dirrtl,
         responsive: [{
-                breakpoint: 99999,
-                settings: "unslick"
-            },
-            {
-                breakpoint: 540,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: true,
-                    infinite: false
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: true,
-                    infinite: false
-                }
+            breakpoint: 99999,
+            settings: "unslick"
+        },
+        {
+            breakpoint: 540,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                infinite: false
             }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                infinite: false
+            }
+        }
         ]
     });
     $(
@@ -3778,8 +3778,8 @@ function slicksubInitializer() {
     ).text("");
     if (
         $(".cortana-6tabs .inner-menu-ul li")
-        .not(".inner-menu-ul li:first-child")
-        .hasClass("current")
+            .not(".inner-menu-ul li:first-child")
+            .hasClass("current")
     ) {
         $(".cortana-6tabs .inner-menu-ul li:first-child")
             .addClass("current")
@@ -3820,8 +3820,8 @@ $(document).ready(function () {
         $(".cortana-6tabs .main-menu-ul li").each(function () {
             if (
                 $(this)
-                .find("p")
-                .html().length == 0
+                    .find("p")
+                    .html().length == 0
             ) {
                 // $(this).remove();
             } else {
@@ -3840,8 +3840,8 @@ $(document).ready(function () {
                 .each(function () {
                     if (
                         $(this)
-                        .find("p")
-                        .html().length == 0
+                            .find("p")
+                            .html().length == 0
                     ) {
                         // $(this).remove();
                     } else {
@@ -3863,14 +3863,14 @@ $(document).ready(function () {
             function () {
                 if (
                     $(this)
-                    .find("img")
-                    .attr("src") == undefined ||
+                        .find("img")
+                        .attr("src") == undefined ||
                     $(this)
-                    .find("img")
-                    .attr("src") == "" ||
+                        .find("img")
+                        .attr("src") == "" ||
                     $(this)
-                    .find("img")
-                    .attr("src") == null
+                        .find("img")
+                        .attr("src") == null
                 ) {
                     $(this)
                         .closest(".m-col-12-24")
@@ -4045,7 +4045,7 @@ $(document).ready(function () {
                     }
                 });
         });
-    } catch (err) {}
+    } catch (err) { }
 });
 
 $(function () {
@@ -4089,12 +4089,12 @@ $(document).ready(function () {
                 var now = new Date();
                 var timeString =
                     $(".events-hero")
-                    .find(".countdown-timer")
-                    .data("event-time") +
+                        .find(".countdown-timer")
+                        .data("event-time") +
                     "  " +
                     $(".events-hero")
-                    .find(".countdown-timer")
-                    .data("event-timezone");
+                        .find(".countdown-timer")
+                        .data("event-timezone");
                 timeString = timeString.toString();
                 var countdownDate = new Date(timeString);
                 //console.log(countdownDate);
@@ -4139,7 +4139,7 @@ $(document).ready(function () {
 
             setInterval(setEventCountdown, 1000);
         }
-    } catch (err) {}
+    } catch (err) { }
 });
 /***Eventsbgimagetimer js end*/
 
@@ -4152,9 +4152,9 @@ function loadaccordiondata() {
         $(".cp-accordion-with-control .accordionpanel").each(function () {
             $(this).html(
                 $(".accordiondatatabs")
-                .children()
-                .eq(i)
-                .html()
+                    .children()
+                    .eq(i)
+                    .html()
             );
 
             i++;
@@ -4203,13 +4203,13 @@ function CircleGraphicsWithSideTextCall() {
             var windowWidth = $(window).width();
             var componentWidth =
                 innerWidth > 1084 ?
-                1084 :
-                windowWidth *
-                (innerWidth > 768 ?
-                    0.95 :
-                    innerWidth >= 540 ?
-                    0.87 :
-                    0.91); /*As per Cloud-platform viewports*/
+                    1084 :
+                    windowWidth *
+                    (innerWidth > 768 ?
+                        0.95 :
+                        innerWidth >= 540 ?
+                            0.87 :
+                            0.91); /*As per Cloud-platform viewports*/
             var slideWidth = componentWidth * 0.3;
             var currentBarCircleIndex = 0;
             positioning();
@@ -4217,13 +4217,13 @@ function CircleGraphicsWithSideTextCall() {
                 windowWidth = $(window).width();
                 componentWidth =
                     innerWidth > 1084 ?
-                    1084 :
-                    windowWidth *
-                    (innerWidth > 768 ?
-                        0.95 :
-                        innerWidth >= 540 ?
-                        0.87 :
-                        0.91); /*As per Cloud-platform viewports*/
+                        1084 :
+                        windowWidth *
+                        (innerWidth > 768 ?
+                            0.95 :
+                            innerWidth >= 540 ?
+                                0.87 :
+                                0.91); /*As per Cloud-platform viewports*/
                 positioning();
                 slideListNode.style.marginLeft = -slideWidth * currentBarCircleIndex * 2 + "px";
             });
@@ -4447,12 +4447,12 @@ function CircleLayersWithSideTextCall() {
                 for (var i = 0; i < length; i++) {
                     var color =
                         i < changeIndex ?
-                        circleLayerNodes[i].getAttribute("data-color") :
-                        circleLayerNodes[changeIndex].getAttribute("data-color");
+                            circleLayerNodes[i].getAttribute("data-color") :
+                            circleLayerNodes[changeIndex].getAttribute("data-color");
                     var subColor =
                         i < changeIndex ?
-                        circleLayerSubNodes[i].getAttribute("data-color") :
-                        circleLayerNodes[changeIndex].getAttribute("data-color");
+                            circleLayerSubNodes[i].getAttribute("data-color") :
+                            circleLayerNodes[changeIndex].getAttribute("data-color");
 
                     circleLayerNodes[i].setAttribute("fill", color);
                     circleLayerSubNodes[i].setAttribute("fill", subColor);
@@ -4462,9 +4462,9 @@ function CircleLayersWithSideTextCall() {
             function setPositions() {
                 var containerWidth =
                     innerWidth > 1180 ?
-                    1180 :
-                    $(window).width() *
-                    (innerWidth > 768 ? 0.95 : innerWidth >= 540 ? 0.87 : 0.91);
+                        1180 :
+                        $(window).width() *
+                        (innerWidth > 768 ? 0.95 : innerWidth >= 540 ? 0.87 : 0.91);
                 var slideWidth = containerWidth * (innerWidth >= 768 ? 0.33 : 1);
                 var graphicWidth = containerWidth * (innerWidth >= 768 ? 0.67 : 1);
                 if (innerWidth < 768) {
@@ -4525,7 +4525,7 @@ $(document).ready(function () {
                 });
             });
         }
-    } catch (err) {}
+    } catch (err) { }
 });
 /*End--Carousel for trusted cloud pages ---*/
 
@@ -4552,7 +4552,7 @@ $(document).ready(function () {
                 });
             });
         }
-    } catch (err) {}
+    } catch (err) { }
 });
 
 /*END-Trusted-Cloud-JS*/
@@ -4563,7 +4563,7 @@ $(window).load(function () {
 $(window).resize(function () {
     try {
         slickaccessibility();
-    } catch (err) {}
+    } catch (err) { }
 });
 
 //start of zh-cn CP_TryBuyFilter
@@ -5140,10 +5140,10 @@ $(document).ready(function () {
                         //On popu open set default Focus on close button
                         $(itemNodes[activeIndex].querySelector(".pillar-popup")).focusout();
                         $(
-                                itemNodes[activeIndex]
+                            itemNodes[activeIndex]
                                 .querySelector(".pillar-popup")
                                 .querySelector(".pillar-close-button")
-                            )
+                        )
                             .attr("tabindex", "0")
                             .focus();
                     }
@@ -5217,7 +5217,7 @@ $(document).ready(function () {
                 resize();
             }
         );
-    } catch (err) {}
+    } catch (err) { }
 });
 
 function setHero1ColHeight() {
@@ -5225,8 +5225,8 @@ function setHero1ColHeight() {
         $(".hero-height").each(function () {
             if (
                 $(this)
-                .find("picture")
-                .children().length == 0
+                    .find("picture")
+                    .children().length == 0
             ) {
                 $(this).css("height", "auto");
                 $(this)
@@ -5244,7 +5244,7 @@ function setHero1ColHeight() {
                 }
             }
         });
-    } catch (e) {}
+    } catch (e) { }
 }
 $(document).ready(function () {
     setHero1ColHeight();
@@ -5384,8 +5384,8 @@ $(document).ready(function () {
         if ($(this).text() == "") {
             if (
                 $(this)
-                .siblings()
-                .find("a") != ""
+                    .siblings()
+                    .find("a") != ""
             ) {
                 $("#CP_Footer_1 p").css("margin-top", "20px");
             }
@@ -5422,15 +5422,15 @@ $(window).load(function () {
     $(".cp-mwf-hero-carousel .m-hero div.c-carousel-p ul li").each(function () {
         if (
             $(this)
-            .find("section")
-            .hasClass("theme-dark")
+                .find("section")
+                .hasClass("theme-dark")
         ) {
             $(this).attr("data-f-theme", "dark");
         }
         if (
             $(this)
-            .find("section")
-            .hasClass("theme-light")
+                .find("section")
+                .hasClass("theme-light")
         ) {
             $(this).attr("data-f-theme", "light");
         }
@@ -5550,8 +5550,8 @@ $(document).ready(function () {
     $(".hero-1-col .hero-content ul li").each(function () {
         if (
             $(this)
-            .find("a")
-            .hasClass("theme-transparent")
+                .find("a")
+                .hasClass("theme-transparent")
         ) {
             $(this).addClass("fn");
         }
@@ -5563,8 +5563,8 @@ $(document).ready(function () {
     try {
         var relativeUrl =
             window.location.search != "" ?
-            window.location.pathname + window.location.search :
-            window.location.pathname;
+                window.location.pathname + window.location.search :
+                window.location.pathname;
         var pageNameStartIndex = relativeUrl.lastIndexOf("/");
         var pageFromUrl = relativeUrl
             .substring(pageNameStartIndex + 1)
