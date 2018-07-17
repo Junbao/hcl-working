@@ -4905,7 +4905,7 @@ $(document).ready(function () {
         if (sectionWidth < 767) {
             $(".carousel-arrow-slider").css("display", "none");
         }
-        
+
         setTimeout(function () {
             var elm = $('.carousel-thumbnail-item[data-active="true"]');
             var elmIndex = parseInt(elm.attr('data-index'), 10);
@@ -4967,12 +4967,12 @@ $(document).ready(function () {
             activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
 
             if (imageTabCarouselCount === 6) {
-                if ( activeIndex === 0 ) {
-                    nextIndex = imageTabCarouselCount - 1 ;
+                if (activeIndex === 0) {
+                    nextIndex = imageTabCarouselCount - 1;
                 } else {
                     nextIndex = activeIndex - 1;
                 }
-                
+
                 $('.carousel-thumbnail-item').attr({
                     "tabindex": "0",
                     "data-tabspot": "false",
@@ -4986,6 +4986,7 @@ $(document).ready(function () {
                 }).focus();
 
             } else {
+                
                 carouselLeft();
 
                 setTimeout(function () {
@@ -5002,7 +5003,7 @@ $(document).ready(function () {
                         "aria-selected": "true",
                         "data-tabspot": "true"
                     }).focus();
-                }, 350);
+                }, 150);
 
             }
 
@@ -5011,6 +5012,8 @@ $(document).ready(function () {
 
             if (imageTabCarouselCount === 6) {
                 activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
+                // activeIndex = parseInt(activeIndex);
+                // console.log(activeIndex);
                 if (activeIndex === imageTabCarouselCount - 1) {
                     nextIndex = 0;
                 } else {
@@ -5022,7 +5025,6 @@ $(document).ready(function () {
                     "data-tabspot": "false",
                     "aria-selected": "false"
                 });
-                console.log("Adjusted Active");
                 $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
                     .attr({
                         "tabindex": "0",
@@ -5031,25 +5033,28 @@ $(document).ready(function () {
                     })
                     .focus();
             } else {
-                carouselRight();
+                activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
+                nextIndex = activeIndex + 1;
+                $(".carousel-thumbnail-item").attr({
+                    tabindex: "0",
+                    "data-tabspot": "false",
+                    "aria-selected": "false"
+                });
+                console.log($('.carousel-thumbnail-item[data-index="' + nextIndex + '"]'));
 
-                setTimeout(function () {
-                    activeIndex = $('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index");
-                    nextIndex = activeIndex + 1;
-                    $(".carousel-thumbnail-item").attr({
+                $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
+                    .attr({
                         tabindex: "0",
-                        "data-tabspot": "false",
-                        "aria-selected": "false"
-                    });
+                        "aria-selected": "true",
+                        "data-tabspot": "true"
+                    })
+                    .focus();
+                
 
-                    $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
-                        .attr({
-                            tabindex: "0",
-                            "aria-selected": "true",
-                            "data-tabspot": "true"
-                        })
-                        .focus();
-                }, 350);
+                // setTimeout(function () {
+
+                // }, 350);
+                carouselRight();
             }
         } else if (e.keyCode == 13) { //Enter keypress
             activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
