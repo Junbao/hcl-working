@@ -4342,6 +4342,8 @@ section.learning-center .ms-row>div:nth-child(2) {
 
 #CP_NewsFeed_1 div.banner-container .text-right {
     text-align: right;
+    display: block;
+    float: right;
 }
 
 /*End of CP_NewsFeed Styles */
@@ -9336,6 +9338,7 @@ CP_CenterImageWithSideText .Bottom-content {
     .cp-image-tab-carousel .carousel-content-list {
         height: 431px;
     }
+
 }
 
 /* VIEWPORT 768 */

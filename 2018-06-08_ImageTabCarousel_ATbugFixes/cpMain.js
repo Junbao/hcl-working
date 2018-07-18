@@ -4902,9 +4902,9 @@ $(document).ready(function () {
         var sectionWidth = $("#cp-image-tab-carousel").width();
         var carouselThumbnailList = $('.carousel-thumbnail-list').position().left;
 
-        if (sectionWidth < 767) {
-            $(".carousel-arrow-slider").css("display", "none");
-        }
+        // if (sectionWidth < 539) {
+        //     $(".carousel-arrow-slider").css("display", "none");
+        // }
 
         setTimeout(function () {
             var elm = $('.carousel-thumbnail-item[data-active="true"]');
@@ -4935,24 +4935,10 @@ $(document).ready(function () {
     });
 
     function carouselLeft() {
-        // activeTab = $('.carousel-thumbnail-item[data-active="true"]');
-        // nextIndex = 0;
-
-        // nextIndex = parseInt($(activeTab).attr('data-index'), 10) - 1;
-        // if (nextIndex < 0) {
-        //     nextIndex = 0;
-        // }
-        // nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]');
         slideCarousel("left");
     }
 
     function carouselRight() {
-        // var = activeTabCR = $('.carousel-thumbnail-item[data-active="true"]');
-        // var = nextIndexCR = parseInt($(activeTabCR).attr('data-index'), 10) + 1;
-        // if (nextIndexCR > imageTabCarouselCountTotal) {
-        //     nextIndexCR = imageTabCarouselCountTotal;
-        // }
-        // nextTab = $('.carousel-thumbnail-item[data-index="' + nextIndexCR + '"]');
         slideCarousel("right");
     }
 
@@ -4973,15 +4959,15 @@ $(document).ready(function () {
                     nextIndex = activeIndex - 1;
                 }
 
-                $('.carousel-thumbnail-item').attr({
-                    "tabindex": "0",
-                    "data-tabspot": "false",
-                    "aria-selected": "false"
+                $(".carousel-thumbnail-item").attr({
+                  tabindex: "0",
+                  // "aria-selected": "false",
+                  "data-tabspot": "false"
                 });
 
                 $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]').attr({
                     "tabindex": "0",
-                    "aria-selected": "true",
+                    // "aria-selected": "true",
                     "data-tabspot": "true"
                 }).focus();
 
@@ -4994,13 +4980,14 @@ $(document).ready(function () {
                     nextIndex = activeIndex - 1;
                     $('.carousel-thumbnail-item').attr({
                         "tabindex": "0",
-                        "data-tabspot": "false",
-                        "aria-selected": "false"
+                        // "aria-selected": "false",
+                        "data-tabspot": "false"
+                        
                     });
 
                     $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]').attr({
                         "tabindex": "0",
-                        "aria-selected": "true",
+                        // "aria-selected": "true",
                         "data-tabspot": "true"
                     }).focus();
                 }, 150);
@@ -5012,8 +4999,6 @@ $(document).ready(function () {
 
             if (imageTabCarouselCount === 6) {
                 activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
-                // activeIndex = parseInt(activeIndex);
-                // console.log(activeIndex);
                 if (activeIndex === imageTabCarouselCount - 1) {
                     nextIndex = 0;
                 } else {
@@ -5022,13 +5007,14 @@ $(document).ready(function () {
 
                 $(".carousel-thumbnail-item").attr({
                     "tabindex": "0",
-                    "data-tabspot": "false",
-                    "aria-selected": "false"
+                    // "aria-selected": "false",
+                    "data-tabspot": "false"
+                    
                 });
                 $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
                     .attr({
                         "tabindex": "0",
-                        "aria-selected": "true",
+                        // "aria-selected": "true",
                         "data-tabspot": "true"
                     })
                     .focus();
@@ -5037,8 +5023,9 @@ $(document).ready(function () {
                 nextIndex = activeIndex + 1;
                 $(".carousel-thumbnail-item").attr({
                     tabindex: "0",
-                    "data-tabspot": "false",
-                    "aria-selected": "false"
+                    // "aria-selected": "false",
+                    "data-tabspot": "false"
+                   
                 });
                 console.log($('.carousel-thumbnail-item[data-index="' + nextIndex + '"]'));
 
@@ -5049,15 +5036,16 @@ $(document).ready(function () {
                         "data-tabspot": "true"
                     })
                     .focus();
-                
 
-                // setTimeout(function () {
-
-                // }, 350);
                 carouselRight();
             }
         } else if (e.keyCode == 13) { //Enter keypress
-            activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
+            // activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
+            $(".carousel-thumbnail-item").each(function(i) {
+                this.is(':focus');
+                activeTab = $('this');
+            })
+            // activeTab = $(".carousel-thumbnail-item").is(':focus');
             tabSelected(activeTab);
         }
     });
