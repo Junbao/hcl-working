@@ -4794,8 +4794,6 @@ $(document).ready(function () {
 
     // Populate the content from tab selection
     function tabSelected(elm) {
-        // console.log(elm);
-
         $(".carousel-thumbnail-item").attr({
             "data-active": "false",
             "tabindex": "-1",
@@ -4900,17 +4898,17 @@ $(document).ready(function () {
     // Move Carousel Arrow to follow active(elm)
     function carouselArrowFollow() {
         var sectionWidth = $("#cp-image-tab-carousel").width();
-        var carouselThumbnailList = $('.carousel-thumbnail-list').position().left;
-
-        // if (sectionWidth < 539) {
-        //     $(".carousel-arrow-slider").css("display", "none");
-        // }
+        var carouselThumbnailList = $('.carousel-thumbnail-list').width();
+        // var sectionWidth = $(".carousel-content-list").width();
+        console.log("carousel left - " + carouselThumbnailList);
+        console.log("section width - " + sectionWidth);
+        var leftSideCar = (sectionWidth - carouselThumbnailList) / 2;
 
         setTimeout(function () {
             var elm = $('.carousel-thumbnail-item[data-active="true"]');
             var elmIndex = parseInt(elm.attr('data-index'), 10);
             var elmWidth = parseInt(elm.css("width"), 10);
-            var arrowAlign = -($('.carousel-arrow-slider').width() / 2 - (carouselThumbnailList + elmIndex * elmWidth) - elmWidth / 2) + "px";
+            var arrowAlign = -($(".carousel-arrow-slider").width() / 2 - (leftSideCar + elmWidth / 2 + (elmIndex * elmWidth))) + "px";
 
             $(".carousel-arrow-slider").css("left", arrowAlign);
         }, 350);
@@ -4960,9 +4958,9 @@ $(document).ready(function () {
                 }
 
                 $(".carousel-thumbnail-item").attr({
-                  tabindex: "0",
-                  // "aria-selected": "false",
-                  "data-tabspot": "false"
+                    tabindex: "0",
+                    // "aria-selected": "false",
+                    "data-tabspot": "false"
                 });
 
                 $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]').attr({
@@ -4972,7 +4970,7 @@ $(document).ready(function () {
                 }).focus();
 
             } else {
-                
+
                 carouselLeft();
 
                 setTimeout(function () {
@@ -4982,7 +4980,7 @@ $(document).ready(function () {
                         "tabindex": "0",
                         // "aria-selected": "false",
                         "data-tabspot": "false"
-                        
+
                     });
 
                     $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]').attr({
@@ -5009,7 +5007,7 @@ $(document).ready(function () {
                     "tabindex": "0",
                     // "aria-selected": "false",
                     "data-tabspot": "false"
-                    
+
                 });
                 $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
                     .attr({
@@ -5025,7 +5023,7 @@ $(document).ready(function () {
                     tabindex: "0",
                     // "aria-selected": "false",
                     "data-tabspot": "false"
-                   
+
                 });
                 console.log($('.carousel-thumbnail-item[data-index="' + nextIndex + '"]'));
 
@@ -5041,7 +5039,7 @@ $(document).ready(function () {
             }
         } else if (e.keyCode == 13) { //Enter keypress
             // activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
-            $(".carousel-thumbnail-item").each(function(i) {
+            $(".carousel-thumbnail-item").each(function (i) {
                 this.is(':focus');
                 activeTab = $('this');
             })
