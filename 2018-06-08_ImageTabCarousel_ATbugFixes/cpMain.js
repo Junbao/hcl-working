@@ -5044,17 +5044,30 @@ $(document).ready(function () {
     });
 
     // mobile carousel arrows
+    var activeContent = "";
+    var thumbID = "";
+    var thumbIDnum = 1;
+    var nextTab = "";
+
     $('#imageTabCarouselContent .carousel-nav').on("click", function(e) {
-        var activeContent = "";
-        var thumbID = "";
-        var thumbIDnum = 1;
-        var nextTab = "";
+
         if ($(this).hasClass("carousel-right")) {
             contentMoveMobileRight();
         } else if ($(this).hasClass("carousel-left")) {
             contentMoveMobileLeft();
         }
     });
+
+    $('#imageTabCarouselContent .carousel-nav').on("keydown", function (e) {
+        if (e.keyCode === 13) {
+            if ($(this).hasClass("carousel-right")) {
+                contentMoveMobileRight();
+            } else if ($(this).hasClass("carousel-left")) {
+                contentMoveMobileLeft();
+            }
+        }
+    });
+
 
     function contentMoveMobileRight() {
         activeContent = $('#bottom').attr("aria-labelledby");
