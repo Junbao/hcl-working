@@ -9182,8 +9182,10 @@ CP_CenterImageWithSideText .Bottom-content {
 }
 
 .cp-image-tab-carousel .carousel-thumbnails .carousel-thumbnail-item {
-    /* width: calc(100% / 4); */
-    position: absolute;
+    width: calc(100% / 4);
+    /* position: absolute; */
+    float: right;
+    padding-bottom: 15px;
     text-align: center;
     transition: left .5s ease;
     display: none;
@@ -9333,11 +9335,12 @@ CP_CenterImageWithSideText .Bottom-content {
         padding-bottom: 29px;
     }
     .cp-image-tab-carousel .carousel-thumbnails .carousel-thumbnail-item {
-        /* width: calc(100% / 4); */
+        width: calc(100% / 4);
     }
     .cp-image-tab-carousel .carousel-content-list {
         height: 431px;
     }
+    .
 
 }
 
@@ -9369,9 +9372,9 @@ CP_CenterImageWithSideText .Bottom-content {
     .cp-image-tab-carousel .carousel-thumbnails {
         padding-bottom: 29px;
     }
-    /* .cp-image-tab-carousel .carousel-thumbnails .carousel-thumbnail-item {
+    .cp-image-tab-carousel .carousel-thumbnails .carousel-thumbnail-item {
         width: calc(100% / 3);
-    } */
+    }
     .cp-image-tab-carousel .carousel-content-list {
         height: 351px;
     }

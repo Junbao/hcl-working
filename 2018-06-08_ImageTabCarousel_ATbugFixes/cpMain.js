@@ -4724,10 +4724,11 @@ $(document).ready(function () {
     var imageTabCarouselListWidth = $(imageTabCarouselList).width();
     var imageTabCarouselCountTotal = $('.carousel-thumbnail-item[data-show="true"]').length;
     var imageTabCarouselCount = 6;
-    var imageTabCarouselItemWidth = imageTabCarouselListWidth / imageTabCarouselCount;
+    // var imageTabCarouselItemWidth = imageTabCarouselListWidth / imageTabCarouselCount;
 
     $('.cp-image-tab-carousel .carousel-arrow-slider').attr('aria-hidden', 'true');
     $('.cp-image-tab-carousel .carousel-arrow-slider img').attr('role', 'presentation');
+    // $(".carousel-thumbnail-item").css({"position": "absolute", "float": "none", "padding-bottom":"0"});
 
     function carouselResize() {
         imageTabCarouselListWidth = $(".carousel-thumbnail-list").width();
@@ -4770,6 +4771,8 @@ $(document).ready(function () {
 
     // setting width and left properties for all tabs
     function setTabCarousel(tabs) {
+    $(".carousel-thumbnail-item").css({"position": "absolute", "float": "none", "padding-bottom":"0"});
+
         var tabPosition = 0;
         var tabPositionLeft = 0;
         // reassigning value for tabs count based on screen width 3 - 4 - 6
@@ -4899,9 +4902,6 @@ $(document).ready(function () {
     function carouselArrowFollow() {
         var sectionWidth = $("#cp-image-tab-carousel").width();
         var carouselThumbnailList = $('.carousel-thumbnail-list').width();
-        // var sectionWidth = $(".carousel-content-list").width();
-        console.log("carousel left - " + carouselThumbnailList);
-        console.log("section width - " + sectionWidth);
         var leftSideCar = (sectionWidth - carouselThumbnailList) / 2;
 
         setTimeout(function () {
@@ -4946,107 +4946,157 @@ $(document).ready(function () {
         var activeTab = "";
         var activeIndex = "";
 
-        if (e.keyCode == 37 || e.keyCode == 38) { //Left and up arrow keypress 
-            e.preventDefault();
+        if (e.keyCode == 37 || e.keyCode == 38) {
+          //Left and up arrow keypress
+          e.preventDefault();
+          activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
+
+          if (imageTabCarouselCount === 6) {
+            if (activeIndex === 0) {
+              nextIndex = imageTabCarouselCount - 1;
+            } else {
+              nextIndex = activeIndex - 1;
+            }
+
+            $(".carousel-thumbnail-item").attr({
+              tabindex: "0",
+              // "aria-selected": "false",
+              "data-tabspot": "false"
+            });
+
+            $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
+              .attr({ tabindex: "0", // "aria-selected": "true",
+                "data-tabspot": "true" })
+              .focus();
+          } else {
+            carouselLeft();
+
+            setTimeout(function() {
+              activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
+              nextIndex = activeIndex - 1;
+              $(".carousel-thumbnail-item").attr({
+                tabindex: "0",
+                // "aria-selected": "false",
+                "data-tabspot": "false"
+              });
+
+              $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
+                .attr({ tabindex: "0", // "aria-selected": "true",
+                  "data-tabspot": "true" })
+                .focus();
+            }, 150);
+          }
+        } else if (e.keyCode == 39 || e.keyCode == 40) {
+          //Right and down arrow keypress
+          e.preventDefault();
+
+          if (imageTabCarouselCount === 6) {
             activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
-
-            if (imageTabCarouselCount === 6) {
-                if (activeIndex === 0) {
-                    nextIndex = imageTabCarouselCount - 1;
-                } else {
-                    nextIndex = activeIndex - 1;
-                }
-
-                $(".carousel-thumbnail-item").attr({
-                    tabindex: "0",
-                    // "aria-selected": "false",
-                    "data-tabspot": "false"
-                });
-
-                $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]').attr({
-                    "tabindex": "0",
-                    // "aria-selected": "true",
-                    "data-tabspot": "true"
-                }).focus();
-
+            if (activeIndex === imageTabCarouselCount - 1) {
+              nextIndex = 0;
             } else {
-
-                carouselLeft();
-
-                setTimeout(function () {
-                    activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
-                    nextIndex = activeIndex - 1;
-                    $('.carousel-thumbnail-item').attr({
-                        "tabindex": "0",
-                        // "aria-selected": "false",
-                        "data-tabspot": "false"
-
-                    });
-
-                    $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]').attr({
-                        "tabindex": "0",
-                        // "aria-selected": "true",
-                        "data-tabspot": "true"
-                    }).focus();
-                }, 150);
-
+              nextIndex = activeIndex + 1;
             }
 
-        } else if (e.keyCode == 39 || e.keyCode == 40) { //Right and down arrow keypress
-            e.preventDefault();
+            $(".carousel-thumbnail-item").attr({
+              tabindex: "0",
+              // "aria-selected": "false",
+              "data-tabspot": "false"
+            });
+            $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
+              .attr({ tabindex: "0", // "aria-selected": "true",
+                "data-tabspot": "true" })
+              .focus();
+          } else {
+            activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
+            nextIndex = activeIndex + 1;
+            $(".carousel-thumbnail-item").attr({
+              tabindex: "0",
+              // "aria-selected": "false",
+              "data-tabspot": "false"
+            });
+            console.log($('.carousel-thumbnail-item[data-index="' + nextIndex + '"]'));
 
-            if (imageTabCarouselCount === 6) {
-                activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
-                if (activeIndex === imageTabCarouselCount - 1) {
-                    nextIndex = 0;
-                } else {
-                    nextIndex = activeIndex + 1;
-                }
+            $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
+              .attr({
+                tabindex: "0",
+                "aria-selected": "true",
+                "data-tabspot": "true"
+              })
+              .focus();
 
-                $(".carousel-thumbnail-item").attr({
-                    "tabindex": "0",
-                    // "aria-selected": "false",
-                    "data-tabspot": "false"
-
-                });
-                $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
-                    .attr({
-                        "tabindex": "0",
-                        // "aria-selected": "true",
-                        "data-tabspot": "true"
-                    })
-                    .focus();
-            } else {
-                activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
-                nextIndex = activeIndex + 1;
-                $(".carousel-thumbnail-item").attr({
-                    tabindex: "0",
-                    // "aria-selected": "false",
-                    "data-tabspot": "false"
-
-                });
-                console.log($('.carousel-thumbnail-item[data-index="' + nextIndex + '"]'));
-
-                $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
-                    .attr({
-                        tabindex: "0",
-                        "aria-selected": "true",
-                        "data-tabspot": "true"
-                    })
-                    .focus();
-
-                carouselRight();
-            }
-        } else if (e.keyCode == 13) { //Enter keypress
-            // activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
-            $(".carousel-thumbnail-item").each(function (i) {
-                this.is(':focus');
-                activeTab = $('this');
-            })
-            // activeTab = $(".carousel-thumbnail-item").is(':focus');
-            tabSelected(activeTab);
+            carouselRight();
+          }
+        } else if (e.keyCode == 13) {
+          //Enter keypress
+          // activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
+          $(".carousel-thumbnail-item").each(function(i) {
+            this.is(":focus");
+            activeTab = $("this");
+          });
+          // activeTab = $(".carousel-thumbnail-item").is(':focus');
+          tabSelected(activeTab);
+        } else if (e.which === 9 && e.shiftKey) {
+            $('#tabImageCarousel').focus();
+        } else if (e.which == 9) {
+            $("#bottom").focus();
         }
     });
+
+    // mobile carousel arrows
+    $('#imageTabCarouselContent .carousel-nav').on("click", function(e) {
+        var activeContent = "";
+        var thumbID = "";
+        var thumbIDnum = 1;
+        var nextTab = "";
+        if ($(this).hasClass("carousel-right")) {
+            contentMoveMobileRight();
+        } else if ($(this).hasClass("carousel-left")) {
+            contentMoveMobileLeft();
+        }
+    });
+
+    function contentMoveMobileRight() {
+        activeContent = $('#bottom').attr("aria-labelledby");
+        activeID = activeContent[activeContent.length - 1];
+        $('.carousel-thumbnail-item').each(function () {
+            thumbID = $(this).attr("id")
+            thumbIDnum = thumbID[thumbID.length - 1];
+
+            if (thumbIDnum == activeID) {
+                thumbIDnum++
+
+                if (thumbIDnum > imageTabCarouselCount) {
+                    thumbIDnum = 1;
+                    nextTab = "tabcarousel-" + thumbIDnum;
+                } else {
+                    nextTab = "tabcarousel-" + thumbIDnum;
+                }
+                tabSelected($('.carousel-thumbnail-item[id="' + nextTab + '"]'))
+            }
+        });
+    }
+
+    function contentMoveMobileLeft() {
+        activeContent = $('#bottom').attr("aria-labelledby");
+        activeID = activeContent[activeContent.length - 1];
+        $('.carousel-thumbnail-item').each(function () {
+            thumbID = $(this).attr("id")
+            thumbIDnum = thumbID[thumbID.length - 1];
+
+            if (thumbIDnum == activeID) {
+                thumbIDnum--
+
+                if (thumbIDnum < 1) {
+                    thumbIDnum = imageTabCarouselCount;
+                    nextTab = "tabcarousel-" + thumbIDnum;
+                } else {
+                    nextTab = "tabcarousel-" + thumbIDnum;
+                }
+                tabSelected($('.carousel-thumbnail-item[id="' + nextTab + '"]'))
+            }
+        });
+    }
 });
 
 // End of the reWrite Image Carousel

@@ -76,17 +76,17 @@
                 </div>
             </div>
             <!-- Tab Content -->
-            <div class="livearea livearea-content">
+            <div id="imageTabCarouselContent" class="livearea livearea-content">
                 <div class="carousel-content-list">
 
                     <div id="bottom" aria-labelledby="tabcarousel-1" role="tabpanel" tabindex="0" class="carousel-content-item  {{1:background-color}} {{1:background-theme}}"
                         data-active="true" data-show="{{1:show-element}}">
 
-                        <div id="conBkgImage" class="carousel-content-background">
-                            <img class="" src="{{1:background-image-2000x500}}" alt="{{1:background-alt-text}}">
+                        <div id="conBkgImage" class="carousel-content-background" role="presentation">
+                            <img class="" src="{{1:background-image-2000x500}}" alt="{{1:background-alt-text}}" aria-hidden="true">
                         </div>
                         <div class="carousel-content">
-                            <img class="" data-desktop-class="" src="{{1:logo-image-300x100}}" alt="{{1:logo-image-alt-text}}">
+                            <img class="" data-desktop-class="" src="{{1:logo-image-300x100}}" alt="{{1:logo-image-alt-text}}"  aria-hidden="true">
                             <h3 class="carousel-headline c-heading-4">{{1:headline}}</h3>
                             <div class="carousel-body">{{{1:body}}}</div>
                             <mscom:link href="{{1:link}}" target="{{1:link-target}}" md:payloadguid="{{1:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"
