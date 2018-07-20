@@ -9420,12 +9420,16 @@ CP_CenterImageWithSideText .Bottom-content {
         padding: 2px;
         text-align: center;
         background: rgba(255, 255, 255, .35);
+        z-index: 1500;
     }
     .cp-image-tab-carousel .livearea-content .carousel-nav:hover {
         background: rgba(255, 255, 255, .5);
     }
     .cp-image-tab-carousel .livearea-content .carousel-nav img {
         height: 25px;
+    }
+    .cp-image-tab-carousel .livearea-content .carousel-nav:focus {
+        outline: 2px dotted #fff;
     }
     .cp-image-tab-carousel .livearea-content .carousel-right {
         right: 0;

@@ -4750,7 +4750,11 @@ $(document).ready(function () {
         } else if (imageTabCarouselListWidth > 437) {
             imageTabCarouselCount = 3;
             tabImageCarouselArrows("show");
-        }
+        } 
+        // else if ( $('#bottom').width() < 540 ) {
+        //     console.log("in mobile - running update");
+        //     mobileAriaLabelUpdate();
+        // }
 
         setTabCarousel(imageTabCarouselCount);
 
@@ -4811,6 +4815,11 @@ $(document).ready(function () {
             "data-tabspot": "true"
         });
 
+        var tabID = $(elm).attr("id");
+        var tabIDnum = tabID[tabID.length - 1];
+        var tabLabel = $(elm).attr("aria-label");
+        var newLabel = "";
+
         carouselArrowFollow();
 
         // Pull info from Tabs
@@ -4845,7 +4854,15 @@ $(document).ready(function () {
         $("#bottom .carousel-content a").attr("aria-label", conCTAariaLabel);
         $("#bottom span").text(conCTAspan);
         // $('#bottom').focus();
+
+        if ($('#bottom').width() < 540) {
+            newLabel = "slide " + tabIDnum + " of " + imageTabCarouselCount + " - " + tabLabel;
+            $('#bottom').attr("aria-label", newLabel);
+            
+        }
+
     }
+
 
     // sliding the tabs in the carousel
     function slideCarousel(direction) {
@@ -5075,6 +5092,7 @@ $(document).ready(function () {
     function contentMoveMobileRight() {
         activeContent = $('#bottom').attr("aria-labelledby");
         activeID = activeContent[activeContent.length - 1];
+        var newLabel = "";
         $('.carousel-thumbnail-item').each(function () {
             thumbID = $(this).attr("id")
             thumbIDnum = thumbID[thumbID.length - 1];
@@ -5115,68 +5133,74 @@ $(document).ready(function () {
     }
 
     // swipe gesture
-    // document.getElementById('bottom').addEventListener('touchstart', function() {
 
-    // });
+    function swipedetect(elm, callback) {
+        var touchsurface = elm,
+            swipedir,
+            startX,
+            startY,
+            distX,
+            distY,
+            threshold = 150, //required min distance traveled to be considered swipe
+            restraint = 100, // maximum distance allowed at the same time in perpendicular direction
+            allowedTime = 300, // maximum time allowed to travel that distance
+            elapsedTime,
+            startTime,
+            handleswipe = callback || function (swipedir) {}
 
-        function swipedetect(elm, callback) {
-            var touchsurface = elm,
-                swipedir,
-                startX,
-                startY,
-                distX,
-                distY,
-                threshold = 150, //required min distance traveled to be considered swipe
-                restraint = 100, // maximum distance allowed at the same time in perpendicular direction
-                allowedTime = 300, // maximum time allowed to travel that distance
-                elapsedTime,
-                startTime,
-                handleswipe = callback || function (swipedir) {}
+        touchsurface.addEventListener('touchstart', function (e) {
+            var touchobj = e.changedTouches[0];
+            swipedir = 'none';
+            dist = 0;
+            startX = touchobj.pageX;
+            startY = touchobj.pageY;
+            startTime = new Date().getTime(); // record time when finger first makes contact with surface
+            e.preventDefault();
+        }, false)
 
-            touchsurface.addEventListener('touchstart', function (e) {
-                var touchobj = e.changedTouches[0];
-                swipedir = 'none';
-                dist = 0;
-                startX = touchobj.pageX;
-                startY = touchobj.pageY;
-                startTime = new Date().getTime(); // record time when finger first makes contact with surface
-                e.preventDefault();
-            }, false)
+        touchsurface.addEventListener('touchmove', function (e) {
+            e.preventDefault() // prevent scrolling when inside DIV
+        }, false)
 
-            touchsurface.addEventListener('touchmove', function (e) {
-                e.preventDefault() // prevent scrolling when inside DIV
-            }, false)
-
-            touchsurface.addEventListener('touchend', function (e) {
-                var touchobj = e.changedTouches[0]
-                distX = touchobj.pageX - startX;
-                distY = touchobj.pageY - startY;
-                elapsedTime = new Date().getTime() - startTime;
-                if (elapsedTime <= allowedTime) {
-                    if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
-                        swipedir = (distX < 0) ? 'left' : 'right';
-                    } else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) {
-                        swipedir = (distY < 0) ? 'up' : 'down';
-                    }
+        touchsurface.addEventListener('touchend', function (e) {
+            var touchobj = e.changedTouches[0]
+            distX = touchobj.pageX - startX;
+            distY = touchobj.pageY - startY;
+            elapsedTime = new Date().getTime() - startTime;
+            if (elapsedTime <= allowedTime) {
+                if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+                    swipedir = (distX < 0) ? 'left' : 'right';
+                } else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) {
+                    swipedir = (distY < 0) ? 'up' : 'down';
                 }
-                handleswipe(swipedir)
-                e.preventDefault()
-            }, false)
-        }
-
-        var elm = document.getElementById('bottom');
-        swipedetect(elm, function (swipedir) {
-            // swipedir contains either "none", "left", "right", "top", or "down"
-
-            if (swipedir === "right") {
-                console.log("moving right");
-                contentMoveMobileRight();
-            } else if (swipedir === "left") {
-                console.log("moving left");
-                contentMoveMobileLeft();
             }
+            handleswipe(swipedir)
+            e.preventDefault()
+        }, false)
+    }
 
-        });
+    var elm = document.getElementById('bottom');
+    swipedetect(elm, function (swipedir) {
+        // swipedir contains either "none", "left", "right", "top", or "down"
+        var slideCount = 0;
+
+        if (swipedir === "right") {
+            contentMoveMobileRight();
+            slideCount ++;
+            if ( slideCount === imageTabCarouselCount) {
+                slideCount = 1;
+            } 
+            
+        } else if (swipedir === "left") {
+            contentMoveMobileLeft();
+            slideCount --;
+            if (slideCount === 0) {
+                slideCount = imageTabCarouselCount;
+            }
+        }
+        $('#mobileStatusUpdate').text("slide " + slideCount + " of " + imageTabCarouselCount);
+
+    });
 
 });
 
