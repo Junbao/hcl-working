@@ -9375,9 +9375,9 @@ CP_CenterImageWithSideText .Bottom-content {
     .cp-image-tab-carousel .carousel-thumbnails .carousel-thumbnail-item {
         width: calc(100% / 3);
     }
-    .cp-image-tab-carousel .carousel-content-list {
+    /* .cp-image-tab-carousel .carousel-content-list {
         height: 351px;
-    }
+    } */
     .cp-image-tab-carousel .carousel-content .carousel-headline {
         font-size: 20px;
         padding-top: 20px;
