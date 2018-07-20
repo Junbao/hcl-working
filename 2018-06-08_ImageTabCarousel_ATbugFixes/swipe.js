@@ -49,5 +49,11 @@ function swipedetect(el, callback) {
 var el = document.getElementById('bottom');
 swipedetect(el, function (swipedir) {
     // swipedir contains either "none", "left", "right", "top", or "down"
-    el.innerHTML = 'Swiped <span style="color:yellow">' + swipedir + '</span>';
+
+    if (swipedir === "right") {
+        contentMoveMobileRight();
+    } else if(swipedir === "left") {
+        contentMoveMobileLeft();
+    }
+
 });

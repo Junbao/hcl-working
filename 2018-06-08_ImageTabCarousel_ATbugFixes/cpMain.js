@@ -4791,9 +4791,9 @@ $(document).ready(function () {
         carouselResize();
     });
 
-    $('.carousel-thumbnails').focusin(function () {
-        $(".carousel-thumbnail-item").attr('tabindex', '0');
-    })
+    // $('.carousel-thumbnails').focusin(function () {
+    //     $(".carousel-thumbnail-item").attr('tabindex', '0');
+    // })
 
     // Populate the content from tab selection
     function tabSelected(elm) {
@@ -4844,7 +4844,7 @@ $(document).ready(function () {
         $("#bottom .carousel-content a").attr("atlas", conCTAatlas);
         $("#bottom .carousel-content a").attr("aria-label", conCTAariaLabel);
         $("#bottom span").text(conCTAspan);
-        $('#bottom').focus();
+        // $('#bottom').focus();
     }
 
     // sliding the tabs in the carousel
@@ -4960,12 +4960,13 @@ $(document).ready(function () {
 
             $(".carousel-thumbnail-item").attr({
               tabindex: "0",
-              // "aria-selected": "false",
+            //   "aria-selected": "false",
               "data-tabspot": "false"
             });
 
             $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
-              .attr({ tabindex: "0", // "aria-selected": "true",
+              .attr({ tabindex: "0", 
+            //   "aria-selected": "true",
                 "data-tabspot": "true" })
               .focus();
           } else {
@@ -4981,7 +4982,8 @@ $(document).ready(function () {
               });
 
               $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
-                .attr({ tabindex: "0", // "aria-selected": "true",
+                .attr({ tabindex: "0",
+                //  "aria-selected": "true",
                   "data-tabspot": "true" })
                 .focus();
             }, 150);
@@ -5000,7 +5002,7 @@ $(document).ready(function () {
 
             $(".carousel-thumbnail-item").attr({
               tabindex: "0",
-              // "aria-selected": "false",
+            //   "aria-selected": "false",
               "data-tabspot": "false"
             });
             $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
@@ -5020,7 +5022,7 @@ $(document).ready(function () {
             $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
               .attr({
                 tabindex: "0",
-                "aria-selected": "true",
+                // "aria-selected": "true",
                 "data-tabspot": "true"
               })
               .focus();
@@ -5039,6 +5041,7 @@ $(document).ready(function () {
         } else if (e.which === 9 && e.shiftKey) {
             $('#tabImageCarousel').focus();
         } else if (e.which == 9) {
+            e.preventDefault();
             $("#bottom").focus();
         }
     });
@@ -5110,7 +5113,18 @@ $(document).ready(function () {
             }
         });
     }
+
+    // swipe gesture
+    document.getElementById('bottom').addEventListener('touchstart', touch);
+
+    function touch(e) {
+        console.log(e.touches);
+    }
+
+
 });
+
+
 
 // End of the reWrite Image Carousel
 

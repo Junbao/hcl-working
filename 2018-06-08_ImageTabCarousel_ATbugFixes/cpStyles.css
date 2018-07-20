@@ -9403,9 +9403,9 @@ CP_CenterImageWithSideText .Bottom-content {
     .cp-image-tab-carousel .carousel-arrow-slider {
         display: none;
     }
-    .cp-image-tab-carousel .carousel-content-list {
+    /* .cp-image-tab-carousel .carousel-content-list {
         height: 325px;
-    }
+    } */
     .cp-image-tab-carousel .carousel-content {
         height: 100%;
         margin-top: 0;
