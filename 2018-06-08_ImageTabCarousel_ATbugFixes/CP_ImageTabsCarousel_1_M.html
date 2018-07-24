@@ -48,7 +48,7 @@
                             data-item-class="{{4:background-color}} {{4:background-theme}}" data-bkgimg-src="{{4:background-image-2000x500}}"
                             data-bkgimg-alt="{{4:background-alt-text}}" data-body-logo="{{4:logo-image-300x100}}" data-body-logo-alt="{{4:logo-image-alt-text}}"
                             data-body-h3="{{4:headline}}" data-body="{{4:body}}" data-cta-href="{{4:link}}" data-cta-target="{{4:link-target}}"
-                            data-cta-atlas="{{4:link-atlas}}" data-cta-ariaLabel="{{4:aria-label}}" data-cta-span="{{4:link-text}}">
+                            data-cta-atlas="{{4:link-atlas}}" data-cta-ariaLabel="{{4:aria-label}}" data-cta-span="{{4:link-text}}" aria-live="assertive">
                             <img alt="{{4:thumbnail-alt-text}}" src="{{4:thumbnail-image-180x60}}" role="presentation">
                         </button>
                         <button id="tabcarousel-5" class="carousel-thumbnail-item" tabindex="-1" role="tab" aria-selected="false" aria-controls="carousel-content-item-5"
@@ -78,29 +78,28 @@
             <!-- Tab Content -->
             <div id="imageTabCarouselContent" class="livearea livearea-content">
                 <div class="carousel-content-list">
-<div id="bottom" aria-labelledby="tabcarousel-1" role="tabpanel" tabindex="0" aria-live="assertive" class=" carousel-content-item
-    {{1:background-color}} {{1:background-theme}} " data-active="true " data-show="{{1:show-element}} ">
+                    <div id="bottom" aria-labelledby="tabcarousel-1" role="tabpanel" tabindex="0" class=" carousel-content-item {{1:background-color}} {{1:background-theme}} " data-active="true " data-show="{{1:show-element}} ">
 
-                        <a class="carousel-left carousel-nav" aria-label="previous slide" aria-hidden="false" tabindex="0">
+                        <a class="carousel-left carousel-nav" role="presentation" aria-label="previous slide" aria-hidden="false" tabindex="0">
                             <picture>
                                 <source class='hide-by-default show-element' srcset='{{left-arrow-image}}' media='(min-width:0)' />
                                 <img srcset='{{left-arrow-image}}' class="" data-desktop-class="" role="presentation" aria-hidden="true" alt="{{left-arrow-image-alt-text}}"
                                     src="{{left-arrow-image}}">
                             </picture>
                         </a>
-                        <a class="carousel-right carousel-nav" aria-label="next slide" aria-hidden="false" tabindex="0">
+                        <a class="carousel-right carousel-nav" role="presentation" aria-label="next slide" aria-hidden="false" tabindex="0">
                             <picture>
                                 <source class='hide-by-default show-element' srcset='{{right-arrow-image}}' media='(min-width:0)' />
                                 <img srcset='{{right-arrow-image}}' class="" data-desktop-class="" role="presentation" aria-hidden="true" alt="{{right-arrow-image-alt-text}}"
                                     src="{{right-arrow-image}}">
                             </picture>
                         </a>
-                        <div id="mobileStatusUpdate" class="visuallyhidden"></div>
+                        <!--<div id="mobileStatusUpdate" class="visuallyhidden"></div>-->
                         <div id="conBkgImage" class="carousel-content-background" role="presentation">
                             <img class="" src="{{1:background-image-2000x500}}" alt="{{1:background-alt-text}}" aria-hidden="true">
                         </div>
                         <div class="carousel-content">
-                            <img class="" data-desktop-class="" src="{{1:logo-image-300x100}}" alt="{{1:logo-image-alt-text}}"  aria-hidden="true">
+                            <img class="" data-desktop-class="" src="{{1:logo-image-300x100}}" alt="{{1:logo-image-alt-text}}" aria-hidden="true">
                             <h3 class="carousel-headline c-heading-4">{{1:headline}}</h3>
                             <div class="carousel-body">{{{1:body}}}</div>
                             <mscom:link href="{{1:link}}" target="{{1:link-target}}" md:payloadguid="{{1:link-GUID}}" classoverride="carousel-link c-call-to-action c-glyph"

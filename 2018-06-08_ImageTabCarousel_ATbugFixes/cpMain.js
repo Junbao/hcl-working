@@ -4751,10 +4751,13 @@ $(document).ready(function () {
             imageTabCarouselCount = 3;
             tabImageCarouselArrows("show");
         } 
-        // else if ( $('#bottom').width() < 540 ) {
-        //     console.log("in mobile - running update");
-        //     mobileAriaLabelUpdate();
-        // }
+
+        if ( $('#bottom').width() < 540 ) {
+            $('#bottom').attr("aria-live", "assertive" );
+            $("#imageTabCarouselContent")
+              .find(".carousel-nav")
+              .attr("role", "button");
+        }
 
         setTabCarousel(imageTabCarouselCount);
 
