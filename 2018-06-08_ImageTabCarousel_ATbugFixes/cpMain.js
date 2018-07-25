@@ -4751,10 +4751,14 @@ $(document).ready(function () {
             imageTabCarouselCount = 3;
             tabImageCarouselArrows("show");
         } 
-        // else if ( $('#bottom').width() < 540 ) {
-        //     console.log("in mobile - running update");
-        //     mobileAriaLabelUpdate();
-        // }
+
+        if ( $('#bottom').width() < 540 ) {
+            $('#bottom').attr("aria-live", "assertive" );
+            // mobileUpdate();
+            $("#imageTabCarouselContent")
+              .find(".carousel-nav")
+              .attr("role", "button");
+        }
 
         setTabCarousel(imageTabCarouselCount);
 
@@ -4915,6 +4919,15 @@ $(document).ready(function () {
         carouselArrowFollow();
     }
 
+    // function mobileUpdate() {
+    //     var contentID = $("#bottom").attr("aria-labelledby");
+    //     var contentIDnum = contentID[contentID.length - 1];
+
+    //     $("#mobileStatusUpdate").text(
+    //         "slide " + contentIDnum + " of " + imageTabCarouselCountTotal
+    //     ); 
+    // }
+
 
     // Move Carousel Arrow to follow active(elm)
     function carouselArrowFollow() {
@@ -5074,6 +5087,9 @@ $(document).ready(function () {
                 contentMoveMobileLeft();
             }
         }
+        // if ($('#bottom').width() < 540) {
+        //     mobileUpdate();
+        // }
     });
 
 
@@ -5196,11 +5212,15 @@ $(document).ready(function () {
                 slideCount = imageTabCarouselCount;
             }
         }
-        $('#mobileStatusUpdate').text("slide " + slideCount + " of " + imageTabCarouselCount);
-
+        if ($('#bottom').width() < 540) {
+            // mobileUpdate();
+        }
     });
 
+
 });
+
+
 
 
 // End of the reWrite Image Carousel
