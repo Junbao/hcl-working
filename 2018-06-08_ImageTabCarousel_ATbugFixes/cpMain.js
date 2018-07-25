@@ -4815,10 +4815,6 @@ $(document).ready(function () {
             "data-tabspot": "true"
         });
 
-        var tabID = $(elm).attr("id");
-        var tabIDnum = tabID[tabID.length - 1];
-        var tabLabel = $(elm).attr("aria-label");
-        var newLabel = "";
 
         carouselArrowFollow();
 
@@ -4856,6 +4852,11 @@ $(document).ready(function () {
         // $('#bottom').focus();
 
         if ($('#bottom').width() < 540) {
+            var tabID = $(elm).attr("id");
+            var tabIDnum = tabID[tabID.length - 1];
+            var tabLabel = $(elm).attr("aria-label");
+            var newLabel = "";
+            
             newLabel = "slide " + tabIDnum + " of " + imageTabCarouselCount + " - " + tabLabel;
             $('#bottom').attr("aria-label", newLabel);
             
@@ -4976,7 +4977,7 @@ $(document).ready(function () {
             }
 
             $(".carousel-thumbnail-item").attr({
-              tabindex: "0",
+              tabindex: "-1",
             //   "aria-selected": "false",
               "data-tabspot": "false"
             });
@@ -4993,7 +4994,7 @@ $(document).ready(function () {
               activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
               nextIndex = activeIndex - 1;
               $(".carousel-thumbnail-item").attr({
-                tabindex: "0",
+                tabindex: "-1",
                 // "aria-selected": "false",
                 "data-tabspot": "false"
               });
@@ -5018,10 +5019,11 @@ $(document).ready(function () {
             }
 
             $(".carousel-thumbnail-item").attr({
-              tabindex: "0",
+              tabindex: "-1",
             //   "aria-selected": "false",
               "data-tabspot": "false"
             });
+
             $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
               .attr({ tabindex: "0", // "aria-selected": "true",
                 "data-tabspot": "true" })
@@ -5030,11 +5032,11 @@ $(document).ready(function () {
             activeIndex = parseInt($('.carousel-thumbnail-item[data-tabspot="true"]').attr("data-index"), 10);
             nextIndex = activeIndex + 1;
             $(".carousel-thumbnail-item").attr({
-              tabindex: "0",
+              tabindex: "-1",
               // "aria-selected": "false",
               "data-tabspot": "false"
             });
-            console.log($('.carousel-thumbnail-item[data-index="' + nextIndex + '"]'));
+            // console.log($('.carousel-thumbnail-item[data-index="' + nextIndex + '"]'));
 
             $('.carousel-thumbnail-item[data-index="' + nextIndex + '"]')
               .attr({
@@ -5048,12 +5050,7 @@ $(document).ready(function () {
           }
         } else if (e.keyCode == 13) {
           //Enter keypress
-          // activeTab = $('.carousel-thumbnail-item[data-tabspot="true"]');
-          $(".carousel-thumbnail-item").each(function(i) {
-            this.is(":focus");
-            activeTab = $("this");
-          });
-          // activeTab = $(".carousel-thumbnail-item").is(':focus');
+
           tabSelected(activeTab);
         } else if (e.which === 9 && e.shiftKey) {
             $('#tabImageCarousel').focus();
@@ -5069,15 +5066,6 @@ $(document).ready(function () {
     var thumbIDnum = 1;
     var nextTab = "";
 
-    $('#imageTabCarouselContent .carousel-nav').on("click", function(e) {
-
-        if ($(this).hasClass("carousel-right")) {
-            contentMoveMobileRight();
-        } else if ($(this).hasClass("carousel-left")) {
-            contentMoveMobileLeft();
-        }
-    });
-
     $('#imageTabCarouselContent .carousel-nav').on("keydown", function (e) {
         if (e.keyCode === 13) {
             if ($(this).hasClass("carousel-right")) {
@@ -5090,6 +5078,7 @@ $(document).ready(function () {
 
 
     function contentMoveMobileRight() {
+        console.log("clicking right");
         activeContent = $('#bottom').attr("aria-labelledby");
         activeID = activeContent[activeContent.length - 1];
         var newLabel = "";
@@ -5112,6 +5101,7 @@ $(document).ready(function () {
     }
 
     function contentMoveMobileLeft() {
+        console.log("clicking left");
         activeContent = $('#bottom').attr("aria-labelledby");
         activeID = activeContent[activeContent.length - 1];
         $('.carousel-thumbnail-item').each(function () {
@@ -5148,6 +5138,14 @@ $(document).ready(function () {
             startTime,
             handleswipe = callback || function (swipedir) {}
 
+        $('#imageTabCarouselContent .carousel-nav').on("click", function (e) {
+            if ($(this).hasClass('carousel-right')) {
+                contentMoveMobileRight();
+            } else if ($(this).hasClass('carousel-left')) {
+                contentMoveMobileLeft();
+            }
+        });    
+
         touchsurface.addEventListener('touchstart', function (e) {
             var touchobj = e.changedTouches[0];
             swipedir = 'none';
@@ -5155,11 +5153,11 @@ $(document).ready(function () {
             startX = touchobj.pageX;
             startY = touchobj.pageY;
             startTime = new Date().getTime(); // record time when finger first makes contact with surface
-            e.preventDefault();
+            // e.preventDefault();
         }, false)
 
         touchsurface.addEventListener('touchmove', function (e) {
-            e.preventDefault() // prevent scrolling when inside DIV
+            // e.preventDefault() // prevent scrolling when inside DIV
         }, false)
 
         touchsurface.addEventListener('touchend', function (e) {
@@ -5175,11 +5173,11 @@ $(document).ready(function () {
                 }
             }
             handleswipe(swipedir)
-            e.preventDefault()
+            // e.preventDefault()
         }, false)
     }
 
-    var elm = document.getElementById('bottom');
+    var elm = document.getElementById('imageTabCarouselContent');
     swipedetect(elm, function (swipedir) {
         // swipedir contains either "none", "left", "right", "top", or "down"
         var slideCount = 0;
