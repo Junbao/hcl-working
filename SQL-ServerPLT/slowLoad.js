@@ -1,9 +1,6 @@
-console.log("Step One");
-
-window.addEventListener('load', function () {
-    console.log("Step Two");
+window.addEventListener('load', function() {
     var slowLoadDiv = document.getElementById('singleLL');
-    if (slowLoadDiv) {
+    if ( slowLoadDiv ) {
         var allimages = slowLoadDiv.getElementsByClassName('slowFill');
         for (var i = 0; i < allimages.length; i++) {
             if (allimages[i].getAttribute('data-src')) {
@@ -11,6 +8,6 @@ window.addEventListener('load', function () {
             }
         }
     } else {
-        console.log("didn't find the div");
+        // console.log("didn't find the div");
     }
 });
