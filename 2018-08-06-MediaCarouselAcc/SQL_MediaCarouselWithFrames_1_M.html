@@ -21,13 +21,13 @@
                     <input type="hidden" value="{{layover_close_image}}">
 
                     <div class="carousel-navigation">
-                        <div tabindex="-1" aria-hidden="true">
+                        <div>
                             <img alt="{{carousel_prev_alt}}" class="carousel-button carousel-prev" data-desktop-class="carousel-button carousel-prev"
-                                src="{{carousel_prev}}" title="previous" role="presentation" />
+                                src="{{carousel_prev}}" title="previous" tabindex="0" aria-hidden="false" aria-label="previous slide"/>
                         </div>
-                        <div tabindex="-1" aria-hidden="true">
+                        <div>
                             <img alt="{{carousel_next_alt}}" class="carousel-button carousel-next" data-desktop-class="carousel-button carousel-next"
-                                src="{{carousel_next}}" title="next" role="presentation" />
+                                src="{{carousel_next}}" title="next" tabindex="0" aria-hidden="false" aria-label="next slide">
                         </div>
                     </div>
                     <div class="c-sequence-indicator" role="tablist" aria-live="off">

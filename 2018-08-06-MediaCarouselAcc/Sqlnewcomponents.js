@@ -1056,6 +1056,7 @@ function skipWatch() {
     setTimeout(function () {
         $('.false_paragraph a').attr('tabindex', '-1');
         $(".carousel-frame[data-carousel-position='active']").find("a.open-popup-video").attr("tabindex", "0");
+        $('#CP_MediaCarouselWithFrames_1').find(".carousel-button").attr("tabindex", "0");
     }, 1500);
 };
 
