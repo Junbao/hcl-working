@@ -1,0 +1,19 @@
+body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav {
+    width: 150px;
+    background-color: rgb(122, 97, 72);
+    color: black;
+    display: block; 
+    float: left;
+}
+
+section {
+    width: 85%;
+    background-color: beige;
+    margin-left: 15%;
+
+}
