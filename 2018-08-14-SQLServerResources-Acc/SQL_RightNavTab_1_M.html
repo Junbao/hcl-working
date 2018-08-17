@@ -1,0 +1,655 @@
+<a id="{{deep-link-id}}" class="deeplink-element" aria-hidden="true" tabindex="-1"></a>
+<section class="sql-RightNavTab {{top-padding}}" id="CP_RightNavTab_1" data-tag="tagging" role="region" aria-labelledby="Rightnavtab_heading">
+    <div class="ms-grid full">
+        <div class="ms-row">
+            <div class="{{background-color}} {{light-background-OR-dark-background}} col-1-1 no-padding text-center">
+                <div class="main-area livearea overflow-hidden">
+                    <mscom:conditional propertyexists="true" property="PageProperties.IsRightNavTab_Hero">
+                        <h1 id="Rightnavtab_heading" class="title c-heading-3 pb-3 pt-0">{{1:main-headline}}</h1>
+                    </mscom:conditional>
+                    <mscom:conditional propertyexists="false" property="PageProperties.IsRightNavTab_Hero">
+                        <h2 id="Rightnavtab_heading" class="title pb-3 c-heading-3 pt-0">{{1:main-headline}}</h2>
+                    </mscom:conditional>
+                    <div class="hide-by-default livearea {{type-show-row-to-display-subheadline}} pb-2">{{{sub-headline}}}</div>
+                    <div class="main-class {{bg-color1}} {{light-background1-OR-dark-background1}}">
+                        <!-- Tab Panel-->
+                        <div class="l-col-9-24 m-col-9-24 pr-4 s-col-12-24 hide-xs show-s show-m show-l sql-lefttab">
+
+                            <div class="sql-accordion-tab-list {{tab-backgroundcolor}} {{tab-light-background-OR-dark-background}}" aria-label="{{tab-navigation-aria-label}}">
+                                <ul role="tablist">
+                                    <li tabindex="0" id="tab1" role="tab" data-index="0" aria-selected="true" aria-setsize="6" aria-posinset="1" class="hide-by-default {{tab1:type-show-row-to-show}} active">
+                                        <a tabindex="-1" aria-label="{{{1:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{1:tab-item-content}}}</span></a>
+                                    </li>
+                                    <li tabindex="-1" id="tab2" role="tab" data-index="1" aria-selected="false" aria-setsize="6" aria-posinset="2" class="hide-by-default {{tab2:type-show-row-to-show}}">
+                                        <a tabindex="-1" aria-label="{{{2:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{2:tab-item-content}}}</span></a>
+                                    </li>
+                                    <li tabindex="-1" id="tab3" role="tab" data-index="2" aria-selected="false" aria-setsize="6" aria-posinset="3" class="hide-by-default {{tab3:type-show-row-to-show}}">
+                                        <a tabindex="-1" aria-label="{{{3:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{3:tab-item-content}}}</span></a>
+                                    </li>
+                                    <!-- <li tabindex="-1" id="tab4" role="tab" data-index="3" aria-selected="false" class="hide-by-default {{tab4:type-show-row-to-show}}">
+                                        <a tabindex="-1" aria-label="{{{4:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{4:tab-item-content}}}</span></a>
+                                    </li> -->
+                                    <li tabindex="-1" id="tab5" role="tab" data-index="4" aria-selected="false" aria-setsize="6" aria-posinset="4" class="hide-by-default {{tab5:type-show-row-to-show}}">
+                                        <a tabindex="-1" aria-label="{{{5:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{5:tab-item-content}}}</span></a>
+                                    </li>
+                                    <li tabindex="-1" id="tab6" role="tab" data-index="5" aria-selected="false" aria-setsize="6" aria-posinset="5" class="hide-by-default {{tab6:type-show-row-to-show}}">
+                                        <a tabindex="-1" aria-label="{{{6:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{6:tab-item-content}}}</span></a>
+                                    </li>
+                                    <li tabindex="-1" id="tab7" role="tab" data-index="6" aria-selected="false" aria-setsize="6" aria-posinset="6" class="hide-by-default {{tab7:type-show-row-to-show}}">
+                                        <a tabindex="-1" aria-label="{{{7:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{7:tab-item-content}}}</span></a>
+                                    </li>
+                                    <!-- <li tabindex="-1" id="tab8" role="tab" data-index="7" aria-selected="false" class="hide-by-default {{tab8:type-show-row-to-show}}">
+                                        <a tabindex="-1" aria-label="{{{8:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{8:tab-item-content}}}</span></a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--Content Tab-->
+                        <div class="l-col-15-24 m-col-15-24 s-col-12-24 hide-xs show-s show-m show-l sql-righttab">
+                            <!--Business Tab-->
+                            <div id="tabpanel1" tabindex="0" aria-labelledby="tab1" role="tabpanel" class="tab-panel-item active ms-grid hide-by-default {{1:type-show-row-to-show}}">
+                                <div class="icons text-left no-padding">
+                                    <picture>
+                                      
+                                        <source class='hide-by-default show-element' srcset='{{1:default-image}}' media='(min-width:540px)'/>
+                                        <source class='hide-by-default show-element' srcset='{{1:default-image}}' media='(min-width:0)'/><img srcset='{{1:default-image}}' class="defaultimage mb-3" data-desktop-class="defaultimage mb-3" alt="{{1:image-text}}" src="{{1:default-image}}"></picture>
+                                    <h3 class="icontext no-padding c-heading-3">{{1:title-text}}</h3>
+                                    <section class="linktext mt-2 body">
+                                        {{{1:body-content}}}
+                                    </section>
+                                </div>
+                            </div>
+                            <!--Technical Tab-->
+                            <div id="tabpanel2" tabindex="0" aria-labelledby="tab2" role="tabpanel" class="tab-panel-item ms-grid hide-by-default {{2:type-show-row-to-show}}">
+                                <div class="icons text-left no-padding">
+                                    <picture>
+                                        <source class='hide-by-default show-element' srcset='{{2:default-image}}' media='(min-width:540px)'/>
+                                        <source class='hide-by-default show-element' srcset='{{2:default-image}}' media='(min-width:0)'/><img srcset='{{2:default-image}}' class="defaultimage mb-3" data-desktop-class="defaultimage mb-3" alt="{{2:image-text}}" src="{{2:default-image}}"></picture>
+                                    <h3 class="icontext no-padding c-heading-3">{{2:title-text}}</h3>
+                                    <section class="linktext mt-2 body">
+                                        {{{2:body-content}}}
+                                    </section>
+                                </div>
+                            </div>
+                            <!--News Tab-->
+                            <div id="tabpanel3" tabindex="0" aria-labelledby="tab3" role="tabpanel" class="tab-panel-item ms-grid hide-by-default {{3:type-show-row-to-show}}">
+                                <div class="icons text-left no-padding">
+                                    <picture>
+                                        
+                                        <source class='hide-by-default show-element' srcset='{{3:default-image}}' media='(min-width:540px)'/>
+                                        <source class='hide-by-default show-element' srcset='{{3:default-image}}' media='(min-width:0)'/><img srcset='{{3:default-image}}' class="defaultimage mb-3" data-desktop-class="defaultimage mb-3" alt="{{3:image-text}}" src="{{3:default-image}}"></picture>
+                                    <h3 class="icontext no-padding c-heading-3">{{3:title-text}}</h3>
+                                    <section class="linktext mt-2 body">
+                                        {{{3:body-content}}}
+                                    </section>
+                                </div>
+                            </div>
+                            <!--Videos Tab-->
+                            <div id="tabpanel4" tabindex="0" aria-labelledby="tab4" role="tabpanel" class="tab-panel-item ms-grid hide-by-default {{4:type-show-row-to-show}}">
+                                <div class="RightNavTab-carousel">
+                                    <div class="videoheading">
+                                        <div class="title-main no-padding">
+                                            <h3 class="title no-padding c-heading-3 pt-0">{{Video-title}}</h3>
+                                        </div>
+                                        <div class="arrows">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="jcarousel-control-prev" aria-label="View Previous Slide" title="View Previous" tabindex="0"></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="jcarousel-control-next" aria-label="View Next Slide" title="View Next" tabindex="0"></a>
+                                                    <a href="#" aria-hidden="true" class="right-dummy-link" tabindex="-1"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="Tab-carousel">
+                                        <ul class="sliding c-group desktop-slide-carousel">
+                                            <li id="slide-one" class="{{1:_type-show-frame-to-show}} hide-by-default active" aria-hidden="false">
+                                                <div class="frame" id="sql_RightNavTab_Carousel_1" data-tag="tagging">
+                                                    <div class="img-content">
+                                                        <picture>
+                                                          
+                                                            <source class='hide-by-default show-element' srcset='{{1:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{1:_partner-image}}' media='(min-width:0)'/><img srcset='{{1:_partner-image}}' class="" data-desktop-class="" alt="{{1:_alt-text}}" src="{{1:_partner-image}}">
+                                                        </picture>
+                                                    </div>
+                                                    <div class="text-left textcontent">
+                                                        {{{1:_copy-text}}}
+                                                        <mscom:link href="{{1:External-Link}}" md:payloadguid="{{1:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{1:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{1:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{1:_video-player-type}}','data-video-title':'{{1:_video-title}}','data-video-url':'{{1:_video-url}}','ms.ea_action':'{{1:_ms.ea_action}}','ms.ea_offer':'{{1:_ms.ea_offer}}','atlas':'{{1:atlas}}','aria-label':'{{sliding-1:aria-label}}'}">{{1:link-text}}</mscom:link>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="slide-two" class="{{2:_type-show-frame-to-show}} hide-by-default" aria-hidden="true">
+                                                <div class="frame" id="sql_RightNavTab_Carousel_2" data-tag="tagging">
+                                                    <div class="img-content">
+                                                        <picture>
+                                                          
+                                                            <source class='hide-by-default show-element' srcset='{{2:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{2:_partner-image}}' media='(min-width:0)'/><img srcset='{{2:_partner-image}}' class="" data-desktop-class="" alt="{{2:_alt-text}}" src="{{2:_partner-image}}"></picture>
+
+                                                    </div>
+                                                    <div class="text-left textcontent">
+                                                        {{{2:_copy-text}}}
+                                                        <mscom:link href="{{2:External-Link}}" md:payloadguid="{{2:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{2:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{2:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{2:_video-player-type}}','data-video-title':'{{2:_video-title}}','data-video-url':'{{2:_video-url}}','ms.ea_action':'{{2:_ms.ea_action}}','ms.ea_offer':'{{2:_ms.ea_offer}}','atlas':'{{2:atlas}}','aria-label':'{{sliding-2:aria-label}}'}">{{2:link-text}}</mscom:link>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="slide-three" class="{{3:_type-show-frame-to-show}} hide-by-default" aria-hidden="true">
+                                                <div class="frame" id="sql_RightNavTab_Carousel_3" data-tag="tagging">
+                                                    <div class="img-content">
+                                                        <picture>
+                                                           
+                                                            <source class='hide-by-default show-element' srcset='{{3:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{3:_partner-image}}' media='(min-width:0)'/><img srcset='{{3:_partner-image}}' class="" data-desktop-class="" alt="{{3:_alt-text}}" src="{{3:_partner-image}}"></picture>
+
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{3:_copy-text}}}
+                                                        <mscom:link href="{{3:External-Link}}" md:payloadguid="{{3:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{3:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{3:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{3:_video-player-type}}','data-video-title':'{{3:_video-title}}','data-video-url':'{{3:_video-url}}','ms.ea_action':'{{3:_ms.ea_action}}','ms.ea_offer':'{{3:_ms.ea_offer}}','atlas':'{{3:atlas}}','aria-label':'{{sliding-3:aria-label}}'}">{{3:link-text}}</mscom:link>
+                                                    </div>
+
+                                                </div>
+                                            </li>
+                                            <li id="slide-four" class="{{4:_type-show-frame-to-show}} hide-by-default" aria-hidden="true">
+                                                <div class="frame" id="sql_RightNavTab_Carousel_4" data-tag="tagging">
+                                                    <div class="img-content">
+                                                        <picture>
+                                                           
+                                                            <source class='hide-by-default show-element' srcset='{{4:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{4:_partner-image}}' media='(min-width:0)'/><img srcset='{{4:_partner-image}}' class="" data-desktop-class="" alt="{{4:_alt-text}}" src="{{4:_partner-image}}"></picture>
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{4:_copy-text}}}
+                                                        <mscom:link href="{{4:External-Link}}" md:payloadguid="{{4:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{4:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{4:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{4:_video-player-type}}','data-video-title':'{{4:_video-title}}','data-video-url':'{{4:_video-url}}','ms.ea_action':'{{4:_ms.ea_action}}','ms.ea_offer':'{{4:_ms.ea_offer}}','atlas':'{{4:atlas}}','aria-label':'{{sliding-4:aria-label}}'}">{{4:link-text}}</mscom:link>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="slide-five" class="{{5:_type-show-frame-to-show}} hide-by-default" aria-hidden="true">
+                                                <div class="frame" id="sql_RightNavTab_Carousel_5" data-tag="tagging">
+                                                    <div class="img-content">
+                                                        <picture>
+                                                          
+                                                            <source class='hide-by-default show-element' srcset='{{5:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{5:_partner-image}}' media='(min-width:0)'/><img srcset='{{5:_partner-image}}' class="" data-desktop-class="" alt="{{5:_alt-text}}" src="{{5:_partner-image}}"></picture>
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{5:_copy-text}}}
+                                                        <mscom:link href="{{5:External-Link}}" md:payloadguid="{{5:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{5:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{5:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{5:_video-player-type}}','data-video-title':'{{5:_video-title}}','data-video-url':'{{5:_video-url}}','ms.ea_action':'{{5:_ms.ea_action}}','ms.ea_offer':'{{5:_ms.ea_offer}}','atlas':'{{5:atlas}}','aria-label':'{{sliding-5:aria-label}}'}">{{5:link-text}}</mscom:link>
+                                                    </div>
+
+                                                </div>
+                                            </li>
+                                            <li id="slide-six" class="{{6:_type-show-frame-to-show}} hide-by-default" aria-hidden="true">
+                                                <div class="frame" id="sql_RightNavTab_Carousel_6" data-tag="tagging">
+                                                    <div class="img-content">
+                                                        <picture>
+                                                           
+                                                            <source class='hide-by-default show-element' srcset='{{6:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{6:_partner-image}}' media='(min-width:0)'/><img srcset='{{6:_partner-image}}' class="" data-desktop-class="" alt="{{6:_alt-text}}" src="{{6:_partner-image}}"></picture>
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{6:_copy-text}}}
+                                                        <mscom:link href="{{6:External-Link}}" md:payloadguid="{{6:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{6:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{6:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{6:_video-player-type}}','data-video-title':'{{6:_video-title}}','data-video-url':'{{6:_video-url}}','ms.ea_action':'{{6:_ms.ea_action}}','ms.ea_offer':'{{6:_ms.ea_offer}}','atlas':'{{6:atlas}}','aria-label':'{{sliding-6:aria-label}}'}">{{6:link-text}}</mscom:link>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="slide-seven" class="{{7:_type-show-frame-to-show}} hide-by-default" aria-hidden="true">
+                                                <div class="frame" id="sql_RightNavTab_Carousel_7" data-tag="tagging">
+                                                    <div class="img-content">
+
+                                                        <picture>
+                                                            
+                                                            <source class='hide-by-default show-element' srcset='{{7:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{7:_partner-image}}' media='(min-width:0)'/><img srcset='{{7:_partner-image}}' class="" data-desktop-class="" alt="{{7:_alt-text}}" src="{{7:_partner-image}}"></picture>
+
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{7:_copy-text}}}
+                                                        <mscom:link href="{{7:External-Link}}" md:payloadguid="{{7:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{7:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{7:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{7:_video-player-type}}','data-video-title':'{{7:_video-title}}','data-video-url':'{{7:_video-url}}','ms.ea_action':'{{7:_ms.ea_action}}','ms.ea_offer':'{{7:_ms.ea_offer}}','atlas':'{{7:atlas}}','aria-label':'{{sliding-7:aria-label}}'}">{{7:link-text}}</mscom:link>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="slide-eight" class="{{8:_type-show-frame-to-show}} hide-by-default" aria-hidden="true">
+                                                <div class="frame" id="sql_RightNavTab_Carousel_8" data-tag="tagging">
+                                                    <div class="img-content">
+
+                                                        <picture>
+                                                           
+                                                            <source class='hide-by-default show-element' srcset='{{8:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{8:_partner-image}}' media='(min-width:0)'/><img srcset='{{8:_partner-image}}' class="" data-desktop-class="" alt="{{8:_alt-text}}" src="{{8:_partner-image}}"></picture>
+
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{8:_copy-text}}}
+                                                        <mscom:link href="{{8:External-Link}}" md:payloadguid="{{8:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{8:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{8:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{8:_video-player-type}}','data-video-title':'{{8:_video-title}}','data-video-url':'{{8:_video-url}}','ms.ea_action':'{{8:_ms.ea_action}}','ms.ea_offer':'{{8:_ms.ea_offer}}','atlas':'{{8:atlas}}','aria-label':'{{sliding-8:aria-label}}'}">{{8:link-text}}</mscom:link>
+                                                    </div>
+
+                                                </div>
+                                            </li>
+                                            <li id="slide-nine" class="{{9:_type-show-frame-to-show}} hide-by-default" aria-hidden="true">
+                                                <div class="frame" id="sql_RightNavTab_Carousel_9" data-tag="tagging">
+                                                    <div class="img-content">
+
+                                                        <picture>
+                                                            
+                                                            <source class='hide-by-default show-element' srcset='{{9:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{9:_partner-image}}' media='(min-width:0)'/><img srcset='{{9:_partner-image}}' class="" data-desktop-class="" alt="{{9:_alt-text}}" src="{{9:_partner-image}}"></picture>
+
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{9:_copy-text}}}
+
+                                                        <mscom:link href="{{9:External-Link}}" md:payloadguid="{{9:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{9:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{9:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{9:_video-player-type}}','data-video-title':'{{9:_video-title}}','data-video-url':'{{9:_video-url}}','ms.ea_action':'{{9:_ms.ea_action}}','ms.ea_offer':'{{9:_ms.ea_offer}}','atlas':'{{9:atlas}}','aria-label':'{{sliding-9:aria-label}}'}">{{9:link-text}}</mscom:link>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="slide-ten" class="{{10:_type-show-frame-to-show}} hide-by-default" aria-hidden="true">
+                                                <div class="frame" id="sql_RightNavTab_Carousel_10" data-tag="tagging">
+                                                    <div class="img-content">
+
+                                                        <picture>
+                                                           
+                                                            <source class='hide-by-default show-element' srcset='{{10:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{10:_partner-image}}' media='(min-width:0)'/><img srcset='{{10:_partner-image}}' class="" data-desktop-class="" alt="{{10:_alt-text}}" src="{{10:_partner-image}}"></picture>
+
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{10:_copy-text}}}
+                                                        <mscom:link href="{{10:External-Link}}" md:payloadguid="{{10:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{10:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{10:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{10:_video-player-type}}','data-video-title':'{{10:_video-title}}','data-video-url':'{{10:_video-url}}','ms.ea_action':'{{10:_ms.ea_action}}','ms.ea_offer':'{{10:_ms.ea_offer}}','atlas':'{{10:atlas}}','aria-label':'{{sliding-10:aria-label}}'}">{{10:link-text}}</mscom:link>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!--Blog Tab-->
+
+                            <div id="tabpanel5" tabindex="0" aria-labelledby="tab5" role="tabpanel" class="tab-panel-item ms-grid hide-by-default {{5:type-show-row-to-show}}">
+                                <div class="icons text-left no-padding">
+                                    <picture>
+                                       
+                                        <source class='hide-by-default show-element' srcset='{{5:default-image}}' media='(min-width:540px)'/>
+                                        <source class='hide-by-default show-element' srcset='{{5:default-image}}' media='(min-width:0)'/><img srcset='{{5:default-image}}' class="defaultimage mb-3" data-desktop-class="defaultimage mb-3" alt="{{5:image-text}}" src="{{5:default-image}}"></picture>
+                                    <h3 class="icontext no-padding c-heading-3">{{5:title-text}}</h3>
+                                    <section class="linktext mt-2 body">
+                                        {{{5:body-content}}}
+                                    </section>
+                                </div>
+                            </div>
+
+                            <!--Empty Tab1-->
+                            <div id="tabpanel6" tabindex="0" aria-labelledby="tab6" role="tabpanel" class="tab-panel-item ms-grid hide-by-default {{6:type-show-row-to-show}}">
+                                <div class="icons text-left no-padding">
+                                    <picture>
+                                        
+                                        <source class='hide-by-default show-element' srcset='{{6:default-image}}' media='(min-width:540px)'/>
+                                        <source class='hide-by-default show-element' srcset='{{6:default-image}}' media='(min-width:0)'/><img srcset='{{6:default-image}}' class="defaultimage mb-3" data-desktop-class="defaultimage mb-3" alt="{{6:image-text}}" src="{{6:default-image}}"></picture>
+                                    <h3 class="icontext no-padding c-heading-3">{{6:title-text}}</h3>
+                                    <section class="linktext mt-2 body">
+                                        {{{6:body-content}}}
+                                    </section>
+                                </div>
+                            </div>
+
+
+                            <!--Empty Tab2-->
+                            <div id="tabpanel7" tabindex="0" aria-labelledby="tab7" role="tabpanel" class="tab-panel-item ms-grid hide-by-default {{7:type-show-row-to-show}}">
+                                <div class="icons text-left no-padding">
+                                    <picture>
+                                       
+                                        <source class='hide-by-default show-element' srcset='{{7:default-image}}' media='(min-width:540px)'/>
+                                        <source class='hide-by-default show-element' srcset='{{7:default-image}}' media='(min-width:0)'/><img srcset='{{7:default-image}}' class="defaultimage mb-3" data-desktop-class="defaultimage mb-3" alt="{{7:image-text}}" src="{{7:default-image}}"></picture>
+                                    <h3 class="icontext no-padding c-heading-3">{{7:title-text}}</h3>
+                                    <section class="linktext mt-2 body">
+                                        {{{7:body-content}}}
+                                    </section>
+                                </div>
+                            </div>
+
+                            <!--Empty Tab3-->
+                            <div id="tabpanel8" tabindex="0" aria-labelledby="tab8" role="tabpanel" class="tab-panel-item ms-grid hide-by-default {{8:type-show-row-to-show}}">
+                                <div class="icons text-left no-padding">
+                                    <picture>
+                                       
+                                        <source class='hide-by-default show-element' srcset='{{8:default-image}}' media='(min-width:540px)'/>
+                                        <source class='hide-by-default show-element' srcset='{{8:default-image}}' media='(min-width:0)'/><img srcset='{{8:default-image}}' class="defaultimage mb-3" data-desktop-class="defaultimage mb-3" alt="{{8:image-text}}" src="{{8:default-image}}"></picture>
+                                    <h3 class="icontext no-padding c-heading-3">{{8:title-text}}</h3>
+                                    <section class="linktext mt-2 body">
+                                        {{{8:body-content}}}
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile viewport Accordion Start -->
+                        <div class="accordion-main-panel no-padding hide-l hide-m hide-s xs-col-24-24" data-accordion-arrow-class="{{accordion-arrow-class}}" aria-label="Navigate the following tabs using arrow keys">
+                            <!--1. Accordion Segment Start-->
+
+                            <a href="#" aria-expanded="true" role="button" aria-controls="ent-accord1" class="c-paragraph-2 c-hyperlink {{tab1:type-show-row-to-show}} hide-by-default accordion-heading ui-accordion-header ui-helper-reset ui-state-default" data-no-tag="1"><span class="texting fw-5">{{{1:tab-item-content}}}</span></a>
+                            <div id="ent-accord1" class="{{1:type-show-row-to-show}} hide-by-default mainaccordionpanel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+                                <div class="icons text-left no-padding">
+                                    <section class="linktext body">
+                                        {{{1:body-content}}}
+                                    </section>
+                                </div>
+                            </div>
+                            <!--1. Accordion Segment End-->
+                            <!--2. Accordion Segment Start-->
+
+                            <a href="#" aria-expanded="false" role="button" aria-controls="ent-accord2" class="c-paragraph-2 c-hyperlink {{tab2:type-show-row-to-show}} hide-by-default accordion-heading ui-accordion-header ui-helper-reset ui-state-default" data-no-tag="1"><span class="texting fw-5">{{{2:tab-item-content}}}</span></a>
+                            <div id="ent-accord2" class="{{2:type-show-row-to-show}} hide-by-default mainaccordionpanel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+                                <div class="icons text-left no-padding">
+                                    <section class="linktext body">
+                                        {{{2:body-content}}}
+                                    </section>
+                                </div>
+                            </div>
+
+                            <!--2. Accordion Segment End-->
+                            <!--3. Accordion Segment Start-->
+
+                            <a href="#" aria-expanded="false" role="button" aria-controls="ent-accord3" class="c-paragraph-2 c-hyperlink {{tab3:type-show-row-to-show}} hide-by-default accordion-heading ui-accordion-header ui-helper-reset ui-state-default " data-no-tag="1"><span class="texting fw-5">{{{3:tab-item-content}}}</span></a>
+                            <div id="ent-accord3" class="{{3:type-show-row-to-show}} hide-by-default mainaccordionpanel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+                                <div class="icons text-left no-padding">
+                                    <section class="linktext body">
+                                        {{{3:body-content}}}
+                                    </section>
+                                </div>
+                            </div>
+
+                            <!--3. Accordion Segment End-->
+                            <!--4. Accordion Segment Start-->
+
+                            <a href="#" aria-expanded="false" role="button" aria-controls="ent-accord4" class="c-paragraph-2 c-hyperlink hide-by-default {{tab4:type-show-row-to-show}}  accordion-heading ui-accordion-header ui-helper-reset ui-state-default " data-no-tag="1"><span class="texting fw-5">{{{4:tab-item-content}}}</span></a>
+                            <div id="ent-accord4" class="{{4:type-show-row-to-show}} hide-by-default mainaccordionpanel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+                                <div class="RightNavTab-carousel">
+                                    <a href="#" class="jcarousel-control-prev" aria-label="View Previous Slide" title="View Previous" aria-hidden="true"></a>
+                                    <a href="#" class="jcarousel-control-next" aria-label="View Next Slide" title="View Next" aria-hidden="true"></a>
+                                    <div class="Tab-carousel" role="region" aria-label="carousel">
+                                        <ul class="sliding c-group accordion-slide-carousel">
+                                            <li id="mobile-slide-one" class="{{1:_type-show-frame-to-show}} active hide-by-default">
+                                                <section class="frame" id="sql_RightNavTab_Accordion_Carousel_1" data-tag="tagging">
+                                                    <div class="img-content">
+
+                                                        <picture>
+                                                           
+                                                            <source class='hide-by-default show-element' srcset='{{1:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{1:_partner-image}}' media='(min-width:0)'/><img srcset='{{1:_partner-image}}' class="" data-desktop-class="" alt="{{1:_alt-text}}" src="{{1:_partner-image}}"></picture>
+
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{1:_copy-text}}}
+                                                        <mscom:link href="{{1:External-Link}}" md:payloadguid="{{1:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{1:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{1:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{1:_video-player-type}}','data-video-url':'{{1:_video-url}}','ms.ea_action':'{{1:_ms.ea_action}}','ms.ea_offer':'{{1:_ms.ea_offer}}','atlas':'{{1:atlas}}','aria-label':'{{1:aria-label}}'}">{{1:link-text}}</mscom:link>
+                                                    </div>
+                                                </section>
+                                            </li>
+                                            <li id="mobile-slide-two" class="{{2:_type-show-frame-to-show}} hide-by-default">
+                                                <section class="frame" id="sql_RightNavTab_Accordion_Carousel_2" data-tag="tagging">
+                                                    <div class="img-content">
+                                                        <picture>
+                                                           
+                                                            <source class='hide-by-default show-element' srcset='{{2:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{2:_partner-image}}' media='(min-width:0)'/><img srcset='{{2:_partner-image}}' class="" data-desktop-class="" alt="{{2:_alt-text}}" src="{{2:_partner-image}}"></picture>
+
+                                                    </div>
+                                                    <div class="text-left textcontent">
+                                                        {{{2:_copy-text}}}
+                                                        <mscom:link href="{{2:External-Link}}" md:payloadguid="{{2:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{2:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{2:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{2:_video-player-type}}','data-video-url':'{{2:_video-url}}','ms.ea_action':'{{2:_ms.ea_action}}','ms.ea_offer':'{{2:_ms.ea_offer}}','atlas':'{{2:atlas}}','aria-label':'{{2:aria-label}}'}">{{2:link-text}}</mscom:link>
+                                                    </div>
+                                                </section>
+                                            </li>
+                                            <li id="mobile-slide-three" class="{{3:_type-show-frame-to-show}} hide-by-default">
+                                                <section class="frame" id="sql_RightNavTab_Accordion_Carousel_3" data-tag="tagging">
+                                                    <div class="img-content">
+                                                        <picture>
+                                                          
+                                                            <source class='hide-by-default show-element' srcset='{{3:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{3:_partner-image}}' media='(min-width:0)'/><img srcset='{{3:_partner-image}}' class="" data-desktop-class="" alt="{{3:_alt-text}}" src="{{3:_partner-image}}"></picture>
+
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{3:_copy-text}}}
+                                                        <mscom:link href="{{3:External-Link}}" md:payloadguid="{{3:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{3:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{3:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{3:_video-player-type}}','data-video-url':'{{3:_video-url}}','ms.ea_action':'{{3:_ms.ea_action}}','ms.ea_offer':'{{3:_ms.ea_offer}}','atlas':'{{3:atlas}}','aria-label':'{{3:aria-label}}'}">{{3:link-text}}</mscom:link>
+                                                    </div>
+
+                                                </section>
+                                            </li>
+                                            <li id="mobile-slide-four" class="{{4:_type-show-frame-to-show}} hide-by-default">
+                                                <section class="frame" id="sql_RightNavTab_Accordion_Carousel_4" data-tag="tagging">
+                                                    <div class="img-content">
+                                                        <picture>
+                                                            
+                                                            <source class='hide-by-default show-element' srcset='{{4:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{4:_partner-image}}' media='(min-width:0)'/><img srcset='{{4:_partner-image}}' class="" data-desktop-class="" alt="{{4:_alt-text}}" src="{{4:_partner-image}}"></picture>
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{4:_copy-text}}}
+                                                        <mscom:link href="{{4:External-Link}}" md:payloadguid="{{4:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{4:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{4:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{4:_video-player-type}}','data-video-url':'{{4:_video-url}}','ms.ea_action':'{{4:_ms.ea_action}}','ms.ea_offer':'{{4:_ms.ea_offer}}','atlas':'{{4:atlas}}','aria-label':'{{4:aria-label}}'}">{{4:link-text}}</mscom:link>
+                                                    </div>
+
+                                                </section>
+                                            </li>
+                                            <li id="mobile-slide-five" class="{{5:_type-show-frame-to-show}} hide-by-default">
+                                                <section class="frame" id="sql_RightNavTab_Accordion_Carousel_5" data-tag="tagging">
+                                                    <div class="img-content">
+                                                        <picture>
+                                                          
+                                                            <source class='hide-by-default show-element' srcset='{{5:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{5:_partner-image}}' media='(min-width:0)'/><img srcset='{{5:_partner-image}}' class="" data-desktop-class="" alt="{{5:_alt-text}}" src="{{5:_partner-image}}"></picture>
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{5:_copy-text}}}
+                                                        <mscom:link href="{{5:External-Link}}" md:payloadguid="{{5:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{5:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{5:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{5:_video-player-type}}','data-video-url':'{{5:_video-url}}','ms.ea_action':'{{5:_ms.ea_action}}','ms.ea_offer':'{{5:_ms.ea_offer}}','atlas':'{{5:atlas}}','aria-label':'{{5:aria-label}}'}">{{5:link-text}}</mscom:link>
+                                                    </div>
+
+                                                </section>
+                                            </li>
+                                            <li id="mobile-slide-six" class="{{6:_type-show-frame-to-show}} hide-by-default">
+                                                <section class="frame" id="sql_RightNavTab_Accordion_Carousel_6" data-tag="tagging">
+                                                    <div class="img-content">
+                                                        <picture>
+                                                          
+                                                            <source class='hide-by-default show-element' srcset='{{6:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{6:_partner-image}}' media='(min-width:0)'/><img srcset='{{6:_partner-image}}' class="" data-desktop-class="" alt="{{6:_alt-text}}" src="{{6:_partner-image}}"></picture>
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{6:_copy-text}}}
+                                                        <mscom:link href="{{6:External-Link}}" md:payloadguid="{{6:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{6:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{6:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{6:_video-player-type}}','data-video-url':'{{6:_video-url}}','ms.ea_action':'{{6:_ms.ea_action}}','ms.ea_offer':'{{6:_ms.ea_offer}}','atlas':'{{6:atlas}}','aria-label':'{{6:aria-label}}'}">{{6:link-text}}</mscom:link>
+                                                    </div>
+                                                </section>
+                                            </li>
+                                            <li id="mobile-slide-seven" class="{{7:_type-show-frame-to-show}} hide-by-default">
+                                                <section class="frame" id="sql_RightNavTab_Accordion_Carousel_7" data-tag="tagging">
+                                                    <div class="img-content">
+
+                                                        <picture>
+                                                           
+                                                            <source class='hide-by-default show-element' srcset='{{7:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{7:_partner-image}}' media='(min-width:0)'/><img srcset='{{7:_partner-image}}' class="" data-desktop-class="" alt="{{7:_alt-text}}" src="{{7:_partner-image}}"></picture>
+
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{7:_copy-text}}}
+                                                        <mscom:link href="{{7:External-Link}}" md:payloadguid="{{7:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{7:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{7:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{7:_video-player-type}}','data-video-url':'{{7:_video-url}}','ms.ea_action':'{{7:_ms.ea_action}}','ms.ea_offer':'{{7:_ms.ea_offer}}','atlas':'{{7:atlas}}','aria-label':'{{7:aria-label}}'}">{{7:link-text}}</mscom:link>
+                                                    </div>
+                                                </section>
+                                            </li>
+                                            <li id="mobile-slide-eight" class="{{8:_type-show-frame-to-show}} hide-by-default">
+                                                <section class="frame" id="sql_RightNavTab_Accordion_Carousel_8" data-tag="tagging">
+                                                    <div class="img-content">
+
+                                                        <picture>
+                                                            
+                                                            <source class='hide-by-default show-element' srcset='{{8:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{8:_partner-image}}' media='(min-width:0)'/><img srcset='{{8:_partner-image}}' class="" data-desktop-class="" alt="{{8:_alt-text}}" src="{{8:_partner-image}}"></picture>
+
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{8:_copy-text}}}
+                                                        <mscom:link href="{{8:External-Link}}" md:payloadguid="{{8:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{8:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{8:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{8:_video-player-type}}','data-video-url':'{{8:_video-url}}','ms.ea_action':'{{8:_ms.ea_action}}','ms.ea_offer':'{{8:_ms.ea_offer}}','atlas':'{{8:atlas}}','aria-label':'{{8:aria-label}}'}">{{8:link-text}}</mscom:link>
+                                                    </div>
+
+                                                </section>
+                                            </li>
+                                            <li id="mobile-slide-nine" class="{{9:_type-show-frame-to-show}} hide-by-default">
+                                                <section class="frame" id="sql_RightNavTab_Accordion_Carousel_9" data-tag="tagging">
+                                                    <div class="img-content">
+
+                                                        <picture>
+                                                            
+                                                            <source class='hide-by-default show-element' srcset='{{9:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{9:_partner-image}}' media='(min-width:0)'/><img srcset='{{9:_partner-image}}' class="" data-desktop-class="" alt="{{9:_alt-text}}" src="{{9:_partner-image}}"></picture>
+
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{9:_copy-text}}}
+
+                                                        <mscom:link href="{{9:External-Link}}" md:payloadguid="{{9:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{9:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{9:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{9:_video-player-type}}','data-video-url':'{{9:_video-url}}','ms.ea_action':'{{9:_ms.ea_action}}','ms.ea_offer':'{{9:_ms.ea_offer}}','atlas':'{{9:atlas}}','aria-label':'{{9:aria-label}}'}">{{9:link-text}}</mscom:link>
+                                                    </div>
+                                                </section>
+                                            </li>
+                                            <li id="mobile-slide-ten" class="{{10:_type-show-frame-to-show}} hide-by-default">
+                                                <section class="frame" id="sql_RightNavTab_Accordion_Carousel_10" data-tag="tagging">
+                                                    <div class="img-content">
+
+                                                        <picture>
+                                                           
+                                                            <source class='hide-by-default show-element' srcset='{{10:_partner-image}}' media='(min-width:540px)'/>
+                                                            <source class='hide-by-default show-element' srcset='{{10:_partner-image}}' media='(min-width:0)'/><img srcset='{{10:_partner-image}}' class="" data-desktop-class="" alt="{{10:_alt-text}}" src="{{10:_partner-image}}"></picture>
+
+                                                    </div>
+
+                                                    <div class="text-left textcontent">
+                                                        {{{10:_copy-text}}}
+                                                        <mscom:link href="{{10:External-Link}}" md:payloadguid="{{10:InternalLink-GUID}}" controltheme="default" disablebitracking="false" target="{{10:target-window}}" classoverride="c-call-to-action theme-transparent c-glyph styles-for-cta videoarrow pos-r width-10 fl mw {{10:_type-open-popup-video}}" htmlcustomattributes="{'data-player-type':'{{10:_video-player-type}}','data-video-url':'{{10:_video-url}}','ms.ea_action':'{{10:_ms.ea_action}}','ms.ea_offer':'{{10:_ms.ea_offer}}','atlas':'{{10:atlas}}','aria-label':'{{10:aria-label}}'}">{{10:link-text}}</mscom:link>
+                                                    </div>
+                                                </section>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--4. Accordion Segment End-->
+                            <!--5. Accordion Segment Start-->
+
+                            <a href="#" aria-expanded="false" role="button" aria-controls="ent-accord5" class="c-paragraph-2 c-hyperlink {{5:type-show-row-to-show}} hide-by-default accordion-heading ui-accordion-header ui-helper-reset ui-state-default " data-no-tag="1"><span class="texting fw-5">{{{5:tab-item-content}}}</span></a>
+                            <div id="ent-accord5" class="{{5:type-show-row-to-show}} hide-by-default mainaccordionpanel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+                                <div class="icons text-left no-padding">
+                                    <section class="linktext body">
+                                        {{{5:body-content}}}
+                                    </section>
+                                </div>
+                            </div>
+
+                            <!--5. Accordion Segment End-->
+                            <!--6. Accordion Segment Start-->
+
+                            <a href="#" aria-expanded="false" role="button" aria-controls="ent-accord6" class="c-paragraph-2 c-hyperlink {{tab6:type-show-row-to-show}} hide-by-default accordion-heading ui-accordion-header ui-helper-reset ui-state-default " data-no-tag="1"><span class="texting fw-5">{{{6:tab-item-content}}}</span></a>
+                            <div id="ent-accord6" class="{{6:type-show-row-to-show}} hide-by-default mainaccordionpanel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+
+                                <div class="icons text-left no-padding">
+                                    <section class="linktext body">
+                                        {{{6:body-content}}}
+                                    </section>
+                                </div>
+                            </div>
+
+                            <!--6. Accordion Segment End-->
+                            <!--7. Accordion Segment Start-->
+
+                            <a href="#" aria-expanded="false" role="button" aria-controls="ent-accord7" class="c-paragraph-2 c-hyperlink {{tab7:type-show-row-to-show}} hide-by-default accordion-heading ui-accordion-header ui-helper-reset ui-state-default " data-no-tag="1"><span class="texting fw-5">{{{7:tab-item-content}}}</span></a>
+                            <div id="ent-accord7" class="{{7:type-show-row-to-show}} hide-by-default mainaccordionpanel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+                                <div class="icons text-left no-padding">
+                                    <section class="linktext body">
+                                        {{{7:body-content}}}
+                                    </section>
+                                </div>
+                            </div>
+
+                            <!--7. Accordion Segment End-->
+                            <!--8. Accordion Segment Start-->
+
+                            <a href="#" aria-expanded="false" role="button" aria-controls="ent-accord8" class="c-paragraph-2 c-hyperlink {{tab8:type-show-row-to-show}} hide-by-default accordion-heading ui-accordion-header ui-helper-reset ui-state-default " data-no-tag="1"><span class="texting fw-5">{{{8:tab-item-content}}}</span></a>
+                            <div id="ent-accord8" class="{{8:type-show-row-to-show}} hide-by-default mainaccordionpanel ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+
+                                <div class="icons text-left no-padding">
+                                    <section class="linktext body">
+                                        {{{8:body-content}}}
+                                    </section>
+                                </div>
+                            </div>
+
+                            <!--8. Accordion Segment End-->
+
+
+                            <!-- Mobile viewport Accordion END -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function() {
+        try {
+            $('.sql-RightNavTab .sql-righttab .RightNavTab-carousel .Tab-carousel ul li').each(function() {
+                if (!$(this).hasClass('show-frame')) {
+                    $(this).remove();
+                }
+            });
+            $('.sql-RightNavTab .accordion-main-panel .mainaccordionpanel .Tab-carousel ul li').each(function() {
+                if (!$(this).hasClass('show-frame')) {
+                    $(this).remove();
+                }
+            });
+            $('.sql-RightNavTab .main-area .accordion-main-panel .accordion-heading').each(function() {
+                if (!$(this).hasClass('show-row')) {
+                    $(this).remove();
+                }
+            });
+            $('.sql-RightNavTab .main-area .accordion-main-panel .mainaccordionpanel').each(function() {
+                if (!$(this).hasClass('show-row')) {
+                    $(this).remove();
+                }
+            });
+            $('.sql-RightNavTab .sql-lefttab .sql-accordion-tab-list ul li').each(function() {
+                if (!$(this).hasClass('show-row')) {
+                    $(this).remove();
+                }
+            });
+            $('.sql-RightNavTab .sql-righttab .tab-panel-item').each(function() {
+                if (!$(this).hasClass('show-row')) {
+                    $(this).remove();
+                }
+            });
+            $('.sql-RightNavTab .sql-righttab .tab-panel-item:first-child').addClass('active').siblings().removeClass('active');
+            $('.sql-RightNavTab .sql-lefttab .sql-accordion-tab-list .tab-item:first').addClass('active').siblings().removeClass('active');
+        } catch (e) {
+
+        }
+    });
+</script>
