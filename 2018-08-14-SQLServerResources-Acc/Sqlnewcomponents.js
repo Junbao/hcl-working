@@ -1784,15 +1784,15 @@ $(document).ready(function () {
         if (arg != "explicit") {
             enableScroll();
             $(this).addClass('click-actual');
-            $(this).attr('aria-selected', 'true');
-            $(this).siblings().attr('aria-selected', 'false');
+            $(this).find('a').attr('aria-selected', 'true');
+            $(this).siblings().find('a').attr('aria-selected', 'false');
             $(this).focus();
             $(this).children().removeAttr('aria-label');
             $(this).siblings().removeClass('click-actual');
 
             if (navigator.userAgent.toLowerCase().indexOf('edge') != -1) {
-                $(this).children().attr('aria-selected', 'true');
-                $(this).siblings().children().attr('aria-selected', 'false');
+                $(this).find('a').attr('aria-selected', 'true');
+                $(this).siblings().find('a').attr('aria-selected', 'false');
             }
             if ($('html').hasClass('edge-browser') || $('html').hasClass('ie11-browser')) {
                 var a = $(this).children().text();
@@ -1896,8 +1896,8 @@ $(document).ready(function () {
             enableScroll();
             _currentEle = e.currentTarget;
             _currentDataIndex = $(_currentEle).attr('data-index');
-            $(".sql-RightNavTab ul li[data-index=" + _currentDataIndex + "]").trigger('mouseenter').attr('aria-selected', 'true');
-            $(".sql-RightNavTab ul li[data-index=" + _currentDataIndex + "]").siblings().attr('aria-selected', 'false');
+            $(".sql-RightNavTab ul li[data-index=" + _currentDataIndex + "]").find('a').trigger('mouseenter').attr('aria-selected', 'true');
+            $(".sql-RightNavTab ul li[data-index=" + _currentDataIndex + "]").siblings().find('a').attr('aria-selected', 'false');
         }
     });
 
