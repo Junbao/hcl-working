@@ -875,7 +875,7 @@ function isScrolledIntoView(elem) {
     return (
         ((elemBottom <= docViewBottom) && (elemBottom >= docViewTop)) ||
         ((elemTop <= docViewBottom) && (elemTop >= docViewTop))
-        );
+    );
 }
 
 $(window).on('load scroll', function () {
@@ -1389,7 +1389,7 @@ $(document).ready(function () {
                     }
                 }
 
-                    );
+                );
 
             };
 
@@ -1692,7 +1692,7 @@ $(document).ready(function () {
 
         });
 
-       $('.cp-sticky-nav-sub').on('click', function() {
+        $('.cp-sticky-nav-sub').on('click', function () {
             $(stickyNavNode).attr('data-collapse', $(stickyNavNode).attr('data-collapse') == 'true' ? 'false' : 'true');
             toggleDC();
         });
@@ -1707,15 +1707,15 @@ $(document).ready(function () {
         function toggleDC() {
             if ($(stickyNavNode).attr('data-collapse') == "true") {
                 $('#stickyMobilePageLink').attr('aria-expanded', 'false');
-                $('.cp-sticky-nav-sub nav').attr('aria-hidden','true');
-                $("#stickyNotice").text("collapsed");                
+                $('.cp-sticky-nav-sub nav').attr('aria-hidden', 'true');
+                $("#stickyNotice").text("collapsed");
             } else if ($(stickyNavNode).attr('data-collapse') == "false") {
                 $('#stickyMobilePageLink').attr('aria-expanded', 'true');
-                $('.cp-sticky-nav-sub nav').attr('aria-hidden','false');
+                $('.cp-sticky-nav-sub nav').attr('aria-hidden', 'false');
                 $("#stickyNotice").text("expanded");
             }
-            if($('html').hasClass('edge-browser') || navigator.userAgent.toLowerCase().indexOf('trident')>0){
-                $("#stickyNotice").remove();                
+            if ($('html').hasClass('edge-browser') || navigator.userAgent.toLowerCase().indexOf('trident') > 0) {
+                $("#stickyNotice").remove();
             }
         }
 
@@ -2008,43 +2008,43 @@ $(document).ready(function () {
             if (sqlisOpen) {
                 $(sqlheader).removeClass("bg-down-arrow-" + bgArrowColor).addClass("bg-right-arrow-" + bgArrowColor);
                 if (navigator.userAgent.toLowerCase().indexOf('edge') > 0 || navigator.userAgent.toLowerCase().indexOf("trident") > 0) {
-                        setTimeout(function () {
-                            $('#accessible_expand_collapse').text = "";
-                            $('#accessible_expand_collapse').attr('aria-hidden', 'true');
-                        }, 1000);
-                    }
-                    else {
-                $('#accessible_expand_collapse').text('collapsed');
-                //  $('#accessible_expand_collapse').attr('aria-hidden', 'false');
-                setTimeout(function () {
+                    setTimeout(function () {
+                        $('#accessible_expand_collapse').text = "";
+                        $('#accessible_expand_collapse').attr('aria-hidden', 'true');
+                    }, 1000);
+                }
+                else {
+                    $('#accessible_expand_collapse').text('collapsed');
+                    //  $('#accessible_expand_collapse').attr('aria-hidden', 'false');
+                    setTimeout(function () {
                         $('#accessible_expand_collapse').text('');
                         $('#accessible_expand_collapse').attr('aria-hidden', 'true');
-                },500);
-                    }
-                   
+                    }, 500);
+                }
+
             }
             else {
                 $(sqlheader).removeClass("bg-right-arrow-" + bgArrowColor).addClass("bg-down-arrow-" + bgArrowColor);
                 if (navigator.userAgent.toLowerCase().indexOf('edge') > 0 || navigator.userAgent.toLowerCase().indexOf("trident") > 0) {
-                        setTimeout(function () {
-                            $('#accessible_expand_collapse').text = "";
-                            $('#accessible_expand_collapse').attr('aria-hidden', 'true');
-                        }, 1000);
-                    }
-                    else {
-                $('#accessible_expand_collapse').text('expanded');
-                // $('#accessible_expand_collapse').attr('aria-hidden', 'false');
-                setTimeout(function () {
-                    $('#accessible_expand_collapse').text('');
-                    $('#accessible_expand_collapse').attr('aria-hidden', 'true');
-                }, 500);
+                    setTimeout(function () {
+                        $('#accessible_expand_collapse').text = "";
+                        $('#accessible_expand_collapse').attr('aria-hidden', 'true');
+                    }, 1000);
                 }
-                    
+                else {
+                    $('#accessible_expand_collapse').text('expanded');
+                    // $('#accessible_expand_collapse').attr('aria-hidden', 'false');
+                    setTimeout(function () {
+                        $('#accessible_expand_collapse').text('');
+                        $('#accessible_expand_collapse').attr('aria-hidden', 'true');
+                    }, 500);
                 }
-                // setTimeout(function () {
-                //     $('#accessible_expand_collapse').attr('aria-hidden', 'true');
-                // }, 3000);
-            
+
+            }
+            // setTimeout(function () {
+            //     $('#accessible_expand_collapse').attr('aria-hidden', 'true');
+            // }, 3000);
+
             sqlpanel[sqlisOpen ? 'slideUp' : 'slideDown']()
                 .trigger(sqlisOpen ? 'hide' : 'show');
             if (sqlisOpen) {
@@ -2215,27 +2215,25 @@ $(document).ready(function () {
         });
         /******************* *Bug 346848 fix ********************/
 
- } catch (e) { }
+    } catch (e) { }
 });
 
 function lpchatfun() {
-            //          if($("#lpChatButton img").not(".showing").css("visibility","hidden"))
-            if ($("#lpChatButton button").hasClass("showing"))
-            {
-                $("#lpChatButton button").css("visibility", "visible");     
-            }
-            else
-            {
-                $("#lpChatButton button").css("visibility", "hidden");
-            }
-            //  if($("#lpChatButton img").not("showing"))         
-            var link3Width = Number($("#lpChatButton button").outerHeight());
-            if (link3Width != 0 && link3Width != null) {
-                $(".static-support-links-3").css("min-width", link3Width + "px");
-                $(".static-support-links-3").css("width", link3Width + "px");
-                $(".static-support-links-3").css("right", -link3Width + 72);
-            }
-        }
+    //          if($("#lpChatButton img").not(".showing").css("visibility","hidden"))
+    if ($("#lpChatButton button").hasClass("showing")) {
+        $("#lpChatButton button").css("visibility", "visible");
+    }
+    else {
+        $("#lpChatButton button").css("visibility", "hidden");
+    }
+    //  if($("#lpChatButton img").not("showing"))         
+    var link3Width = Number($("#lpChatButton button").outerHeight());
+    if (link3Width != 0 && link3Width != null) {
+        $(".static-support-links-3").css("min-width", link3Width + "px");
+        $(".static-support-links-3").css("width", link3Width + "px");
+        $(".static-support-links-3").css("right", -link3Width + 72);
+    }
+}
 
 $(window).on("load", function () {
     try {
@@ -2244,23 +2242,23 @@ $(window).on("load", function () {
             $("#lpChatButton button").css("visibility", "visible");
             $("#lpChatButton button").addClass("showing")
             if ($('#lpChatButton').children().length == 0) {
-              
+
                 /*346326*/
                 $(".fixed-support-links ul li.static-support-links-3").hide().attr('aria-hidden', 'true');
                 $(".fixed-support-links ul li.static-support-links-3 button").attr('role', 'presentation');
                 $(".fixed-support-links ul li.static-support-links-3").remove();
             } else {
                 $(".fixed-support-links ul li.static-support-links-3").show();
-              
-               lpchatfun(); 
+
+                lpchatfun();
                 $(".fixed-support-links ul li button.showing").on("focus", function () {
-                     $(this).closest('li').addClass("right-zero");
-                     $(this).closest('li').css('outline','2px dashed #fff');
+                    $(this).closest('li').addClass("right-zero");
+                    $(this).closest('li').css('outline', '2px dashed #fff');
                 });
-               $(".fixed-support-links ul li button.showing").on("blur", function () {
+                $(".fixed-support-links ul li button.showing").on("blur", function () {
                     $(this).closest('li').removeClass("right-zero");
-                     $(this).closest('li').css('outline','0');
-               });
+                    $(this).closest('li').css('outline', '0');
+                });
             }
 
         }, 2000);
@@ -2409,16 +2407,16 @@ function stickynavslick() {
                 infinite: false
             }
         },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: true,
-                    infinite: false
-                }
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                infinite: false
             }
+        }
         ]
     });
 
@@ -2501,7 +2499,7 @@ $(document).on("click", ".selectedacctab", function (e) {
     e.preventDefault();
     e.stopPropagation();
     var icon = $('.selectedacctab-section').find("button");
-    
+
     icon.toggleClass("bg-right-arrow-black bg-down-arrow-black");
     if ($('.mobile_table_header').attr('tabindex') == "-1") {
         $('.mobile_table_header').attr({
@@ -2898,22 +2896,22 @@ $(document).ready(function () {
                 initialSlide: 0
             }
         },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    initialSlide: 0
-                }
-            },
-            {
-                breakpoint: 539,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    initialSlide: 0
-                }
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                initialSlide: 0
             }
+        },
+        {
+            breakpoint: 539,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 0
+            }
+        }
         ]
     });
 
@@ -3097,7 +3095,7 @@ var objectFitImages = function () {
         h = g.setAttribute,
         y = !1;
     return a.supportsObjectFit = f, a.supportsObjectPosition = d, o(), a
-} ();
+}();
 
 /*Min height calculation for 3Vs4Vs5VsAnalaysis component*/
 function Sql3Vs4Vs5VsAnalysis_thumbnail_minHeight() {
@@ -3833,7 +3831,7 @@ var sqlintraPageNavBar = function () {
     return {
         init: init
     };
-} ();
+}();
 
 $(document).ready(function () {
     setTimeout(function () {
@@ -4047,118 +4045,118 @@ $(window).on("load", function () {
 
 
 /**START SQL_Subtabs*/
- 
- $(document).ready(function(){
-     try{
-         sqlSubTabActiveColumns();
-         setSubTab();
-      $(document).on("click",".sql-tabs-container .sql-tab",function(e){
-       e.preventDefault();
-       if(!$(this).hasClass("active"))
-       {var tabindex=$(this).index();
-       var tabtext=$(this).text();
-          $(this).parents().closest(".sql-sub-tabs-holder").addClass("sql-current-sub-tab");
-         $(this).parents(".sql-tabs-container").siblings().find('.sql-selected-tab').children().text(tabtext);
 
-$(this).addClass("active");
-$(this).siblings().removeClass("active");
-if (window.matchMedia("(max-width: 539px)").matches) {
- $(this).hide();
-  $(this).siblings().show();
-  $(".sql-tabs-container").slideToggle( "slow");
-  $(".sql-tabs-mobile-container .sql-selected-tab").toggleClass("active");
-} 
-else{
-    $(this).show();
-     $(this).siblings().show();
-     $(".sql-tabs-container").css("display","block");
-}
+$(document).ready(function () {
+    try {
+        sqlSubTabActiveColumns();
+        setSubTab();
+        $(document).on("click", ".sql-tabs-container .sql-tab", function (e) {
+            e.preventDefault();
+            if (!$(this).hasClass("active")) {
+                var tabindex = $(this).index();
+                var tabtext = $(this).text();
+                $(this).parents().closest(".sql-sub-tabs-holder").addClass("sql-current-sub-tab");
+                $(this).parents(".sql-tabs-container").siblings().find('.sql-selected-tab').children().text(tabtext);
+
+                $(this).addClass("active");
+                $(this).siblings().removeClass("active");
+                if (window.matchMedia("(max-width: 539px)").matches) {
+                    $(this).hide();
+                    $(this).siblings().show();
+                    $(".sql-tabs-container").slideToggle("slow");
+                    $(".sql-tabs-mobile-container .sql-selected-tab").toggleClass("active");
+                }
+                else {
+                    $(this).show();
+                    $(this).siblings().show();
+                    $(".sql-tabs-container").css("display", "block");
+                }
 
 
-$(".sql-current-sub-tab").find(".sql-subtabs-data-container").children().removeClass("active");
-$(".sql-current-sub-tab").find(".sql-subtabs-data-container").children().eq(tabindex).fadeOut('fast',function(){
-    $(".sql-current-sub-tab").find(".sql-subtabs-data-container").children().eq(tabindex).siblings().css("display","none");
+                $(".sql-current-sub-tab").find(".sql-subtabs-data-container").children().removeClass("active");
+                $(".sql-current-sub-tab").find(".sql-subtabs-data-container").children().eq(tabindex).fadeOut('fast', function () {
+                    $(".sql-current-sub-tab").find(".sql-subtabs-data-container").children().eq(tabindex).siblings().css("display", "none");
+                });
+                $(".sql-current-sub-tab").find(".sql-subtabs-data-container").children().eq(tabindex).fadeIn('slow', function () {
+                    $(".sql-current-sub-tab").find(".sql-subtabs-data-container").children().eq(tabindex).addClass("active");
+                });
+                $(".sql-current-sub-tab").removeClass("sql-current-sub-tab");
+            }
+            updateSubTabsUrl();
+        });
+        $(document).on("click", ".sql-tabs-mobile-container .sql-selected-tab", function (e) {
+            e.preventDefault();
+            $(this).toggleClass("active");
+            $(".sql-tabs-container").slideToggle("slow");
+
+        });
+        if (window.matchMedia("(min-width: 540px)").matches) {
+            eventSubtabsheight();
+        }
+    }
+    catch (e) {
+        console.log("error" + e);
+    }
 });
-$(".sql-current-sub-tab").find(".sql-subtabs-data-container").children().eq(tabindex).fadeIn('slow', function() {
-    $(".sql-current-sub-tab").find(".sql-subtabs-data-container").children().eq(tabindex).addClass("active");
-});
-$(".sql-current-sub-tab").removeClass("sql-current-sub-tab");
-       }
-updateSubTabsUrl();       
-});
-  $(document).on("click",".sql-tabs-mobile-container .sql-selected-tab",function(e){
-     e.preventDefault();
-     $(this).toggleClass("active");
-$(".sql-tabs-container").slideToggle( "slow");
 
-}); 
-if (window.matchMedia("(min-width: 540px)").matches) {
-eventSubtabsheight();
+
+function setSubTab() {
+    if ($(".sql-event-subtabs").length) {
+        if (window.matchMedia("(min-width: 540px)").matches) {
+            $(".sql-tabs-container").show();
+            $(".sql-tabs-container .sql-tab").show();
+        }
+        else {
+            $(".sql-tabs-container").hide();
+            $(".sql-tabs-mobile-container .sql-selected-tab").removeClass("active");
+            $(".sql-tabs-container .sql-tab.active").hide();
+        }
+    }
 }
-     }
-     catch(e){
-        console.log("error"+e) ;
-     }
- });
 
 
- function setSubTab(){
-      if($(".sql-event-subtabs").length){
-         if (window.matchMedia("(min-width: 540px)").matches) {
-             $(".sql-tabs-container").show();
-     $(".sql-tabs-container .sql-tab").show();
+
+function sqlSubTabActiveColumns() {
+    $('.sql-event-subtabs').each(function () {
+        var gridcount = $(this).attr('data-grid-count');
+        if (gridcount == 3) {
+            $(this).find('.sql-tabs .sql-tab').each(function () {
+                $(this).attr('data-grid', 'col-4');
+                var tabsWidth = gridcount * 16.667 + '%';
+                $(this).parent().width(tabsWidth);
+            });
+        }
+        else if (gridcount == 4) {
+            $(this).find('.sql-tabs .sql-tab').each(function () {
+                $(this).attr('data-grid', 'col-3');
+                var tabsWidth = gridcount * 16.667 + '%';
+                $(this).parent().width(tabsWidth);
+            });
+        }
+        else if (gridcount == 5) {
+            $(this).find('.sql-tabs .sql-tab').each(function () {
+                $(this).attr('data-grid', 'col-1-5');
+                var tabsWidth = gridcount * 16.667 + '%';
+                $(this).parent().width(tabsWidth);
+            });
+        }
+        else if (gridcount == 6) {
+            $(this).find('.sql-tabs .sql-tab').each(function () {
+                $(this).attr('data-grid', 'col-2');
+                var tabsWidth = gridcount * 16.667 + '%';
+                $(this).parent().width(tabsWidth);
+            });
+        }
+    });
 }
-else{
-     $(".sql-tabs-container").hide();
-     $(".sql-tabs-mobile-container .sql-selected-tab").removeClass("active");
-    $(".sql-tabs-container .sql-tab.active").hide();
-}
-     }
- }
- 
-
- 
- function sqlSubTabActiveColumns(){
-     $('.sql-event-subtabs').each(function () {
-		var gridcount = $(this).attr('data-grid-count');
-		 if (gridcount == 3) {
-			$(this).find('.sql-tabs .sql-tab').each(function () {
-				$(this).attr('data-grid', 'col-4');
-                var tabsWidth=gridcount*16.667+'%';
-                $(this).parent().width(tabsWidth);
-			});
-		}
-       else if (gridcount == 4) {
-			$(this).find('.sql-tabs .sql-tab').each(function () {
-				$(this).attr('data-grid', 'col-3');
-                var tabsWidth=gridcount*16.667+'%';
-                $(this).parent().width(tabsWidth);
-			});
-		}
-         else if (gridcount == 5) {
-			$(this).find('.sql-tabs .sql-tab').each(function () {
-				$(this).attr('data-grid', 'col-1-5');
-                var tabsWidth=gridcount*16.667+'%';
-                $(this).parent().width(tabsWidth);
-			});
-		}
-         else if (gridcount == 6) {
-			$(this).find('.sql-tabs .sql-tab').each(function () {
-				$(this).attr('data-grid', 'col-2');
-                var tabsWidth=gridcount*16.667+'%';
-                $(this).parent().width(tabsWidth);
-			});
-		}
- });
- }
- $(window).resize(function(){
+$(window).resize(function () {
     setSubTab();
     sqlSubTabActiveColumns();
     if (window.matchMedia("(min-width: 540px)").matches) {
-    eventSubtabsheight();
+        eventSubtabsheight();
     }
-    else{$(".sql-event-subtabs .sql-tab span").css('height','auto');}
- });
+    else { $(".sql-event-subtabs .sql-tab span").css('height', 'auto'); }
+});
 
 function eventSubtabsheight() {
     try {
@@ -4177,137 +4175,137 @@ function eventSubtabsheight() {
 
     }
 }
- 
+
 function updateSubTabsUrl() {
     var activeTab = $(".sql-event-subtabs").find(".sql-tabs-container").find(".sql-tabs .sql-tab.active").attr("data-deeplinkid").toLowerCase();
-    activeTab=activeTab.replace(/[\W_]/g, '');      
+    activeTab = activeTab.replace(/[\W_]/g, '');
     var tab = activeTab;
-        var tab_value = "";
-    var tabvalue;    
+    var tab_value = "";
+    var tabvalue;
     var url = location.href;
     if (url.indexOf("#") > 0) {
         url = url.substring(url.indexOf("#"), url.length);
         tabvalue = url.split("#");
-        tab_value = tabvalue[1];                        
+        tab_value = tabvalue[1];
     }
     if (activeTab == undefined || activeTab == "" || activeTab == null) {
         return;
     } else {
         if (tab_value == undefined || tab_value == "" || tab_value == null) {
-            if (history.pushState) {               
+            if (history.pushState) {
                 var newurl = window.location.href + '#' + tab;
                 window.history.pushState({
                     path: newurl
                 }, '', newurl);
-            }            
-        }  else {
-                if (history.pushState) {                     
-                    var subupdatedurl = window.location.href;
-                    subupdatedurl = subupdatedurl.replace(tab_value, activeTab);                    
-                    window.history.pushState({
-                        path: subupdatedurl
-                    }, '', subupdatedurl);
-                }
+            }
+        } else {
+            if (history.pushState) {
+                var subupdatedurl = window.location.href;
+                subupdatedurl = subupdatedurl.replace(tab_value, activeTab);
+                window.history.pushState({
+                    path: subupdatedurl
+                }, '', subupdatedurl);
             }
         }
     }
-function loadSubtabTab() {
-    var selectedvalue;    
-    var url = location.href;
-    setTimeout(function(){
-    if (url.indexOf("#") != -1) {
-        selectedvalue = url.substring(url.indexOf("#"), url.length);
-        selectedvalue = selectedvalue.split("#")
-        selectedvalue = selectedvalue[1].toLowerCase();
-        var topvalue = 0;
-        var addheight = 0;
-        if ($(".sql-event-subtabs").length > 0) {
-            if ($(".sql-pageTitle.clone").length > 0) {
-                addheight = $(".sql-pageTitle").outerHeight();
-            }
-            $(".sql-event-subtabs .sql-tabs-container .sql-tabs").find(".sql-tab").each(function () {
-                var deeplinkid = $(this).attr("data-deeplinkid");
-                if (deeplinkid != "" || deeplinkid != undefined || deeplinkid != null) {
-                    deeplinkid = deeplinkid.toString().replace(/[\W_]/g, '').toLowerCase();
-                    var currentTab = $(this);
-                    topvalue = $(this).parents().closest(".sql-event-subtabs").offset().top;
-                    topvalue = topvalue - addheight;
-                    var selectedindex = 0;
-                    setTimeout(function () {
-                        if (deeplinkid == selectedvalue) {
-                            selectedindex = currentTab.index();
-                            currentTab.trigger("click");
-                        }
-                    }, 10);
-                }
-            });
-        }   
-        $("html, body").animate({
-            scrollTop: topvalue
-        }, 100);        
-     }
-    },150);
 }
-function setHighlighterHeight(){
-    try{
-        var browser=navigator.userAgent;
-            $(".sql-event-table .sql-table .merge").each(function () {
+function loadSubtabTab() {
+    var selectedvalue;
+    var url = location.href;
+    setTimeout(function () {
+        if (url.indexOf("#") != -1) {
+            selectedvalue = url.substring(url.indexOf("#"), url.length);
+            selectedvalue = selectedvalue.split("#")
+            selectedvalue = selectedvalue[1].toLowerCase();
+            var topvalue = 0;
+            var addheight = 0;
+            if ($(".sql-event-subtabs").length > 0) {
+                if ($(".sql-pageTitle.clone").length > 0) {
+                    addheight = $(".sql-pageTitle").outerHeight();
+                }
+                $(".sql-event-subtabs .sql-tabs-container .sql-tabs").find(".sql-tab").each(function () {
+                    var deeplinkid = $(this).attr("data-deeplinkid");
+                    if (deeplinkid != "" || deeplinkid != undefined || deeplinkid != null) {
+                        deeplinkid = deeplinkid.toString().replace(/[\W_]/g, '').toLowerCase();
+                        var currentTab = $(this);
+                        topvalue = $(this).parents().closest(".sql-event-subtabs").offset().top;
+                        topvalue = topvalue - addheight;
+                        var selectedindex = 0;
+                        setTimeout(function () {
+                            if (deeplinkid == selectedvalue) {
+                                selectedindex = currentTab.index();
+                                currentTab.trigger("click");
+                            }
+                        }, 10);
+                    }
+                });
+            }
+            $("html, body").animate({
+                scrollTop: topvalue
+            }, 100);
+        }
+    }, 150);
+}
+function setHighlighterHeight() {
+    try {
+        var browser = navigator.userAgent;
+        $(".sql-event-table .sql-table .merge").each(function () {
             $(this).children().eq(0).attr("rowspan", "2");
             $(this).next().children().eq(0).addClass('merge-dn');
         });
     }
-catch(e){}
+    catch (e) { }
 }
-$(document).ready(function() {    
+$(document).ready(function () {
     try {
-        setHighlighterHeight();        
-        setTimeout(function(){
-        var deeplinkvalue;
-        var url = location.href;
-        var subTabDeeplink = 0;
-        if (url.indexOf("#") > 0) {
-            deeplinkvalue = url.substring(url.indexOf("#"), url.length);
-            deeplinkvalue = deeplinkvalue.split("#")
-            var original=deeplinkvalue[1];
-            deeplinkvalue = deeplinkvalue[1].toLowerCase();
-            if ($(".sql-event-subtabs").length > 0) {
-                $(".sql-event-subtabs .sql-tabs-container .sql-tabs .sql-tab").each(function () {
-                    if ($(this).attr("data-deeplinkid").toLowerCase() == deeplinkvalue) {
-                        if (deeplinkvalue == undefined || deeplinkvalue == "") {
-                            updateSubTabsUrl();
-                        } else {
-                            loadSubtabTab();
-                            subTabDeeplink = 1;
+        setHighlighterHeight();
+        setTimeout(function () {
+            var deeplinkvalue;
+            var url = location.href;
+            var subTabDeeplink = 0;
+            if (url.indexOf("#") > 0) {
+                deeplinkvalue = url.substring(url.indexOf("#"), url.length);
+                deeplinkvalue = deeplinkvalue.split("#")
+                var original = deeplinkvalue[1];
+                deeplinkvalue = deeplinkvalue[1].toLowerCase();
+                if ($(".sql-event-subtabs").length > 0) {
+                    $(".sql-event-subtabs .sql-tabs-container .sql-tabs .sql-tab").each(function () {
+                        if ($(this).attr("data-deeplinkid").toLowerCase() == deeplinkvalue) {
+                            if (deeplinkvalue == undefined || deeplinkvalue == "") {
+                                updateSubTabsUrl();
+                            } else {
+                                loadSubtabTab();
+                                subTabDeeplink = 1;
+                            }
                         }
-                    }
-                });
+                    });
 
-            }
-            if (subTabDeeplink == 0) {
-                var addStickyHeight = 0;
-                if ($(".sql-pageTitle.clone").length > 0) {
-                    addStickyHeight = $(".sql-pageTitle").outerHeight();
-                
-                var scrollVal = 0;
-                if($("#"+original).length>0){
-                scrollVal=$("#"+original).offset().top;
                 }
-                else{
-                scrollVal = $("#" + deeplinkvalue).offset().top;
+                if (subTabDeeplink == 0) {
+                    var addStickyHeight = 0;
+                    if ($(".sql-pageTitle.clone").length > 0) {
+                        addStickyHeight = $(".sql-pageTitle").outerHeight();
+
+                        var scrollVal = 0;
+                        if ($("#" + original).length > 0) {
+                            scrollVal = $("#" + original).offset().top;
+                        }
+                        else {
+                            scrollVal = $("#" + deeplinkvalue).offset().top;
+                        }
+                        scrollVal = scrollVal - ((addStickyHeight));
+                        $("html, body").animate({
+                            scrollTop: scrollVal
+                        }, 100);
+
+                    }
                 }
-                scrollVal = scrollVal - ((addStickyHeight));
-                $("html, body").animate({
-                    scrollTop: scrollVal
-                }, 100);
-            
             }
-            }
-        }
-        },100);
-    } 
+        }, 100);
+    }
     catch (err) {
     }
-    $('.sql-event-subtabs .sql-tabs-container .sql-tab').each(function(){
+    $('.sql-event-subtabs .sql-tabs-container .sql-tab').each(function () {
         if (!$(this).hasClass('active')) {
             $(this).attr('aria-selected', 'false');
         }
@@ -4316,7 +4314,7 @@ $(document).ready(function() {
         }
     });
     $(document).on('click', '.sql-event-subtabs .sql-tabs-container .sql-tab', function (e) {
-        
+
         if ($(this).hasClass('active')) {
             $(this).attr('aria-selected', 'true');
             $(this).siblings().attr('aria-selected', 'false');
@@ -4325,7 +4323,7 @@ $(document).ready(function() {
             $(this).attr('aria-selected', 'false');
             $(this).siblings().attr('aria-selected', 'true');
         }
-        
+
     });
     $(document).on('keydown', '.sql-event-subtabs .sql-tabs-container .sql-tab', function (e) {
         if (e.keyCode == 32 || e.charCode == 32) {
@@ -4339,7 +4337,7 @@ $(document).ready(function() {
         var _currentDataIndex;
         var _tablength;
         /*Left arrows*/
-        
+
         if (e.keyCode == 37) {
             // disableScroll();
             _currentEle = e.currentTarget;
@@ -4350,9 +4348,9 @@ $(document).ready(function() {
             }
             $(this).prev().focus();
         }
-        
+
         /*Right arrows*/
-        
+
         if (e.keyCode == 39) {
             // disableScroll();
             _currentEle = e.currentTarget;
@@ -4362,8 +4360,8 @@ $(document).ready(function() {
                 $(".sql-event-subtabs .sql-tabs-container .sql-tab:first").trigger('click').focus();
             }
             $(this).next().focus();
-            
+
         }
-        
+
     });
 });
