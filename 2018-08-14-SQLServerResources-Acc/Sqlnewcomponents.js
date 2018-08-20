@@ -1855,8 +1855,12 @@ $(document).ready(function () {
         }
         SetJcarouselWidth();
     });
+    var keyRegion = document.getElementbyID('CP_RightNavTab_1');
+    keyRegion.addEventListener('keydown', function(e) {
+        console.log("the region is active");
 
-    $(document).on('keydown', '.sql-RightNavTab ul li', function (e) {
+    // $(document).on('keydown', '.sql-RightNavTab ul li', function (e) {
+        
         var _currentEle;
         var _currentDataIndex;
         var _tablength;
