@@ -1114,7 +1114,7 @@
      cursor:pointer;
      text-decoration:none;
 }
- .sql-RightNavTab .sql-lefttab .sql-accordion-tab-list ul li.tab-item{
+ .sql-RightNavTab .sql-lefttab .sql-accordion-tab-list ul li a.tab-item{
      text-decoration: none;
      display: block;
      padding: 22px 0;
