@@ -17,29 +17,21 @@
 
                             <div class="sql-accordion-tab-list {{tab-backgroundcolor}} {{tab-light-background-OR-dark-background}}" aria-label="{{tab-navigation-aria-label}}">
                                 <ul role="tablist">
-                                    <li tabindex="0" id="tab1" role="tab" data-index="0" aria-selected="true" aria-setsize="6" aria-posinset="1" class="hide-by-default {{tab1:type-show-row-to-show}} active">
-                                        <a tabindex="-1" aria-label="{{{1:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{1:tab-item-content}}}</span></a>
+                                    <li tabindex="0" id="tab1" role="tab" data-index="0" aria-selected="true" aria-setsize="6" aria-posinset="1" class="hide-by-default {{tab1:type-show-row-to-show}} active tab-item c-hyperlink texting" aria-label="{{{1:tab-item-content-aria-text}}}">{{{1:tab-item-content}}}
                                     </li>
-                                    <li tabindex="-1" id="tab2" role="tab" data-index="1" aria-selected="false" aria-setsize="6" aria-posinset="2" class="hide-by-default {{tab2:type-show-row-to-show}}">
-                                        <a tabindex="-1" aria-label="{{{2:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{2:tab-item-content}}}</span></a>
+                                    <li tabindex="-1" id="tab2" role="tab" data-index="1" aria-selected="false" aria-setsize="6" aria-posinset="2" class="hide-by-default {{tab2:type-show-row-to-show}} tab-item c-hyperlink texting" aria-label="{{{2:tab-item-content-aria-text}}}">{{{2:tab-item-content}}}
                                     </li>
-                                    <li tabindex="-1" id="tab3" role="tab" data-index="2" aria-selected="false" aria-setsize="6" aria-posinset="3" class="hide-by-default {{tab3:type-show-row-to-show}}">
-                                        <a tabindex="-1" aria-label="{{{3:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{3:tab-item-content}}}</span></a>
+                                    <li tabindex="-1" id="tab3" role="tab" data-index="2" aria-selected="false" aria-setsize="6" aria-posinset="3" class="hide-by-default {{tab3:type-show-row-to-show}} tab-item c-hyperlink texting" aria-label="{{{3:tab-item-content-aria-text}}}">{{{3:tab-item-content}}}
                                     </li>
-                                    <!-- <li tabindex="-1" id="tab4" role="tab" data-index="3" aria-selected="false" class="hide-by-default {{tab4:type-show-row-to-show}}">
-                                        <a tabindex="-1" aria-label="{{{4:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{4:tab-item-content}}}</span></a>
+                                    <!-- <li tabindex="-1" id="tab4" role="tab" data-index="3" aria-selected="false" class="hide-by-default {{tab4:type-show-row-to-show}} tab-item c-hyperlink texting" aria-label="{{{4:tab-item-content-aria-text}}}>{{{4:tab-item-content}}}
                                     </li> -->
-                                    <li tabindex="-1" id="tab5" role="tab" data-index="4" aria-selected="false" aria-setsize="6" aria-posinset="4" class="hide-by-default {{tab5:type-show-row-to-show}}">
-                                        <a tabindex="-1" aria-label="{{{5:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{5:tab-item-content}}}</span></a>
+                                    <li tabindex="-1" id="tab5" role="tab" data-index="4" aria-selected="false" aria-setsize="6" aria-posinset="4" class="hide-by-default {{tab5:type-show-row-to-show}} tab-item c-hyperlink texting" aria-label="{{{5:tab-item-content-aria-text}}}">{{{5:tab-item-content}}}
                                     </li>
-                                    <li tabindex="-1" id="tab6" role="tab" data-index="5" aria-selected="false" aria-setsize="6" aria-posinset="5" class="hide-by-default {{tab6:type-show-row-to-show}}">
-                                        <a tabindex="-1" aria-label="{{{6:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{6:tab-item-content}}}</span></a>
+                                    <li tabindex="-1" id="tab6" role="tab" data-index="5" aria-selected="false" aria-setsize="6" aria-posinset="5" class="hide-by-default {{tab6:type-show-row-to-show}} tab-item c-hyperlink texting"  aria-label="{{{6:tab-item-content-aria-text}}}">{{{6:tab-item-content}}}
                                     </li>
-                                    <li tabindex="-1" id="tab7" role="tab" data-index="6" aria-selected="false" aria-setsize="6" aria-posinset="6" class="hide-by-default {{tab7:type-show-row-to-show}}">
-                                        <a tabindex="-1" aria-label="{{{7:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{7:tab-item-content}}}</span></a>
+                                    <li tabindex="-1" id="tab7" role="tab" data-index="6" aria-selected="false" aria-setsize="6" aria-posinset="6" class="hide-by-default {{tab7:type-show-row-to-show}} tab-item c-hyperlink texting" aria-label="{{{7:tab-item-content-aria-text}}}">{{{7:tab-item-content}}}
                                     </li>
-                                    <!-- <li tabindex="-1" id="tab8" role="tab" data-index="7" aria-selected="false" class="hide-by-default {{tab8:type-show-row-to-show}}">
-                                        <a tabindex="-1" aria-label="{{{8:tab-item-content-aria-text}}}" class="tab-item c-hyperlink"><span class="texting">{{{8:tab-item-content}}}</span></a>
+                                    <!-- <li tabindex="-1" id="tab8" role="tab" data-index="7" aria-selected="false" class="hide-by-default {{tab8:type-show-row-to-show}}" aria-label="{{{8:tab-item-content-aria-text}}}">{{{8:tab-item-content}}}
                                     </li> -->
                                 </ul>
                             </div>
@@ -613,12 +605,51 @@
         </div>
     </div>
 </section>
+
 <script>
     $(document).ready(function() {
+        setTimeout(function () {
+            $('#msccBanner').attr('role', 'presentation');
+        }, 500);
+
         try {
             $('.sql-RightNavTab .sql-righttab .RightNavTab-carousel .Tab-carousel ul li').each(function() {
                 if (!$(this).hasClass('show-frame')) {
                     $(this).remove();
+                }
+            });
+            $('.sql-RightNavTab .accordion-main-panel .mainaccordionpanel .Tab-carousel ul li').each(function() {
+                if (!$(this).hasClass('show-frame')) {
+                    $(this).remove();
+                }
+            });
+            $('.sql-RightNavTab .main-area .accordion-main-panel .accordion-heading').each(function() {
+                if (!$(this).hasClass('show-row')) {
+                    $(this).remove();
+                }
+            });
+            $('.sql-RightNavTab .main-area .accordion-main-panel .mainaccordionpanel').each(function() {
+                if (!$(this).hasClass('show-row')) {
+                    $(this).remove();
+                }
+            });
+            $('.sql-RightNavTab .sql-lefttab .sql-accordion-tab-list ul li').each(function() {
+                if (!$(this).hasClass('show-row')) {
+                    $(this).remove();
+                }
+            });
+            $('.sql-RightNavTab .sql-righttab .tab-panel-item').each(function() {
+                if (!$(this).hasClass('show-row')) {
+                    $(this).remove();
+                }
+            });
+            $('.sql-RightNavTab .sql-righttab .tab-panel-item:first-child').addClass('active').siblings().removeClass('active');
+            $('.sql-RightNavTab .sql-lefttab .sql-accordion-tab-list .tab-item:first').addClass('active').siblings().removeClass('active');
+        } catch (e) {
+
+        }
+    });
+</script>
                 }
             });
             $('.sql-RightNavTab .accordion-main-panel .mainaccordionpanel .Tab-carousel ul li').each(function() {
