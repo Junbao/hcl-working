@@ -846,6 +846,11 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     z-index: 999;
     left: 0;
 }
+.carousel-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 .cp-media-carousel-with-frames {
     padding: 43px 0 40px;
@@ -896,7 +901,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 .cp-media-carousel-with-frames .carousel-group {
-    min-height: 586px;
+    /* min-height: 572px; */
     position: relative;
 }
 
@@ -961,6 +966,13 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     text-decoration: none;
 }
 
+.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-content .carousel-blue-cta:hover {
+    background: #005da6;
+}
+
+/* .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-content .carousel-blue-cta:after {
+    content: "";
+} */
 
 /*srikanth*/
 
@@ -1219,7 +1231,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
         padding-bottom: 53px;
     }
     .cp-media-carousel-with-frames .carousel-group {
-        min-height: 536px;
+        /* min-height: 536px; */
     }
     .carousel-frame[data-carousel-position="-1"] .carousel-image {
         width: 323px;
@@ -1290,9 +1302,9 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-headline {
         padding-top: 40px;
     }
-    .cp-media-carousel-with-frames .carousel-group {
+    /* .cp-media-carousel-with-frames .carousel-group {
         min-height: 436px;
-    }
+    } */
 }
 
 @media screen and (max-width: 539px) {
@@ -1301,9 +1313,9 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     .cp-media-carousel-with-frames .carousel-navigation {
         height: 117px;
     }
-    .cp-media-carousel-with-frames .carousel-with-frames {
+    /* .cp-media-carousel-with-frames .carousel-with-frames {
         padding-bottom: 0;
-    }
+    } */
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-headline,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-content,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .carousel-image,
@@ -1329,9 +1341,9 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
         padding-top: 0px;
         margin-bottom: 20px;
     }
-    .cp-media-carousel-with-frames .carousel-group {
+    /* .cp-media-carousel-with-frames .carousel-group {
         min-height: 380px;
-    }
+    } */
 }
 
 /*END of CP_MediaCarouselWithFrames.css*/

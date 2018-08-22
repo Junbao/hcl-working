@@ -8,3 +8,10 @@
     position: absolute;
     width: 1px;
 }
+
+/* Clear Fix */
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
