@@ -1259,7 +1259,7 @@ $(document).ready(function () {
 
             function copyFrame(fromFrameNode, toFrameNode) {
                 $(toFrameNode).empty();
-                toFrameNode.appendChild(fromFrameNode.querySelector('.open-popup-video').cloneNode(true));
+                toFrameNode.appendChild(fromFrameNode.querySelector('.carousel-frame-link').cloneNode(true));
                 // toFrameNode.appendChild(fromFrameNode.querySelector('.carousel-headline').cloneNode(true));
                 // toFrameNode.appendChild(fromFrameNode.querySelector('.carousel-content').cloneNode(true));
             }
@@ -1273,12 +1273,12 @@ $(document).ready(function () {
 
                     frameNode.style.left = ((position === "active") ? initLocation : parseInt(position) * scaledWidth + initScaledLocation) + 'px';
                 });
-                $(".carousel-frame[data-carousel-position='active']").find("a.open-popup-video").css("pointerEvents", "auto");
-                $(".carousel-frame[data-carousel-position='active']").find("a.open-popup-video").attr("tabindex", "0");
+                $(".carousel-frame[data-carousel-position='active']").find("a").css("pointerEvents", "auto");
+                $(".carousel-frame[data-carousel-position='active']").find("a").attr("tabindex", "0");
                 // $(".carousel-frame[data-carousel-position='active']").find(".carousel-content a").attr("tabindex", "0");
-                skipWatch();
-                $(".carousel-frame[data-carousel-position='active']").siblings().find("a.open-popup-video").css("pointerEvents", "none");
-                $(".carousel-frame[data-carousel-position='active']").siblings().find("a.open-popup-video").attr("tabindex", "-1");
+                // skipWatch();
+                $(".carousel-frame[data-carousel-position='active']").siblings().find("a").css("pointerEvents", "none");
+                $(".carousel-frame[data-carousel-position='active']").siblings().find("a").attr("tabindex", "-1");
                 // $(".carousel-frame[data-carousel-position='active']").siblings().find(".carousel-content a").attr("tabindex", "-1");
             }
 
@@ -1319,7 +1319,7 @@ $(document).ready(function () {
                 } else if (pageIconPlace === -4) {
                     time = 1000;
                 } else if (pageIconPlace === -3) {
-                    time = 750;
+                    time = 750; 
                 } else if (pageIconPlace === -2) {
                     time = 500;
                 } else if (pageIconPlace === -1) {
@@ -1334,7 +1334,7 @@ $(document).ready(function () {
                             attribute = findFrame[i].getAttribute("data-carousel-position");
                             if (attribute === "active") {
                                 $(this).attr('tabindex', '0');
-                                $('.carousel-frame[data-carousel-position="active"] a.open-popup-video').attr('tabindex', '0').attr('aria-selected', 'true').focus();
+                                $('.carousel-frame[data-carousel-position="active"] a').attr('tabindex', '0').attr('aria-selected', 'true').focus();
                                 // $('.carousel-frame .false_paragraph a').attr('aria-hidden', 'false');
                                 clearInterval(timing);
                                 pageIconSet();
@@ -1564,7 +1564,7 @@ $(document).load(function (e) {
 
                     function copyFrame(fromFrameNode, toFrameNode) {
                         $(toFrameNode).empty();
-                        toFrameNode.appendChild(fromFrameNode.querySelector('.open-popup-video').cloneNode(true));
+                        toFrameNode.appendChild(fromFrameNode.querySelector('.carousel-frame-link').cloneNode(true));
                         // toFrameNode.appendChild(fromFrameNode.querySelector('.carousel-headline').cloneNode(true));
                         // toFrameNode.appendChild(fromFrameNode.querySelector('.carousel-blue-cta').cloneNode(true));
                     }
