@@ -1,0 +1,64 @@
+.m-content-placement-item, .c-content-placement {
+    margin-right: 5%; /* add */
+}
+.jlitecmsrefinelist-c .m-content-placement-item picture img {
+    max-width: 100%; /* add */
+}
+
+
+@media only screen and (max-width: 767px) {
+    .summaryParali {
+        width: 50%; /* update */
+    }
+}
+
+
+
+
+
+
+/* ADD */
+
+#wdgweb-jlitecmsrefinelist {
+    margin-bottom: 45px;
+    overflow: hidden;
+}
+
+#wdgweb-jlitecmsrefinelist  a.c-action-trigger.c-glyph {
+    min-width: 36px;
+}
+
+@media only screen and (min-width: 768px) {
+    [class^="m-"] {
+        padding-top: 75px;
+    }
+}
+
+
+@media only screen and (max-width: 599px) {
+    .summaryParali {
+        width: 100%; /* update */
+    }
+
+    .summaryPara {
+        display: inline-block;
+        float: left;
+        padding: 35px 15px;
+    }
+
+}
+
+
+
+NOTES
+Done - 1 - 2 - 5 - 6 - 7 - 11 - 12 (doesn't account for filters)
+
+3- I think that is because there are only 4 pages
+4 - scripted this way - you can override maybe but would check with client first.
+8-9 - this is a different set up as a whole - Select in refference and a div ul on new.  This should be changed if you want same interaction or leave as is.
+10 - Looks like this should be that way
+13 - different set up - same as 8-9 above
+14 - think they asked Neeraj to remove that already - you can add it back and the code clearing the filters to that.
+15 - We don't have a "proper" layout for this - client didn't mention this as a requested fix.
+16 - 17 - section is being transformed to a single a tag - will require re-working  the entire structure to change this.  And then I think client only wanted "Get Started..." to link
+18 - not seeing this issue
