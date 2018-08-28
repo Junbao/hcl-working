@@ -970,6 +970,10 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     background: #005da6;
 }
 
+.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-frame-link:focus {
+    outline: #000 dashed 1px;
+}
+
 /* .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-content .carousel-blue-cta:after {
     content: "";
 } */
