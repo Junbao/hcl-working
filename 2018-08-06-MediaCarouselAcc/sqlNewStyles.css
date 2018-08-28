@@ -846,7 +846,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     z-index: 999;
     left: 0;
 }
-.carousel-group:after {
+.carousel-group::after,.carousel-frame::after {
     content: "";
     display: table;
     clear: both;
@@ -970,7 +970,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     background: #005da6;
 }
 
-.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-frame-link:focus {
+.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-frame-link:focus, .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-frame-link:active {
     outline: #000 dashed 1px;
 }
 
@@ -1155,7 +1155,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     width: 90%;
 }
 
-.cp-media-carousel-with-frames .carousel-group .carousel-frame a.open-popup-video {
+.cp-media-carousel-with-frames .carousel-group .carousel-frame a.carousel-frame-link {
     display: inline-block;
 }
 
