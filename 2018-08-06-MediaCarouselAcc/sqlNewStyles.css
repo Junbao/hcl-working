@@ -25,15 +25,12 @@ a.c-call-to-action.theme-transparent:hover {
 }
 
 /*Ignite Release Live issue fix for CTA alignment. Task:341396 19/09/2017 */
-
 a.c-call-to-action+a.c-call-to-action {
     margin-left: 0;
 }
 
 /*Ignite Release Live issue fix for CTA alignment. Task:341396 19/09/2017 */
-
 /*Start Css for CP_ImageTabs*/
-
 .image-tabs-with-internal-menu {
     margin-left: auto;
     margin-right: auto;
@@ -255,9 +252,11 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     #CP_ImageTabswithInternalMenu_1 .non-carousel {
         display: block;
     }
+
     #CP_ImageTabswithInternalMenu_1 .row-carousel {
         display: none;
     }
+
     /*.CP_BGImgWithCopyAndButtons p.full-width{
          width: 100%;
         /*NAGARAJU: ALLOWING P TO OCCUPY FULL WIDTH FOR LEFT ALIGN CTA 
@@ -266,50 +265,63 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 @media screen and (max-width:539px) {
+
     /*Only Mobile viewport*/
     #CP_ImageTabswithInternalMenu_1 .non-carousel {
         display: none;
     }
+
     #CP_ImageTabswithInternalMenu_1 .row-carousel {
         display: block;
     }
+
     #CP_ImageTabswithInternalMenu_1 .right-text-subdata {
         width: 90%;
     }
+
     #CP_ImageTabswithInternalMenu_1 .tabs {
         width: 20%;
     }
+
     #CP_ImageTabswithInternalMenu_1 .mscom-image {
         display: none !important;
     }
+
     #CP_ImageTabswithInternalMenu_1 .tabs-submenu {
         width: 33.33%;
     }
+
     #CP_ImageTabswithInternalMenu_1 .icons {
         display: block;
     }
 }
 
 @media screen and (min-width:320px) and (max-width:539px) {
+
     /*Only Tablet 'Portrait' */
     #CP_ImageTabswithInternalMenu_1 .right-text-subdata {
         width: 90%;
     }
+
     #CP_ImageTabswithInternalMenu_1 .tabs {
         width: 20%;
     }
+
     #CP_ImageTabswithInternalMenu_1 .mscom-image {
         display: none !important;
     }
+
     #CP_ImageTabswithInternalMenu_1 .tabs-submenu {
         width: 33.33%
     }
+
     #CP_ImageTabswithInternalMenu_1 .icons {
         display: block;
     }
 }
 
 @media screen and (max-width:319px) {
+
     /*Only Mobile viewport*/
     #CP_ImageTabswithInternalMenu_1 .right-text-subdata {
         width: 90%;
@@ -317,9 +329,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 /*END Css for CP_ImageTabs*/
-
 /*Start for CP_Scroll Top*/
-
 .cp-scrolltop a.scrolltext {
     position: fixed;
     right: 0;
@@ -336,9 +346,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 /*End-of-Scroll-top*/
-
 /*Start of CP_BGImgWithPreFooter.css*/
-
 .CP_BGImgWithPreFooter.hero-height {
     height: 700px;
 }
@@ -369,6 +377,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
         min-height: 440px;
         height: 440px;
     }
+
     .CP_BGImgWithPreFooter.hero-1-col ul a.c-call-to-action.theme-transparent {
         margin-top: 0px;
     }
@@ -378,16 +387,20 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     #CP_PricingTable_1 .hide-by-default.show-row {
         display: table;
     }
+
     #CP_PricingTable_1 .hide-by-default.show-row {
         display: table;
     }
+
     .CP_BGImgWithPreFooter.hero-height {
         min-height: 420px;
         height: 420px;
     }
+
     .CP_BGImgWithPreFooter.hero-1-col ul a.c-call-to-action.theme-transparent {
         margin-top: 45px;
     }
+
     .CP_BGImgWithPreFooter .v-center {
         position: absolute;
         transform: none;
@@ -399,9 +412,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 /*End of CP_BGImgWithPreFooter.css*/
-
 /*Start of CP_ImageBlocksAnimation.css*/
-
 .cp-image-blocks-animation {
     padding: 60px 0 110px;
     margin: 0 auto;
@@ -445,14 +456,12 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 /* To overlap the right border */
-
 .cp-image-blocks-animation .image-block-1,
 .cp-image-blocks-animation .image-block-3 {
     margin-right: -1px;
 }
 
 /* To overlap the top border */
-
 .cp-image-blocks-animation .image-block-3,
 .cp-image-blocks-animation .image-block-4 {
     margin-top: -1px;
@@ -726,19 +735,24 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     .cp-image-blocks-animation {
         padding: 5px 0 60px;
     }
+
     .cp-image-blocks-animation .component-sub-title {
         padding: 25px 0 0;
     }
+
     .cp-image-blocks-animation .component-top {
         padding: 0 0 56px;
     }
+
     .cp-image-blocks-animation .image-blocks {
         width: 974px;
     }
+
     .cp-image-blocks-animation .image-block:not(.image-block-5),
     .cp-image-blocks-animation[data-disable="false"] .image-block:not(.image-block-5) .image-block-inner {
         width: 486px;
     }
+
     .cp-image-blocks-animation[data-disable="false"] .image-block:not(.image-block-5) .image-block-inner {
         height: 247px;
     }
@@ -748,46 +762,57 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     .cp-image-blocks-animation .component-title {
         padding-top: 27px;
     }
+
     .cp-image-blocks-animation .component-sub-title {
         padding: 25px 0 0;
     }
+
     .cp-image-blocks-animation .component-top {
         padding: 0 0 46px;
     }
+
     .cp-image-blocks-animation .image-block img {
         width: 97px;
         height: 97px;
         margin-top: 0;
     }
+
     .cp-image-blocks-animation .component-top {
         width: 90%;
     }
+
     .cp-image-blocks-animation .image-block .image-block-content {
         width: 85%;
     }
+
     .cp-image-blocks-animation .image-blocks,
     .cp-image-blocks-animation .image-block:not(.image-block-5),
     .cp-image-blocks-animation[data-disable="false"] .image-block:not(.image-block-5) .image-block-inner {
         width: 581px;
     }
+
     /* To overlap the top border */
     .cp-image-blocks-animation .image-block {
         margin: -1px 0 0;
     }
+
     .cp-image-blocks-animation .image-block-23,
     .cp-image-blocks-animation .image-block .image-block-label {
         display: block;
     }
+
     .cp-image-blocks-animation .image-block-5,
     .cp-image-blocks-animation .image-block-label,
     .cp-image-blocks-animation .image-block-border .image-block-label {
         display: none;
     }
+
     .cp-image-blocks-animation .image-block .image-block-label {
         height: 20px;
         opacity: 1;
         transition: height .5s, opacity .5s;
     }
+
     .cp-image-blocks-animation .image-block:hover .image-block-label {
         height: 0;
         opacity: 0;
@@ -798,15 +823,18 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     .cp-image-blocks-animation .component-top {
         padding: 0 0 47px;
     }
+
     .cp-image-blocks-animation .livearea {
         width: 100%;
         padding: 0;
     }
+
     .cp-image-blocks-animation .image-blocks,
     .cp-image-blocks-animation .image-block:not(.image-block-5),
     .cp-image-blocks-animation[data-disable="false"] .image-block:not(.image-block-5) .image-block-inner {
         width: 518px;
     }
+
     .cp-image-blocks-animation .component-sub-title {
         padding-top: 25px;
     }
@@ -816,17 +844,21 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     .cp-image-blocks-animation .component-title {
         padding-top: 27px;
     }
+
     .cp-image-blocks-animation .component-sub-title {
         padding: 25px 0 0;
     }
+
     .cp-image-blocks-animation .component-top {
         padding: 0 0 75px;
     }
+
     .cp-image-blocks-animation .image-block img {
         width: 97px;
         height: 97px;
         margin-top: -10px;
     }
+
     .cp-image-blocks-animation .image-blocks,
     .cp-image-blocks-animation .image-block:not(.image-block-5),
     .cp-image-blocks-animation[data-disable="false"] .image-block:not(.image-block-5) .image-block-inner {
@@ -835,9 +867,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 /*END of CP_ImageBlocksAnimation.css*/
-
 /*Start of CP_MediaCarouselWithFrames.css*/
-
 .cp-media-carousel-with-frames .carousel-group .carousel-frame .video-link a {
     position: absolute;
     height: 100%;
@@ -846,7 +876,9 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     z-index: 999;
     left: 0;
 }
-.carousel-group::after,.carousel-frame::after {
+
+.carousel-group::after,
+.carousel-frame::after {
     content: "";
     display: table;
     clear: both;
@@ -970,16 +1002,18 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     background: #005da6;
 }
 
-.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-frame-link:focus, .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-frame-link:active {
+.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-frame-link:focus,
+.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-frame-link:active {
     outline: #000 dashed 1px;
 }
 
-/* .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-content .carousel-blue-cta:after {
-    content: "";
-} */
+/* .cp-media-carousel-with-frames .carousel-group .carousel-frame a.carousel-frame-link */
+
+.cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-frame-link a.carousel-frame-link {
+    cursor: hand;
+}
 
 /*srikanth*/
-
 .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .video-link.black .open-popup-video {
     background-size: 21%;
     background-position: 50% 50%;
@@ -992,7 +1026,6 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 /*end*/
-
 .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .play-button {
     position: absolute;
     top: 0;
@@ -1160,7 +1193,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 .cp-media-carousel-with-frames .carousel-group .carousel-frame a {
-    cursor: default;
+    cursor: pointer;
 }
 
 .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-content a {
@@ -1173,52 +1206,63 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 @media screen and (max-width: 1199px) {
+
     /* Viewport 1084 */
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .carousel-image,
     .cp-media-carousel-with-frames .carousel-navigation {
         height: 300px;
     }
+
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-headline,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-content,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .carousel-image,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail {
         width: 533px;
     }
+
     .cp-media-carousel-with-frames {
         padding: 12px 0 58px;
     }
+
     .cp-media-carousel-with-frames .headline {
         text-align: center;
         padding-bottom: 73px;
     }
+
     .cp-media-carousel-with-frames .carousel-navigation .carousel-button {
         width: 25px;
     }
+
     .carousel-frame[data-carousel-position="-1"] .carousel-image {
         width: 323px;
     }
+
     .carousel-frame[data-carousel-position="0"] .carousel-image {
         width: 323px;
     }
 }
 
 @media screen and (max-width:1084px) {
+
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-headline,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-content,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .carousel-image,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail {
         width: 400px;
     }
+
     .cp-media-carousel-with-frames .carousel-frame-shadow+.carousel-content.true_paragraph {
         bottom: -205px !important;
     }
 }
 
 @media screen and (min-width:768px) and (max-width: 900px) {
+
     /* Viewport 768 */
     .cp-media-carousel-with-frames {
         padding: 40px 0 58px;
     }
+
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .carousel-image,
     .cp-media-carousel-with-frames .carousel-navigation,
     .cp-media-carousel-with-frames .carousel-navigation .carousel-button,
@@ -1227,22 +1271,28 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     .cp-media-carousel-with-frames .carousel-group {
         transition: all 1.25s;
     }
+
     .cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position="-1"],
     .cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position="0"] {
         opacity: 1;
     }
+
     .cp-media-carousel-with-frames .headline {
         padding-bottom: 53px;
     }
+
     .cp-media-carousel-with-frames .carousel-group {
         /* min-height: 536px; */
     }
+
     .carousel-frame[data-carousel-position="-1"] .carousel-image {
         width: 323px;
     }
+
     .carousel-frame[data-carousel-position="0"] .carousel-image {
         width: 323px;
     }
+
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-headline,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-content,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .carousel-image,
@@ -1252,11 +1302,11 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 /*media Query for Ipad*/
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
     .cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position="-1"] {
         padding-left: 11%;
     }
+
     .cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position="0"] {
         left: 240px !important;
     }
@@ -1269,54 +1319,67 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 @media screen and (min-width:540px) and (max-width: 767px) {
+
     /* Viewport 540 */
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .carousel-image,
     .cp-media-carousel-with-frames .carousel-navigation {
         height: 222px;
     }
+
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-headline,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-content,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .carousel-image,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail {
         width: 394px;
     }
+
     .cp-media-carousel-with-frames .carousel-with-frames {
         padding-bottom: 50px;
     }
+
     .cp-media-carousel-with-frames .carousel-frame-shadow+.carousel-content.true_paragraph {
         bottom: -198px !important;
     }
+
     .cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position="-1"],
     .cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position="0"] {
         opacity: 0;
     }
+
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .play-button {
         width: 100px;
         height: 100px;
     }
+
     .cp-media-carousel-with-frames {
         padding: 37px 0 58px;
     }
+
     .cp-media-carousel-with-frames .headline {
         padding-bottom: 44px;
     }
+
     .cp-media-carousel-with-frames .headline .c-heading-3 {
         padding: 0;
     }
+
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-headline {
         padding-top: 40px;
     }
+
     /* .cp-media-carousel-with-frames .carousel-group {
         min-height: 436px;
     } */
 }
 
 @media screen and (max-width: 539px) {
+
     /* Viewport 320 */
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .carousel-image,
     .cp-media-carousel-with-frames .carousel-navigation {
         height: 117px;
     }
+
     /* .cp-media-carousel-with-frames .carousel-with-frames {
         padding-bottom: 0;
     } */
@@ -1326,34 +1389,38 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail {
         width: 225px;
     }
+
     .cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position="-1"],
     .cp-media-carousel-with-frames .carousel-group .carousel-frame[data-carousel-position="0"] {
         opacity: 0;
     }
+
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-thumbnail .play-button {
         width: 50px;
         height: 50px;
     }
+
     .cp-media-carousel-with-frames {
         padding: 40px 0 69px;
     }
+
     .cp-media-carousel-with-frames .headline {
         padding-bottom: 44px;
     }
+
     .cp-media-carousel-with-frames .carousel-group .carousel-frame .carousel-headline {
         margin-top: 20px;
         padding-top: 0px;
         margin-bottom: 20px;
     }
+
     /* .cp-media-carousel-with-frames .carousel-group {
         min-height: 380px;
     } */
 }
 
 /*END of CP_MediaCarouselWithFrames.css*/
-
 /*Start of CP_RightNavTab.css*/
-
 .sql-RightNavTab .main-area {
     padding: 70px 0px 0px 0px;
 }
@@ -1368,7 +1435,6 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
      padding:0px 0px 75px 0px;
 }
 */
-
 .sql-RightNavTab .sql-righttab .sql-accordion-tab-list {
     display: inline-block;
     width: 95%;
@@ -1433,7 +1499,6 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
      opacity:1;
 }
 */
-
 .sql-RightNavTab .sql-lefttab .sql-accordion-tab-list .sql-accordion-tab-list ul li.active .texting {
     font-weight: 600;
     opacity: 0.9;
@@ -1635,7 +1700,6 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 /* Responsive Styles of RightNavTab*/
-
 .sql-RightNavTab .RightNavTab-carousel .videoheading {
     display: inline-block;
     padding: 0 10px;
@@ -1692,9 +1756,11 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     .sql-RightNavTab .main-class {
         padding: 70px 50px 50px 25px;
     }
+
     .sql-RightNavTab .main-area {
         padding: 50px 0 0 0;
     }
+
     /*.sql-RightNavTab .title {
          padding: 0 0 55px 0;
     }
@@ -1702,9 +1768,11 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     .sql-RightNavTab .sql-lefttab {
         padding-right: 30px;
     }
+
     .sql-RightNavTab .main-class .tab-panel-item .icons .linktext {
         padding-bottom: 30px;
     }
+
     .sql-RightNavTab .RightNavTab-carousel {
         /*updated as part of right nav tab issue*/
         margin-bottom: 30px;
@@ -1721,21 +1789,27 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     .sql-RightNavTab .RightNavTab-carousel .videoheading .title-main {
         width: 55%;
     }
+
     .sql-RightNavTab .RightNavTab-carousel .arrows {
         width: 45%;
     }
+
     .sql-RightNavTab .main-class {
         padding: 70px 20px 50px;
     }
+
     .sql-RightNavTab .main-class .icons .icontext {
         padding: 0px;
     }
+
     .sql-RightNavTab .main-class .icons img {
         margin-bottom: 30px
     }
+
     .sql-RightNavTab .sql-lefttab {
         padding-right: 15px;
     }
+
     .sql-RightNavTab .sql-lefttab .sql-accordion-tab-list {
         height: auto !important;
         display: block !important;
@@ -1746,6 +1820,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     .sql-RightNavTab .main-area {
         padding: 40px 10px 0 12px;
     }
+
     /*.sql-RightNavTab .title {
          padding: 0 0 45px 0;
     }
@@ -1754,27 +1829,33 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
         padding: 60px 35px 70px;
         width: 82%;
     }
+
     .sql-RightNavTab .main-area .accordion-main-panel .accordion-heading {
         text-align: left;
         text-decoration: none;
         padding-top: 27px;
         padding-bottom: 27px;
     }
+
     .sql-RightNavTab .main-area .accordion-main-panel .accordion-heading.bg-down-arrow-black {
         padding-top: 27px;
     }
+
     .sql-RightNavTab .RightNavTab-carousel {
         position: relative;
         padding-top: 5px;
     }
+
     .sql-RightNavTab .RightNavTab-carousel .Tab-carousel .img-content {
         text-align: center;
         width: 80%;
         display: inline-block;
     }
+
     .sql-RightNavTab .main-class .accordion-main-panel .mainaccordionpanel .icons {
         padding: 0px 35px 15px 10px;
     }
+
     .sql-RightNavTab .main-class .RightNavTab-carousel .jcarousel-control-next,
     .sql-RightNavTab .main-class .RightNavTab-carousel .jcarousel-control-prev {
         position: absolute;
@@ -1782,49 +1863,52 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
         top: 30%;
         transform: translateY(-50%);
     }
+
     .sql-RightNavTab .main-class .RightNavTab-carousel .jcarousel-control-next {
         right: 0;
     }
+
     .sql-RightNavTab .main-class .RightNavTab-carousel .jcarousel-control-prev {
         left: 0;
     }
+
     .sql-RightNavTab .main-class .accordion-main-panel .accordion-heading.bg-right-arrow-black:after {
         content: url('//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RESD65?ver=06ac');
         color: #000;
         position: absolute;
         right: 5px;
     }
+
     .sql-RightNavTab .main-class.dark-background .accordion-main-panel .accordion-heading.bg-right-arrow-white:after {
         content: url('//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REV1nK?ver=894f');
         color: #FFF;
         position: absolute;
         right: 5px;
     }
+
     .sql-RightNavTab .main-class .accordion-main-panel .accordion-heading.bg-down-arrow-black:after {
         content: url('//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RESKTT?ver=a01a');
         color: #000;
         position: absolute;
         right: 5px;
     }
+
     .sql-RightNavTab .main-class.dark-background .accordion-main-panel .accordion-heading.bg-down-arrow-white:after {
         content: url('//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REV6Ah?ver=f117');
         color: #FFF;
         position: absolute;
         right: 5px;
     }
+
     .sql-RightNavTab .main-area .accordion-main-panel .mainaccordionpanel .icons .disc-list {
         padding-left: 10px;
     }
 }
 
 /* Responsive Styles of RightNavTab*/
-
 /*END of CP_RightNavTab.css*/
-
 /*Start of CP_AccordionWithTable.css*/
-
 /* legend css*/
-
 .CP_AccordionWithTable .terms_and_conditions fieldset {
     display: inline-block;
 }
@@ -1872,13 +1956,11 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 /*Accordionwithtable Redesign*/
-
 /*.CP_AccordionWithTable .Table-content td:first-child{
      width:17.7%;
      text-align: left;
 }
 */
-
 .CP_AccordionWithTable .accordion-main-panel .Table-content table tr:first-child th p.c-paragraph-3 {
     padding: 0;
 }
@@ -2002,7 +2084,6 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
      display: block;
 }
 */
-
 .CP_AccordionWithTable .accordion-area tr {
     display: table-row;
     width: 100%;
@@ -2027,7 +2108,6 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
      border-bottom: #fff 2px solid;
 }
 */
-
 .CP_AccordionWithTable #table_container_main th {
     display: inline-block;
     padding: 10px 0px 12px 0px;
@@ -2053,29 +2133,35 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 @media only screen and (max-width: 540px) {
+
     /* bug:338748 CP_AccordionWithTable bullet list bug */
     .main-content .CP_AccordionWithTable .accordion-main-panel .Table-content .table-area td ul {
         width: 60%;
     }
+
     .CP_AccordionWithTable.light-background .accordion-area .accordion-main-panel tr {
         padding: 22px 0px;
         margin-left: 10%;
         padding-right: 12px;
         width: 85%;
     }
+
     .CP_AccordionWithTable .Table-content tr th:first-child {
         width: 50%;
     }
+
     .CP_AccordionWithTable .Table-content table {
         margin-left: 15%;
         width: 85%;
     }
+
     .CP_AccordionWithTable .Table-content td {
         padding-top: 37px;
     }
 }
 
 @media screen and (min-width:1600px) {
+
     /* bug:338748 CP_AccordionWithTable bullet list bug */
     .main-content .CP_AccordionWithTable .accordion-main-panel .Table-content .table-area td ul {
         width: 60%;
@@ -2083,9 +2169,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 /*END of CP_AccordionWithTable.css*/
-
 /*start of CP_ThreeBGImagesWithCopy.css*/
-
 .cp-three-bg-images-with-copy .livearea {
     width: 100%;
     max-width: 100%;
@@ -2146,7 +2230,6 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
      text-decoration: none !important;
 }
  */
-
 .cp-three-bg-images-with-copy .theme-dark,
 .cp-three-bg-images-with-copy .theme-light {
     background: none;
@@ -2231,6 +2314,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 @media screen and (-ms-high-contrast: black-on-white) {
+
     .cp-three-bg-images-with-copy .section-button,
     .cp-three-bg-images-with-copy .section-headline,
     .cp-three-bg-images-with-copy .section-content,
@@ -2241,6 +2325,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 @media screen and (-ms-high-contrast: white-on-black) {
+
     .cp-three-bg-images-with-copy .section-button,
     .cp-three-bg-images-with-copy .section-headline,
     .cp-three-bg-images-with-copy .section-content,
@@ -2254,14 +2339,17 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     .cp-three-bg-images-with-copy .c-mosaic [data-f-mosaic~=f-height-medium] {
         height: 400px;
     }
+
     .cp-three-bg-images-with-copy .c-mosaic [data-f-mosaic~=f-height-large] {
         height: 800px;
     }
+
     .cp-three-bg-images-with-copy .section-2 img {
         width: 100%;
         height: 95%;
         left: 90%;
     }
+
     .cp-three-bg-images-with-copy .section-4 {
         padding: 0 10% !important;
     }
@@ -2276,17 +2364,19 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     }
 }
  */
-
 @media only screen and (min-width: 768px) and (max-width: 1083px) {
     .cp-three-bg-images-with-copy .c-mosaic [data-f-mosaic~=f-vp1-whole] {
         width: 50%;
     }
+
     .cp-three-bg-images-with-copy .c-mosaic [data-f-mosaic~=f-height-large] {
         height: 800px;
     }
+
     .cp-three-bg-images-with-copy .c-mosaic [data-f-mosaic~=f-height-medium] {
         height: 400px;
     }
+
     .cp-three-bg-images-with-copy .section-2 img {
         width: 55%;
         left: 70%;
@@ -2294,9 +2384,11 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
         /*object-fit: scale-down;
         */
     }
+
     .cp-three-bg-images-with-copy .width-full-for-tablet {
         width: 100% !important;
     }
+
     .cp-three-bg-images-with-copy .section-2.c-mosaic-placement {
         padding: 0 55% 0 5% !important;
     }
@@ -2306,9 +2398,11 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
     .cp-three-bg-images-with-copy .c-mosaic [data-f-mosaic~=f-height-medium] {
         height: 400px;
     }
+
     .cp-three-bg-images-with-copy .c-mosaic [data-f-mosaic~=f-height-large] {
         height: 425px;
     }
+
     .cp-three-bg-images-with-copy .c-mosaic [data-f-mosaic~=f-vp2-half] {
         height: 352px;
     }
@@ -2321,21 +2415,26 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 @media screen and (max-width: 539px) {
+
     .cp-three-bg-images-with-copy .section-1.c-mosaic-placement,
     .cp-three-bg-images-with-copy .section-2.c-mosaic-placement,
     .cp-three-bg-images-with-copy .section-4.c-mosaic-placement {
         padding: 0 5% !important;
     }
+
     .cp-three-bg-images-with-copy .section-2.c-mosaic-placement>div,
     .cp-three-bg-images-with-copy .section-4.c-mosaic-placement>div {
         text-align: center;
     }
+
     .cp-three-bg-images-with-copy .section-3-wrapper {
         display: block;
     }
+
     .cp-three-bg-images-with-copy .section-2 picture {
         display: none;
     }
+
     .cp-three-bg-images-with-copy .section-2 .section-button,
     .cp-three-bg-images-with-copy .section-4 .section-button,
     .cp-3bgimagewithcopy .section-3.c-mosaic-placement div {
@@ -2348,9 +2447,7 @@ image-tabs-with-internal-menu.internalmenu .image-tab-submenu a,
 }
 
 /*END of CP_ThreeBGImagesWithCopy.css*/
-
 /*Start of CP_TwoColContentBlocks.css*/
-
 .CP_TwoColContentBlocks .left-table,
 .CP_TwoColContentBlocks .right-table {
     border-bottom: 2px solid #ccc;
@@ -2399,17 +2496,15 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
     .CP_TwoColContentBlocks .width-for-col {
         width: 100%;
     }
+
     .CP_TwoColContentBlocks .main-class .tab-panel-item {
         min-height: 270px;
     }
 }
 
 /*END of CP_TwoColContentBlocks.css*/
-
 /*********************************************/
-
 /*Styles starts for SQL Server Migration Slick Crosel Component*/
-
 .carousel .slick-dots li button {
     width: 10px;
     height: 10px;
@@ -2612,17 +2707,14 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
         height: auto;
         width: auto;
     }
+
     /* END CSS FOR CP_MWF_HeroCarouselWithCopy */
 }
 
 /*Styles ends for SQL Server Migration Slick Crosel Component*/
-
 /*********************************************/
-
 /*********************************************/
-
 /*Styles starts for SQL Server pricing Table Component*/
-
 .terms_and_conditions .caption {
     padding-top: 10px;
 }
@@ -2836,13 +2928,12 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
 }
 
 /*media Queries for responsive viewports*/
-
 /*media query for mobile viewport*/
-
 @media only screen and (max-width:320px) {
     .CP_PricingTable_1 .sub-headline {
         padding-right: 5px;
     }
+
     .CP_PricingTable_1 .accordion-area .accordion-heading {
         padding-left: 10px;
         padding-top: 28px;
@@ -2851,40 +2942,48 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
         margin-bottom: 0px;
         clear: both;
     }
+
     .CP_PricingTable_1.light-background .accordion-area .c-paragraph-2.accordion-heading {
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .CP_PricingTable_1.light-background .Table-content .table-area td {
         width: 100%;
         display: inline-block;
     }
+
     .CP_PricingTable_1.light-background .Table-content .table-area td p {
         width: 100%;
     }
+
     .CP_PricingTable_1 .terms_and_conditions {
         display: block;
         width: 100%;
         padding-left: 10px;
         padding-right: 10px;
     }
+
     .CP_PricingTable_1.light-background .Table-content .table-area td:first-child {
         margin-top: -19px;
     }
+
     .CP_PricingTable_1.light-background .Table-content .table-area td:nth-child(2) {
         margin-top: -26px;
     }
+
     .CP_PricingTable_1 .CP_accordion-container p.h6 {
         font-size: 20px;
     }
+
     .CP_PricingTable_1 .accordion-area {
         width: 95%;
     }
 }
 
 /*media Query for mobile viewport*/
-
 @media only screen and (min-width:321px) and (max-width:539px) {
+
     /*.CP_PricingTable_1 #table_title{
          display: none;
     }
@@ -2892,21 +2991,26 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
     .CP_PricingTable_1 .CP_accordion-container {
         visibility: visible;
     }
+
     .CP_PricingTable_1 .CP_accordion-container p.h6 {
         font-size: 24px;
     }
+
     .CP_PricingTable_1.light-background .Table-content .table-area td:first-child {
         margin-top: -19px;
     }
+
     .CP_PricingTable_1.light-background .Table-content .table-area td:nth-child(2) {
         margin-top: -26px;
     }
+
     .CP_PricingTable_1 .accordion-area {
         padding-left: 22px;
         padding-right: 22px;
         padding-top: 24px;
         padding-bottom: 28px;
     }
+
     #terms_and_conditions_PricingTable_2 {
         padding-left: 25px;
         padding-right: 25px;
@@ -2914,20 +3018,23 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
 }
 
 /*media query for tablet viewport*/
-
 @media only screen and (min-width:540px) and (max-width:1083px) {
     .rtl #table_container table.pricing-table th:first-child {
         padding: 21px 15px 33px 3px !important;
     }
+
     #table_container table.pricing-table th:first-child {
         padding: 21px 10px 33px 3px !important;
     }
+
     #table_container table.pricing-table th {
         padding: 15px 15px 21px 1px !important;
     }
+
     #table_container table.pricing-table td {
         padding: 21px 15px 33px 2px !important;
     }
+
     #table_container h2.mb-4 {
         margin-bottom: 40px !important;
     }
@@ -2937,14 +3044,17 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
     .CP_PricingTable_1 .CP_accordion-container {
         visibility: visible;
     }
+
     .CP_PricingTable_1 .CP_accordion-container p.h6 {
         font-size: 24px;
     }
+
     .CP_PricingTable_1 .accordion-area {
         padding-left: 25px;
         padding-right: 25px;
         padding-bottom: 44px;
     }
+
     #terms_and_conditions_PricingTable_2 {
         padding-left: 40px;
         padding-right: 40px;
@@ -2952,24 +3062,28 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
 }
 
 /*media query for tablet landscape viewport*/
-
 @media only screen and (min-width:768px) and (max-width:1083px) {
     .CP_PricingTable_1 .CP_accordion-container {
         display: none;
     }
+
     .CP_PricingTable_1 .accordion-main-panel {
         margin: 0px;
         width: 100%;
     }
+
     .CP_PricingTable_1.light-background#table_title {
         display: none;
     }
+
     .CP_PricingTable_1.light-background .Table-content .table-area td p {
         width: 90%;
     }
+
     .CP_PricingTable_1.light-background#table_title.livearea h3.text-center {
         margin-bottom: 0px !important;
     }
+
     .CP_PricingTable_1 .accordion-area {
         width: 100%;
         padding: 0;
@@ -2979,15 +3093,16 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
 }
 
 /*media query for desktop viewport*/
-
 @media only screen and (min-width:1084px) {
     .CP_PricingTable_1 .CP_accordion-container {
         visibility: hidden;
         display: none;
     }
+
     .CP_PricingTable_1.light-background .Table-content .table-area td p {
         width: 100%;
     }
+
     .CP_PricingTable_1 #table_container table.pricing-table th,
     #table_container table.pricing-table td {
         padding-bottom: 25px;
@@ -2995,13 +3110,9 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
 }
 
 /*Styles ends for SQL Server pricing Table Component*/
-
 /*********************************************/
-
 /*********************************************/
-
 /*Styles starts for CP_SocialBar Page Fragments*/
-
 #CP_SocialBar .social-share-links {
     margin-top: 0px;
 }
@@ -3021,13 +3132,9 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
 }
 
 /*Styles ends for CP_SocialBar Page Fragments*/
-
 /*********************************************/
-
 /*********************************************/
-
 /*Styles ends for CP_StaticSupportLinks_1_VG Component*/
-
 .fixed-support-links {
     border-right: none;
     float: right;
@@ -3097,13 +3204,9 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
 }
 
 /*Styles ends for CP_StaticSupportLinks_1_VG Component*/
-
 /*********************************************/
-
 /***********************************************************/
-
 /* Styles starts for CP_FiveColumnsWithCopy_1_VG Component */
-
 .cp-five-columns-with-copy .top-content {
     padding: 0 0 37px;
     text-align: center;
@@ -3132,7 +3235,6 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
 }
 
 /*margin between two buttons - Ramesh (2017/08/23)*/
-
 .cp-five-columns-with-copy .top-content a.c-call-to-action,
 .cp-five-columns-with-copy .top-content a.c-call-to-action.theme-default:last-child {
     margin-left: 20px;
@@ -3151,7 +3253,6 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
      padding: 60px 0 70px;
 }
 */
-
 .cp-five-columns-with-copy .top {
     text-align: center;
 }
@@ -3245,12 +3346,15 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
         width: 33% !important;
         padding-bottom: 15px;
     }
+
     .cp-five-columns-with-copy .top-headline {
         padding: 0 0 50px;
     }
+
     .cp-five-columns-with-copy.light-background .col-content p {
         padding: 3px 0 10px;
     }
+
     .cp-five-columns-with-copy .column-image {
         width: 120px;
         height: auto;
@@ -3261,6 +3365,7 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
     .cp-five-columns-with-copy .column {
         width: 33%;
     }
+
     .cp-five-columns-with-copy .col-headline {
         padding-top: 20px;
     }
@@ -3270,6 +3375,7 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
     .cp-five-columns-with-copy .column {
         width: 50% !important;
     }
+
     /*.cp-five-columns-with-copy .column:not(:first-child){
          padding-top: 20px !important;
     }*/
@@ -3277,12 +3383,14 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
         height: auto !important;
         padding-bottom: 0 !important;
     }
+
     .cp-five-columns-with-copy .col-headline {
         padding: 0 0 4px;
     }
 }
 
 @media screen and (max-width: 539px) {
+
     .cp-five-columns-with-copy .column,
     .cp-five-columns-with-copy[data-column-count="5"] .column,
     .cp-five-columns-with-copy[data-column-count="4"] .column,
@@ -3290,39 +3398,40 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
     .cp-five-columns-with-copy[data-column-count="2"] .column {
         padding: 40px 5% 0 5% !important;
     }
+
     .cp-five-columns-with-copy .row-carousel.five-column,
     .cp-five-columns-with-copy[data-column-count="4"] .row-carousel.four-column,
     .cp-five-columns-with-copy[data-column-count="3"] .row-carousel.three-column,
     .cp-five-columns-with-copy[data-column-count="2"] .row-carousel.two-column {
         display: block;
     }
+
     .cp-five-columns-with-copy .column,
     .cp-five-columns-with-copy[data-column-count="2"] .column {
         width: 100% !important;
     }
+
     .cp-five-columns-with-copy picture {
         height: 120px !important;
         width: 128px !important;
         margin: auto;
         overflow: visible !important;
     }
+
     .cp-five-columns-with-copy .col-content {
         padding: 0 40px !important;
         height: auto;
     }
+
     .cp-five-columns-with-copy .col-content p {
         padding-top: 5px;
     }
 }
 
 /* Styles ends for CP_FiveColumnsWithCopy_1_VG Component */
-
 /*********************************************************/
-
 /************************************************************/
-
 /* Styles starts for CP_ThreeColumnsWithCopy_1_VG Component */
-
 .cp-three-columns-with-copy .top-content a {
     text-align: center;
 }
@@ -3395,83 +3504,86 @@ CP_TwoColContentBlocks .light-background .main-class .light-background h4 {
 }
 
 /* Viewport 1084 */
-
 @media screen and (max-width: 1199px) {
     .cp-three-columns-with-copy .column .col-content p {
         padding: 6px 0 10px;
     }
+
     .cp-three-columns-with-copy .top-content {
         padding: 0 0 57px;
     }
 }
 
 /* Viewport 768 */
-
 @media screen and (min-width:768px) and (max-width: 1083px) {
     .cp-three-columns-with-copy .column {
         width: 33.33%;
     }
+
     .cp-three-columns-with-copy .top-content {
         padding: 0 0 48px;
     }
 }
 
 /* Viewport 540 */
-
 @media screen and (min-width:540px) and (max-width: 767px) {
     .cp-three-columns-with-copy .col-1-3 {
         width: 50%;
     }
+
     .cp-three-columns-with-copy .col-1-3.column.column-3:nth-child(3) {
         margin-top: 53px;
     }
+
     .cp-three-columns-with-copy .column .column-image {
         width: 128px;
     }
+
     .cp-three-columns-with-copy .column .col-headline {
         padding-top: 18px;
     }
+
     .cp-three-columns-with-copy.light-background .column .col-content p {
         color: #737373;
     }
 }
 
 /* Viewport 320 */
-
 @media screen and (max-width: 539px) {
     .cp-three-columns-with-copy .row-non-carousel {
         display: block;
     }
+
     .cp-three-columns-with-copy .row-carousel {
         display: none;
     }
+
     .cp-three-columns-with-copy picture {
         height: 73px !important;
         width: 128px !important;
         margin: auto;
         overflow: visible !important;
     }
+
     .cp-three-columns-with-copy .col-content p {
         padding-top: 5px;
         color: #737373;
         padding-bottom: 20px;
     }
+
     .cp-three-columns-with-copy.bg-cyan-300 .col-content p {
         color: #ffffff;
     }
+
     .cp-three-columns-with-copy {
         padding: 0;
     }
 }
 
 /* Styles ends for CP_ThreeColumnsWithCopy_1_VG Component */
-
 /**********************************************************/
-
 /**********************************************************/
-
 /* Styles styles for CP_footer button */
-
 a.mscom-link.white-color-btn {
     background-color: white;
     color: #0067B7;
@@ -3483,21 +3595,15 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /* Styles ends for CP_footer button */
-
 /**********************************************************/
-
 /**********************************************************/
-
 /* Styles starts for CP_StickyNav */
-
 /*width fix if there are 7 tabs - Ramesh*/
-
 .cp-sticky-nav .col-1-7.nb {
     width: 14.2857%
 }
 
 /*End*/
-
 .cp-sticky-nav,
 .sql-image-tab-carousel {
     position: relative;
@@ -3589,61 +3695,69 @@ a.mscom-link.white-color-btn:hover {
     .cp-sticky-nav .livearea {
         padding: 0 !important;
     }
+
     .cp-sticky-nav .cp-sticky-nav-sub {
         border-bottom: none;
     }
+
     .cp-sticky-nav .cp-sticky-nav-sub[data-collapse="true"] .tab {
         display: none;
     }
+
     .cp-sticky-nav .main-tab .tab-menu {
         line-height: 65px;
     }
+
     .cp-sticky-nav .tab .tab-menu {
         line-height: 60px;
     }
+
     .cp-sticky-nav .tabs {
         display: block;
     }
+
     .cp-sticky-nav .tab {
         text-align: left;
         width: 100%;
         border-bottom: 1px solid rgba(0, 0, 0, .1);
         padding: 0 30px;
     }
+
     .cp-sticky-nav .main-tab {
         display: block !important;
     }
+
     .cp-sticky-nav .main-tab:focus {
         display: inline-block !important;
     }
+
     .cp-sticky-nav .cp-sticky-nav-sub[data-collapse="true"] .main-tab .tab-menu:after {
         content: url(/en-us/CMSImages/SQL_Tablearrow_Black.png?version=40228936-e959-d05d-4eb9-a1a1306e15fa&CollectionId=23fb7a98-725a-43b9-aab3-b10d37e74256);
         padding-left: 5px;
     }
+
     .cp-sticky-nav .cp-sticky-nav-sub[data-collapse="false"] .main-tab .tab-menu:after {
         content: url(/en-us/CMSImages/SQL_Tablearrowdown_black.png?version=fb1c72e1-a73a-32c0-0663-0c0db4f632f0&CollectionId=23fb7a98-725a-43b9-aab3-b10d37e74256);
         padding-left: 5px;
     }
+
     /*width fix if there are 7 tabs - Ramesh*/
     .cp-sticky-nav .col-1-7.nb {
         width: 100%;
     }
+
     .cp-sticky-nav .main-tab:focus {
         display: inline-block !important;
     }
+
     /*End*/
 }
 
 /* Styles ends for CP_StickyNav */
-
 /**********************************************************/
-
 /**********************************************************/
-
 /* Styles starts for Click Top Chat */
-
 /*lpChatButton*/
-
 .fixed-support-links #lpChatButton {
     float: left;
     z-index: 999;
@@ -3677,56 +3791,57 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /* Styles ends for Click Top Chat */
-
 /**********************************************************/
-
 /*===Start====CP_CustomCarousel_1_M==============================================================================*/
-
 .CP_CustomCarousel.livearea {
     width: 100%;
     padding: 0px;
 }
 
 @media screen and (max-width:539px) {
+
     /*Only Mobile viewport*/
     #CP_CustomCarousel_1 .slick-list.draggable {
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
+
     #CP_CustomCarousel_1 .panel-item {
         margin-right: 0px;
     }
 }
 
 @media screen and (min-width:320px) and (max-width:539px) {
+
     /*Only Tablet 'Portrait' */
     #CP_CustomCarousel_1 .slick-list.draggable {
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
+
     #CP_CustomCarousel_1 .panel-item {
         margin-right: 0px;
     }
 }
 
 @media screen and (max-width:319px) {
+
     /*Only Mobile viewport*/
     #CP_CustomCarousel_1 .slick-list.draggable {
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
+
     #CP_CustomCarousel_1 .panel-item {
         margin-right: 0px;
     }
 }
 
 /*===End====CP_CustomCarousel_1_M==============================================================================*/
-
 /******* Start .SQL_3Vs4Vs5VsAnalysis_1 *******/
-
 .anim-counter.h2
-/** CR task: 337530 to change font styles**/
 
+/** CR task: 337530 to change font styles**/
     {
     font-weight: 200;
     font-size: 80px;
@@ -3742,7 +3857,6 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /** CR task: 337530 change font styles**/
-
 @media screen and (max-width:1084px) {
     .anim-counter.h2 {
         font-size: 60px;
@@ -3756,9 +3870,7 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /******* End .SQL_3Vs4Vs5VsAnalysis_1 *******/
-
 /* HeroCarouselWithButtons */
-
 .hero-carousel-with-button.livearea {
     width: 100%;
     padding: 0px;
@@ -3905,12 +4017,14 @@ a.mscom-link.white-color-btn:hover {
     .main-content .hero-carousel-with-button ul.slick-dots {
         bottom: 25px;
     }
+
     .hero-carousel-with-button.bottom .text-content {
         bottom: 105px;
     }
 }
 
 @media screen and (min-width:540px) and (max-width:1083px) {
+
     .hero-carousel-with-button,
     .hero-carousel-with-button .img-content {
         max-height: 470px;
@@ -3929,6 +4043,7 @@ a.mscom-link.white-color-btn:hover {
     .main-content .hero-carousel-with-button .half-text {
         width: 100%;
     }
+
     .hero-carousel-with-button.middle .text-content,
     .hero-carousel-with-button.bottom .text-content {
         position: relative;
@@ -3940,24 +4055,30 @@ a.mscom-link.white-color-btn:hover {
         transform: translate(0%, 0%);
         padding-bottom: 40px;
     }
+
     .hero-carousel-with-button .img-content {
         display: inline-block;
         width: 100%;
     }
+
     .main-content .hero-carousel-with-button .frame,
     .main-content .hero-carousel-with-button .img-content {
         width: 100%;
     }
+
     .main-content .hero-carousel-with-button .frame {
         width: auto;
     }
+
     .main-content .hero-carousel-with-button .img-content {
         height: auto;
     }
+
     .main-content .hero-carousel-with-button .theme-dark a:last-child,
     .main-content .hero-carousel-with-button .theme-light a:last-child {
         margin-left: 3%;
     }
+
     .main-content .hero-carousel-with-button .theme-dark a:first-child,
     .main-content .hero-carousel-with-button .theme-light a:first-child {
         margin-left: 0;
@@ -3965,7 +4086,6 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /**** StaticMenuWithImage CSS****/
-
 #CP_StaticMenu .sql-imagelist-1-col-image {
     width: auto;
     height: auto;
@@ -3986,7 +4106,6 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /**** StaticMenuWithImage CSS****/
-
 .main-content .staticmenu .slick-slider .slick-slide {
     box-sizing: content-box !important;
 }
@@ -3995,19 +4114,21 @@ a.mscom-link.white-color-btn:hover {
     .CP_AccordionWithTable.light-background .Table-content .table-area td {
         width: 50%;
     }
+
     .CP_AccordionWithTable.light-background .Table-content .table-area td[data-index] {
         display: none;
     }
+
     .CP_AccordionWithTable.light-background .Table-content .table-area td[data-index].active {
         display: table-cell;
     }
+
     .CP_AccordionWithTable .accordion-main-panel .Table-content table tr:first-child {
         display: none;
     }
 }
 
 /**static menu-carousel*/
-
 .main-content #static_menu_1 .slick-prev {
     left: 0px;
 }
@@ -4017,7 +4138,6 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /*** CustomCarousel***/
-
 #CP_CustomCarousel_1 .carousel .slick-prev,
 #CP_CustomCarousel_1 .carousel .slick-next {
     background-color: #000;
@@ -4035,9 +4155,7 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /*** CustomCarousel***/
-
 /**** Start of SideImageWithCopyV1 ****/
-
 .side-image-with-copy .right-media .video-link a {
     position: absolute;
     height: 100%;
@@ -4111,9 +4229,11 @@ a.mscom-link.white-color-btn:hover {
     .side-image-with-copy-v1 .s-dib {
         display: inline-block;
     }
+
     .side-image-with-copy-v1 .sqlsideimagemain {
         padding: 50px 0px 45px 0px;
     }
+
     #CP_CustomCarousel_1 .hero-carousel ul.slick-dots {
         margin-top: 15px ! important;
     }
@@ -4124,19 +4244,24 @@ a.mscom-link.white-color-btn:hover {
         padding: 55px 5% 0px 5%;
         text-align: center;
     }
+
     .side-image-with-copy-v1 .sqlsideimagemain .left-text.txtlft-imgrht {
         padding: 0px 5% 0px 5%;
         text-align: center;
     }
+
     .side-image-with-copy-v1 .sqlsideimagemain .right-media.txtlft-imgrht {
         padding-top: 25px;
     }
+
     .side-image-with-copy-v1 .sqlsideimagemain.txtlft-imgrht {
         padding: 40px 0px 45px 0px;
     }
+
     .side-image-with-copy-v1 .sqlsideimagemain {
         padding: 40px 0px 35px 0px;
     }
+
     .side-image-with-copy-v1 .right-media ul.list-items {
         margin: 0px 5% 0px 5%;
         width: 90%;
@@ -4147,16 +4272,17 @@ a.mscom-link.white-color-btn:hover {
     .side-image-with-copy-v1 .sqlsideimagemain {
         padding: 40px 0px 15px 0px;
     }
+
     .side-image-with-copy-v1 .sqlsideimagemain.txtlft-imgrht {
         padding: 40px 0px 35px 0px;
     }
+
     .side-image-with-copy-v1 .right-media .list-item {
         max-width: 50%;
     }
 }
 
 /*End of SideImageWithCopyV1*/
-
 .main-content .staticmenu.light-background .slick-slider .slick-prev:before {
     content: url('http://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RETaUY?ver=7c40');
 }
@@ -4180,7 +4306,6 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /*SQL_5PillarsOverlayContent.css*/
-
 .sql-five-pillar-overlay-content-1 .pillar-list .pillar-item .pillar-content a.c-call-to-action {
     width: 100%;
     padding-right: 0px;
@@ -4365,19 +4490,21 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /* VIEWPORT 1083 */
-
 @media only screen and (max-width: 1083px) {
     .sql-five-pillar-overlay-content-1 .pillar-list {
         padding-bottom: 0;
     }
+
     .sql-five-pillar-overlay-content-1 .pillar-item {
         width: calc(33.33% - 20px) !important;
         margin-right: 30px;
     }
+
     .sql-five-pillar-overlay-content-1 .pillar-item,
     .sql-five-pillar-overlay-content-1 .pillar-popup {
         margin-bottom: 50px;
     }
+
     .sql-five-pillar-overlay-content-1 .pillar-content {
         padding: 25px 25px 60px;
     }
@@ -4393,21 +4520,25 @@ a.mscom-link.white-color-btn:hover {
     .sql-five-pillar-overlay-content-1 .pillar-list {
         padding-bottom: 0;
     }
+
     .sql-five-pillar-overlay-content-1 .pillar-item {
         width: calc(50% - 15px) !important;
         margin-right: 30px;
     }
+
     .sql-five-pillar-overlay-content-1 .pillar-item,
     .sql-five-pillar-overlay-content-1 .pillar-popup,
     .sql-five-pillar-overlay-content-1 .pillar-item:nth-child(3) {
         margin-bottom: 40px;
     }
+
     .sql-five-pillar-overlay-content-1 .pillar-item:nth-child(2n) {
         margin-right: 0;
     }
 }
 
 @media only screen and (max-width: 539px) {
+
     .sql-five-pillar-overlay-content-1 .pillar-item,
     .sql-five-pillar-overlay-content-1 .pillar-item:nth-child(3) {
         width: 100% !important;
@@ -4416,9 +4547,7 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /*SQL_5PillarsOverlayContent.css end*/
-
 /*** Starts SQL_ImageTabsCarousel ***/
-
 .sql-image-tab-carousel {
     padding-top: 10px;
 }
@@ -4578,53 +4707,63 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /* VIEWPORT 1083 */
-
 @media only screen and (max-width: 1083px) {
     .sql-image-tab-carousel .carousel-thumbnails {
         padding-bottom: 29px;
     }
+
     .sql-image-tab-carousel .carousel-thumbnails .carousel-thumbnail-item {
         width: calc(100% / 4);
     }
+
     .sql-image-tab-carousel .carousel-content-list {
         height: 431px;
     }
 }
 
 /* VIEWPORT 768 */
-
 @media only screen and (max-width: 767px) {
     .sql-image-tab-carousel .livearea {
         padding: 0;
     }
+
     .sql-image-tab-carousel .livearea-thumbnail {
         width: 90%;
     }
+
     .sql-image-tab-carousel {
         padding-top: 10px;
     }
+
     .sql-image-tab-carousel .headline {
         margin-bottom: 20px;
     }
+
     .sql-image-tab-carousel .carousel-thumbnails .carousel-thumbnail-list {
         width: calc(100% - 48px);
     }
+
     .sql-image-tab-carousel .carousel-thumbnails .carousel-nav {
         width: 24px;
         display: inline-block;
     }
+
     .sql-image-tab-carousel .carousel-thumbnails .carousel-right {
         text-align: right;
     }
+
     .sql-image-tab-carousel .carousel-thumbnails {
         padding-bottom: 29px;
     }
+
     .sql-image-tab-carousel .carousel-thumbnails .carousel-thumbnail-item {
         width: calc(100% / 3);
     }
+
     .sql-image-tab-carousel .carousel-content-list {
         height: 351px;
     }
+
     .sql-image-tab-carousel .carousel-content .carousel-headline {
         font-size: 20px;
         padding-top: 20px;
@@ -4632,28 +4771,32 @@ a.mscom-link.white-color-btn:hover {
         display: inline-block;
         max-width: 100%;
     }
+
     .sql-image-tab-carousel .carousel-content .carousel-body {
         padding-bottom: 10px;
     }
 }
 
 /* VIEWPORT 540 */
-
 @media only screen and (max-width: 539px) {
     .sql-image-tab-carousel {
         padding-top: 0;
     }
+
     .sql-image-tab-carousel .carousel-thumbnails,
     .sql-image-tab-carousel .carousel-arrow-slider {
         display: none;
     }
+
     .sql-image-tab-carousel .carousel-content-list {
         height: 325px;
     }
+
     .sql-image-tab-carousel .carousel-content {
         height: 100%;
         margin-top: 0;
     }
+
     .sql-image-tab-carousel .livearea-content .carousel-nav {
         display: block;
         position: absolute;
@@ -4665,21 +4808,22 @@ a.mscom-link.white-color-btn:hover {
         text-align: center;
         background: rgba(255, 255, 255, .35);
     }
+
     .sql-image-tab-carousel .livearea-content .carousel-nav:hover {
         background: rgba(255, 255, 255, .5);
     }
+
     .sql-image-tab-carousel .livearea-content .carousel-nav img {
         height: 25px;
     }
+
     .sql-image-tab-carousel .livearea-content .carousel-right {
         right: 0;
     }
 }
 
 /*** Ends SQL_ImageTabsCarousel ***/
-
 /*accordionwith table comparison mobile*/
-
 .mobile_table_container_main {
     line-height: 70px;
 }
@@ -4726,19 +4870,18 @@ a.mscom-link.white-color-btn:hover {
     .mobile_table_container_main .xs-width {
         width: 50%;
     }
+
     .mobile_table_container_main .full-width {
         width: 100%
     }
 }
 
 /** 3reasons padding-top Fix*/
-
 .three-reasons-container.no-heading .slides {
     padding-top: 0;
 }
 
 /** new styles*/
-
 .left-5 {
     left: 5%;
 }
@@ -4809,9 +4952,11 @@ a.mscom-link.white-color-btn:hover {
         padding-left: 0px;
         padding-right: 0px;
     }
+
     .main-content .customcarouselv1 .slick-slider .slick-prev {
         left: 0px;
     }
+
     .main-content .customcarouselv1 .slick-slider .slick-next {
         right: 0px;
     }
@@ -4821,6 +4966,7 @@ a.mscom-link.white-color-btn:hover {
     .cp-3bgimagewithcopy.cp-three-bg-images-with-copy .c-mosaic {
         max-width: 100%;
     }
+
     .carousel .carousel-content .content-block {
         position: absolute;
         width: 70%;
@@ -4831,7 +4977,6 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /*Row css fixes*/
-
 @media screen and (min-width:540px) {
     .accordion .accordion-container .expand-collapse-holder {
         width: 20%;
@@ -4839,7 +4984,6 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /************START SQL_EventsWithBGImage**************/
-
 .countdown-timer {
     max-width: 350px;
     margin-left: auto;
@@ -4869,8 +5013,8 @@ a.mscom-link.white-color-btn:hover {
 }
 
 .events-hero a.c-call-to-action.theme-transparent.calendar-link:before {
-    content: url(http://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolS?ver=65db);
-    padding-right: 10px;
+    content: url(http: //img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolS?ver=65db);
+        padding-right: 10px;
 }
 
 .events-hero a.c-call-to-action.theme-transparent.calendar-link:after {
@@ -4886,9 +5030,7 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /**************END SQL_EventsWithBGImage**************/
-
 /**************START SQL_FourColwithImageText**************/
-
 #SQL_FourColwithImageText .fourcol-accordion-tabs {
     border-radius: 5px;
     position: relative;
@@ -4983,7 +5125,6 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /*----- Section Content -----*/
-
 #SQL_FourColwithImageText .accordion-section-content {
     position: relative;
     display: inline-block;
@@ -5016,6 +5157,7 @@ a.mscom-link.white-color-btn:hover {
     #SQL_FourColwithImageText .accordion-section .overlay {
         margin: 0 20%;
     }
+
     #SQL_FourColwithImageText .accordion-section-content .closebtn {
         text-align: right;
         top: 10px;
@@ -5023,7 +5165,6 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /*Accessibilty bugs*/
-
 #SQL_FourColwithImageText .accordion-section a:focus,
 #SQL_FourColwithImageText .accordion-section-content a:focus {
     outline: 1px dashed #fff;
@@ -5036,10 +5177,12 @@ a.mscom-link.white-color-btn:hover {
         padding: 6px;
         position: relative;
     }
+
     .fourcol-accordion-tabs .tabdata-container .closebtn .closebutton {
         display: inline-block;
         background-color: black;
     }
+
     #SQL_FourColwithImageText .accordion-section .overlay.active:after,
     #SQL_FourColwithImageText .accordion-section .overlay.active::after {
         border-style: solid;
@@ -5054,6 +5197,7 @@ a.mscom-link.white-color-btn:hover {
         border-width: 15px;
         margin-left: -15px;
     }
+
     /*Accessibility bug-339176-SQL Server Training certification_Issues.xlsx*/
     .main-content #CP_MediaCarouselWithFrames_1 .carousel-with-frames .carousel-group .carousel-frame .carousel-content a:focus {
         outline: 5px dotted #000 !important;
@@ -5061,6 +5205,7 @@ a.mscom-link.white-color-btn:hover {
 }
 
 @media screen and (-ms-high-contrast: white-on-black) {
+
     /*black*/
     #SQL_FourColwithImageText .accordion-section .overlay.active {
         background: #00bcf2;
@@ -5068,6 +5213,7 @@ a.mscom-link.white-color-btn:hover {
         padding: 6px;
         position: relative;
     }
+
     #SQL_FourColwithImageText .accordion-section .overlay.active:after,
     #SQL_FourColwithImageText .accordion-section .overlay.active::after {
         border-style: solid;
@@ -5082,9 +5228,11 @@ a.mscom-link.white-color-btn:hover {
         border-width: 15px;
         margin-left: -15px;
     }
+
     .fourcol-accordion-tabs .tabdata-container .closebtn .closebutton {
         display: inline-block;
     }
+
     /*Accessibility bug-339176-SQL Server Training certification_Issues.xlsx*/
     .main-content #CP_MediaCarouselWithFrames_1 .carousel-with-frames .carousel-group .carousel-frame .carousel-content a:focus {
         outline: 5px dotted #fff !important;
@@ -5092,9 +5240,7 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /**************END SQL_FourColwithImageText**************/
-
 /*start SQL_sidecopywithcolumn*/
-
 .sql-side-copy-columns .display-table-cell a {
     outline: none ! important;
 }
@@ -5112,6 +5258,7 @@ a.mscom-link.white-color-btn:hover {
     .sql-side-copy-columns .four-column-copy.three-column .sql-copy-row .sql-copy-column {
         width: 100%;
     }
+
     .sql-side-copy-columns div.display-table-cell {
         display: block;
         padding: 0;
@@ -5159,26 +5306,22 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /*r*/
-
 .sql-side-copy-columns .columns-title-line-break .sql-columns-title-line {
     margin-bottom: 5px;
     margin-top: 25px;
 }
 
 /*r*/
-
 .sql-side-copy-columns .sql-bottom-break-line {
     margin-bottom: 3px;
 }
 
 /*r*/
-
 .sql-side-copy-columns .sql-bottom-break-line {
     height: 1px;
 }
 
 /*r*/
-
 .sql-side-copy-columns .no-pad-left-540 {
     padding-left: 4.1%
 }
@@ -5206,9 +5349,7 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /*end SQL_sidecopywithcolumn*/
-
 /*Start Task 341195*/
-
 .main-content .hero-carousel a.c-call-to-action.theme-dark {
     background-color: #FFF;
     color: #0078d7 !important;
@@ -5247,9 +5388,7 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /*End Task 341195*/
-
 /****Start SQL_MWF_ContentPlacement_1_VG****/
-
 .sql-content-placement .content-placement-main .m-content-placement-item.f-precise-click,
 .sql-content-placement .content-placement-main .m-content-placement-item.f-precise-click:hover h3,
 .sql-content-placement .content-placement-main .m-content-placement-item.f-precise-click:hover a.c-call-to-action span {
@@ -5276,13 +5415,13 @@ a.mscom-link.white-color-btn:hover {
     .sql-content-placement .livearea+.livearea .content-placement-main section.m-content-placement-item.xs-mt-0 {
         margin-top: 0px;
     }
+
     .sql-content-placement .livearea .content-placement-main section.m-content-placement-item.xs-mt-0 {
         margin-top: 40px;
     }
 }
 
 /*srikanth*/
-
 .sql-content-placement .content-placement-main a.c-call-to-action.theme-default:focus span {
     text-decoration: underline !important;
 }
@@ -5362,24 +5501,19 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /*srikanth end*/
-
 /*****End SQL_MWF_ContentPlacement_1_VG****/
-
 /* START of Herocarousel load issue bug-342946*/
-
 .hero-carousel-with-button .hero-carousel-button-slides.hide-back {
     position: absolute;
     z-index: -1;
 }
 
 /*END of Herocarousel load issue bug-342946*/
-
 #CP_RightNavTab_1 .ms-grid.full {
     overflow-y: hidden;
 }
 
 /* legend-key css fixes */
-
 .cp-footer p.caption {
     padding: 10px 0px 0px 0px !important;
 }
@@ -5398,23 +5532,21 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /* legend-key css fixes */
-
 /*SQL Static_Menu*/
-
 @media screen and (min-width:768px) and (max-width:1083px) {
+
     /*********************************************/
     /*Start Css for Static_Menu Up to desktop */
     #SQL_StaticMenu ul li {
         padding-right: 20px;
     }
+
     /*END Css for Static_Menu max up to desktop*/
     /*********************************************/
 }
 
 /**********************************************/
-
 /*Start of Static_Menu styles Desktop and larger */
-
 #SQL_StaticMenu ul li.dtc {
     display: inline-block !important;
     text-align: center;
@@ -5463,9 +5595,7 @@ a.mscom-link.white-color-btn:hover {
 }
 
 /* End of Static_Menu Styles Desktop and larger */
-
 /**********************************************/
-
 @media screen and (min-width:768px) and (max-width:1083px) {
     /*Only Tablet 'Landscape' */
     /*#SQL_StaticMenu ul{
@@ -5483,18 +5613,15 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus {
 }
 
 /* SQL_TwoColBGColor_1_VG*/
-
 .cp-TwoCol-BGColor a.c-call-to-action.theme-transparent {
     text-align: center;
 }
 
 /*344188*/
-
 /*section.sqlstaticmenu {
      background: white !important;
 }
 */
-
 .sqlstaticmenu #sql_static_menu_1 .dtc a {
     color: black;
 }
@@ -5534,19 +5661,18 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus {
         */
         padding-bottom: 7px;
     }
+
     #SQL_StaticMenu ul li {
         padding-right: 10px;
     }
 }
 
 /*end*/
-
 #CP_PricingTable_1 .hide-by-default.show-row {
     display: table-row;
 }
 
 /******One Player CSS Starts*******/
-
 .mwf-popup-background button.glyph-cancel:focus {
     outline: 2px dashed #fff !important;
 }
@@ -5589,22 +5715,18 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus {
 }
 
 /******One Player CSS Ends*******/
-
 .sql-RightNavTab .main-class .RightNavTab-carousel .textcontent {
     padding-left: 2px;
     padding-right: 4px;
 }
 
 /*********Bug 346848 fix***************/
-
 .right-zero {
     right: 0px !important;
 }
 
 /*********Bug 346848 fix***************/
-
 /*SQL_event-table*/
-
 .sql-sub-tabs-holder {
     clear: both;
 }
@@ -5659,13 +5781,11 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus {
 }
 
 /*css for 1st child*/
-
 .sql-event-table .sql-table tr th:first-child {
     width: 200px;
 }
 
 /*css for 2nd child*/
-
 .sql-event-table[data-col-count="2"] .sql-table tr td:nth-child(2) {
     width: auto;
 }
@@ -5679,7 +5799,6 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus {
 }
 
 /*css for 3rd child*/
-
 .sql-event-table[data-col-count="3"] .sql-table tr td:nth-child(3) {
     width: auto;
 }
@@ -5689,7 +5808,6 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus {
 }
 
 /*css for 4th child*/
-
 .sql-event-table[data-col-count="4"] .sql-table tr td:nth-child(4) {
     width: auto;
 }
@@ -5704,10 +5822,12 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus {
 }
 
 @media screen and (min-width:540px) and (max-width:767px) {
+
     .sql-event-table[data-col-count="3"] .sql-table tr td:nth-child(1),
     .sql-event-table[data-col-count="3"] .sql-table tr:not(first-child) th {
         width: 120px;
     }
+
     .sql-event-table[data-col-count="3"] .sql-table tr td:nth-child(2) {
         width: 150px;
     }
@@ -5720,19 +5840,23 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus {
 }
 
 @media screen and (max-width:539px) {
+
     .sql-event-table td.hide-by-default.show,
     .sql-event-table tr:not(first-child) th.hide-by-default.show {
         display: inline-block !important;
         width: 100% !important;
         padding-left: 15px;
     }
+
     .sql-event-table tr:not(first-child) th.merge-dn.hide-by-default.show {
         display: none !important;
     }
+
     .sql-event-table tr td:first-child p,
     .sql-event-table tr:not(first-child) th p {
         font-weight: 600;
     }
+
     .sql-event-table .c-table {
         float: left;
         width: 100%;
@@ -5746,7 +5870,6 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus {
 }
 
 /**sql-subtabs**/
-
 .sql-subtabs-data-container .sql-subdata {
     display: none;
 }
@@ -5805,6 +5928,7 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus {
 }
 
 @media screen and (max-width:898px) {
+
     .sql-sub-tabs-holder .sql-event-table [data-grid~="container"],
     .sql-event-subtabs .livearea {
         padding-left: 10px;
@@ -5816,6 +5940,7 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus {
     .sql-table tr td:nth-child(2) {
         width: 150px;
     }
+
     .sql-table tr td:first-child,
     .sql-table tr:not(first-child) th {
         width: 120px;
@@ -5827,9 +5952,11 @@ sqlstaticmenu #sql_static_menu_1 li a.theme-transparent:focus {
         display: none;
         text-align: center;
     }
+
     .sql-event-subtabs .sql-tabs-mobile-container {
         display: block;
     }
+
     .sql-event-subtabs .sql-tabs-container .sql-tab.active {
         display: none !important;
     }
