@@ -1,0 +1,11 @@
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-3x1-Basics of C-sharp\Packt-3x1-Basics of C-sharp\bin\Debug\netcoreapp2.1\Packt-3x1-Basics of C-sharp.deps.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-3x1-Basics of C-sharp\Packt-3x1-Basics of C-sharp\bin\Debug\netcoreapp2.1\Packt-3x1-Basics of C-sharp.runtimeconfig.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-3x1-Basics of C-sharp\Packt-3x1-Basics of C-sharp\bin\Debug\netcoreapp2.1\Packt-3x1-Basics of C-sharp.runtimeconfig.dev.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-3x1-Basics of C-sharp\Packt-3x1-Basics of C-sharp\bin\Debug\netcoreapp2.1\Packt-3x1-Basics of C-sharp.dll
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-3x1-Basics of C-sharp\Packt-3x1-Basics of C-sharp\bin\Debug\netcoreapp2.1\Packt-3x1-Basics of C-sharp.pdb
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-3x1-Basics of C-sharp\Packt-3x1-Basics of C-sharp\obj\Debug\netcoreapp2.1\Packt-3x1-Basics of C-sharp.csprojAssemblyReference.cache
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-3x1-Basics of C-sharp\Packt-3x1-Basics of C-sharp\obj\Debug\netcoreapp2.1\Packt-3x1-Basics of C-sharp.csproj.CoreCompileInputs.cache
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-3x1-Basics of C-sharp\Packt-3x1-Basics of C-sharp\obj\Debug\netcoreapp2.1\Packt-3x1-Basics of C-sharp.AssemblyInfoInputs.cache
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-3x1-Basics of C-sharp\Packt-3x1-Basics of C-sharp\obj\Debug\netcoreapp2.1\Packt-3x1-Basics of C-sharp.AssemblyInfo.cs
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-3x1-Basics of C-sharp\Packt-3x1-Basics of C-sharp\obj\Debug\netcoreapp2.1\Packt-3x1-Basics of C-sharp.dll
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-3x1-Basics of C-sharp\Packt-3x1-Basics of C-sharp\obj\Debug\netcoreapp2.1\Packt-3x1-Basics of C-sharp.pdb

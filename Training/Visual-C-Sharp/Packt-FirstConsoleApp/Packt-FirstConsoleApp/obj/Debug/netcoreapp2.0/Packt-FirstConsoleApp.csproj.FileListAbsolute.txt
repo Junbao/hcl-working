@@ -1,0 +1,11 @@
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-FirstConsoleApp\Packt-FirstConsoleApp\bin\Debug\netcoreapp2.0\Packt-FirstConsoleApp.deps.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-FirstConsoleApp\Packt-FirstConsoleApp\bin\Debug\netcoreapp2.0\Packt-FirstConsoleApp.runtimeconfig.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-FirstConsoleApp\Packt-FirstConsoleApp\bin\Debug\netcoreapp2.0\Packt-FirstConsoleApp.runtimeconfig.dev.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-FirstConsoleApp\Packt-FirstConsoleApp\bin\Debug\netcoreapp2.0\Packt-FirstConsoleApp.dll
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-FirstConsoleApp\Packt-FirstConsoleApp\bin\Debug\netcoreapp2.0\Packt-FirstConsoleApp.pdb
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-FirstConsoleApp\Packt-FirstConsoleApp\obj\Debug\netcoreapp2.0\Packt-FirstConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-FirstConsoleApp\Packt-FirstConsoleApp\obj\Debug\netcoreapp2.0\Packt-FirstConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-FirstConsoleApp\Packt-FirstConsoleApp\obj\Debug\netcoreapp2.0\Packt-FirstConsoleApp.AssemblyInfoInputs.cache
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-FirstConsoleApp\Packt-FirstConsoleApp\obj\Debug\netcoreapp2.0\Packt-FirstConsoleApp.AssemblyInfo.cs
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-FirstConsoleApp\Packt-FirstConsoleApp\obj\Debug\netcoreapp2.0\Packt-FirstConsoleApp.dll
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-FirstConsoleApp\Packt-FirstConsoleApp\obj\Debug\netcoreapp2.0\Packt-FirstConsoleApp.pdb

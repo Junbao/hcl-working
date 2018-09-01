@@ -1,0 +1,11 @@
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packet-Arrays\Packet-Arrays\bin\Debug\netcoreapp2.1\Packet-Arrays.deps.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packet-Arrays\Packet-Arrays\bin\Debug\netcoreapp2.1\Packet-Arrays.runtimeconfig.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packet-Arrays\Packet-Arrays\bin\Debug\netcoreapp2.1\Packet-Arrays.runtimeconfig.dev.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packet-Arrays\Packet-Arrays\bin\Debug\netcoreapp2.1\Packet-Arrays.dll
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packet-Arrays\Packet-Arrays\bin\Debug\netcoreapp2.1\Packet-Arrays.pdb
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packet-Arrays\Packet-Arrays\obj\Debug\netcoreapp2.1\Packet-Arrays.csprojAssemblyReference.cache
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packet-Arrays\Packet-Arrays\obj\Debug\netcoreapp2.1\Packet-Arrays.csproj.CoreCompileInputs.cache
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packet-Arrays\Packet-Arrays\obj\Debug\netcoreapp2.1\Packet-Arrays.AssemblyInfoInputs.cache
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packet-Arrays\Packet-Arrays\obj\Debug\netcoreapp2.1\Packet-Arrays.AssemblyInfo.cs
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packet-Arrays\Packet-Arrays\obj\Debug\netcoreapp2.1\Packet-Arrays.dll
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packet-Arrays\Packet-Arrays\obj\Debug\netcoreapp2.1\Packet-Arrays.pdb
