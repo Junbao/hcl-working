@@ -1,0 +1,10 @@
+C:\Users\v-jobur\source\repos\Packt-CreateMethods\Packt-CreateMethods\bin\Debug\netcoreapp2.1\Packt-CreateMethods.deps.json
+C:\Users\v-jobur\source\repos\Packt-CreateMethods\Packt-CreateMethods\bin\Debug\netcoreapp2.1\Packt-CreateMethods.runtimeconfig.json
+C:\Users\v-jobur\source\repos\Packt-CreateMethods\Packt-CreateMethods\bin\Debug\netcoreapp2.1\Packt-CreateMethods.runtimeconfig.dev.json
+C:\Users\v-jobur\source\repos\Packt-CreateMethods\Packt-CreateMethods\bin\Debug\netcoreapp2.1\Packt-CreateMethods.dll
+C:\Users\v-jobur\source\repos\Packt-CreateMethods\Packt-CreateMethods\bin\Debug\netcoreapp2.1\Packt-CreateMethods.pdb
+C:\Users\v-jobur\source\repos\Packt-CreateMethods\Packt-CreateMethods\obj\Debug\netcoreapp2.1\Packt-CreateMethods.csproj.CoreCompileInputs.cache
+C:\Users\v-jobur\source\repos\Packt-CreateMethods\Packt-CreateMethods\obj\Debug\netcoreapp2.1\Packt-CreateMethods.AssemblyInfoInputs.cache
+C:\Users\v-jobur\source\repos\Packt-CreateMethods\Packt-CreateMethods\obj\Debug\netcoreapp2.1\Packt-CreateMethods.AssemblyInfo.cs
+C:\Users\v-jobur\source\repos\Packt-CreateMethods\Packt-CreateMethods\obj\Debug\netcoreapp2.1\Packt-CreateMethods.dll
+C:\Users\v-jobur\source\repos\Packt-CreateMethods\Packt-CreateMethods\obj\Debug\netcoreapp2.1\Packt-CreateMethods.pdb

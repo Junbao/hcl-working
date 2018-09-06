@@ -1,0 +1,11 @@
+C:\Users\v-jobur\source\repos\Packt-MultipleValuesFromMethod-ONE\Packt-MultipleValuesFromMethod-ONE\bin\Debug\netcoreapp2.1\Packt-MultipleValuesFromMethod-ONE.deps.json
+C:\Users\v-jobur\source\repos\Packt-MultipleValuesFromMethod-ONE\Packt-MultipleValuesFromMethod-ONE\bin\Debug\netcoreapp2.1\Packt-MultipleValuesFromMethod-ONE.runtimeconfig.json
+C:\Users\v-jobur\source\repos\Packt-MultipleValuesFromMethod-ONE\Packt-MultipleValuesFromMethod-ONE\bin\Debug\netcoreapp2.1\Packt-MultipleValuesFromMethod-ONE.runtimeconfig.dev.json
+C:\Users\v-jobur\source\repos\Packt-MultipleValuesFromMethod-ONE\Packt-MultipleValuesFromMethod-ONE\bin\Debug\netcoreapp2.1\Packt-MultipleValuesFromMethod-ONE.dll
+C:\Users\v-jobur\source\repos\Packt-MultipleValuesFromMethod-ONE\Packt-MultipleValuesFromMethod-ONE\bin\Debug\netcoreapp2.1\Packt-MultipleValuesFromMethod-ONE.pdb
+C:\Users\v-jobur\source\repos\Packt-MultipleValuesFromMethod-ONE\Packt-MultipleValuesFromMethod-ONE\obj\Debug\netcoreapp2.1\Packt-MultipleValuesFromMethod-ONE.csprojAssemblyReference.cache
+C:\Users\v-jobur\source\repos\Packt-MultipleValuesFromMethod-ONE\Packt-MultipleValuesFromMethod-ONE\obj\Debug\netcoreapp2.1\Packt-MultipleValuesFromMethod-ONE.csproj.CoreCompileInputs.cache
+C:\Users\v-jobur\source\repos\Packt-MultipleValuesFromMethod-ONE\Packt-MultipleValuesFromMethod-ONE\obj\Debug\netcoreapp2.1\Packt-MultipleValuesFromMethod-ONE.AssemblyInfoInputs.cache
+C:\Users\v-jobur\source\repos\Packt-MultipleValuesFromMethod-ONE\Packt-MultipleValuesFromMethod-ONE\obj\Debug\netcoreapp2.1\Packt-MultipleValuesFromMethod-ONE.AssemblyInfo.cs
+C:\Users\v-jobur\source\repos\Packt-MultipleValuesFromMethod-ONE\Packt-MultipleValuesFromMethod-ONE\obj\Debug\netcoreapp2.1\Packt-MultipleValuesFromMethod-ONE.dll
+C:\Users\v-jobur\source\repos\Packt-MultipleValuesFromMethod-ONE\Packt-MultipleValuesFromMethod-ONE\obj\Debug\netcoreapp2.1\Packt-MultipleValuesFromMethod-ONE.pdb

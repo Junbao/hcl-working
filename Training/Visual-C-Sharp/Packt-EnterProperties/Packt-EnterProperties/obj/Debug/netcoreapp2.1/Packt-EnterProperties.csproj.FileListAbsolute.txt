@@ -1,0 +1,11 @@
+C:\Users\v-jobur\source\repos\Packt-EnterProperties\Packt-EnterProperties\bin\Debug\netcoreapp2.1\Packt-EnterProperties.deps.json
+C:\Users\v-jobur\source\repos\Packt-EnterProperties\Packt-EnterProperties\bin\Debug\netcoreapp2.1\Packt-EnterProperties.runtimeconfig.json
+C:\Users\v-jobur\source\repos\Packt-EnterProperties\Packt-EnterProperties\bin\Debug\netcoreapp2.1\Packt-EnterProperties.runtimeconfig.dev.json
+C:\Users\v-jobur\source\repos\Packt-EnterProperties\Packt-EnterProperties\bin\Debug\netcoreapp2.1\Packt-EnterProperties.dll
+C:\Users\v-jobur\source\repos\Packt-EnterProperties\Packt-EnterProperties\bin\Debug\netcoreapp2.1\Packt-EnterProperties.pdb
+C:\Users\v-jobur\source\repos\Packt-EnterProperties\Packt-EnterProperties\obj\Debug\netcoreapp2.1\Packt-EnterProperties.csprojAssemblyReference.cache
+C:\Users\v-jobur\source\repos\Packt-EnterProperties\Packt-EnterProperties\obj\Debug\netcoreapp2.1\Packt-EnterProperties.csproj.CoreCompileInputs.cache
+C:\Users\v-jobur\source\repos\Packt-EnterProperties\Packt-EnterProperties\obj\Debug\netcoreapp2.1\Packt-EnterProperties.AssemblyInfoInputs.cache
+C:\Users\v-jobur\source\repos\Packt-EnterProperties\Packt-EnterProperties\obj\Debug\netcoreapp2.1\Packt-EnterProperties.AssemblyInfo.cs
+C:\Users\v-jobur\source\repos\Packt-EnterProperties\Packt-EnterProperties\obj\Debug\netcoreapp2.1\Packt-EnterProperties.dll
+C:\Users\v-jobur\source\repos\Packt-EnterProperties\Packt-EnterProperties\obj\Debug\netcoreapp2.1\Packt-EnterProperties.pdb

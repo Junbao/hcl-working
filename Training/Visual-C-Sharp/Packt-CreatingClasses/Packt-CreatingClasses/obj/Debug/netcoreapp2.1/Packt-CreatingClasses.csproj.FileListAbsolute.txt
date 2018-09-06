@@ -1,0 +1,10 @@
+C:\Users\v-jobur\source\repos\Packt-CreatingClasses\Packt-CreatingClasses\bin\Debug\netcoreapp2.1\Packt-CreatingClasses.deps.json
+C:\Users\v-jobur\source\repos\Packt-CreatingClasses\Packt-CreatingClasses\bin\Debug\netcoreapp2.1\Packt-CreatingClasses.runtimeconfig.json
+C:\Users\v-jobur\source\repos\Packt-CreatingClasses\Packt-CreatingClasses\bin\Debug\netcoreapp2.1\Packt-CreatingClasses.runtimeconfig.dev.json
+C:\Users\v-jobur\source\repos\Packt-CreatingClasses\Packt-CreatingClasses\bin\Debug\netcoreapp2.1\Packt-CreatingClasses.dll
+C:\Users\v-jobur\source\repos\Packt-CreatingClasses\Packt-CreatingClasses\bin\Debug\netcoreapp2.1\Packt-CreatingClasses.pdb
+C:\Users\v-jobur\source\repos\Packt-CreatingClasses\Packt-CreatingClasses\obj\Debug\netcoreapp2.1\Packt-CreatingClasses.csproj.CoreCompileInputs.cache
+C:\Users\v-jobur\source\repos\Packt-CreatingClasses\Packt-CreatingClasses\obj\Debug\netcoreapp2.1\Packt-CreatingClasses.AssemblyInfoInputs.cache
+C:\Users\v-jobur\source\repos\Packt-CreatingClasses\Packt-CreatingClasses\obj\Debug\netcoreapp2.1\Packt-CreatingClasses.AssemblyInfo.cs
+C:\Users\v-jobur\source\repos\Packt-CreatingClasses\Packt-CreatingClasses\obj\Debug\netcoreapp2.1\Packt-CreatingClasses.dll
+C:\Users\v-jobur\source\repos\Packt-CreatingClasses\Packt-CreatingClasses\obj\Debug\netcoreapp2.1\Packt-CreatingClasses.pdb
