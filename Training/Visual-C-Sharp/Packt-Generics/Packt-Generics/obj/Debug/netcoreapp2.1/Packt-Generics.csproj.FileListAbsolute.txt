@@ -1,0 +1,11 @@
+C:\Users\v-jobur\source\repos\Packt-Generics\Packt-Generics\obj\Debug\netcoreapp2.1\Packt-Generics.csprojAssemblyReference.cache
+C:\Users\v-jobur\source\repos\Packt-Generics\Packt-Generics\obj\Debug\netcoreapp2.1\Packt-Generics.csproj.CoreCompileInputs.cache
+C:\Users\v-jobur\source\repos\Packt-Generics\Packt-Generics\obj\Debug\netcoreapp2.1\Packt-Generics.AssemblyInfoInputs.cache
+C:\Users\v-jobur\source\repos\Packt-Generics\Packt-Generics\obj\Debug\netcoreapp2.1\Packt-Generics.AssemblyInfo.cs
+C:\Users\v-jobur\source\repos\Packt-Generics\Packt-Generics\bin\Debug\netcoreapp2.1\Packt-Generics.deps.json
+C:\Users\v-jobur\source\repos\Packt-Generics\Packt-Generics\bin\Debug\netcoreapp2.1\Packt-Generics.runtimeconfig.json
+C:\Users\v-jobur\source\repos\Packt-Generics\Packt-Generics\bin\Debug\netcoreapp2.1\Packt-Generics.runtimeconfig.dev.json
+C:\Users\v-jobur\source\repos\Packt-Generics\Packt-Generics\bin\Debug\netcoreapp2.1\Packt-Generics.dll
+C:\Users\v-jobur\source\repos\Packt-Generics\Packt-Generics\bin\Debug\netcoreapp2.1\Packt-Generics.pdb
+C:\Users\v-jobur\source\repos\Packt-Generics\Packt-Generics\obj\Debug\netcoreapp2.1\Packt-Generics.dll
+C:\Users\v-jobur\source\repos\Packt-Generics\Packt-Generics\obj\Debug\netcoreapp2.1\Packt-Generics.pdb

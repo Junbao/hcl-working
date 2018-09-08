@@ -1,0 +1,11 @@
+C:\Users\v-jobur\source\repos\Packt-Structs\Packt-Structs\bin\Debug\netcoreapp2.1\Packt-Structs.deps.json
+C:\Users\v-jobur\source\repos\Packt-Structs\Packt-Structs\bin\Debug\netcoreapp2.1\Packt-Structs.runtimeconfig.json
+C:\Users\v-jobur\source\repos\Packt-Structs\Packt-Structs\bin\Debug\netcoreapp2.1\Packt-Structs.runtimeconfig.dev.json
+C:\Users\v-jobur\source\repos\Packt-Structs\Packt-Structs\bin\Debug\netcoreapp2.1\Packt-Structs.dll
+C:\Users\v-jobur\source\repos\Packt-Structs\Packt-Structs\bin\Debug\netcoreapp2.1\Packt-Structs.pdb
+C:\Users\v-jobur\source\repos\Packt-Structs\Packt-Structs\obj\Debug\netcoreapp2.1\Packt-Structs.csprojAssemblyReference.cache
+C:\Users\v-jobur\source\repos\Packt-Structs\Packt-Structs\obj\Debug\netcoreapp2.1\Packt-Structs.csproj.CoreCompileInputs.cache
+C:\Users\v-jobur\source\repos\Packt-Structs\Packt-Structs\obj\Debug\netcoreapp2.1\Packt-Structs.AssemblyInfoInputs.cache
+C:\Users\v-jobur\source\repos\Packt-Structs\Packt-Structs\obj\Debug\netcoreapp2.1\Packt-Structs.AssemblyInfo.cs
+C:\Users\v-jobur\source\repos\Packt-Structs\Packt-Structs\obj\Debug\netcoreapp2.1\Packt-Structs.dll
+C:\Users\v-jobur\source\repos\Packt-Structs\Packt-Structs\obj\Debug\netcoreapp2.1\Packt-Structs.pdb

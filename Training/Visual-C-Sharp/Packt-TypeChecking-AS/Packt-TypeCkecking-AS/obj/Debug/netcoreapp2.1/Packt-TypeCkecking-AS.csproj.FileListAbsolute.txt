@@ -1,0 +1,11 @@
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeCkecking-AS\Packt-TypeCkecking-AS\bin\Debug\netcoreapp2.1\Packt-TypeCkecking-AS.deps.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeCkecking-AS\Packt-TypeCkecking-AS\bin\Debug\netcoreapp2.1\Packt-TypeCkecking-AS.runtimeconfig.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeCkecking-AS\Packt-TypeCkecking-AS\bin\Debug\netcoreapp2.1\Packt-TypeCkecking-AS.runtimeconfig.dev.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeCkecking-AS\Packt-TypeCkecking-AS\bin\Debug\netcoreapp2.1\Packt-TypeCkecking-AS.dll
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeCkecking-AS\Packt-TypeCkecking-AS\bin\Debug\netcoreapp2.1\Packt-TypeCkecking-AS.pdb
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeCkecking-AS\Packt-TypeCkecking-AS\obj\Debug\netcoreapp2.1\Packt-TypeCkecking-AS.csprojAssemblyReference.cache
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeCkecking-AS\Packt-TypeCkecking-AS\obj\Debug\netcoreapp2.1\Packt-TypeCkecking-AS.csproj.CoreCompileInputs.cache
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeCkecking-AS\Packt-TypeCkecking-AS\obj\Debug\netcoreapp2.1\Packt-TypeCkecking-AS.AssemblyInfoInputs.cache
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeCkecking-AS\Packt-TypeCkecking-AS\obj\Debug\netcoreapp2.1\Packt-TypeCkecking-AS.AssemblyInfo.cs
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeCkecking-AS\Packt-TypeCkecking-AS\obj\Debug\netcoreapp2.1\Packt-TypeCkecking-AS.dll
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeCkecking-AS\Packt-TypeCkecking-AS\obj\Debug\netcoreapp2.1\Packt-TypeCkecking-AS.pdb

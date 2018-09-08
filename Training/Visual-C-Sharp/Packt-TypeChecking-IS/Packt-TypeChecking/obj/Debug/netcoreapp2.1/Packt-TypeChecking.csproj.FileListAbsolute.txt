@@ -1,0 +1,10 @@
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeChecking\Packt-TypeChecking\bin\Debug\netcoreapp2.1\Packt-TypeChecking.deps.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeChecking\Packt-TypeChecking\bin\Debug\netcoreapp2.1\Packt-TypeChecking.runtimeconfig.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeChecking\Packt-TypeChecking\bin\Debug\netcoreapp2.1\Packt-TypeChecking.runtimeconfig.dev.json
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeChecking\Packt-TypeChecking\bin\Debug\netcoreapp2.1\Packt-TypeChecking.dll
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeChecking\Packt-TypeChecking\bin\Debug\netcoreapp2.1\Packt-TypeChecking.pdb
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeChecking\Packt-TypeChecking\obj\Debug\netcoreapp2.1\Packt-TypeChecking.csproj.CoreCompileInputs.cache
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeChecking\Packt-TypeChecking\obj\Debug\netcoreapp2.1\Packt-TypeChecking.AssemblyInfoInputs.cache
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeChecking\Packt-TypeChecking\obj\Debug\netcoreapp2.1\Packt-TypeChecking.AssemblyInfo.cs
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeChecking\Packt-TypeChecking\obj\Debug\netcoreapp2.1\Packt-TypeChecking.dll
+C:\Users\v-jobur\Documents\Code\Training\Visual-C-Sharp\Packt-TypeChecking\Packt-TypeChecking\obj\Debug\netcoreapp2.1\Packt-TypeChecking.pdb
