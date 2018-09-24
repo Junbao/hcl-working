@@ -1,0 +1,12 @@
+C:\Users\v-jobur\Documents\Projects\hcl-working\Training\Visual-C-Sharp\Star-CSharpBasics\Chapter01ex01\Chapter01ex01\bin\Debug\netcoreapp2.1\Chapter01ex01.deps.json
+C:\Users\v-jobur\Documents\Projects\hcl-working\Training\Visual-C-Sharp\Star-CSharpBasics\Chapter01ex01\Chapter01ex01\bin\Debug\netcoreapp2.1\Chapter01ex01.runtimeconfig.json
+C:\Users\v-jobur\Documents\Projects\hcl-working\Training\Visual-C-Sharp\Star-CSharpBasics\Chapter01ex01\Chapter01ex01\bin\Debug\netcoreapp2.1\Chapter01ex01.runtimeconfig.dev.json
+C:\Users\v-jobur\Documents\Projects\hcl-working\Training\Visual-C-Sharp\Star-CSharpBasics\Chapter01ex01\Chapter01ex01\bin\Debug\netcoreapp2.1\Chapter01ex01.dll
+C:\Users\v-jobur\Documents\Projects\hcl-working\Training\Visual-C-Sharp\Star-CSharpBasics\Chapter01ex01\Chapter01ex01\bin\Debug\netcoreapp2.1\Chapter01ex01.pdb
+C:\Users\v-jobur\Documents\Projects\hcl-working\Training\Visual-C-Sharp\Star-CSharpBasics\Chapter01ex01\Chapter01ex01\bin\Debug\netcoreapp2.1\Chapter01ex01.xml
+C:\Users\v-jobur\Documents\Projects\hcl-working\Training\Visual-C-Sharp\Star-CSharpBasics\Chapter01ex01\Chapter01ex01\obj\Debug\netcoreapp2.1\Chapter01ex01.csprojAssemblyReference.cache
+C:\Users\v-jobur\Documents\Projects\hcl-working\Training\Visual-C-Sharp\Star-CSharpBasics\Chapter01ex01\Chapter01ex01\obj\Debug\netcoreapp2.1\Chapter01ex01.csproj.CoreCompileInputs.cache
+C:\Users\v-jobur\Documents\Projects\hcl-working\Training\Visual-C-Sharp\Star-CSharpBasics\Chapter01ex01\Chapter01ex01\obj\Debug\netcoreapp2.1\Chapter01ex01.AssemblyInfoInputs.cache
+C:\Users\v-jobur\Documents\Projects\hcl-working\Training\Visual-C-Sharp\Star-CSharpBasics\Chapter01ex01\Chapter01ex01\obj\Debug\netcoreapp2.1\Chapter01ex01.AssemblyInfo.cs
+C:\Users\v-jobur\Documents\Projects\hcl-working\Training\Visual-C-Sharp\Star-CSharpBasics\Chapter01ex01\Chapter01ex01\obj\Debug\netcoreapp2.1\Chapter01ex01.dll
+C:\Users\v-jobur\Documents\Projects\hcl-working\Training\Visual-C-Sharp\Star-CSharpBasics\Chapter01ex01\Chapter01ex01\obj\Debug\netcoreapp2.1\Chapter01ex01.pdb

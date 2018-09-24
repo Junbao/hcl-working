@@ -3,8 +3,10 @@
     "",
     "\\Training",
     "\\Training\\Visual-C-Sharp",
-    "\\Training\\Visual-C-Sharp\\Packt-Strings\\Packt-Strings"
+    "\\Training\\Visual-C-Sharp\\Packt-Sec3",
+    "\\Training\\Visual-C-Sharp\\Packt-Sec3\\Packt-Working-With-Files",
+    "\\Training\\Visual-C-Sharp\\Packt-Sec3\\Packt-Working-With-Files\\Packt-Working-With-Files"
   ],
-  "SelectedNode": "\\Training\\Visual-C-Sharp\\Packt-Strings",
+  "SelectedNode": "\\Training\\Visual-C-Sharp\\Packt-Sec3\\Packt-Working-With-Files\\Packt-Working-With-Files\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
