@@ -1,0 +1,5 @@
+﻿This is the first file to read.
+With some luck, it will work much better than my last.writing another line to the current file
+writing another line to the current file
+writing another line to the current file
+writing another line to the current file

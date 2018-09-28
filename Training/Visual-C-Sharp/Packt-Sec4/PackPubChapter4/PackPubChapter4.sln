@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuples", "Tuples\Tuples.csproj", "{0DD1B800-0C74-4989-BBB9-FDBB855B90D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternMatching", "PatternMatching\PatternMatching.csproj", "{76532C04-86F8-4B45-AAD6-88D1438ABE82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DD1B800-0C74-4989-BBB9-FDBB855B90D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD1B800-0C74-4989-BBB9-FDBB855B90D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD1B800-0C74-4989-BBB9-FDBB855B90D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD1B800-0C74-4989-BBB9-FDBB855B90D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76532C04-86F8-4B45-AAD6-88D1438ABE82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76532C04-86F8-4B45-AAD6-88D1438ABE82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76532C04-86F8-4B45-AAD6-88D1438ABE82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76532C04-86F8-4B45-AAD6-88D1438ABE82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FAAE226-D819-4F1E-AB5E-03E7FF4A6D6B}
+	EndGlobalSection
+EndGlobal
