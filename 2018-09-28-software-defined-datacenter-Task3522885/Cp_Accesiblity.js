@@ -2063,17 +2063,13 @@ $(window).load(function () {
 
 // Task - 352285 - JB
 $(document).ready(function(){
-    console.log("it is being loaded");
-
-    $("#CP_Table_5Col_1_With_Filters .select-filter-box li").keydown(function(e) {
-        console.log(e);
-        if ((e.which == 38) || (e.which == 40)) {
-            e.preventDefault();
-            // e.stopPropagation();
-            e.stopImmediatePropagation();
-            console.log("key hit" + e.which);
+    $("#CP_Table_5Col_1_With_Filters .exp_elem_list").keydown(function(e) {
+        if ($(".exp_elem_list").not(".hidden")) {
+            if ((e.which == 38) || (e.which == 40)) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
         }
     });
-
 });
 

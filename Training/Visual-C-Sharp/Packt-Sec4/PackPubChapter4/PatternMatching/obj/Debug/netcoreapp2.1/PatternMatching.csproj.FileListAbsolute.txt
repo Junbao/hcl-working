@@ -1,0 +1,11 @@
+C:\Users\v-jobur\Documents\Code\hcl-working\Training\Visual-C-Sharp\Packt-Sec4\PackPubChapter4\PatternMatching\obj\Debug\netcoreapp2.1\PatternMatching.csprojAssemblyReference.cache
+C:\Users\v-jobur\Documents\Code\hcl-working\Training\Visual-C-Sharp\Packt-Sec4\PackPubChapter4\PatternMatching\obj\Debug\netcoreapp2.1\PatternMatching.csproj.CoreCompileInputs.cache
+C:\Users\v-jobur\Documents\Code\hcl-working\Training\Visual-C-Sharp\Packt-Sec4\PackPubChapter4\PatternMatching\obj\Debug\netcoreapp2.1\PatternMatching.AssemblyInfoInputs.cache
+C:\Users\v-jobur\Documents\Code\hcl-working\Training\Visual-C-Sharp\Packt-Sec4\PackPubChapter4\PatternMatching\obj\Debug\netcoreapp2.1\PatternMatching.AssemblyInfo.cs
+C:\Users\v-jobur\Documents\Code\hcl-working\Training\Visual-C-Sharp\Packt-Sec4\PackPubChapter4\PatternMatching\bin\Debug\netcoreapp2.1\PatternMatching.deps.json
+C:\Users\v-jobur\Documents\Code\hcl-working\Training\Visual-C-Sharp\Packt-Sec4\PackPubChapter4\PatternMatching\bin\Debug\netcoreapp2.1\PatternMatching.runtimeconfig.json
+C:\Users\v-jobur\Documents\Code\hcl-working\Training\Visual-C-Sharp\Packt-Sec4\PackPubChapter4\PatternMatching\bin\Debug\netcoreapp2.1\PatternMatching.runtimeconfig.dev.json
+C:\Users\v-jobur\Documents\Code\hcl-working\Training\Visual-C-Sharp\Packt-Sec4\PackPubChapter4\PatternMatching\bin\Debug\netcoreapp2.1\PatternMatching.dll
+C:\Users\v-jobur\Documents\Code\hcl-working\Training\Visual-C-Sharp\Packt-Sec4\PackPubChapter4\PatternMatching\bin\Debug\netcoreapp2.1\PatternMatching.pdb
+C:\Users\v-jobur\Documents\Code\hcl-working\Training\Visual-C-Sharp\Packt-Sec4\PackPubChapter4\PatternMatching\obj\Debug\netcoreapp2.1\PatternMatching.dll
+C:\Users\v-jobur\Documents\Code\hcl-working\Training\Visual-C-Sharp\Packt-Sec4\PackPubChapter4\PatternMatching\obj\Debug\netcoreapp2.1\PatternMatching.pdb

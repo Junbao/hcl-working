@@ -30,7 +30,7 @@ namespace PatternMatching
 				Console.WriteLine($"{p} is not an employee");
 			}
 		}
-
+		// When using Switch case - start with the most generic then to the parent.  If (below) we started with Person - it would stop there and we loose the details of suc class
 		private static void describePerson(Person p)
 		{
 			switch (p)
