@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuples", "Tuples\Tuples.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternMatching", "PatternMatching\PatternMatching.csproj", "{76532C04-86F8-4B45-AAD6-88D1438ABE82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ref-Locals-Returns", "Ref-Locals-Returns\Ref-Locals-Returns.csproj", "{3F9D9678-36AD-4F35-980B-6C1AEF328A0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InlineoutVariables", "InlineoutVariables\InlineoutVariables.csproj", "{73541ACA-1BC9-4F48-BB91-0FD2FB6359BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{76532C04-86F8-4B45-AAD6-88D1438ABE82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76532C04-86F8-4B45-AAD6-88D1438ABE82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76532C04-86F8-4B45-AAD6-88D1438ABE82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F9D9678-36AD-4F35-980B-6C1AEF328A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F9D9678-36AD-4F35-980B-6C1AEF328A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F9D9678-36AD-4F35-980B-6C1AEF328A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F9D9678-36AD-4F35-980B-6C1AEF328A0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73541ACA-1BC9-4F48-BB91-0FD2FB6359BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73541ACA-1BC9-4F48-BB91-0FD2FB6359BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73541ACA-1BC9-4F48-BB91-0FD2FB6359BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73541ACA-1BC9-4F48-BB91-0FD2FB6359BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
