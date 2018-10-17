@@ -18,6 +18,8 @@ $(element).click(function (e) {
 
 
 
+
+
 $("#id_of_textbox").keyup(function (event) {
     if (event.keyCode === 13) {
         $("#id_of_button").click();
@@ -31,8 +33,8 @@ $("#pw").keyup(function (event) {
 
 $("#myButton").click(function () {
     alert("Button code executed.");
-}); <
-script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" > < /script>
+}); 
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" > < /script>
 
 Username: < input id = "username"
 type = "text" > < br >
@@ -85,3 +87,15 @@ runat = "server" > < /asp:TextBox> <
 Text = "Test3"
 onKeydown = "return tab('textbox2', 'textbox1');"
 runat = "server" > < /asp:TextBox>
+                            
+                            
+                            
+var lastFocus;
+                            
+function modalShow () {
+    lastFocus = document.activeElement;
+}
+                            
+function modalClose () {
+    lastFocus.focus(); // place focus on the saved element
+}
