@@ -3,11 +3,7 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
-<<<<<<< HEAD
-    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Users\v-jobur\Documents\Projects\hcl-working\Training\Visual-C-Sharp\Packt-Sec4\PackPubChapter4\PatternMatching\obj\project.assets.json</ProjectAssetsFile>
-=======
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Users\v-jobur\Documents\Code\hcl-working\Training\Visual-C-Sharp\Packt-Sec4\PackPubChapter4\PatternMatching\obj\project.assets.json</ProjectAssetsFile>
->>>>>>> a4ceda32bce09eae6f124566a22789cac95ab1fe
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\v-jobur\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>

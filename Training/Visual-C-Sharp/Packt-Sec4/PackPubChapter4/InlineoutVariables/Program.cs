@@ -7,7 +7,7 @@ namespace InlineoutVariables
 		static void Main(string[] args)
 		{
 			Console.WriteLine("Inline out Variables - example 4.4.1");
-
+			//This is the orginal way to write this - int are declared first
 			int sum, diff;
 			calculate(8, 2, out sum, out diff);
 			Console.WriteLine("$");

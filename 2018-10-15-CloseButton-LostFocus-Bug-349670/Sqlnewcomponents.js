@@ -2591,7 +2591,7 @@ $(document).ready(function () {
     });
 
     $(".sql-five-pillar-overlay-content-1 .pillar-item").each(function () {
-
+        $(this).attr("aria-live", "assertive");
         $(this).find(".pillar-content a.c-call-to-action").on("keypress", function (e) {
             lastFocus = document.activeElement;
             console.log("line 2597  " + lastElement);
@@ -2605,22 +2605,22 @@ $(document).ready(function () {
                 setTimeout(function () {
                     // Bug fix 349670 - focus needs to go to parent container when pop up closes
 
-                    // if ( $(e.target).parents(".pillar-1").length > 0 ) {
-                    //     $('.pillar-1').focus();
-                    // } else if ( $(e.target).parents(".pillar-2").length > 0 ) {
-                    //     $('.pillar-2').focus();
-                    // } else if ( $(e.target).parents(".pillar-3").length > 0 ) {
-                    //     $('.pillar-3').focus();
-                    // } else if ( $(e.target).parents(".pillar-4").length > 0 ) {
-                    //     $('.pillar-4').focus();
-                    // } else if ( $(e.target).parents(".pillar-5").length > 0 ) {
-                    //     $('.pillar-5').focus();
-                    // }
+                    if ( $(e.target).parents(".pillar-1").length > 0 ) {
+                        $('.pillar-1').focus();
+                    } else if ( $(e.target).parents(".pillar-2").length > 0 ) {
+                        $('.pillar-2').focus();
+                    } else if ( $(e.target).parents(".pillar-3").length > 0 ) {
+                        $('.pillar-3').focus();
+                    } else if ( $(e.target).parents(".pillar-4").length > 0 ) {
+                        $('.pillar-4').focus();
+                    } else if ( $(e.target).parents(".pillar-5").length > 0 ) {
+                        $('.pillar-5').focus();
+                    }
                     
                     // $(".sql-five-pillar-overlay-content-1 .pillar-item .pillar-content a.c-call-to-action.active").focus();  - orginal
                     // e.preventDefault();
-
-                    lastFocus.focus();
+                    // lastFocus.attr("aria-live", "assertive");
+                    // lastFocus.focus();
 
                     $(".sql-five-pillar-overlay-content-1 .pillar-item .pillar-content a.c-call-to-action.active").removeClass("active");
                 }, 300);
