@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2B6FD963-0448-4D0C-97F9-A8B69020BC85}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.OneRenderFramework.Partner.MyPartner.HelloWorld</RootNamespace>
+    <AssemblyName>Microsoft.OneRenderFramework.Partner.MyPartner.HelloWorld</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.OneRenderFramework.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OneRenderFramework.Core.2.0.6711.0352\lib\net45\Microsoft.OneRenderFramework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OneRenderFramework.Core.Attributes, Version=1.0.0.24, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OneRenderFramework.Core.2.0.6711.0352\lib\net45\Microsoft.OneRenderFramework.Core.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OneRenderFramework.Core.CmsDocuments.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OneRenderFramework.Core.CmsDocuments.2.0.6711.342\lib\net45\Microsoft.OneRenderFramework.Core.CmsDocuments.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OneRenderFramework.Core.Configuration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OneRenderFramework.Core.Service.2.0.6711.0352\lib\net45\Microsoft.OneRenderFramework.Core.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OneRenderFramework.Core.Configuration.ParallaxInterfaces, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OneRenderFramework.Core.Service.2.0.6711.0352\lib\net45\Microsoft.OneRenderFramework.Core.Configuration.ParallaxInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OneRenderFramework.Core.DataProviders.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OneRenderFramework.Core.DataProviders.2.0.6711.342\lib\net45\Microsoft.OneRenderFramework.Core.DataProviders.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OneRenderFramework.Core.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OneRenderFramework.Core.Service.2.0.6711.0352\lib\net45\Microsoft.OneRenderFramework.Core.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OneRenderFramework.Core.Services.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OneRenderFramework.Core.DataProviders.2.0.6711.342\lib\net45\Microsoft.OneRenderFramework.Core.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OneRenderFramework.Core.Utility, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OneRenderFramework.Core.Utility.2.2.6711.0352\lib\net45\Microsoft.OneRenderFramework.Core.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OneRenderFramework.Partner.Core.CmsDocuments, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OneRenderFramework.Core.CmsDocuments.2.0.6711.342\lib\net45\Microsoft.OneRenderFramework.Partner.Core.CmsDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OneRenderFramework.Partner.Core.DataProviders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OneRenderFramework.Core.DataProviders.2.0.6711.342\lib\net45\Microsoft.OneRenderFramework.Partner.Core.DataProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OneRenderFramework.Partner.Core.Modules.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OneRenderFramework.Core.Modules.Models.2.0.6711.342\lib\net45\Microsoft.OneRenderFramework.Partner.Core.Modules.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OneRenderFramework.Partner.Core.DataProviders.Mappers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OneRenderFramework.Core.DataProviders.2.0.6711.342\lib\net45\Microsoft.OneRenderFramework.Partner.Core.DataProviders.Mappers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Search.Platform.Parallax, Version=2.21.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Parallax.2.21.3198030\lib\Microsoft.Search.Platform.Parallax.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.UniversalStore.DisplayCatalog.Contracts, Version=2.19.2.0, Culture=neutral, PublicKeyToken=0cbc2f3236999b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.UniversalStore.DisplayCatalog.Contracts.2.19.2\lib\net45\Microsoft.UniversalStore.DisplayCatalog.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.UniversalStore.DisplayCatalog.Contracts.IngestionSchema, Version=2.19.2.0, Culture=neutral, PublicKeyToken=0cbc2f3236999b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.UniversalStore.DisplayCatalog.Contracts.2.19.2\lib\net45\Microsoft.UniversalStore.DisplayCatalog.Contracts.IngestionSchema.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.UniversalStore.DisplayCatalog.Contracts.MockData, Version=2.19.2.0, Culture=neutral, PublicKeyToken=0cbc2f3236999b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.UniversalStore.DisplayCatalog.Contracts.2.19.2\lib\net45\Microsoft.UniversalStore.DisplayCatalog.Contracts.MockData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.UniversalStore.DisplayCatalog.Contracts.Utilities, Version=2.19.2.0, Culture=neutral, PublicKeyToken=0cbc2f3236999b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.UniversalStore.DisplayCatalog.Contracts.2.19.2\lib\net45\Microsoft.UniversalStore.DisplayCatalog.Contracts.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.UniversalStore.DisplayCatalog.ProductModels, Version=2.19.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.UniversalStore.DisplayCatalog.Contracts.2.19.2\lib\net45\Microsoft.UniversalStore.DisplayCatalog.ProductModels.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.UniversalStore.InventoryService.Contracts, Version=2.19.2.0, Culture=neutral, PublicKeyToken=0cbc2f3236999b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.UniversalStore.DisplayCatalog.Contracts.2.19.2\lib\net45\Microsoft.UniversalStore.InventoryService.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Initialization.cs" />
+    <Compile Include="MockHelper\ModuleTitleMockHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Mappers\HelloWorldModuleMapper.cs" />
+    <Compile Include="Models\HelloWorldModule.cs" />
+    <Compile Include="ViewModels\HelloWorldModuleViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Css\Modules\HelloWorld\HelloWorld.scss" />
+    <None Include="Content\Css\Modules\HelloWorld\Uplevel\Base\HelloWorldBase.scss" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PartnerUpdate.config" />
+    <None Include="Views\Helpers\SampleViewHelper.cshtml" />
+    <None Include="Views\MyPartner.HelloWorld\Modules\HelloWorld.cshtml" />
+    <None Include="Views\MyPartner.HelloWorld\web.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\de.resx" />
+    <EmbeddedResource Include="Resources\en.resx" />
+    <EmbeddedResource Include="Resources\es-es.resx" />
+    <EmbeddedResource Include="Resources\fr-fr.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Js\Modules\HelloWorld\HelloWorld.js" />
+    <Content Include="Content\Js\Shared\Sample\Message.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Parallax.2.21.3198030\build\Parallax.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Parallax.2.21.3198030\build\Parallax.targets'))" />
+    <Error Condition="!Exists('..\packages\RazorGenerator.MsBuild.2.4.1\build\RazorGenerator.MsBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\RazorGenerator.MsBuild.2.4.1\build\RazorGenerator.MsBuild.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.OneRenderFramework.BuildTasks.2.4.2\build\Microsoft.OneRenderFramework.BuildTasks.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.OneRenderFramework.BuildTasks.2.4.2\build\Microsoft.OneRenderFramework.BuildTasks.targets'))" />
+  </Target>
+  <Import Project="..\packages\Parallax.2.21.3198030\build\Parallax.targets" Condition="Exists('..\packages\Parallax.2.21.3198030\build\Parallax.targets')" />
+  <Import Project="..\packages\RazorGenerator.MsBuild.2.4.1\build\RazorGenerator.MsBuild.targets" Condition="Exists('..\packages\RazorGenerator.MsBuild.2.4.1\build\RazorGenerator.MsBuild.targets')" />
+  <Import Project="..\packages\Microsoft.OneRenderFramework.BuildTasks.2.4.2\build\Microsoft.OneRenderFramework.BuildTasks.targets" Condition="Exists('..\packages\Microsoft.OneRenderFramework.BuildTasks.2.4.2\build\Microsoft.OneRenderFramework.BuildTasks.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
