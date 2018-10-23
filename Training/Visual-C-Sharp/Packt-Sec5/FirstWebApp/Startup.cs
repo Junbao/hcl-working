@@ -58,7 +58,7 @@ namespace FirstWebApp
 			}
 
 			app.UseHttpsRedirection();
-			app.UseStaticFiles(); // css, jaascript, images, etc that reside indirectory
+			app.UseStaticFiles(); // css, javascript, images, etc that reside in directory
 			app.UseCookiePolicy();
 
 			app.Run(async (context) =>
