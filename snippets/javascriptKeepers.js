@@ -26,3 +26,18 @@ window.addEventListener("keydown", function(e) {
         e.preventDefault();
     }
 }, false);
+
+
+
+
+$( document ).ready(function() {
+  console.log( "ready!" );
+});
+
+
+
+
+window.onload = function() {
+  init();
+  doSomethingElse();
+};

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat template</title>
+    <!-- MWF -->
+    <link rel="stylesheet" href="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/css/mwf-west-european-default.min.css" type="text/css" media="all">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script> 
+    <script src="chatScript.js"></script> 
+
+</head>
+<body>
+
+
+<div id="chatBox">
+    <a id="chatClickBox" class="chatBox-expand x-hidden-focus" href="javascript:void(0)" role="button" aria-label="Collapse the Chat and Contact Sales Widget" data-toggled-label="Expand the Chat and Contact Sales Widget to call Office 365 Sales" aria-controls="ow-cs-list"></a>
+    <ul class="">
+        <li class="glyph-chat">
+            <div class="chat-text">
+                <a role="button" aria-label="by sending this chat request">Chat with sales</a><span class="glyphLink"></span>
+            </div>
+        </li>
+        <li class="glyph-email">
+            <div class="chat-text">
+                <a href="https://go.microsoft.com/fwlink/p/?linkid=518644&amp;clcid=0x0409" role="button" aria-label="by filling out the form on the next page">CONTACT US</a><span class="glyphLink"></span>
+            </div>
+        </li>
+        <li class="glyph-tele">
+            <div class="chat-text">
+                <a  href="tel:18552700615" aria-label="call or add to Skype now">1 855-270-0615</a>
+                <span class="schedule">Available M-F from 6:00AM to 6:00PM</span>
+            </div>
+        </li>
+    </ul>
+    <div class="closeBtn">
+        <!-- <span class="closeX">X</span> -->
+        <a class="c-action-trigger c-glyph glyph-cancel ow-collapse x-hidden-focus" id="ow-cs-collapse" href="javascript:void(0)" role="button" aria-label="Collapse the Chat and Contact Sales Widget" aria-controls="ow-cs-list" aria-expanded="true">Close</a>
+    </div>
+</div>
+    
+</body>
+</html>
