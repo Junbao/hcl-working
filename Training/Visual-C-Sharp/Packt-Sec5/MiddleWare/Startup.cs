@@ -14,57 +14,58 @@ namespace MiddleWare
 {
 	public class Startup
 	{
-		public Startup(IConfiguration configuration)
-		{
-			Configuration = configuration;
-		}
-
-		public IConfiguration Configuration { get; }
-
 		// This method gets called by the runtime. Use this method to add services to the container.
+		// For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.Configure<CookiePolicyOptions>(options =>
-			{
-				// This lambda determines whether user consent for non-essential cookies is needed for a given request.
-				options.CheckConsentNeeded = context => true;
-				options.MinimumSameSitePolicy = SameSiteMode.None;
-			});
-
-
-			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 		{
-			//if (env.IsDevelopment())
-			//{
-			//	app.UseDeveloperExceptionPage();
-			//}
-			//else
-			//{
-			//	app.UseExceptionHandler("/Error");
-			//	app.UseHsts();
-			//}
-
-			//app.UseHttpsRedirection();
-			//app.UseStaticFiles();
-			//app.UseCookiePolicy();
-
-			//app.UseMvc();
-
-			//Middleware that catches exception and displays a generic error message
-			app.Use(async (context, next) = >
+			//Middleware that catches exceptions and displays a generic error message
+			app.Use(async (context, next) =>
 			{
 				try
 				{
 					await next();
 				}
-				catch(Exception e)
+				catch (Exception e)
 				{
-					await context.Response.WriteAsync("Oops, sorry went terribly wrong");
+					await context.Response.WriteAsync("Oops, something went wrong...");
 				}
+			});
+
+			app.Use((context, next) =>
+			{
+				Random randomizer = new Random();
+				int chance = randomizer.Next(10);
+				if (chance % 2 == 0)
+				{
+					throw new Exception("Invalid operation");
+				}
+				return next();
+			});
+
+			app.Map("/home", appBuilder =>
+			{
+				appBuilder.Run(async (context) =>
+				{
+					await context.Response.WriteAsync("Home Page");
+				});
+			});
+
+			app.Map("/about", appBuilder =>
+			{
+				appBuilder.Run(async (context) =>
+				{
+					await context.Response.WriteAsync("About Page");
+				});
+			});
+
+			app.Run(async (context) =>
+			{
+				await context.Response.WriteAsync("Hello ASP.NET Core");
 			});
 		}
 	}
