@@ -9,9 +9,12 @@ namespace RoutingViews.Controllers
 {
     public class PagesController : Controller
     {
-        public IActionResult Games()
+		// This is the attribute method for adding the page routing (url) vs adding to the startup.cs
+		[Route("mygames", Name = "MyGames")]
+
+		public IActionResult Games()
         {
-			ViewData["games"] = new List<Game>()
+					ViewData["games"] = new List<Game>()
 			{
 				new Game() { Title = "The Witcher", Genre = "RPG" },
 				new Game() { Title = "Need for Speed", Genre = "Racing" },
@@ -20,6 +23,11 @@ namespace RoutingViews.Controllers
 			};
             return View();
         }
+
+		// This is the attribute method for adding the page routing (url) vs adding to the startup.cs
+		[Route("mymovies", Name = "MyMovies")]
+
+
 		// There are a couple of ways to create the list the following could be the same format as the games list.  Just a different option.
 		public IActionResult Movies()
 		{

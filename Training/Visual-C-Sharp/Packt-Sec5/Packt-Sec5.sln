@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddleWare", "MiddleWare\Mi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingViews", "Routing-Views\RoutingViews.csproj", "{CC380AE4-5FAC-4234-9E69-F566795E5C41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection", "DependencyInjection\DependencyInjection.csproj", "{28C0F389-3206-4CAA-82E2-9E7EEC610136}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{CC380AE4-5FAC-4234-9E69-F566795E5C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC380AE4-5FAC-4234-9E69-F566795E5C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC380AE4-5FAC-4234-9E69-F566795E5C41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28C0F389-3206-4CAA-82E2-9E7EEC610136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28C0F389-3206-4CAA-82E2-9E7EEC610136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28C0F389-3206-4CAA-82E2-9E7EEC610136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28C0F389-3206-4CAA-82E2-9E7EEC610136}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

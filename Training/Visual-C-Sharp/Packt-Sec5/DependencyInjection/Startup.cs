@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace RoutingViews
+namespace DependencyInjection
 {
 	public class Startup
 	{
@@ -57,18 +57,6 @@ namespace RoutingViews
 				routes.MapRoute(
 					name: "default",
 					template: "{controller=Home}/{action=Index}/{id?}");
-
-				routes.MapRoute(
-					name: "AllGames",
-					template: "games/all",
-					defaults: new { Controller = "pages", Action = "Games" }
-				);
-
-				routes.MapRoute(
-					name: "AllMovies",
-					template: "movies/all",
-					defaults: new { Controller = "pages", Action = "Movies" }
-				);
 			});
 		}
 	}
