@@ -1,7 +1,17 @@
 ﻿
+@model List<Movie>
+
 @{
     ViewData["Title"] = "Movies";
 }
 
 <h2>Movies</h2>
 
+<ul>
+	@foreach (var movie in Model)
+	{
+		<li>
+			@movie.Title - @movie.Ranking
+		</li>
+	}
+</ul>

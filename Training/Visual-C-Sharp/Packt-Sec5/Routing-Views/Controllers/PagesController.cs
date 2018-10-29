@@ -20,17 +20,17 @@ namespace RoutingViews.Controllers
 			};
             return View();
         }
-
+		// There are a couple of ways to create the list the following could be the same format as the games list.  Just a different option.
 		public IActionResult Movies()
 		{
-			ViewData["movies"] = new List<Movie>()
+			var movies = new List<Movie>()
 			{
 				new Movie() { Title = "Star Wars", Ranking = 1 },
 				new Movie() { Title = "Inception", Ranking = 2 },
 				new Movie() { Title = "Ghost in a Shell", Ranking = 3 },
 
 			};
-			return View();
+			return View(movies);
 		}
 	}
 }
