@@ -1,0 +1,90 @@
+﻿@model Microsoft.OneRenderFramework.Partner.wdgweb.Chat.ViewModels.ChatViewModel
+
+<div id="chatBox">
+    @RenderChatBoxView(Html)
+</div>
+
+
+@helper RenderChatBoxView(HtmlHelper html)
+{
+    var isChatNeeded = false;
+    if (Model.ShowTextPicker == true) { isChatNeeded = true; }
+    if (Model.ShowEmailPicker == true) { isChatNeeded = true; }
+    if (Model.ShowVoicePicker == true) { isChatNeeded = true; }
+    if (@isChatNeeded)
+    {@RenderChatBox(Html)}
+}
+
+@helper RenderChatText(HtmlHelper html)
+{
+    <li class="glyph-chat">
+        <div class="chat-text">
+            <a role="button" aria-label=@Model.LOC_Chat_TextPicker_AriaLabel>
+                @Model.LOC_Chat_TextPicker_ButtonText
+            </a>
+            <span class="glyphLink"></span>
+        </div>
+    </li>
+}
+
+@helper RenderChatEmail(HtmlHelper html)
+{
+    <li class="glyph-email">
+        <div class="chat-text">
+            <a href="@Model.URLEMailPage" role="button"
+               aria-label="@Model.LOC_Chat_EmailPicker_AriaLabel">
+                @Model.LOC_Chat_EmailPicker_ButtonText
+            </a>
+            <span class="glyphLink"></span>
+        </div>
+    </li>
+}
+
+@helper RenderChatVoice(HtmlHelper html)
+{
+    <li class="glyph-tele">
+        <div class="chat-text">
+            <a href="tel:@Model.PhoneNumber" aria-label="@Model.LOC_Chat_VoicePicker_AriaLabel">
+                @Model.PhoneNumber 
+            </a>
+            <span class="schedule">
+                @Model.PhoneNumberInfo
+            </span>
+        </div>
+    </li>
+}
+
+@helper RenderChats(HtmlHelper html)
+{
+    if (Model.ShowTextPicker == true)
+    {
+            @RenderChatText(Html)
+    }
+    if (Model.ShowEmailPicker == true)
+    {
+        if (Model.isURLEMailPageValid == true)
+        {
+            @RenderChatEmail(Html)
+        }
+    }
+    if (Model.ShowVoicePicker == true)
+    {
+        @RenderChatVoice(Html)
+    }
+}
+
+@helper RenderChatBox(HtmlHelper html)
+{
+    <a id="chatClickBox" class="chatBox-expand x-hidden-focus" href="javascript:void(0)" role="button" aria-label="@Model.LOC_Chat_ChatBox_Button_AriaLabel"
+       data-toggled-label="@Model.LOC_Chat_ChatBox_Button_DataToggledLabel" aria-controls="ow-cs-list">
+    </a>
+    <ul class="">
+        @RenderChats(html)
+    </ul>
+    <div class="closeBtn">
+        <a class="c-action-trigger c-glyph glyph-cancel ow-collapse x-hidden-focus" id="ow-cs-collapse" href="javascript:void(0)" role="button"
+           aria-label="@Model.LOC_Chat_ChatBox_CloseButton_AriaLabel" aria-controls="ow-cs-list" aria-expanded="true">
+            @Model.LOC_Chat_ChatBox_CloseButtonText
+        </a>
+    </div>
+}

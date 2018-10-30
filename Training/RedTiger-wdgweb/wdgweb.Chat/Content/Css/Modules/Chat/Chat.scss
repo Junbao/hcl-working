@@ -1,0 +1,144 @@
+﻿body {
+    background-color: gray;
+}
+
+#chatBox {
+    width: 260px;
+    position: absolute;
+    top: calc(50% - 100px);
+    right: 0;
+    min-height: 50px;
+    border: 1px solid #fff;
+}
+
+#chatBox ul {
+    background-color: #2B589B;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+#chatBox li {
+    list-style-type: none;
+    min-height: 50px;
+    margin: 0 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #fff;
+}
+
+#chatBox li:last-child {
+    border-bottom: none;
+}
+
+#chatBox ul a {
+    display: inline;
+    color: #fff;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+#chatBox ul a:hover {
+    text-decoration: underline;
+}
+
+#chatBox ul .glyphLink {
+    display: inline-block;
+}
+
+#chatBox ul .glyphLink:after {
+    content: "\e76c";
+    font-family: "MWF-MDL2";
+    vertical-align: middle;
+    text-decoration: none;
+    padding-left: 3px;
+    text-decoration: none !important;
+    outline-color: transparent !important;
+}
+
+#chatBox .schedule {
+    font-size: 75%;
+    display: block;
+}
+
+#chatBox .chat-text {
+    margin-left: 40px;
+}
+
+
+#chatBox .glyph-chat, #chatBox .glyph-email, #chatBox .glyph-tele, #chatBox .chat-text {
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+}
+
+#chatBox .glyph-chat {
+    background-image: url("https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2vgri");
+}
+
+#chatBox .glyph-email {
+    background-image: url("https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2vdR3");
+}
+
+#chatBox .glyph-tele {
+    background-image: url("https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2viZy");
+}
+
+
+/* icon coloum button */
+html:not([dir="rtl"]) #chatBox #chatClickBox {
+    left: 2px;
+}
+
+#chatBox #chatClickBox:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-color: transparent;
+}
+
+#chatBox #chatClickBox {
+    cursor: pointer;
+    height: calc(100% - 4px);
+    position: absolute;
+    top: 2px;
+    width: 43px;
+    z-index: 1;
+}
+
+/* close Button */
+#chatBox .closeBtn {
+    background: #fff;
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0;
+    padding: 2px 5px;
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 0;
+}
+
+#chatBox .closeX {
+    padding-right: 5px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+#chatBox .closeBtn a {
+    font-size: 11px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+#chatBox .closeBtn a:hover {
+    text-decoration: underline;
+}
+
+#chatBox .closeBtn .c-glyph:before {
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+    margin-right: 4px;
+    vertical-align: middle;
+}

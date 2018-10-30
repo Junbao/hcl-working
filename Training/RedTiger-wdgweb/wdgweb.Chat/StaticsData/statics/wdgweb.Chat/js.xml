@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map>
+  <!-- Build Duration: 237ms -->
+  <Map ToHash="/sc/55/9368a1.js">
+    <FromFile>/js/wdgweb.chat/modules/chat.uplevel.js</FromFile>
+    <FromFile>/js/wdgweb.chat/modules/chat.midlevel.js</FromFile>
+  </Map>
+</Map>

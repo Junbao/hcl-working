@@ -1,0 +1,143 @@
+/*/#source 1 1 wdgweb\wdgweb.Chat\Content\Css\Modules\Chat\Chat.scss FILESTART*/
+/* line 2, stdin */
+body {
+  background-color: gray; }
+
+/* line 6, stdin */
+#chatBox {
+  width: 260px;
+  position: absolute;
+  top: calc(50% - 100px);
+  right: 0;
+  min-height: 50px;
+  border: 1px solid #fff; }
+
+/* line 15, stdin */
+#chatBox ul {
+  background-color: #2B589B;
+  margin: 0;
+  padding: 0;
+  color: #fff; }
+
+/* line 22, stdin */
+#chatBox li {
+  list-style-type: none;
+  min-height: 50px;
+  margin: 0 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid #fff; }
+
+/* line 30, stdin */
+#chatBox li:last-child {
+  border-bottom: none; }
+
+/* line 34, stdin */
+#chatBox ul a {
+  display: inline;
+  color: #fff;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap; }
+
+/* line 44, stdin */
+#chatBox ul a:hover {
+  text-decoration: underline; }
+
+/* line 48, stdin */
+#chatBox ul .glyphLink {
+  display: inline-block; }
+
+/* line 52, stdin */
+#chatBox ul .glyphLink:after {
+  content: "\e76c";
+  font-family: "MWF-MDL2";
+  vertical-align: middle;
+  text-decoration: none;
+  padding-left: 3px;
+  text-decoration: none !important;
+  outline-color: transparent !important; }
+
+/* line 62, stdin */
+#chatBox .schedule {
+  font-size: 75%;
+  display: block; }
+
+/* line 67, stdin */
+#chatBox .chat-text {
+  margin-left: 40px; }
+
+/* line 72, stdin */
+#chatBox .glyph-chat, #chatBox .glyph-email, #chatBox .glyph-tele, #chatBox .chat-text {
+  background-repeat: no-repeat;
+  background-position: 0% 50%; }
+
+/* line 77, stdin */
+#chatBox .glyph-chat {
+  background-image: url("https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2vgri"); }
+
+/* line 81, stdin */
+#chatBox .glyph-email {
+  background-image: url("https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2vdR3"); }
+
+/* line 85, stdin */
+#chatBox .glyph-tele {
+  background-image: url("https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2viZy"); }
+
+/* icon coloum button */
+/* line 91, stdin */
+html:not([dir="rtl"]) #chatBox #chatClickBox {
+  left: 2px; }
+
+/* line 95, stdin */
+#chatBox #chatClickBox:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: transparent; }
+
+/* line 100, stdin */
+#chatBox #chatClickBox {
+  cursor: pointer;
+  height: calc(100% - 4px);
+  position: absolute;
+  top: 2px;
+  width: 43px;
+  z-index: 1; }
+
+/* close Button */
+/* line 110, stdin */
+#chatBox .closeBtn {
+  background: #fff;
+  border: 1px solid #ccc;
+  display: block;
+  margin: 0;
+  padding: 2px 5px;
+  position: absolute;
+  top: calc(100% + 1px);
+  right: 0; }
+
+/* line 121, stdin */
+#chatBox .closeX {
+  padding-right: 5px;
+  font-size: 12px;
+  text-decoration: none; }
+
+/* line 127, stdin */
+#chatBox .closeBtn a {
+  font-size: 11px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-decoration: none; }
+
+/* line 135, stdin */
+#chatBox .closeBtn a:hover {
+  text-decoration: underline; }
+
+/* line 139, stdin */
+#chatBox .closeBtn .c-glyph:before {
+  width: 16px;
+  height: 16px;
+  margin-left: 3px;
+  margin-right: 4px;
+  vertical-align: middle; }
