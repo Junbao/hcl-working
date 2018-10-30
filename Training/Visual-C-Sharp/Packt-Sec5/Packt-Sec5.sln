@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingViews", "Routing-Vie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection", "DependencyInjection\DependencyInjection.csproj", "{28C0F389-3206-4CAA-82E2-9E7EEC610136}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjNoMVC", "DependencyInjNoMVC\DependencyInjNoMVC.csproj", "{5E16B3FB-3EC7-4C94-B234-F9B560708213}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{28C0F389-3206-4CAA-82E2-9E7EEC610136}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28C0F389-3206-4CAA-82E2-9E7EEC610136}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28C0F389-3206-4CAA-82E2-9E7EEC610136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E16B3FB-3EC7-4C94-B234-F9B560708213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E16B3FB-3EC7-4C94-B234-F9B560708213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E16B3FB-3EC7-4C94-B234-F9B560708213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E16B3FB-3EC7-4C94-B234-F9B560708213}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
