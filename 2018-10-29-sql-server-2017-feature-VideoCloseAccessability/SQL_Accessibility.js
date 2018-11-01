@@ -1921,7 +1921,16 @@ $(document).ready(function(){
 	});
     
     // JAB
-    // $(document).ready(function(){
-    //     $(".custom-popup-background").css("display", "none");
-    //     $(".page-frame-popup-background").css("display", "none");
-    // });
+    $(document).ready(function(){
+        // $(".custom-popup-background").css("display", "none");
+        // $(".page-frame-popup-background").css("display", "none");
+        $(".custom-popup-background").remove();
+        $(".page-frame-popup-background").remove();
+        $(".mwf-popup-background").remove();
+        $('.wdg-lightbox button').removeAttr('ms.title').removeAttr('data-pmcwdxce');
+        $('.wdg-lightbox button').attr('aria-live', 'assertive');
+    });
+
+    // aria-live="assertive
+    // wdg-lightbox
+    // ms.title="undefined" data-pmcwdxce="true" 
