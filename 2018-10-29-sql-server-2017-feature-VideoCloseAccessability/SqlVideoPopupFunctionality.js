@@ -241,6 +241,8 @@ $(document).ready(function () {
 		$('.' + pageContainerClass).css("z-index", "1005");
 		$('.' + pageContainerClass).css("opacity", "1");
 	});
+
+
 	$('.' + pageContainerClass).on('click', closeVideoFunction);
 	$('.' + pageContainerClass).find('.close-button').on('click', closeVideoFunction);
 	
@@ -543,4 +545,62 @@ $(document).ready(function () {
     });
     
 });
+
+$(document).ready(function () {
+	// $(".oneplayer-popup-video").on('click', function (e) {
+	// 	e.preventDefault();
+	// 	console.log("well this part is working");
+	// 	$(".wdg-lightbox").css('display', 'block').attr('aria-hidden', 'false');
+	// 	$(".custom-popup-background").css("display", "none");
+    //     $(".page-frame-popup-background").css("display", "none");
+	// 	$(".mwf-popup-background").css("display", "none");
+		
+		
+	// });
+	// console.log("ready!");
+});
  
+
+// $(".oneplayer-popup-video").on('click', function (e) {
+// 	alert("well this part is working");
+// 	e.preventDefault();
+// 	var videoType = $(this).data(playerTypeDataName).toLowerCase();
+// 	var videotitle = $(this).data(videoDataTitle);
+// 	if (videoType !== onePlayer) { //condition for checking whether player typer is One player 
+// 		popupContainerClass = "custom-popup-background"; //One player code related
+// 		$('.' + popupContainerClass).find('.close-button').show().attr("tabindex", "0").focus();
+// 		$('.' + popupContainerClass).find('span.close-button').attr("tabindex", "-1");
+// 		$('body .' + popupContainerClass).attr('aria-hidden', 'false'); /*341271*/
+// 		$(this).parents().closest(".top-parent-element").attr("data-video-playing", "true");
+
+// 		$(this).parents().closest(".top-parent-element").addClass("currentvideoplaying");
+// 		$(".currentvideoplaying").attr("data-video-playing", "true");
+// 		if ($(".currentvideoplaying").attr("data-auto-play") == "true") {
+// 			$(".currentvideoplaying").find(".slick-slider").slick("slickSetOption", "autoplay", false);
+
+// 			$(".slick-slider").slick("pause");
+// 		}
+
+
+
+// 		$('.' + popupContainerClass + " .custom-popup-container").attr('aria-label', videotitle);
+// 		$('.' + popupContainerClass + '  iframe:visible').attr('title', videotitle);
+// 		$(".custom-popup-container").attr("tabindex", '0');
+// 		$(".custom-popup-container").focus();
+
+// 		openVideo();
+
+// 	}
+
+// 	else {
+// 		console.log("Error: invalid video player type");
+// 		youtubeVideoIframe.hide();
+// 		html5VideoIframe.hide();
+// 		channel9VideoIframe.hide();
+// 		demomateVideoIframe.hide();
+// 		htmlpageIframe.hide();
+// 		oneplayerIframe.hide(); //One player code related
+// 	}
+
+// 	//openVideo();
+// });
