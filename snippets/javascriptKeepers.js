@@ -41,3 +41,25 @@ window.onload = function() {
   init();
   doSomethingElse();
 };
+
+// Add Script to Headers
+< script >
+  if (window.innerWidth > 500) {
+    var head = document.getElementsByTagName('head')[0];
+
+    var s1 = document.createElement("script");
+    s1.type = "text/javascript";
+    s1.src = "http://www.domain.com/js/jquery.min.js";
+    head.appendChild(s1);
+
+    var s2 = document.createElement("script");
+    s2.type = "text/javascript";
+    s2.src = "http://www.domain.com/js/jquery.colorbox.min.js";
+    head.appendChild(s2);
+
+    var s3 = document.createElement("script");
+    s3.type = "text/javascript";
+    s3.src = "http://www.domain.com/js/inner-code-colorbox.min.js";
+    head.appendChild(s3);
+  }
+</script >
