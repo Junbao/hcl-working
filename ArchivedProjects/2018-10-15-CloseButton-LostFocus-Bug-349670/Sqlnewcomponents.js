@@ -2509,6 +2509,7 @@ $(document).ready(function () {
                     lastFocus = document.activeElement;
                     console.log("line 2510  " + lastElement);
                     itemNodes[activeIndex].setAttribute('data-active', true);
+                    $(".sql-five-pillar-overlay-content-1 .pillar-item[data-active='true'] .pillar-popup .body-alt .link ul.stacked li:first-child a").focus();
 
                     isActive = true;
                 }
@@ -2591,7 +2592,7 @@ $(document).ready(function () {
     });
 
     $(".sql-five-pillar-overlay-content-1 .pillar-item").each(function () {
-        $(this).attr("aria-live", "assertive");
+        // $(this).attr("aria-live", "assertive");
         $(this).find(".pillar-content a.c-call-to-action").on("keypress", function (e) {
             lastFocus = document.activeElement;
             console.log("line 2597  " + lastElement);
