@@ -8,7 +8,7 @@
                     <p class="subheadline c-paragraph-3 pb-0">{{subheadline}}</p>
                 </div>
 
-                <div class="pillar-list" data-pillar-count="{{pillar-count}}">
+                <div class="pillar-list" data-pillar-count="{{pillar-count}}" aria-live="assertive">
                     <div class="pillar-item pillar-1 {{1:pillar-bgcolor}} {{1:type-disable-popup}}">
                         <div class="pillar-content">
                             <picture>
@@ -21,8 +21,8 @@
                             <p class="body-alt pt-2 c-paragraph-3">{{1:column-paragraph}}</p>
                             <div class="text-center mt-0">{{{1:links}}}</div>
                         </div>
-                        <!-- aria-labelledby="pillarPopup1_label" aria-modal="true"  -->
-                        <div role="dialog" class="pillar-popup" aria-labelledby="pillarPopup1_label" aria-modal="true" >
+                        <!-- aria-labelledby="pillarPopup1_label" aria-modal="true"  role="dialog"   -->
+                        <div class="pillar-popup" aria-labelledby="pillarPopup1_label" aria-modal="true"  role="dialog">
                             <picture>
                                 <source class='hide-by-default show-element' srcset='{{1:img-id}}' media='(min-width:540px)' />
                                 <source class='hide-by-default show-element' srcset='{{1:img-id}}' media='(min-width:0)' />
@@ -54,7 +54,7 @@
                             <p class="body-alt pt-2 c-paragraph-3">{{2:column-paragraph}}</p>
                             <div class="text-center mt-0">{{{2:links}}}</div>
                         </div>
-                        <div role="dialog" class="pillar-popup" aria-labelledby="pillarPopup2_label" aria-modal="true">
+                        <div class="pillar-popup" aria-labelledby="pillarPopup2_label" aria-modal="true"  role="dialog">
                             <picture>
                                 <source class='hide-by-default show-element' srcset='{{2:img-id}}' media='(min-width:540px)' />
                                 <source class='hide-by-default show-element' srcset='{{2:img-id}}' media='(min-width:0)' />
@@ -84,7 +84,7 @@
                             <p class="body-alt pt-2 c-paragraph-3">{{3:column-paragraph}}</p>
                             <div class="text-center mt-0">{{{3:links}}}</div>
                         </div>
-                        <div role="dialog" class="pillar-popup" aria-labelledby="pillarPopup3_label" aria-modal="true">
+                        <div  class="pillar-popup" aria-labelledby="pillarPopup3_label" aria-modal="true"  role="dialog">
                             <picture>
                                 <source class='hide-by-default show-element' srcset='{{3:img-id}}' media='(min-width:540px)' />
                                 <source class='hide-by-default show-element' srcset='{{3:img-id}}' media='(min-width:0)' />

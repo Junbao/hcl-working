@@ -2480,17 +2480,17 @@ $(document).ready(function () {
 /*SQL_5PillarsOverlayContent.js*/
 $(document).ready(function () {
     try {
-        var lastElement = "";
         var forEach = Array.prototype.forEach.call.bind(Array.prototype.forEach);
         forEach(document.querySelectorAll('.sql-five-pillar-overlay-content-1'), function (componentNode) {
 
             var itemNodes = $('.pillar-item');
+            var lastFocus = "";
             var DESKTOP = 1084;
             var TABLET = 768;
             var MOBILE = 540;
             var activeIndex = 0;
             var isActive = false;
-            var itemClick = function (event) {
+            var itemClick = function (event) { //pops 2 - gets passed the item clicked
 
                 if (event.target.window || event.target.className.indexOf('pillar-close-button') < 0) {
 
@@ -2506,15 +2506,29 @@ $(document).ready(function () {
                         }
                     });
                     itemNodes[activeIndex].removeAttribute("style");
-                    lastFocus = document.activeElement;
-                    console.log("line 2510  " + lastElement);
+                    lastFocus = document.activeElement; //pops 3
+                    // console.log("line 2510  " + lastElement);
                     itemNodes[activeIndex].setAttribute('data-active', true);
-                    $(".sql-five-pillar-overlay-content-1 .pillar-item[data-active='true'] .pillar-popup .body-alt .link ul.stacked li:first-child a").focus();
+                    // $('.pillar-item[data-active="true"]').attr({
+                    //         "aria-labelledby": "working",
+                    //         "aria-modal": "true",
+                    //         "role": "dialog"
+                    //     });
+                    // $(".sql-five-pillar-overlay-content-1 .pillar-item[data-active='true'] ").find('.pillar-popup').attr({
+                    //     "aria-labelledby": "working",
+                    //     "aria-modal": "true",
+                    //     "role": "dialog",
+                    //     "tabindex": "0"
+                    //     }).focus();
+
+                        $(".sql-five-pillar-overlay-content-1 .pillar-item[data-active='true'] ").find('.pillar-popup').focus();
+                        // console.log("added attributes? - focus?");
 
                     isActive = true;
                 }
 
                 if (event.target.className && event.target.className.indexOf('pillar-close-button') >= 0) {
+                    console.log("index of close button " + event.target.className.indexOf('pillar-close-button'));
 
                     forEach(itemNodes, function (subItemNode) {
                         subItemNode.removeAttribute('data-active');
@@ -2539,8 +2553,9 @@ $(document).ready(function () {
             forEach(itemNodes, function (itemNode, index) {
                 itemNode.onclick = function (event) {
                     // event.preventDefault();
-                    activeIndex = index;
+                    activeIndex = index;//pops 1
                     if (!$(itemNode).hasClass("disable-popup"))
+                    console.log("item clicked line 2544 " + event);
                         itemClick(event);
                 };
                 itemNode.onkeypress = function (event) {
@@ -2570,6 +2585,7 @@ $(document).ready(function () {
 
     }
 
+    //tabbing inside popup
     $(".sql-five-pillar-overlay-content-1 .pillar-item .pillar-popup").each(function () {
         $(this).find("a.pillar-close-button").on("keydown", function (e) {
             if (e.keyCode == 9) {
@@ -2591,43 +2607,69 @@ $(document).ready(function () {
         });
     });
 
-    $(".sql-five-pillar-overlay-content-1 .pillar-item").each(function () {
-        // $(this).attr("aria-live", "assertive");
-        $(this).find(".pillar-content a.c-call-to-action").on("keypress", function (e) {
-            lastFocus = document.activeElement;
-            console.log("line 2597  " + lastElement);
-            $(".sql-five-pillar-overlay-content-1 .pillar-item .pillar-content a.c-call-to-action").removeClass("active");
-            if (e.keyCode == 13) {
-                $(this).addClass("active");
-            }
-        });
-        $(this).find("a.pillar-close-button").on("keydown", function (e) {
-            if (e.keyCode == 13) {
-                setTimeout(function () {
-                    // Bug fix 349670 - focus needs to go to parent container when pop up closes
-
-                    if ( $(e.target).parents(".pillar-1").length > 0 ) {
-                        $('.pillar-1').focus();
-                    } else if ( $(e.target).parents(".pillar-2").length > 0 ) {
-                        $('.pillar-2').focus();
-                    } else if ( $(e.target).parents(".pillar-3").length > 0 ) {
-                        $('.pillar-3').focus();
-                    } else if ( $(e.target).parents(".pillar-4").length > 0 ) {
-                        $('.pillar-4').focus();
-                    } else if ( $(e.target).parents(".pillar-5").length > 0 ) {
-                        $('.pillar-5').focus();
-                    }
-                    
-                    // $(".sql-five-pillar-overlay-content-1 .pillar-item .pillar-content a.c-call-to-action.active").focus();  - orginal
-                    // e.preventDefault();
-                    // lastFocus.attr("aria-live", "assertive");
-                    // lastFocus.focus();
-
-                    $(".sql-five-pillar-overlay-content-1 .pillar-item .pillar-content a.c-call-to-action.active").removeClass("active");
-                }, 300);
-            }
-        });
+    $("a.pillar-close-button").on("click", function (e) {
+        $(this).parents(".pillar-item").focus();
+        console.log("close button clicked - sending focus back - line 2597");
+        // $(this).parents(".pillar-item").find('.pillar-popup').removeAttr("aria-labelledby aria-modal role" );
     });
+
+    var pillarpopupID = '';
+    // $(".sql-five-pillar-overlay-content-1 .pillar-item").each(function () {
+    //     // $(this).attr("aria-live", "assertive");
+    //     $(this).find(".pillar-content a.c-call-to-action").on("keypress", function (e) {
+    //         // lastPillarFocus = document.activeElement;
+    //         // console.log("line 2597  " + lastElement);
+    //         pillarpopupID = $(this).parents('.pillar-item').find(".pillar-popup h3").attr("id");
+    //         console.log("this is the pillar popup ID " + pillarpopupID);
+    //         $(".sql-five-pillar-overlay-content-1 .pillar-item .pillar-content a.c-call-to-action").removeClass("active");
+    //         $(this).parents(".pillar-item").focus();
+    //         $(this).parents('.pillar-item').attr({
+    //             "aria-labelledby": pillarpopupID,
+    //             "aria-modal": "true",
+    //             "role": "dialog"
+    //         });
+
+    //         // aria-labelledby="pillarPopup1_label" aria-modal="true"  role="dialog"
+    //         if (e.keyCode == 13) {
+    //             $(this).addClass("active");
+    //         }
+    //     });
+    //     $(this).find("a.pillar-close-button").on("keydown", function (e) {
+
+    //         // $(this).parent(".pillar-item").focus();
+    //         // console.log("sending focus back - line 2620");
+
+    //         if (e.keyCode == 13) {
+    //             // $(this).parent(".pillar-item").focus();
+    //             //     console.log("sent focus to pillar-item");
+    //             setTimeout(function () {
+    //                 // Bug fix 349670 - focus needs to go to parent container when pop up closes
+    //                 // $(e.target).parents(".pillar-item").focus();
+    //                 // console.log("sent focus to pillar-item");
+    //                 // if ( $(e.target).parents(".pillar-1").length > 0 ) {
+    //                 //     $('.pillar-1').focus();
+    //                 // } else if ( $(e.target).parents(".pillar-2").length > 0 ) {
+    //                 //     $('.pillar-2').focus();
+    //                 // } else if ( $(e.target).parents(".pillar-3").length > 0 ) {
+    //                 //     $('.pillar-3').focus();
+    //                 // } else if ( $(e.target).parents(".pillar-4").length > 0 ) {
+    //                 //     $('.pillar-4').focus();
+    //                 // } else if ( $(e.target).parents(".pillar-5").length > 0 ) {
+    //                 //     $('.pillar-5').focus();
+    //                 // }
+
+    //                 // $( lastPillarFocus ).focus();
+                    
+    //                 // $(".sql-five-pillar-overlay-content-1 .pillar-item .pillar-content a.c-call-to-action.active").focus();  - orginal
+    //                 // e.preventDefault();
+    //                 // lastFocus.attr("aria-live", "assertive");
+    //                 // lastFocus.focus();
+
+    //                 $(".sql-five-pillar-overlay-content-1 .pillar-item .pillar-content a.c-call-to-action.active").removeClass("active");
+    //             }, 300);
+    //         }
+    //     });
+    // });
 });
 
 
@@ -2871,8 +2913,8 @@ $(document).ready(function () {
             $('.accordion-section-content .tabdata-container').eq(imgindex).addClass('open').siblings().removeClass('open');
         }
         //Accessibility bug 339030
-        $("#SQL_FourColwithImageText .accordion-section .accordion-section-img").each(function () {
-            console.log('expanded');
+        $("#SQL_FourColwithImageText .accordion-section .accordion-section-img").each(function () { // pops 6
+            // console.log('expanded');
             $(this).attr('role', 'button');
             if ($(this).parents('.overlay').hasClass("active")) {
                 $(this).attr("aria-expanded", "true");
