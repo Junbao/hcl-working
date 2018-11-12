@@ -857,7 +857,7 @@ $(document).ready(function () {
                 });
             }
         });
-    } catch (e) {}
+    } catch (e) { }
 });
 
 function isScrolledIntoView(elem) {
@@ -920,14 +920,14 @@ $(window).load(function () {
     try {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
-    } catch (e) {}
+    } catch (e) { }
 });
 
 $(window).resize(function () {
     try {
         if (announcementCarousel.$carousel != null && announcementCarousel.$carousel.length < 1) return;
         announcementCarousel.heightCalc();
-    } catch (e) {}
+    } catch (e) { }
 });
 /**********END OF CP_CustomCarouselSettings.js **********/
 
@@ -989,11 +989,11 @@ function setMediaFramesHeight() {
 }
 $(window).resize(function () {
     // try {
-        if ($(".cp-media-carousel-with-frames").length > 0) {
-            setTimeout(function () {
-                setMediaFramesHeight();
-            }, 400);
-        }
+    if ($(".cp-media-carousel-with-frames").length > 0) {
+        setTimeout(function () {
+            setMediaFramesHeight();
+        }, 400);
+    }
     // } catch (r) {
 
     // }
@@ -1319,7 +1319,7 @@ $(document).ready(function () {
                 } else if (pageIconPlace === -4) {
                     time = 1000;
                 } else if (pageIconPlace === -3) {
-                    time = 750; 
+                    time = 750;
                 } else if (pageIconPlace === -2) {
                     time = 500;
                 } else if (pageIconPlace === -1) {
@@ -1359,12 +1359,12 @@ $(document).ready(function () {
 
             function pageIconSet() {
                 $('.c-sequence-indicator button').each(function () {
-                        if ($(this).attr('aria-selected') != "true") {
-                            $(this).attr('tabindex', '-1');
-                        } else {
-                            $(this).attr('tabindex', '0');
-                        }
+                    if ($(this).attr('aria-selected') != "true") {
+                        $(this).attr('tabindex', '-1');
+                    } else {
+                        $(this).attr('tabindex', '0');
                     }
+                }
 
                 );
 
@@ -1736,29 +1736,29 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     try {
-        
+
         $(document).on('click', '.sql-RightNavTab .sql-accordion-tab-list ul li', function () {
-    $(this).parents().closest("section").addClass("selectedtab");
-    $(this).siblings().removeClass("active");
-    $(this).addClass("active");
-    $(this).attr('tabindex', '0');
-    $(this).focus();
-    $(this).children().removeAttr('aria-label');
-    $(this).siblings().attr('tabindex', '-1');
-    var selectedindex = $(this).attr("data-index");
-    var selectedtext = $(this).text();
-    var $data = $(".selectedtab .sql-righttab");
-    $(".selectedtab .selected-tabitem").find("p").text(selectedtext);
-    $(".selectedtab .selected-tabitem").find("p").prepend("<span class='arrow-down'></span>");
-    $data.children().removeClass("active");
-    $data.children().eq(selectedindex).addClass("active");
-    if ($(window).width() < 540) {
-        $(".selectedtab .sql-accordion-tab-list").animate({
-            height: "toggle"
-        }, 500);
-    }
-});
-        
+            $(this).parents().closest("section").addClass("selectedtab");
+            $(this).siblings().removeClass("active");
+            $(this).addClass("active");
+            $(this).attr('tabindex', '0');
+            $(this).focus();
+            $(this).children().removeAttr('aria-label');
+            $(this).siblings().attr('tabindex', '-1');
+            var selectedindex = $(this).attr("data-index");
+            var selectedtext = $(this).text();
+            var $data = $(".selectedtab .sql-righttab");
+            $(".selectedtab .selected-tabitem").find("p").text(selectedtext);
+            $(".selectedtab .selected-tabitem").find("p").prepend("<span class='arrow-down'></span>");
+            $data.children().removeClass("active");
+            $data.children().eq(selectedindex).addClass("active");
+            if ($(window).width() < 540) {
+                $(".selectedtab .sql-accordion-tab-list").animate({
+                    height: "toggle"
+                }, 500);
+            }
+        });
+
         $(document).on('click', '.sql-RightNavTab .sql-accordion-tab-list ul li', function (e, arg) {
             if (arg != "explicit") {
                 enableScroll();
@@ -1843,12 +1843,12 @@ $(document).ready(function () {
             if (e.keyCode == 37 || e.keyCode == 38) {
                 e.preventDefault();
                 disableScroll();
-                
+
                 _currentEle = e.currentTarget;
                 _tablength = $(".sql-RightNavTab .sql-accordion-tab-list ul li").length;
                 _currentDataIndex = $(_currentEle).attr('data-index');
                 $(".sql-RightNavTab .sql-accordion-tab-list ul li[data-index=" + _currentDataIndex + "]").prev().focus();
-               
+
                 if (_currentDataIndex == 0) {
                     $(".sql-RightNavTab .sql-accordion-tab-list ul li:last").focus();
                 }
@@ -1863,7 +1863,7 @@ $(document).ready(function () {
                 _currentDataIndex = $(_currentEle).attr('data-index');
 
                 $(".sql-RightNavTab .sql-accordion-tab-list ul li[data-index=" + _currentDataIndex + "]").next().focus();
-               
+
                 $(".sql-RightNavTab .sql-righttab").children().eq(_currentDataIndex).attr('tabindex', '0').siblings().attr('tabindex', '-1');
 
                 if (_currentDataIndex == _tablength) {
@@ -1886,7 +1886,7 @@ $(document).ready(function () {
             $(this).attr('aria-label', $(this).find('.texting').text().trim());
         });
 
-         } catch (e) {
+    } catch (e) {
 
     }
 });
@@ -1933,7 +1933,7 @@ $(document).ready(function () {
             // carouselComponentFCT();
             liheightcalc();
         });
-    } catch (e) {}
+    } catch (e) { }
 });
 /** DIV line-height**/
 
@@ -2198,7 +2198,7 @@ $(document).ready(function () {
         });
         /******************* *Bug 346848 fix ********************/
 
-    } catch (e) {}
+    } catch (e) { }
 });
 
 function lpchatfun() {
@@ -2245,7 +2245,7 @@ $(window).on("load", function () {
 
         }, 2000);
 
-    } catch (e) {}
+    } catch (e) { }
 });
 
 /**********END OF CP_StaticSupportLinks.js **********/
@@ -2288,7 +2288,7 @@ $(document).ready(function () {
                 }
             }
         }
-    } catch (e) {}
+    } catch (e) { }
 });
 
 
@@ -2343,25 +2343,25 @@ function stickynavslick() {
         infinite: false,
 
         responsive: [{
-                breakpoint: 1084,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: true,
-                    infinite: false
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    dots: false,
-                    arrows: true,
-                    infinite: false
-                }
+            breakpoint: 1084,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                infinite: false
             }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                infinite: false
+            }
+        }
         ]
     });
 
@@ -2398,7 +2398,7 @@ $(document).ready(function () {
             stickynavslick();
             stickynavheight();
         }
-    } catch (err) {}
+    } catch (err) { }
 
 });
 
@@ -2521,8 +2521,8 @@ $(document).ready(function () {
                     //     "tabindex": "0"
                     //     }).focus();
 
-                        $(".sql-five-pillar-overlay-content-1 .pillar-item[data-active='true'] ").find('.pillar-popup').focus();
-                        // console.log("added attributes? - focus?");
+                    $(".sql-five-pillar-overlay-content-1 .pillar-item[data-active='true'] ").find('.pillar-popup').focus();
+                    // console.log("added attributes? - focus?");
 
                     isActive = true;
                 }
@@ -2555,8 +2555,8 @@ $(document).ready(function () {
                     // event.preventDefault();
                     activeIndex = index;//pops 1
                     if (!$(itemNode).hasClass("disable-popup"))
-                    console.log("item clicked line 2544 " + event);
-                        itemClick(event);
+                        console.log("item clicked line 2544 " + event);
+                    itemClick(event);
                 };
                 itemNode.onkeypress = function (event) {
                     if (event.keyCode == 13) {
@@ -2566,8 +2566,8 @@ $(document).ready(function () {
                             itemClick(event);
                     }
                 };
-                if (!$(itemNode).hasClass("disable-popup")){
-                    $(itemNode).attr('tabindex','0');
+                if (!$(itemNode).hasClass("disable-popup")) {
+                    $(itemNode).attr('tabindex', '0');
                 }
             });
 
@@ -2587,6 +2587,7 @@ $(document).ready(function () {
 
     //tabbing inside popup
     $(".sql-five-pillar-overlay-content-1 .pillar-item .pillar-popup").each(function () {
+        $(".sql-five-pillar-overlay-content-1 .pillar-item[data-active='true'] .pillar-popup").focus();
         $(this).find("a.pillar-close-button").on("keydown", function (e) {
             if (e.keyCode == 9) {
                 $(".sql-five-pillar-overlay-content-1 .pillar-item[data-active='true'] .pillar-popup .body-alt .link ul.stacked li:first-child a").focus();
@@ -2659,7 +2660,7 @@ $(document).ready(function () {
     //                 // }
 
     //                 // $( lastPillarFocus ).focus();
-                    
+
     //                 // $(".sql-five-pillar-overlay-content-1 .pillar-item .pillar-content a.c-call-to-action.active").focus();  - orginal
     //                 // e.preventDefault();
     //                 // lastFocus.attr("aria-live", "assertive");
@@ -2942,29 +2943,29 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [{
-                breakpoint: 1084,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    initialSlide: 0
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    initialSlide: 0
-                }
-            },
-            {
-                breakpoint: 539,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    initialSlide: 0
-                }
+            breakpoint: 1084,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                initialSlide: 0
             }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                initialSlide: 0
+            }
+        },
+        {
+            breakpoint: 539,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 0
+            }
+        }
         ]
     });
 
@@ -3167,7 +3168,7 @@ function Sql3Vs4Vs5VsAnalysis_thumbnail_minHeight() {
             $(".thumbnail-child1").removeClass("thumbnail-child1");
             $(".thumbnail-child2").removeClass("thumbnail-child2");
         });
-    } catch (e) {}
+    } catch (e) { }
 }
 
 $(document).ready(function () {
@@ -3357,7 +3358,7 @@ $(document).on("click", ".jcarousel-control-next", function (e) {
             $(".current-righttab-carousel").find(".jcarousel-control-prev").attr('aria-label', 'view previous slide');
         }
         $(".current-righttab-carousel").removeClass("current-righttab-carousel");
-    } catch (e) {}
+    } catch (e) { }
 });
 
 $(document).on("click", ".jcarousel-control-prev", function (e) {
@@ -3544,7 +3545,7 @@ $(document).ready(function () {
             $('#SQL_StaticMenu').removeClass('bg-grey-d2');
             $('#SQL_StaticMenu').addClass('bg-grey-50');
         }
-    } catch (e) {}
+    } catch (e) { }
 });
 
 /*SQL-static menu*/
@@ -3894,8 +3895,8 @@ $(document).ready(function () {
 
 /********************Static-Menu*******************/
 $(document).ready(function () {
-    
-          try {
+
+    try {
         $('.case-study-col-with-links .content').each(function () {
             $(this).find("p.subheadline").each(function () {
                 if ($(this).is(':empty')) {
@@ -3903,7 +3904,7 @@ $(document).ready(function () {
                 }
             });
         });
-        
+
     } catch (e) {
 
     }
@@ -3912,7 +3913,7 @@ $(window).on("load resize", function () {
     try {
         var setParaHeight;
         var setHeadHeight;
-       $(".sql-TwoCol-BGColor .column-1 .para-content").css("height", "auto");
+        $(".sql-TwoCol-BGColor .column-1 .para-content").css("height", "auto");
         $(".sql-TwoCol-BGColor .column-2 .para-content").css("height", "auto");
         $(".sql-TwoCol-BGColor .column-1 .c-heading-3").css("height", "auto");
         $(".sql-TwoCol-BGColor .column-2 .c-heading-3").css("height", "auto");
@@ -3920,26 +3921,26 @@ $(window).on("load resize", function () {
         var col2_paraHeight = $(".sql-TwoCol-BGColor .column-2 .para-content").outerHeight();
         var head1_paraHeight = $(".sql-TwoCol-BGColor .column-1 .c-heading-3").outerHeight();
         var head2_paraHeight = $(".sql-TwoCol-BGColor .column-2 .c-heading-3").outerHeight();
-        
+
         if (col1_paraHeight > col2_paraHeight) {
             setParaHeight = col1_paraHeight;
         } else {
             setParaHeight = col2_paraHeight;
-        }       
+        }
         if (window.matchMedia("(min-width: 540px)").matches) {
-           $(".sql-TwoCol-BGColor .column-2 .para-content").css("height", setParaHeight);
-        $(".sql-TwoCol-BGColor .column-1 .para-content").css("height", setParaHeight);
-        } 
+            $(".sql-TwoCol-BGColor .column-2 .para-content").css("height", setParaHeight);
+            $(".sql-TwoCol-BGColor .column-1 .para-content").css("height", setParaHeight);
+        }
         if (head1_paraHeight > head2_paraHeight) {
             setHeadHeight = head1_paraHeight;
         } else {
             setHeadHeight = head2_paraHeight;
         }
-         if (window.matchMedia("(min-width: 540px)").matches) {
-        $(".sql-TwoCol-BGColor .column-2 .c-heading-3").css("height", setHeadHeight);
-        $(".sql-TwoCol-BGColor .column-1 .c-heading-3").css("height", setHeadHeight);
-         }  
-                    
+        if (window.matchMedia("(min-width: 540px)").matches) {
+            $(".sql-TwoCol-BGColor .column-2 .c-heading-3").css("height", setHeadHeight);
+            $(".sql-TwoCol-BGColor .column-1 .c-heading-3").css("height", setHeadHeight);
+        }
+
     } catch (err) {
         console.log(err);
     }
@@ -4087,7 +4088,7 @@ function maxHeight($selector) {
 }
 $(window).on("load", function () {
     var fivePillar = $(".sql-five-pillar-overlay-content-1 .pillar-list .pillar-item .pillar-content ");
-    maxHeight(fivePillar);    
+    maxHeight(fivePillar);
     // var sql_TwoCol_BGColor_para_height = $(".sql-TwoCol-BGColor .columns .para-content");
     // maxHeight(sql_TwoCol_BGColor_para_height);
 
@@ -4300,7 +4301,7 @@ function setHighlighterHeight() {
             $(this).children().eq(0).attr("rowspan", "2");
             $(this).next().children().eq(0).addClass('merge-dn');
         });
-    } catch (e) {}
+    } catch (e) { }
 }
 $(document).ready(function () {
     try {
@@ -4347,7 +4348,7 @@ $(document).ready(function () {
                 }
             }
         }, 100);
-    } catch (err) {}
+    } catch (err) { }
     $('.sql-event-subtabs .sql-tabs-container .sql-tab').each(function () {
         if (!$(this).hasClass('active')) {
             $(this).attr('aria-selected', 'false');
