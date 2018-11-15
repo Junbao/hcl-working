@@ -11,6 +11,10 @@ namespace P2Variables
 		static void Main(string[] args)
 		{
 			Console.WriteLine("Working with varibles");
+			int x = 5;
+			double priceOfItem = 40.40;
+			string name = "eBook";
+
 
 			Console.Read();
 		}

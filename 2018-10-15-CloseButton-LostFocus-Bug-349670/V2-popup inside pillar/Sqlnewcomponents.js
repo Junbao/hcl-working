@@ -2479,8 +2479,6 @@ $(document).ready(function () {
 
 /*SQL_5PillarsOverlayContent.js*/
 $(document).ready(function () {
-
-
     try {
         var forEach = Array.prototype.forEach.call.bind(Array.prototype.forEach);
         forEach(document.querySelectorAll('.sql-five-pillar-overlay-content-1'), function (componentNode) {
@@ -2492,38 +2490,54 @@ $(document).ready(function () {
             var MOBILE = 540;
             var activeIndex = 0;
             var isActive = false;
-            // var itemClick = function (event) { //pops 2 - gets passed the item clicked
+            var itemClick = function (event) { //pops 2 - gets passed the item clicked
 
-            //     if (event.target.window || event.target.className.indexOf('pillar-close-button') < 0) {
+                if (event.target.window || event.target.className.indexOf('pillar-close-button') < 0) {
 
-            //         forEach(itemNodes, function (subItemNode, subIndex) {
-            //             if (innerWidth >= MOBILE && innerWidth < TABLET && ((activeIndex < 2 && subIndex < 2) || (activeIndex >= 2 && activeIndex < 4 && subIndex >= 2 && subIndex < 4) || (activeIndex >= 4 && subIndex >= 4)) ||
-            //                 innerWidth >= TABLET && innerWidth < DESKTOP && ((activeIndex < 3 && subIndex < 3) || (activeIndex >= 3 && subIndex >= 3)) ||
-            //                 innerWidth >= DESKTOP) {
-            //                 // subItemNode.setAttribute('data-active', false);
+                    forEach(itemNodes, function (subItemNode, subIndex) {
+                        if (innerWidth >= MOBILE && innerWidth < TABLET && ((activeIndex < 2 && subIndex < 2) || (activeIndex >= 2 && activeIndex < 4 && subIndex >= 2 && subIndex < 4) || (activeIndex >= 4 && subIndex >= 4)) ||
+                            innerWidth >= TABLET && innerWidth < DESKTOP && ((activeIndex < 3 && subIndex < 3) || (activeIndex >= 3 && subIndex >= 3)) ||
+                            innerWidth >= DESKTOP) {
+                            subItemNode.setAttribute('data-active', false);
 
-            //             } else {
+                        } else {
 
-            //                 subItemNode.setAttribute('data-active', 'fade');
-            //             }
-            //         });
-            //         itemNodes[activeIndex].removeAttribute("style");
-            //         lastFocus = document.activeElement; //pops 3
+                            subItemNode.setAttribute('data-active', 'fade');
+                        }
+                    });
+                    itemNodes[activeIndex].removeAttribute("style");
+                    lastFocus = document.activeElement; //pops 3
+                    // console.log("line 2510  " + lastElement);
+                    itemNodes[activeIndex].setAttribute('data-active', true);
+                    // $('.pillar-item[data-active="true"]').attr({
+                    //         "aria-labelledby": "working",
+                    //         "aria-modal": "true",
+                    //         "role": "dialog"
+                    //     });
+                    // $(".sql-five-pillar-overlay-content-1 .pillar-item[data-active='true'] ").find('.pillar-popup').attr({
+                    //     "aria-labelledby": "working",
+                    //     "aria-modal": "true",
+                    //     "role": "dialog",
+                    //     "tabindex": "0"
+                    //     }).focus();
 
-            //         isActive = true;
-            //     }
+                    $(".sql-five-pillar-overlay-content-1 .pillar-item[data-active='true'] ").find('.pillar-popup').focus();
+                    // console.log("added attributes? - focus?");
 
-            //     // if (event.target.className && event.target.className.indexOf('pillar-close-button') >= 0) {
-            //     //     console.log("index of close button " + event.target.className.indexOf('pillar-close-button'));
+                    isActive = true;
+                }
 
-            //     //     forEach(itemNodes, function (subItemNode) {
-            //     //         subItemNode.removeAttribute('data-active');
-            //     //         event.preventDefault();
-            //     //     });
-            //     //     isActive = false;
-            //     //     resize();
-            //     // }
-            // };
+                if (event.target.className && event.target.className.indexOf('pillar-close-button') >= 0) {
+                    console.log("index of close button " + event.target.className.indexOf('pillar-close-button'));
+
+                    forEach(itemNodes, function (subItemNode) {
+                        subItemNode.removeAttribute('data-active');
+                        event.preventDefault();
+                    });
+                    isActive = false;
+                    resize();
+                }
+            };
 
             var resize = function () {
                 var maxHeight = 0;
@@ -2536,26 +2550,26 @@ $(document).ready(function () {
                 });
             };
 
-            // forEach(itemNodes, function (itemNode, index) {
-            //     itemNode.onclick = function (event) {
-            //         // event.preventDefault();
-            //         activeIndex = index;//pops 1
-            //         if (!$(itemNode).hasClass("disable-popup"))
-            //             console.log("item clicked line 2544 " + event);
-            //         itemClick(event);
-            //     };
-            //     itemNode.onkeypress = function (event) {
-            //         if (event.keyCode == 13) {
-            //             // event.preventDefault();
-            //             activeIndex = index;
-            //             if (!$(itemNode).hasClass("disable-popup"))
-            //                 itemClick(event);
-            //         }
-            //     };
-            //     if (!$(itemNode).hasClass("disable-popup")) {
-            //         $(itemNode).attr('tabindex', '0');
-            //     }
-            // });
+            forEach(itemNodes, function (itemNode, index) {
+                itemNode.onclick = function (event) {
+                    // event.preventDefault();
+                    activeIndex = index;//pops 1
+                    if (!$(itemNode).hasClass("disable-popup"))
+                        console.log("item clicked line 2544 " + event);
+                    itemClick(event);
+                };
+                itemNode.onkeypress = function (event) {
+                    if (event.keyCode == 13) {
+                        // event.preventDefault();
+                        activeIndex = index;
+                        if (!$(itemNode).hasClass("disable-popup"))
+                            itemClick(event);
+                    }
+                };
+                if (!$(itemNode).hasClass("disable-popup")) {
+                    $(itemNode).attr('tabindex', '0');
+                }
+            });
 
             window.addEventListener('resize', function (event) {
                 var fivePillar = $(".sql-five-pillar-overlay-content-1 .pillar-list .pillar-item .pillar-content ");
@@ -2571,45 +2585,30 @@ $(document).ready(function () {
 
     }
 
-
-    $(".sql-five-pillar-overlay-content-1 .pillar-item").on("click", function() {
-        // $(this).attr("data-active", "false");
-        $(".sql-five-pillar-overlay-content-1 .pillar-popup-wrap").addClass("active");
-        $(".sql-five-pillar-overlay-content-1 .pillar-popup-wrap .pillar-popup[data-pillar='1']").focus();
-        console.log("Check now");
-
-        // $(".sql-five-pillar-overlay-content-1 .pillar-popup[data-pillar='1']").focus();
-    });
-
-    $(".sql-five-pillar-overlay-content-1 .pillar-popup .pillar-close-button").on("click", function() {
-        $(".sql-five-pillar-overlay-content-1 .pillar-popup-wrap").removeClass("active");
-    });
-
     //tabbing inside popup
-    $(".sql-five-pillar-overlay-content-1 .pillar-popup").each(function () {
-        // $(".sql-five-pillar-overlay-content-1 .pillar-popup").focus();
+    $(".sql-five-pillar-overlay-content-1 .pillar-item .pillar-popup").each(function () {
         $(this).find("a.pillar-close-button").on("keydown", function (e) {
             if (e.keyCode == 9) {
-                $(".sql-five-pillar-overlay-content-1 .pillar-popup .body-alt .link ul.stacked li:first-child a").focus();
+                $(".sql-five-pillar-overlay-content-1 .pillar-item[data-active='true'] .pillar-popup .body-alt .link ul.stacked li:first-child a").focus();
                 e.preventDefault();
             }
         });
         $(this).find("a.pillar-close-button").on("keydown", function (e) {
             if (e.shiftKey && e.keyCode == 9) {
-                $(".sql-five-pillar-overlay-content-1 .pillar-popup .body-alt .link ul.stacked li:last-child a").focus();
+                $(".sql-five-pillar-overlay-content-1 .pillar-item[data-active='true'] .pillar-popup .body-alt .link ul.stacked li:last-child a").focus();
                 e.preventDefault();
             }
         });
         $(this).find(".body-alt .link ul.stacked li:first-child a").on("keydown", function (e) {
             if (e.shiftKey && e.keyCode == 9) {
-                $(".sql-five-pillar-overlay-content-1 .pillar-popup a.pillar-close-button").focus();
+                $(".sql-five-pillar-overlay-content-1 .pillar-item .pillar-popup a.pillar-close-button").focus();
                 e.preventDefault();
             }
         });
     });
 
     $("a.pillar-close-button").on("click", function (e) {
-        $(this).parents(".pillar-list").find(".pillar-item").focus();
+        $(this).parents(".pillar-item").focus();
         console.log("close button clicked - sending focus back - line 2597");
         // $(this).parents(".pillar-item").find('.pillar-popup').removeAttr("aria-labelledby aria-modal role" );
     });
